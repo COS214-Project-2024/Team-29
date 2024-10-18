@@ -1,2 +1,5 @@
-# Team-29
-Team-29's description
+# The City Kings
+
+## Members
+- Ruan Esterhuizen (u23532387)
+- 
