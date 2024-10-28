@@ -1,4 +1,5 @@
 #include "LandmarkBuilding.h"
+#include "UnderConstructionState.h"
 
 LandmarkBuilding::LandmarkBuilding(){
     this->powerConsumption = 50;
@@ -7,4 +8,5 @@ LandmarkBuilding::LandmarkBuilding(){
     this->sewageProduction = 200;
     this->buildingCapacity = 500;
     this->buildingType = "Landmark";
+    this->buildingState = new UnderConstructionState();
 }

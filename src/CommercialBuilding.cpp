@@ -1,4 +1,5 @@
 #include "CommercialBuilding.h"
+#include "UnderConstructionState.h"
 
 CommercialBuilding::CommercialBuilding(){
     this->powerConsumption = 100;
@@ -7,4 +8,5 @@ CommercialBuilding::CommercialBuilding(){
     this->sewageProduction = 500;
     this->buildingCapacity = 1000;
     this->buildingType = "Commercial";
+    this->buildingState = new UnderConstructionState();
 }

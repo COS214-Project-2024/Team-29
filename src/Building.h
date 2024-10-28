@@ -1,4 +1,5 @@
 #include <string>
+#include "BuildingState.h"
 
 #ifndef BUILDING_H
 #define BUILDING_H
@@ -12,6 +13,15 @@ class Building {
         int buildingCapacity; // amount of people the building can handle
         std::string buildingType; // type of building (Residential, Commercial, Industrial, Landmark)
         std::string buildingName;
+        BuildingState* buildingstate;
+    
+    public:
+        void setBuildingState(BuildingState* s);
 };
+
+void Building::setBuildingState(BuildingState* s){
+    delete this->buildingState;
+    this->buildingState = s;
+}
 
 #endif
