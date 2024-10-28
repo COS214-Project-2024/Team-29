@@ -5,4 +5,6 @@ ResidentialBuilding::ResidentialBuilding(){
     this->waterConsumption = 50;
     this->wasteProduction = 50;
     this->sewageProduction = 50;
+    this->buildingCapacity = 5;
+    this->buildingType = "Residential";
 }

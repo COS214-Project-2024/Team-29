@@ -5,4 +5,6 @@ LandmarkBuilding::LandmarkBuilding(){
     this->waterConsumption = 50;
     this->wasteProduction = 200;
     this->sewageProduction = 200;
+    this->buildingCapacity = 500;
+    this->buildingType = "Landmark";
 }
