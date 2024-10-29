@@ -49,7 +49,7 @@ class ModeOfTransport {
         /// @return The amount of goods that the entire city can move in one cycle
         int getGoodsTransportCapacity();
 
-    protected: //this is private in the class diagram
+    private:
 
         /// @brief The amount of people/goods that the mode of transport can move in a cycle
         int capacity;
