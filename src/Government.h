@@ -1,6 +1,16 @@
 #ifndef GOVERNMENT_H
 #define GOVERNMENT_H
 
+#include "City.h"
+#include "ConstructBuildingCommand.h"
+#include "SetPolicyCommand.h"
+#include "AllocateResourcesCommand.h"
+
+class City;
+class ConstructBuildingCommand;
+class SetPolicyCommand;
+class AllocateResourcesCommand; 
+
 class Government {
 
 private:
@@ -11,10 +21,12 @@ private:
 	AllocateResourcesCommand* resources;
 	double budget;
 
-public:
+protected:
 	Government();
+	~Government();
+public:
 
-	Government* instance();
+	static Government* instance();
 };
 
 #endif
