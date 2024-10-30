@@ -5,10 +5,15 @@
 
 class City {
     private:
+        static City* cityInstance;
         SatisfactionState* satisfaction;
     
-    public:
+    protected:
         City();
+        ~City();
+
+    public:
+        static City* instance();
         void setSatisfactionState(SatisfactionState* s);
 };
 
