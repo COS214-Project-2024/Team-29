@@ -11,8 +11,8 @@ class City {
         static City* cityInstance;
         SatisfactionState* satisfaction;
         BuildingComponent* buildings;
-        ModeOfTransport* modesOfTransport;
         UtilityFacade* utilitiesManager;
+        vector<ModeOfTransport*> modesOfTransport;
     
     protected:
         City();
@@ -21,6 +21,9 @@ class City {
     public:
         static City* instance();
         void setSatisfactionState(SatisfactionState* s);
+
+        //transport related functions
+        void addTransport(ModeOfTransport* transport);
 };
 
 #endif
