@@ -1,6 +1,6 @@
 #include "Building.h"
 
-Building::Building( std::string type, std::string name, int cap ) : buildingType(type), buildingName(name), capacity(cap) {};
+Building::Building( std::string type, std::string name, int cap ) : buildingType(type), buildingName(name), buildingCapacity(cap) {};
 
 void Building::addBuilding( BuildingComponent* bc ) {};
 
@@ -8,17 +8,23 @@ void Building::demolishBuilding( BuildingComponent* bc ) {};
 
 int Building::getCapacity() 
 { 
-    return capacity; 
+    return this->buildingCapacity; 
 };
 
 std::string Building::getBuildingType() 
 { 
-    return buildingType; 
+    return this->buildingType; 
 };
 
 std::string Building::getBuildingName() 
 { 
-    return buildingName; 
+    return this->buildingName; 
+};
+
+void Building::setBuildingState(BuildingState* s) 
+{ 
+    delete this->buildingState; 
+    this->buildingState = s; 
 };
 
 Building::~Building() {};

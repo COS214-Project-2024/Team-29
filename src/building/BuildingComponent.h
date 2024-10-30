@@ -5,8 +5,8 @@
 
 class BuildingComponent
 {
-    private:
-        int capacity;
+    protected:
+        int buildingCapacity;
 
     public:
         virtual void addBuilding( BuildingComponent* bc ) = 0;
