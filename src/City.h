@@ -7,6 +7,9 @@ class City {
     private:
         static City* cityInstance;
         SatisfactionState* satisfaction;
+        BuildingComponent* buildings;
+        ModeOfTransport* modesOfTransport;
+        UtilityFacade* utilitiesManager;
     
     protected:
         City();
