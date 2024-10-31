@@ -10,3 +10,7 @@ CommercialBuilding::CommercialBuilding(){
     this->buildingType = "Commercial";
     this->buildingState = new UnderConstructionState();
 }
+
+void CommercialBuilding::acceptVisitor(Visitor * visitor){
+    visitor->visitMall(this);
+}

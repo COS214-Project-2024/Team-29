@@ -10,3 +10,7 @@ IndustrialBuilding::IndustrialBuilding(){
     this->buildingType = "Industrial";
     this->buildingState = new UnderConstructionState();
 }
+
+void IndustrialBuilding::acceptVisitor(Visitor * visitor){
+    visitor->visitFactory(this);
+}

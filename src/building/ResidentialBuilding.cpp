@@ -10,3 +10,7 @@ ResidentialBuilding::ResidentialBuilding(){
     this->buildingType = "Residential";
     this->buildingState = new UnderConstructionState();
 }
+
+void ResidentialBuilding::acceptVisitor(Visitor * visitor){
+    visitor->visitHouse(this);
+}

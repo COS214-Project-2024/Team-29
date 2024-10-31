@@ -10,3 +10,7 @@ LandmarkBuilding::LandmarkBuilding(){
     this->buildingType = "Landmark";
     this->buildingState = new UnderConstructionState();
 }
+
+void LandmarkBuilding::acceptVisitor(Visitor * visitor){
+
+}
