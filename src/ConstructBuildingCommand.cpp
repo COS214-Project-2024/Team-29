@@ -1,7 +1,7 @@
 #include "ConstructBuildingCommand.h"
 
-ConstructBuildingCommand::ConstructBuildingCommand(Building* build, CommercialBuildingCreator* cC, IndustrialBuildingCreator* iC, ResidentialBuildingCreator* rC, LandmarkBuildingCreator* lC){
-    this->building = build;
+ConstructBuildingCommand::ConstructBuildingCommand(CompositeNeighbourhood* n, CommercialBuildingCreator* cC, IndustrialBuildingCreator* iC, ResidentialBuildingCreator* rC, LandmarkBuildingCreator* lC){
+    this->neighbourhood = n;
     this->commercialCreator = cC;
     this->industrialCreator = iC;
     this->residentialCreator = rC;
@@ -36,7 +36,7 @@ void ConstructBuildingCommand::execute(){
             newBuilding = landmarkCreator->createBuilding(); 
     }
 
-    building->addBuilding(newBuilding);
+    neighbourhood->addBuilding(newBuilding);
 
     /* switch(buildingType){
         case 1:
