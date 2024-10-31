@@ -1,11 +1,11 @@
 #include "Interface.h"
 
 Interface::Interface(){
-    this->gov = new Government();
+    this->gov = Government::instance();
 }
 
 Interface::~Interface(){
-    delete this->gov;
+    //delete this->gov;
 }
 
 // creates a new building depending on the user's choice

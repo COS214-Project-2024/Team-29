@@ -1,6 +1,6 @@
 #include "ConstructBuildingCommand.h"
 
-ConstructBuildingCommand::ConstructBuildingCommand(CompositeNeighbourhood* n, CommercialBuildingCreator* cC, IndustrialBuildingCreator* iC, ResidentialBuildingCreator* rC, LandmarkBuildingCreator* lC){
+ConstructBuildingCommand::ConstructBuildingCommand(BuildingComponent* n, CommercialBuildingCreator* cC, IndustrialBuildingCreator* iC, ResidentialBuildingCreator* rC, LandmarkBuildingCreator* lC){
     this->neighbourhood = n;
     this->commercialCreator = cC;
     this->industrialCreator = iC;

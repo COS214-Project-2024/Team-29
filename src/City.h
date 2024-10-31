@@ -22,6 +22,8 @@ class City {
         static City* instance();
         void setSatisfactionState(SatisfactionState* s);
 
+        BuildingComponent* getBuildings(){return buildings;};
+
         //transport related functions
         void addTransport(ModeOfTransport* transport);
 };

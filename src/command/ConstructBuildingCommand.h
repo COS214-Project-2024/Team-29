@@ -11,14 +11,14 @@
 
 class ConstructBuildingCommand : public Command{
     private:
-        CompositeNeighbourhood* neighbourhood;
+        BuildingComponent* neighbourhood;
         CommercialBuildingCreator* commercialCreator;
         IndustrialBuildingCreator* industrialCreator;
         ResidentialBuildingCreator* residentialCreator;
         LandmarkBuildingCreator* landmarkCreator;
 
     public:
-        ConstructBuildingCommand(CompositeNeighbourhood* n, CommercialBuildingCreator* cC, IndustrialBuildingCreator* iC, ResidentialBuildingCreator* rC, LandmarkBuildingCreator* lC);
+        ConstructBuildingCommand(BuildingComponent* n, CommercialBuildingCreator* cC, IndustrialBuildingCreator* iC, ResidentialBuildingCreator* rC, LandmarkBuildingCreator* lC);
         void execute();
 };
 #endif
