@@ -42,8 +42,5 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 # Link modules to main executable
 target_link_libraries(${PROJECT_NAME} building command government managers satisfaction transport utility)
 
-# Make code use add executable or add library
-add_library(${PROJECT_NAME} STATIC ${Headers} ${Sources}) 
-
 # Keep code seperate from tests
-add_subdirectory(tests)
+add_subdirectory(test)
