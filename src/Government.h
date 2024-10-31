@@ -25,7 +25,9 @@ protected:
 	Government();
 	~Government();
 public:
-
+	ConstructBuildingCommand* getConstruct();
+	SetPolicyCommand* getPolicies();
+	AllocateResourcesCommand* getResources();
 	static Government* instance();
 };
 

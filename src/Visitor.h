@@ -1,13 +1,15 @@
 #ifndef VISITOR_H
 #define VISITOR_H
 
-#include "CompositeNeighbourhood.h"
+#include "building/CompositeNeighbourhood.h"
+
+#include <list>
 
 class Visitor {
 
 
 public:
-	virtual int operation(list<CompositeNeighbourhood> list) = 0;
+	virtual int operation(std::list<CompositeNeighbourhood> list) = 0;
 
 	virtual void visitTownhouse(BuildingComponent* building) = 0;
 

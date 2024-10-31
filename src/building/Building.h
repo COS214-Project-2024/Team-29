@@ -19,6 +19,7 @@ class Building : public BuildingComponent
         BuildingState* buildingState;
 
     public:
+        Building(){};
         Building( std::string type, std::string name, int cap );
         void addBuilding( BuildingComponent* bc );
         void demolishBuilding( BuildingComponent* bc );

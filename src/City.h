@@ -3,8 +3,8 @@
 
 #include "Satisfaction/SatisfactionState.h"
 #include "building/BuildingComponent.h"
-#include "ModeOfTransport.h"
-#include "UtilityFacade.h"
+#include "transportation/ModeOfTransport.h"
+#include "utility/UtilityFacade.h"
 
 class City {
     private:

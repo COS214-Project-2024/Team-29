@@ -21,3 +21,15 @@ static Government* Government::instance() {
 	}
 	return instance;
 }
+
+ConstructBuildingCommand* Government::getConstruct(){
+	return this->construct;
+}
+
+SetPolicyCommand* Government::getPolicies(){
+	return this->policies;
+}
+
+AllocateResourcesCommand* Government::getResources(){
+	return this->resources;
+}
