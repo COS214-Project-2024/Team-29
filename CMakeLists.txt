@@ -13,6 +13,15 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+include(FetchContent)
+
+# Declare and fetch GoogleTest
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
+)
+FetchContent_MakeAvailable(googletest)
+
 # Nice to have, libraries that will be linked together
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
@@ -28,7 +37,6 @@ set(DIRECTORIES
     src/utility
     src/government
     src/managers
-    googletest
 )
 
 # Add each directory as a subdirectory
