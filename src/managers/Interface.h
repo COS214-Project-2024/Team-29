@@ -1,7 +1,7 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
-#include "Government.h"
+#include "government/Government.h"
 #include "City.h"
 
 class Interface {

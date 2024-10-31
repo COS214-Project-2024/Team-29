@@ -1,5 +1,5 @@
 #include "City.h"
-#include "Satisfaction/Neutral.h"
+#include "satisfaction/Neutral.h"
 
 City* City::cityInstance = 0;
 
