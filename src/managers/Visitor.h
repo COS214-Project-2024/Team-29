@@ -1,8 +1,7 @@
 #ifndef VISITOR_H
 #define VISITOR_H
 
-#include "building/CompositeNeighbourhood.h"
-
+#include "../building/CompositeNeighbourhood.h"
 #include <list>
 
 class Visitor {

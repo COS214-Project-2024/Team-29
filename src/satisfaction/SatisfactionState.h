@@ -1,7 +1,7 @@
 #ifndef SATISFACTIONSTATE_H
 #define SATISFACTIONSTATE_H
 
-#include "managers/City.h"
+#include "../managers/City.h"
 
 #include <string>
 

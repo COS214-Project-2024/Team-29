@@ -1,7 +1,7 @@
 #ifndef TAXCOLLECTOR_H
 #define TAXCOLLECTOR_H
 
-#include "Visitor.h"
+#include "../managers/Visitor.h"
 
 class TaxCollector : public Visitor {
 

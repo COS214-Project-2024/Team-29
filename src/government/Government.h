@@ -1,10 +1,10 @@
 #ifndef GOVERNMENT_H
 #define GOVERNMENT_H
 
-#include "City.h"
-#include "command/ConstructBuildingCommand.h"
-#include "command/SetPolicyCommand.h"
-#include "command/AllocateResourcesCommand.h"
+#include "../managers/City.h"
+#include "../command/ConstructBuildingCommand.h"
+#include "../command/SetPolicyCommand.h"
+#include "../command/AllocateResourcesCommand.h"
 
 class City;
 
