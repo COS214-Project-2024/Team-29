@@ -9,41 +9,41 @@ int TaxCollector::operation(list<CompositeNeighbourhood*> list) {
 }
 
 void TaxCollector::visitTownhouse(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 30;
 }
 
 void TaxCollector::visitEstate(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 30;
 }
 
 void TaxCollector::visitHouse(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 30;
 }
 
 void TaxCollector::visitApartment(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 60;
 }
 
 void TaxCollector::visitFactory(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 100;
 }
 
 void TaxCollector::visitWarehouse(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 100;
 }
 
 void TaxCollector::visitPlant(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 100;
 }
 
 void TaxCollector::visitOffice(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 100;
 }
 
 void TaxCollector::visitShop(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 100;
 }
 
 void TaxCollector::visitMall(BuildingComponent* building) {
-	totalTax += 0;
+	totalTax += 200;
 }
