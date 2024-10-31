@@ -1,9 +1,9 @@
 #ifndef CITY_H
 #define CITY_H
 
-#include "Satisfaction/SatisfactionState.h"
+#include "satisfaction/SatisfactionState.h"
 #include "building/BuildingComponent.h"
-#include "transportation/ModeOfTransport.h"
+#include "transport/ModeOfTransport.h"
 #include "utility/UtilityFacade.h"
 
 class City {

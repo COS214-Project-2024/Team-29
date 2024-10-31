@@ -2,8 +2,8 @@
 #define BUILDING_COMPONENT_H
 
 #include <string>
-#include "../Visitor.h"
-#include "../TaxCollector.h"
+#include "managers/Visitor.h"
+#include "managers/TaxCollector.h"
 
 class BuildingComponent
 {
