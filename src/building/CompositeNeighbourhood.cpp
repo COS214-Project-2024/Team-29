@@ -30,6 +30,12 @@ int CompositeNeighbourhood::getCapacity()
     return totalCapacity;
 }
 
+void CompositeNeighbourhood::acceptVisitor(Visitor * visitor){
+    for( auto * building : buildingsList){
+        building->acceptVisitor(visitor);
+    }
+}
+
 CompositeNeighbourhood::~CompositeNeighbourhood()
 {
     std::list< BuildingComponent* >::iterator it;

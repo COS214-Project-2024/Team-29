@@ -6,6 +6,7 @@
 class ResidentialBuilding : public Building {
     public:
         ResidentialBuilding();
+        virtual void acceotVisitor(Visitor * visitor) = 0;
 };
 
 #endif

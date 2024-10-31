@@ -26,6 +26,7 @@ class Building : public BuildingComponent
         std::string getBuildingType();
         std::string getBuildingName();
         void setBuildingState(BuildingState* s);
+        virtual void acceptVisitor(Visitor * visitor) = 0;
         ~Building();
 };
 

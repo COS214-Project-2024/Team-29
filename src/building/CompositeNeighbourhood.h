@@ -15,6 +15,7 @@ class CompositeNeighbourhood : public BuildingComponent
         void addBuilding( BuildingComponent* bc );
         void demolishBuilding( BuildingComponent* bc );
         int getCapacity();
+        void acceptVisitor(Visitor * visitor);
         ~CompositeNeighbourhood();
 };
 

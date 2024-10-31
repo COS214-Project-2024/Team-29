@@ -6,6 +6,7 @@
 class LandmarkBuilding : public Building {
     public:
         LandmarkBuilding();
+        virtual void acceotVisitor(Visitor * visitor) = 0;
 };
 
 #endif

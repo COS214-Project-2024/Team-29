@@ -2,6 +2,8 @@
 #define BUILDING_COMPONENT_H
 
 #include <string>
+#include "Visitor.h"
+#include "TaxCollector.h"
 
 class BuildingComponent
 {
@@ -12,6 +14,7 @@ class BuildingComponent
         virtual void addBuilding( BuildingComponent* bc ) = 0;
         virtual void demolishBuilding( BuildingComponent* bc ) = 0;
         virtual int getCapacity() = 0;
+        virtual void acceptVisitor(Visitor * visitor) = 0;
         virtual ~BuildingComponent() {};
 };
 

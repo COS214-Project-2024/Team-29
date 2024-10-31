@@ -6,6 +6,7 @@
 class IndustrialBuilding : public Building {
     public:
         IndustrialBuilding();    
+        virtual void acceotVisitor(Visitor * visitor) = 0;
 };
 
 #endif
