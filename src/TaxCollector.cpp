@@ -1,5 +1,4 @@
 #include "TaxCollector.h"
-
 int TaxCollector::operation(list<CompositeNeighbourhood*> list) {
 	totalTax = 0;
 	for( auto * area : list){

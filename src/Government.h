@@ -7,9 +7,6 @@
 #include "AllocateResourcesCommand.h"
 
 class City;
-class ConstructBuildingCommand;
-class SetPolicyCommand;
-class AllocateResourcesCommand; 
 
 class Government {
 
