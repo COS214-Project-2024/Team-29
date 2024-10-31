@@ -6,5 +6,6 @@
         "stdexcept": "cpp",
         "iostream": "cpp",
         "string": "cpp"
-    }
+    },
+    "cmake.options.statusBarVisibility": "icon"
 }

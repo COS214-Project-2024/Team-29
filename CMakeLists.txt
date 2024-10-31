@@ -23,8 +23,8 @@ enable_testing()
 set(DIRECTORIES
     src/building
     src/command
-    src/Satisfaction
-    src/transportation
+    src/satisfaction
+    src/transport
     src/utility
     src/government
     src/managers
