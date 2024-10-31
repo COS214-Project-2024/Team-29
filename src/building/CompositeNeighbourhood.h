@@ -3,17 +3,16 @@
 
 #include "BuildingComponent.h"
 
-#include <list>
+#include <list> // Forward declaration
 
-class CompositeNeighbourhood : public BuildingComponent
-{
+class CompositeNeighbourhood : public BuildingComponent {
     private:
-        std::list< BuildingComponent* > buildingsList;
+        std::list<BuildingComponent*> buildingsList;
 
     public:
         CompositeNeighbourhood();
-        void addBuilding( BuildingComponent* bc );
-        void demolishBuilding( BuildingComponent* bc );
+        void addBuilding(BuildingComponent* bc);
+        void demolishBuilding(BuildingComponent* bc);
         int getCapacity();
         void acceptVisitor(Visitor * visitor);
         ~CompositeNeighbourhood();

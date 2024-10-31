@@ -2,46 +2,40 @@
 
 CompositeNeighbourhood::CompositeNeighbourhood() {};
 
-void CompositeNeighbourhood::addBuilding( BuildingComponent* bc )
-{
+void CompositeNeighbourhood::addBuilding( BuildingComponent* bc ) {
     buildingsList.push_back( bc );
 }
 
-void CompositeNeighbourhood::demolishBuilding( BuildingComponent* bc )
-{
+void CompositeNeighbourhood::demolishBuilding( BuildingComponent* bc ) {
     buildingsList.remove( bc );
 
-    if( bc != NULL )
+    if(bc != nullptr)
         delete bc;
     
-    bc = NULL;
+    bc = nullptr;
 }
 
-int CompositeNeighbourhood::getCapacity()
-{
+int CompositeNeighbourhood::getCapacity() {
     int totalCapacity = 0;
     std::list< BuildingComponent* >::iterator it;
 
-    for( it = buildingsList.begin(); it != buildingsList.end(); ++it )
-    {
+    for( it = buildingsList.begin(); it != buildingsList.end(); ++it ) {
         totalCapacity += (*it)->getCapacity();
     }
 
     return totalCapacity;
 }
 
-void CompositeNeighbourhood::acceptVisitor(Visitor * visitor){
-    for( auto * building : buildingsList){
+void CompositeNeighbourhood::acceptVisitor(Visitor * visitor) {
+    for( auto * building : buildingsList) {
         building->acceptVisitor(visitor);
     }
 }
 
-CompositeNeighbourhood::~CompositeNeighbourhood()
-{
+CompositeNeighbourhood::~CompositeNeighbourhood() {
     std::list< BuildingComponent* >::iterator it;
 
-    for( it = buildingsList.begin(); it != buildingsList.end(); ++it )
-    {
+    for( it = buildingsList.begin(); it != buildingsList.end(); ++it ) {
         delete *it;
     }
 }

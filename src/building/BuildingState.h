@@ -2,7 +2,9 @@
 #define BUILDINGSTATE_H
 
 #include <string>
-#include "Building.h"
+
+// Forward declaration
+class Building;
 
 class BuildingState {
     protected:

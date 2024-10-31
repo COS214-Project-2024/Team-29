@@ -1,5 +1,5 @@
 #include "City.h"
-#include "satisfaction/Neutral.h"
+#include "../satisfaction/Neutral.h"
 
 City* City::cityInstance = 0;
 
@@ -17,7 +17,9 @@ City::City(){
 }
 
 void City::setSatisfactionState(SatisfactionState* s){
-    delete this->satisfaction;
+    if(this->satisfaction != nullptr)
+        delete this->satisfaction;
+        
     this->satisfaction = s;
 }
 

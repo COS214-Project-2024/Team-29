@@ -1,10 +1,12 @@
-#include "BuildingState.h"
+#ifndef BUILDING_H
+#define BUILDING_H
+
 #include "BuildingComponent.h"
 
 #include <string>
 
-#ifndef BUILDING_H
-#define BUILDING_H
+// Forward declaration
+class BuildingState;
 
 class Building : public BuildingComponent
 {
@@ -19,7 +21,7 @@ class Building : public BuildingComponent
         BuildingState* buildingState;
 
     public:
-        Building(){};
+        Building();
         Building( std::string type, std::string name, int cap );
         void addBuilding( BuildingComponent* bc );
         void demolishBuilding( BuildingComponent* bc );
