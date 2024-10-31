@@ -6,6 +6,7 @@
 class CommercialBuilding : public Building {
     public:
         CommercialBuilding();
+        virtual void acceptVisitor(Visitor * visitor);
 };
 
 #endif
