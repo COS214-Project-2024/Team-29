@@ -1,5 +1,5 @@
 # Set the minimum version of CMake that can be used
-cmake_mimimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.20)
 
 # Set variable for project name
 set(PROJECT_NAME TheCityKings)
