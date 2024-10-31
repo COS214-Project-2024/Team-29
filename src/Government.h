@@ -2,16 +2,16 @@
 #define GOVERNMENT_H
 
 #include "City.h"
-#include "ConstructBuildingCommand.h"
-#include "SetPolicyCommand.h"
-#include "AllocateResourcesCommand.h"
+#include "command/ConstructBuildingCommand.h"
+#include "command/SetPolicyCommand.h"
+#include "command/AllocateResourcesCommand.h"
 
 class City;
 
 class Government {
 
 private:
-	Government* uniqueinstance;
+	static Government* uniqueinstance;
 	City* city;
 	ConstructBuildingCommand* construct;
 	SetPolicyCommand* policies;
@@ -22,7 +22,9 @@ protected:
 	Government();
 	~Government();
 public:
-
+	ConstructBuildingCommand* getConstruct();
+	SetPolicyCommand* getPolicies();
+	AllocateResourcesCommand* getResources();
 	static Government* instance();
 };
 

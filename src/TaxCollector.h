@@ -9,7 +9,7 @@ private:
 	int totalTax;
 
 public:
-	int operation(list<CompositeNeighbourhood> list);
+	int operation(std::list<CompositeNeighbourhood> list);
 
 	void visitTownhouse(BuildingComponent* building);
 

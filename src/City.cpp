@@ -21,7 +21,18 @@ void City::setSatisfactionState(SatisfactionState* s){
     this->satisfaction = s;
 }
 
+void City::addTransport(ModeOfTransport *transport)
+{
+    this->modesOfTransport.push_back(transport);
+}
+
 City::~City(){
     // delete other class variables here
+
+    for (ModeOfTransport* transport : modesOfTransport)
+        delete transport;
+    modesOfTransport.clear(); 
+
+
     delete cityInstance;
 }
