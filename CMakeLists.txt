@@ -30,13 +30,15 @@ enable_testing()
 
 # Add dependency for project
 set(DIRECTORIES
-    src/building
+    src/buildingComposite
+    src/buildingFactory
     src/command
+    src/government
+    src/managers
     src/satisfaction
     src/transport
     src/utility
-    src/government
-    src/managers
+    src/visitor
 )
 
 # Add each directory as a subdirectory
@@ -48,7 +50,7 @@ endforeach()
 add_executable(${PROJECT_NAME} src/main.cpp)
 
 # Link modules to main executable
-target_link_libraries(${PROJECT_NAME} building command government managers satisfaction transport utility)
+target_link_libraries(${PROJECT_NAME} buildingComposite buildingFactory command government managers satisfaction transport utility visitor)
 
 # Keep code seperate from tests
 add_subdirectory(test)

@@ -1,11 +1,12 @@
 #ifndef CITY_H
 #define CITY_H
 
-#include "satisfaction/SatisfactionState.h"
-#include "building/BuildingComponent.h"
-#include "transport/TransportManager.h"
-#include "utility/UtilityFacade.h"
-#include "memento/CityMemento.h"
+#include "../building/BuildingComponent.h"
+#include "../transport/ModeOfTransport.h"
+#include "../utility/UtilityFacade.h"
+#include "../memento/CityMemento.h"
+
+class SatisfactionState;  // Forward declaration
 
 class City {
     private:

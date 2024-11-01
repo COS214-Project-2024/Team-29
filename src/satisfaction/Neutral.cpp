@@ -2,18 +2,19 @@
 #include "Satisfied.h"
 #include "Unsatisfied.h"
 
-Neutral::Neutral(){
-    this->state = "Neutral";
+Neutral::Neutral() { this->state = "Neutral"; }
+
+std::string Neutral::getSatisfactionLevel() { return this->state; }
+
+void Neutral::incSatisfactionState(City* c) { 
+    if(c != nullptr) {
+        c->setSatisfactionState(new Satisfied()); 
+    } 
 }
 
-std::string Neutral::getSatisfactionLevel(){
-    return this->state;
-}
+void Neutral::decSatisfactionState(City* c) { 
 
-void Neutral::incSatisfactionState(City* c){
-    c->setSatisfactionState(new Satisfied());
-}
-
-void Neutral::decSatisfactionState(City* c){
-    c->setSatisfactionState(new Unsatisfied());
+    if(c != nullptr) {
+        c->setSatisfactionState(new Unsatisfied()); 
+    }
 }

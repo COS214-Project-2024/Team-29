@@ -1,5 +1,5 @@
 #include "SetPolicyCommand.h"
-#include "managers/City.h"
+#include "../managers/City.h"
 #include "Policy.h"
 
 SetPolicyCommand::SetPolicyCommand(City* newCity){
