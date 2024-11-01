@@ -18,7 +18,7 @@ class Train: public ModeOfTransport {
         ///- Capacity: 100 000
         /// @param name the name of the train
         /// @throws runtime_error if there is not enough budget to build the train
-        Train(string name);
+        Train(string name, float& budget);
         ~Train();
     private:
         float cost;
