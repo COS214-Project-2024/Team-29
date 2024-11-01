@@ -34,5 +34,8 @@
 #Build Directories
 build/
 
+# GoogleTest
+googletest/
+
 #.vscode
 .vscode/
