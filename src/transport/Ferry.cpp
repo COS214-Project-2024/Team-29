@@ -1,21 +1,19 @@
 #include "Ferry.h"
 
-Ferry::Ferry(string name)
+Ferry::Ferry(string name, float& budget)
 {
     this->name = name;
     this->cost = 1_000_000;
     this->capacity = 500_000;
     this->type = TransportType::PublicTransport;
 
-    float budget = 1000000; //somehow get the avaliable budget
-
     if(cost < budget) {
         cout << this->name << " Ferry constructed." << endl; 
-        // decrease budget by cost
+        budget -= cost;
     }
     else if(cost == budget) {
         cout << this->name << " Ferry constructed, but you just blew your remaining budget on a ferry." << endl;
-        // decreate budget by cost
+        budget -= cost;
     }
     else {
         throw runtime_error("The city does not have enough money for a ferry.");

@@ -3,7 +3,7 @@
 
 #include "satisfaction/SatisfactionState.h"
 #include "building/BuildingComponent.h"
-#include "transport/ModeOfTransport.h"
+#include "transport/TransportManager.h"
 #include "utility/UtilityFacade.h"
 #include "memento/CityMemento.h"
 
@@ -12,7 +12,10 @@ class City {
         SatisfactionState* satisfaction;
         BuildingComponent* buildings;
         UtilityFacade* utilitiesManager;
-        vector<ModeOfTransport*> modesOfTransport;
+        TransportManager* transportManager;
+
+        float budget;
+        int population;
 
     public:
         City();
@@ -23,11 +26,22 @@ class City {
         BuildingComponent* getBuildings(){return buildings;};
 
         //transport related functions
-        void addTransport(ModeOfTransport* transport);
+        
+        /// @brief Adds a mode of transport to the city
+        /// @param type "Airport", "Bus", "Ferry", "Train"
+        /// @param name eg. "Gautrain"
+        /// @param budget The budget of the city at the current point in time
+        void addTransport(string type, string name, float& budget);
+
+        void printTransport();
+
+        /// @brief Calculates if the current transport system is satisfactory for the population of the city
+        /// @return True if there is enough modes of transport and false if not
+        bool calcTransportSatisfaction();
 
         //memento related functions
-        CityMemento saveGame();
-        loadGame(CityMemento save);
+        void CityMemento saveGame();
+        void loadGame(CityMemento save);
 
 };
 
