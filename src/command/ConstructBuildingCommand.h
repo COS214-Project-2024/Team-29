@@ -2,11 +2,11 @@
 #define CONSTRUCTBUILDINGCOMMAND_H
 
 #include "Command.h"
-#include "building/CompositeNeighbourhood.h"
-#include "building/CommercialBuildingCreator.h"
-#include "building/IndustrialBuildingCreator.h"
-#include "building/ResidentialBuildingCreator.h"
-#include "building/LandmarkBuildingCreator.h"
+#include "../building/CompositeNeighbourhood.h"
+#include "../building/CommercialBuildingCreator.h"
+#include "../building/IndustrialBuildingCreator.h"
+#include "../building/ResidentialBuildingCreator.h"
+#include "../building/LandmarkBuildingCreator.h"
 
 
 class ConstructBuildingCommand : public Command{
