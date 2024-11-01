@@ -1,13 +1,15 @@
-#include "BuildingCreator.h"
-#include "Building.h"
+#ifndef INDUSTRIAL_BUILDING_CREATOR_H
+#define INDUSTRIAL_BUILDING_CREATOR_H
 
-#ifndef INDUSTRIALBUILDINGCREATOR_H
-#define INDUSTRIALBUILDINGCREATOR_H
+#include "BuildingCreator.h"
+#include "../buildingComposite/Building.h"
+
+#include <iostream>
 
 class IndustrialBuildingCreator : public BuildingCreator
 {
     public:
-        Building* createBuilding();
+        Building* createBuilding(std::string buildType);
 };
 
 #endif

@@ -3,8 +3,8 @@
 Ferry::Ferry(string name, float& budget)
 {
     this->name = name;
-    this->cost = 1_000_000;
-    this->capacity = 500_000;
+    this->cost = 1000000;
+    this->capacity = 500000;
     this->type = TransportType::PublicTransport;
 
     if(cost < budget) {

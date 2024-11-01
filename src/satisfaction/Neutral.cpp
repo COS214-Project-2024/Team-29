@@ -2,6 +2,8 @@
 #include "Satisfied.h"
 #include "Unsatisfied.h"
 
+#include "../managers/City.h"
+
 Neutral::Neutral() { this->state = "Neutral"; }
 
 std::string Neutral::getSatisfactionLevel() { return this->state; }

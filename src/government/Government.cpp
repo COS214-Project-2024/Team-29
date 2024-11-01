@@ -1,24 +1,17 @@
 #include "Government.h"
-#include "building/CommercialBuildingCreator.h"
-#include "building/IndustrialBuildingCreator.h"
-#include "building/LandmarkBuildingCreator.h"
-#include "building/ResidentialBuildingCreator.h"
+#include "../buildingFactory/CommercialBuildingCreator.h"
+#include "../buildingFactory/IndustrialBuildingCreator.h"
+#include "../buildingFactory/LandmarkBuildingCreator.h"
+#include "../buildingFactory/ResidentialBuildingCreator.h"
 
 Government* Government::uniqueinstance = 0;
 
 Government::Government(){
-	city = City::instance();
-	construct = new ConstructBuildingCommand(city->getBuildings(), new CommercialBuildingCreator(), new IndustrialBuildingCreator(), new ResidentialBuildingCreator(), new LandmarkBuildingCreator());
-	policies = new SetPolicyCommand(city);
-	//resources = new AllocateResourcesCommand();
 	budget = 1000000; // Add actual budget
 }
 
 Government::~Government(){
-	delete construct;
-	delete policies;
-	delete resources;
-	//delete city; // Might remove this
+	delete uniqueinstance;
 }
 
 Government* Government::instance() {
@@ -26,16 +19,4 @@ Government* Government::instance() {
 		uniqueinstance = new Government();
 	}
 	return uniqueinstance;
-}
-
-ConstructBuildingCommand* Government::getConstruct(){
-	return this->construct;
-}
-
-SetPolicyCommand* Government::getPolicies(){
-	return this->policies;
-}
-
-AllocateResourcesCommand* Government::getResources(){
-	return this->resources;
 }

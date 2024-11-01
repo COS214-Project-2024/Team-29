@@ -1,9 +1,9 @@
 #ifndef CITYMEMENTO_H
 #define CITYMEMENTO_H
 
-#include "satisfaction/SatisfactionState.h"
-#include "building/BuildingComponent.h"
-#include "transport/ModeOfTransport.h"
+#include "../satisfaction/SatisfactionState.h"
+#include "../buildingComposite/BuildingComponent.h"
+#include "../transport/ModeOfTransport.h"
 
 #include <iostream>
 #include <vector>
@@ -13,9 +13,9 @@ class CityMemento {
     public:
         ~CityMemento();
 
-        setSatisfaction(SatisfactionState* s);
-        setBuildings(BuildingComponent* b);
-        setModesOfTransport(vector<ModeOfTransport> m);
+        void setSatisfaction(SatisfactionState* s);
+        void setBuildings(BuildingComponent* b);
+        void setModesOfTransport(vector<ModeOfTransport> m);
 
         SatisfactionState* getSatisfaction();
         BuildingComponent* getBuildings();

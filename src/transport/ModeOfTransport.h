@@ -2,10 +2,11 @@
 #define MODEOFTRANSPORT_H 
 
 #include <iostream>
+#include <sstream>
 #include <vector>
 using namespace std;
 
-#include "../building/Building.h"
+#include "../buildingComposite/Building.h"
 
 /** 
  * @brief Abstract class for the different modes of transport

@@ -2,6 +2,8 @@
 #include "Satisfied.h"
 #include "Neutral.h"
 
+#include "../managers/City.h"
+
 Satisfied::Satisfied(){
     this->state = "Satisfied";
 }

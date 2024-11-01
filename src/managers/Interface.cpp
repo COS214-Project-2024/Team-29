@@ -16,12 +16,12 @@ void Interface::build(){
     //         2 - Commercial
     //         3 - Industrial
     //         4 - Landmark
-    gov->getConstruct()->execute();
+    
 }
 
 // assumes there is a generate policy method that randomly generates either a positive or negative policy
 void Interface::policy(){
-    gov->getPolicies()->execute();
+
 }
 
 // assumes there is a adjust tax method that changes the tax rate according to user input

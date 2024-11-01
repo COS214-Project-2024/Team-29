@@ -32,9 +32,9 @@ bool City::calcTransportSatisfaction()
     return false
 }
 
-CityMemento City::saveGame()
+CityMemento* City::saveGame()
 {
-    //corresponds to Memento::createMemento()
+    /* //corresponds to Memento::createMemento()
     CityMemento* save = new CityMemento();
     save->setSatisfaction(this->satisfaction);
     save->setBuildings(this->buildings);
@@ -42,10 +42,11 @@ CityMemento City::saveGame()
     // save->setGovernment(this->government);
 
     //any attributes that get added to city must be here
-    return save;
+    return save; */
+    return nullptr;
 }
 
-City::loadGame(CityMemento save)
+void City::loadGame(CityMemento* save)
 {
     //corresponds to Memento::setMemento(memento)
     this->satisfaction = save->getSatisfaction();
