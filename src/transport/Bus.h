@@ -18,7 +18,7 @@ class Bus: public ModeOfTransport {
         ///- Capacity: 5 000
         /// @param name the name of the bus
         /// @throws runtime_error if there is not enough budget for the bus
-        Bus(string name);
+        Bus(string name, float& budget);
         ~Bus();
         string getTransportType();
         string getName();

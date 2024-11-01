@@ -1,21 +1,19 @@
 #include "Bus.h"
 
-Bus::Bus(string name)
+Bus::Bus(string name, float& budget)
 {
     this->name = name;
     this->cost = 100000;
     this->capacity = 5000;
     this->type = TransportType::PublicTransport;
 
-    float budget = 100000; //somehow get the avaliable budget
-
     if(cost < budget) {
         cout << this->name << " Bus bought." << endl; 
-        // decrease budget by cost
+        budget -= cost;
     }
     else if(cost == budget) {
         cout << this->name << " Bus bought, but you just blew your remaining budget on a bus." << endl;
-        // decrease budget by cost
+        budget -= cost;
     }
     else {
         throw runtime_error("The city does not have enough money for a bus.");

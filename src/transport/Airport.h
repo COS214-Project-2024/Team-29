@@ -18,7 +18,7 @@ class Airport: public ModeOfTransport {
         ///- Capacity: 1 000 000 (General Transport capacity splits evenly between goods and public transport)
         /// @param name the name of the airports
         /// @throws runtime_error if there is not enough budget to build the airports
-        Airport(string name);
+        Airport(string name, float& budget);
         ~Airport();
         string getTransportType();
         string getName();

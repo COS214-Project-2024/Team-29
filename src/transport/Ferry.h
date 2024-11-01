@@ -18,7 +18,7 @@ class Ferry: public ModeOfTransport {
         ///- Capacity: 500 000
         /// @param name the name of the ferry
         /// @throws runtime_error if there is not enough budget to build the ferry
-        Ferry(string name);
+        Ferry(string name, float& budget);
         ~Ferry();
         string getTransportType();
         string getName();
