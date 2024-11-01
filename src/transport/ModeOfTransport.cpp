@@ -8,7 +8,7 @@ string ModeOfTransport::toString()
         << ", Name: " << this->getName() 
         << ", Capacity " << this->getCapacity();
 
-    return os;
+    return os.str();
 }
 
 int ModeOfTransport::getCapacity()

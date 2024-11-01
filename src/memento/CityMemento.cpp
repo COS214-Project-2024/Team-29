@@ -4,20 +4,20 @@ CityMemento::~CityMemento()
 {
     delete this->satisfaction;
     delete this->buildings;
-    delete this->modesOfTransport;
+    //delete this->modesOfTransport;
 }
 
-CityMemento::setSatisfaction(SatisfactionState *s)
+void CityMemento::setSatisfaction(SatisfactionState *s)
 {
     this->satisfaction = s;
 }
 
-CityMemento::setBuildings(BuildingComponent *b)
+void CityMemento::setBuildings(BuildingComponent *b)
 {
     this->buildings = b;
 }
 
-CityMemento::setModesOfTransport(vector<ModeOfTransport> m)
+void CityMemento::setModesOfTransport(vector<ModeOfTransport> m)
 {
     this->modesOfTransport = m;
 }

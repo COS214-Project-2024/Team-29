@@ -1,9 +1,9 @@
 #ifndef SATISFACTIONSTATE_H
 #define SATISFACTIONSTATE_H
 
-#include <string>
+class City;
 
-class City;  // Forward declaration
+#include <string>
 
 class SatisfactionState {
     public:

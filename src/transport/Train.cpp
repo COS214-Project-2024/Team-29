@@ -3,8 +3,8 @@
 Train::Train(string name)
 {
     this->name = name;
-    this->cost = 500_000;
-    this->capacity = 100_000;
+    this->cost = 500000;
+    this->capacity = 100000;
     this->type = TransportType::GoodsTransport;
 
     float budget = 100000; //somehow get the avaliable budget

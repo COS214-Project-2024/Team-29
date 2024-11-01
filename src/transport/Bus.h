@@ -20,6 +20,9 @@ class Bus: public ModeOfTransport {
         /// @throws runtime_error if there is not enough budget for the bus
         Bus(string name);
         ~Bus();
+        string getTransportType();
+        string getName();
+        string getType();
 
     private:
         float cost;

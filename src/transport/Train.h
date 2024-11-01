@@ -20,6 +20,10 @@ class Train: public ModeOfTransport {
         /// @throws runtime_error if there is not enough budget to build the train
         Train(string name);
         ~Train();
+        string getTransportType();
+        string getName();
+        string getType();
+        
     private:
         float cost;
         string name;

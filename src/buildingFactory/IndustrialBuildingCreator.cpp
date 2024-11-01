@@ -1,7 +1,21 @@
 #include "IndustrialBuildingCreator.h"
-#include "Building.h"
-#include "IndustrialBuilding.h"
+#include "../buildingComposite/industrial/IndustrialBuilding.h"
 
-Building* IndustrialBuildingCreator::createBuilding(){
-    return new IndustrialBuilding();
+#include "../buildingComposite/industrial/Factory.h"
+#include "../buildingComposite/industrial/Plant.h"
+#include "../buildingComposite/industrial/Warehouse.h"
+
+Building* IndustrialBuildingCreator::createBuilding(std::string buildType){
+    if(buildType == "Factory")
+    {
+        return new Factory();
+    }
+    else if(buildType == "Plant")
+    {
+        return new Plant();
+    }
+    else
+    {
+        return new Warehouse();
+    }
 }

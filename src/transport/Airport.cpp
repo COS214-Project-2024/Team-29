@@ -3,8 +3,8 @@
 Airport::Airport(string name)
 {
     this->name = name;
-    this->cost = 10_000_000;
-    this->capacity = 1_000_000;
+    this->cost = 10000000;
+    this->capacity = 1000000;
     this->type = TransportType::GeneralTransport;
 
     float budget = 100000; //somehow get the avaliable budget

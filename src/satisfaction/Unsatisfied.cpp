@@ -2,6 +2,8 @@
 #include "Unsatisfied.h"
 #include "VeryUnsatisfied.h"
 
+#include "../managers/City.h"
+
 Unsatisfied::Unsatisfied(){
     this->state = "Unsatisfied";
 }

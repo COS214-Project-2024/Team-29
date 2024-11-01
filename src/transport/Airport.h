@@ -20,6 +20,9 @@ class Airport: public ModeOfTransport {
         /// @throws runtime_error if there is not enough budget to build the airports
         Airport(string name);
         ~Airport();
+        string getTransportType();
+        string getName();
+        string getType();
 
     private:
         float cost;

@@ -1,13 +1,15 @@
-#include "BuildingCreator.h"
-#include "Building.h"
+#ifndef LANDMARK_BUILDING_CREATOR_H
+#define LANDMARK_BUILDING_CREATOR_H
 
-#ifndef LANDMARKBUILDINGCREATOR_H
-#define LANDMARKBUILDINGCREATOR_H
+#include "BuildingCreator.h"
+#include "../buildingComposite/Building.h"
+
+#include <iostream>
 
 class LandmarkBuildingCreator : public BuildingCreator
 {
     public:
-        Building* createBuilding();
+        Building* createBuilding(std::string buildType);
 };
 
 #endif

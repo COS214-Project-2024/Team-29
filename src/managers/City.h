@@ -2,11 +2,13 @@
 #define CITY_H
 
 
-#include "../building/BuildingComponent.h"
+#include "../buildingComposite/BuildingComponent.h"
 #include "../transport/ModeOfTransport.h"
 #include "../utility/UtilityFacade.h"
+#include "../memento/CityMemento.h"
 
 class SatisfactionState;  // Forward declaration
+class CityMemento;
 
 
 class City {
@@ -28,8 +30,8 @@ class City {
         void addTransport(ModeOfTransport* transport);
 
         //memento related functions
-        CityMemento saveGame();
-        loadGame(CityMemento save);
+        CityMemento* saveGame();
+        void loadGame(CityMemento* save);
 
 };
 

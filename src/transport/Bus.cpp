@@ -3,7 +3,7 @@
 Bus::Bus(string name)
 {
     this->name = name;
-    this->cost = 100_000;
+    this->cost = 100000;
     this->capacity = 5000;
     this->type = TransportType::PublicTransport;
 

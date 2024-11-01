@@ -1,7 +1,7 @@
-#include "Building.h"
+#ifndef BUILDING_CREATOR_H
+#define BUILDING_CREATOR_H
 
-#ifndef BUILDINGCREATOR_H
-#define BUILDINGCREATOR_H
+#include "../buildingComposite/Building.h"
 
 class BuildingCreator {
     protected:

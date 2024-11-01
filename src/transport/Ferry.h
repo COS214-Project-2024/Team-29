@@ -20,6 +20,9 @@ class Ferry: public ModeOfTransport {
         /// @throws runtime_error if there is not enough budget to build the ferry
         Ferry(string name);
         ~Ferry();
+        string getTransportType();
+        string getName();
+        string getType();
 
     private:
         float cost;
