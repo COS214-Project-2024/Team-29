@@ -35,7 +35,7 @@ class TaxRateVisitor : public BuildingVisitor {
 		virtual void visit(House* h);
 		virtual void visit(TownHouse* th);
 		virtual void visit(CompositeNeighbourhood* cn);
-		double getTotalTaxRate();
+		double getValue();
 };
 
 #endif
