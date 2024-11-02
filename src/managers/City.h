@@ -23,6 +23,11 @@ class City {
 
         float budget;
         int population;
+        int totalPowerDemand;
+        int totalWaterDemand;
+        int totalWasteDemand;
+        int totalSewageDemand;
+
 
     public:
         City();
@@ -54,6 +59,12 @@ class City {
         //memento related functions
         CityMemento* saveGame();
         void loadGame(CityMemento* save);
+
+        //add func to calculate demand and set demand vars
+
+        //add func to check efficiency of diff utilities, set satisfaction and print what is not meeting demand
+
+        //add func to upgrade different utilities and set satisfaction after upgrading
 
 
 };
