@@ -7,22 +7,12 @@ set(PROJECT_NAME TheCityKings)
 # Set the project name
 project(${PROJECT_NAME} C CXX)
 
-# Specify the C standard
+# Specify the C and C++ standards
 set(CMAKE_C_STANDARD 99)
-# Specify the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-include(FetchContent)
-
-# Declare and fetch GoogleTest
-FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
-)
-FetchContent_MakeAvailable(googletest)
-
-# Nice to have, libraries that will be linked together
+# Nice to have, libraries that will be linked together, shared libraries
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # Tells CMake we will have unit tests / googletest
