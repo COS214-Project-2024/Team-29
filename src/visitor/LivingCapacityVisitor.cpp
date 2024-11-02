@@ -54,6 +54,9 @@ void LivingCapacityVisitor::visit(TownHouse* th) {
     totalLivingCapacity += th->getLivingCapacity();
 }
 
+void LivingCapacityVisitor::visit(CompositeNeighbourhood* cn) {
+    cn->accept(this);
+}
 // Return totalLivingCapacity
 int LivingCapacityVisitor::getTotalLivingCapacity() const {
     return totalLivingCapacity;

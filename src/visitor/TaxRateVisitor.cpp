@@ -54,6 +54,10 @@ void TaxRateVisitor::visit(TownHouse* th) {
 	totalTaxRate += th->getTaxRate();
 }
 
+void TaxRateVisitor::visit(CompositeNeighbourhood* cn) {
+	cn->accept(this);
+}
+
 // Return totalTaxRate
 double TaxRateVisitor::getTotalTaxRate() const {
 	return totalTaxRate;
