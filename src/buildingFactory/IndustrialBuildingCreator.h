@@ -9,7 +9,7 @@
 class IndustrialBuildingCreator : public BuildingCreator
 {
     public:
-        Building* createBuilding(std::string buildType);
+        Building* createBuilding(int type);
 };
 
 #endif
