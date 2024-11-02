@@ -12,24 +12,15 @@
 class UtilityFacade{
     private:
         UtilitiesDecorator* powerPlant;
-        UtilitiesDecorator* sewageManagement;
-        UtilitiesDecorator* wasteManagement;
         UtilitiesDecorator* waterSupply;
-        int totalPowerDemand;
-        int totalWaterDemand;
-        int totalWasteDemand;
-        int totalSewageDemand;
+        UtilitiesDecorator* wasteManagement;
+        UtilitiesDecorator* sewageManagement;
     
     public:
         UtilityFacade();
         ~UtilityFacade();
-        void calculateUtilityDemands(int numBuilding, int population);
-        void checkAndUpgradeUtilities();
+        void checkAndUpgradeUtilities(int demand);
         void printResourceDistribution();
-        int getTotalPowerDemand();
-        int getTotalWaterDemand();
-        int getTotalWasteDemand();
-        int getTotalSewageDemand();
         int getPowerCapacity();
         int getWaterCapacity();
         int getWasteCapacity();
