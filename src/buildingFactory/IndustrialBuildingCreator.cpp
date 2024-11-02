@@ -5,17 +5,23 @@
 #include "../buildingComposite/industrial/Plant.h"
 #include "../buildingComposite/industrial/Warehouse.h"
 
-Building* IndustrialBuildingCreator::createBuilding(std::string buildType){
-    if(buildType == "Factory")
+// Input: type (int)
+//  1 - Factory
+//  2 - Warehouse
+//  3 - Plant
+Building* IndustrialBuildingCreator::createBuilding(int type){
+    switch (type)
     {
+    case 1:
         return new Factory();
-    }
-    else if(buildType == "Plant")
-    {
-        return new Plant();
-    }
-    else
-    {
+        break;
+    case 2:
         return new Warehouse();
+        break;
+    case 3:
+        return new Plant();
+        break;
+    default:
+        break;
     }
 }
