@@ -30,7 +30,7 @@ int TransportManager::getTotalCapacity()
 void TransportManager::printSummary()
 {
     for (ModeOfTransport* transport : modesOfTransport)
-        cout << transport->toString << endl;
+        cout << transport->toString() << endl;
 }
 
 TransportManager::~TransportManager()

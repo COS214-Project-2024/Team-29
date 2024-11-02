@@ -13,7 +13,7 @@ using namespace std;
 
 class TransportManager {
     private:
-        vector<ModesOfTransport*> modesOfTransport;
+        vector<ModeOfTransport*> modesOfTransport;
 
     public:
 
@@ -27,7 +27,7 @@ class TransportManager {
 
         void printSummary();
 
-        void ~TransportManager();
+        ~TransportManager();
 
 };
 
