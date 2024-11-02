@@ -72,3 +72,11 @@ City::~City(){
     delete transportManager; 
 
 }
+
+void City::caclulateTotalTax(){
+    BuildingVisitor * tax = new TaxRateVisitor();
+    for(auto * hood : buildings){
+        hood->accept(tax);
+    }
+    budget = tax->getValue();
+}

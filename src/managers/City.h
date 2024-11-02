@@ -9,6 +9,9 @@
 #include "../utility/UtilityFacade.h"
 #include "../memento/CityMemento.h"
 #include "../government/Government.h"
+#include "../visitor/TaxRateVisitor.h"
+#include "../visitor/BuildingVisitor.h"
+#include <list>
 
 class SatisfactionState;  // Forward declaration
 class CityMemento;
@@ -16,7 +19,7 @@ class CityMemento;
 class City {
     private:
         SatisfactionState* satisfaction;
-        BuildingComponent* buildings;
+        list<BuildingComponent*> buildings;
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
         Government* government;
@@ -35,7 +38,7 @@ class City {
 
         void setSatisfactionState(SatisfactionState* s);
 
-        BuildingComponent* getBuildings(){return buildings;};
+        list<BuildingComponent*> getBuildings(){return buildings;};
 
         //transport related functions
         
@@ -65,7 +68,8 @@ class City {
         //add func to check efficiency of diff utilities, set satisfaction and print what is not meeting demand
 
         //add func to upgrade different utilities and set satisfaction after upgrading
-
+        /// @brief Calculates the total Tax income accumulated from all of the buildings
+        void caclulateTotalTax();
 
 };
 
