@@ -5,7 +5,7 @@
 
 #include "../buildingComposite/BuildingComponent.h"
 
-#include "../transport/ModeOfTransport.h"
+#include "../transport/TransportManager.h"
 #include "../utility/UtilityFacade.h"
 #include "../memento/CityMemento.h"
 
