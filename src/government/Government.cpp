@@ -4,19 +4,44 @@
 #include "../buildingFactory/LandmarkBuildingCreator.h"
 #include "../buildingFactory/ResidentialBuildingCreator.h"
 
-Government* Government::uniqueinstance = 0;
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <random>
 
 Government::Government(){
-	budget = 1000000; // Add actual budget
+	//get list of policies
+	ifstream file("Policies.txt");
+    
+    if (!file.is_open()) {
+        std::cerr << "Failed to open file." << std::endl;
+        return;
+    }
+    
+    string line;
+    while (getline(file, line)) {
+        istringstream iss(line);
+        string name;
+        string impactString;
+        
+        if (getline(iss, name, ',') && getline(iss, impactString)) {
+            bool impact = (impactString == "true");
+            this->policies.push_back(Policy(name, impact));
+        } else {
+            cerr << "Error parsing line: " << line << endl;
+        }
+    }
+    
+    file.close();
 }
 
-Government::~Government(){
-	delete uniqueinstance;
-}
+bool Government::implementPolicy(float &budget)
+{
+	random_device rd;
+	mt19937 gen(rd());
+	uniform_int_distribution<> distrib(0, policies.size());
 
-Government* Government::instance() {
-	if(uniqueinstance == 0){
-		uniqueinstance = new Government();
-	}
-	return uniqueinstance;
+	int policyIndex = distrib(gen);
+
+	return this->policies.at(policyIndex).getImpact();
 }
