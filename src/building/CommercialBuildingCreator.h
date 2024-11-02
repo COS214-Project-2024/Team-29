@@ -6,7 +6,7 @@
 
 class CommercialBuildingCreator : public BuildingCreator {
     public:
-        Building* createBuilding();
+        Building* createBuilding(int type);
 };
 
 #endif
