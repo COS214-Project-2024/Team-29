@@ -22,4 +22,4 @@ endforeach()
 target_link_libraries(buildingComposite commercial industrial landmark residential)
 
 # Add src as an include directory for this module
-target_include_directories(buildingComposite PUBLIC $(CMAKE_SOURCE_DIR)/src)
+target_include_directories(buildingComposite PUBLIC ${CMAKE_SOURCE_DIR}/src)
