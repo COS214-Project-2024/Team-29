@@ -1,25 +1,34 @@
-# Include the current directory
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+# Set minimum version of CMake
+cmake_minimum_required(VERSION 3.20)
+
+# Set variable for project name
+set(PROJECT_NAME TheCityKings)
 
 # Add subdirectories for modules
-set(DIRECTORIES 
-    buildingComposite
-    buildingFactory
-    government
-    managers
-    satisfaction
-    transport
-    utility
-    visitor 
+add_subdirectory(buildingComposite)
+add_subdirectory(buildingFactory)
+add_subdirectory(government)
+add_subdirectory(managers)
+add_subdirectory(satisfaction)
+add_subdirectory(transport)
+add_subdirectory(utility)
+add_subdirectory(visitor)
+
+# Add the main executable
+add_executable(${PROJECT_NAME} main.cpp)
+
+# Link libraries created from all the subdirectories
+target_link_libraries(${PROJECT_NAME} 
+    commercialLib
+    industrialLib
+    landmarkLib
+    residentialLib
+    buildingCompositeLib
+    buildingFactoryLib
+    governmentLib
+    managersLib
+    satisfactionLib
+    transportLib
+    utilityLib
+    visitorLib
 )
-
-# Add each directory as a subdirectory
-foreach(DIR ${DIRECTORIES})
-    add_subdirectory(${DIR})
-endforeach()
-
-# Create the executable
-add_executable(TheCityKings main.cpp)
-
-# Link module libraries to the executable
-target_link_libraries(TheCityKings PUBLIC ${DIRECTORIES})

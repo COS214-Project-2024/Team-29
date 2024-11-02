@@ -12,12 +12,10 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Nice to have, libraries that will be linked together, shared libraries
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-
 # Option to enable/disable testing
 option(ENABLE_TESTS "Build test for the project" OFF)
 
+# Set variable for subdirectories in 
 # Add src directory
 add_subdirectory(src)
 
