@@ -59,6 +59,8 @@ void TaxRateVisitor::visit(CompositeNeighbourhood* cn) {
 }
 
 // Return totalTaxRate
-double TaxRateVisitor::getTotalTaxRate() const {
-	return totalTaxRate;
+double TaxRateVisitor::getTotalTaxRate(){
+	int temp = totalTaxRate;
+	totalTaxRate = 0;
+	return temp;
 }
