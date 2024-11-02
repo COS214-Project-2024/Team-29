@@ -1,11 +1,11 @@
+#include current directory
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
 #Gather source and header files for current module
-file(GLOB Sources *.cpp)
-file(GLOB Headers *.h)
+file(GLOB SOURCES *.cpp)
+file(GLOB HEADERS *.h)
 
-# Define current module as a library
-add_library(buildingComposite ${Sources} ${Headers})
-
-# Add dependency for this module
+# Make a list of directories to add as subdirectories
 set(DIRECTORIES
     commercial
     industrial
@@ -13,13 +13,16 @@ set(DIRECTORIES
     residential
 )
 
-# Add each directory as a subdirectory
+# Add subdirectories for each module
 foreach(DIR ${DIRECTORIES})
     add_subdirectory(${DIR})
 endforeach()
 
-# Link modules to current module
-target_link_libraries(buildingComposite commercial industrial landmark residential)
+# Create a library from current module
+add_library(buildingComposite ${SOURCES} ${HEADERS})
 
 # Add src as an include directory for this module
-target_include_directories(buildingComposite PUBLIC ${CMAKE_SOURCE_DIR}/src)
+target_include_directories(buildingComposite PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Link modules to current module
+target_link_libraries(buildingComposite PUBLIC ${DIRECTORIES})
