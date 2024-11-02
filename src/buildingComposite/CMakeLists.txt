@@ -1,25 +1,15 @@
-#Gather source and header files for current module
-file(GLOB Sources *.cpp)
-file(GLOB Headers *.h)
+# Add all subdirectories
+add_subdirectory(commercial)
+add_subdirectory(industrial)
+add_subdirectory(landmark)
+add_subdirectory(residential)
 
-# Define current module as a library
-add_library(buildingComposite ${Sources} ${Headers})
+# Gather source and header files for current module
+file(GLOB SOURCES *.cpp)
+file(GLOB HEADERS *.h)
 
-# Add dependency for this module
-set(DIRECTORIES
-    commercial
-    industrial
-    landmark
-    residential
-)
-
-# Add each directory as a subdirectory
-foreach(DIR ${DIRECTORIES})
-    add_subdirectory(${DIR})
-endforeach()
-
-# Link modules to current module
-target_link_libraries(buildingComposite commercial industrial landmark residential)
+# Create a library from current module
+add_library(buildingCompositeLib ${SOURCES} ${HEADERS})
 
 # Add src as an include directory for this module
-target_include_directories(buildingComposite PUBLIC ${CMAKE_SOURCE_DIR}/src)
+target_include_directories(buildingCompositeLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

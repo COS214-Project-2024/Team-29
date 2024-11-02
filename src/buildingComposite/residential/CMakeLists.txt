@@ -1,9 +1,9 @@
 #Gather source and header files for current module
-file(GLOB Sources *.cpp)
-file(GLOB Headers *.h)
+file(GLOB SOURCES *.cpp)
+file(GLOB HEADERS *.h)
 
 # Define current module as a library
-add_library(residential ${Sources} ${Headers})
+add_library(residentialLib ${SOURCES} ${HEADERS})
 
 # Add src as an include directory for this module
-target_include_directories(residential PUBLIC ${CMAKE_SOURCE_DIR}/src)
+target_include_directories(residentialLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

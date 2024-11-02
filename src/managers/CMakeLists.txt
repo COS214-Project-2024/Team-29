@@ -1,9 +1,9 @@
-#Gather source and header files for the managers module
-file(GLOB Sources *.cpp)
-file(GLOB Headers *.h)
+#Gather source and header files for current module
+file(GLOB SOURCES *.cpp)
+file(GLOB HEADERS *.h)
 
 # Define the government module as a library
-add_library(managers ${Sources} ${Headers})
+add_library(managersLib ${SOURCES} ${HEADERS})
 
 # Add src as an include directory for this module
-target_include_directories(managers PUBLIC ${CMAKE_SOURCE_DIR}/src)
+target_include_directories(managersLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
