@@ -15,6 +15,7 @@
 
 class SatisfactionState;  // Forward declaration
 class CityMemento;
+class Government;
 
 class City {
     private:
