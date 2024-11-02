@@ -32,7 +32,18 @@ bool City::calcTransportSatisfaction()
     return false;
 }
 
-CityMemento* City::saveGame()
+void City::implementPolicy()
+{
+    bool satisfied = this->government->implementPolicy(budget);
+
+    if(satisfied)
+        this->satisfaction->incSatisfactionState(this);
+    else
+        this->satisfaction->decSatisfactionState(this);
+        
+}
+
+CityMemento *City::saveGame()
 {
     /* //corresponds to Memento::createMemento()
     CityMemento* save = new CityMemento();

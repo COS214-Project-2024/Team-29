@@ -1,0 +1,14 @@
+More Public Holidays,true
+Crime Reduction Programs,true
+Green Spaces Expansion,true
+Free Public Wifi,true
+Senior Citizen Benefits,true
+Wildlife Protection,true
+Ban on operating a vehicle while blindfolded,true
+Speed Cameras,false
+Increased Parking Fees,false
+Alcohol and Tabacco Ban,false
+High Fines for Littering,false
+Fast Food Ban,false
+Chewing Gum Ban,false
+Brandy Special Price Increase,false

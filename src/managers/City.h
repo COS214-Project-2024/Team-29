@@ -8,6 +8,7 @@
 #include "../transport/TransportManager.h"
 #include "../utility/UtilityFacade.h"
 #include "../memento/CityMemento.h"
+#include "../government/Government.h"
 
 class SatisfactionState;  // Forward declaration
 class CityMemento;
@@ -18,6 +19,7 @@ class City {
         BuildingComponent* buildings;
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
+        Government* government;
 
         float budget;
         int population;
@@ -43,6 +45,11 @@ class City {
         /// @brief Calculates if the current transport system is satisfactory for the population of the city
         /// @return True if there is enough modes of transport and false if not
         bool calcTransportSatisfaction();
+
+        //government related functions
+
+        /// @brief Implements a random policy that will increase/decrease citizen satisfaction and costs R 5000 to implement
+        void implementPolicy();
 
         //memento related functions
         CityMemento* saveGame();
