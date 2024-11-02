@@ -6,4 +6,4 @@ file(GLOB Headers *.h)
 add_library(residential ${Sources} ${Headers})
 
 # Add src as an include directory for this module
-target_include_directories(residential PUBLIC $(CMAKE_SOURCE_DIR)/src)
+target_include_directories(residential PUBLIC ${CMAKE_SOURCE_DIR}/src)

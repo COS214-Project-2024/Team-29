@@ -6,4 +6,4 @@ file(GLOB Headers *.h)
 add_library(landmark ${Sources} ${Headers})
 
 # Add src as an include directory for this module
-target_include_directories(landmark PUBLIC $(CMAKE_SOURCE_DIR)/src)
+target_include_directories(landmark PUBLIC ${CMAKE_SOURCE_DIR}/src)

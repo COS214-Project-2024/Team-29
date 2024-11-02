@@ -29,10 +29,21 @@ bool City::calcTransportSatisfaction()
 {
     if(transportManager->getTotalCapacity() > this->population*0.75)
         return true;
-    return false
+    return false;
 }
 
-CityMemento* City::saveGame()
+void City::implementPolicy()
+{
+    bool satisfied = this->government->implementPolicy(budget);
+
+    if(satisfied)
+        this->satisfaction->incSatisfactionState(this);
+    else
+        this->satisfaction->decSatisfactionState(this);
+        
+}
+
+CityMemento *City::saveGame()
 {
     /* //corresponds to Memento::createMemento()
     CityMemento* save = new CityMemento();
@@ -49,15 +60,15 @@ CityMemento* City::saveGame()
 void City::loadGame(CityMemento* save)
 {
     //corresponds to Memento::setMemento(memento)
-    this->satisfaction = save->getSatisfaction();
-    this->buildings = save->getBuildings();
-    this->modesOfTransport = save->getModesOfTransport();
+    // this->satisfaction = save->getSatisfaction();
+    // this->buildings = save->getBuildings();
+    // this->modesOfTransport = save->getModesOfTransport();
 }
 
 City::~City(){
     // delete other class variables here
     delete satisfaction;
 
-    delete tranportManager; 
+    delete transportManager; 
 
 }

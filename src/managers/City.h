@@ -5,9 +5,10 @@
 
 #include "../buildingComposite/BuildingComponent.h"
 
-#include "../transport/ModeOfTransport.h"
+#include "../transport/TransportManager.h"
 #include "../utility/UtilityFacade.h"
 #include "../memento/CityMemento.h"
+#include "../government/Government.h"
 
 class SatisfactionState;  // Forward declaration
 class CityMemento;
@@ -18,9 +19,15 @@ class City {
         BuildingComponent* buildings;
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
+        Government* government;
 
         float budget;
         int population;
+        int totalPowerDemand;
+        int totalWaterDemand;
+        int totalWasteDemand;
+        int totalSewageDemand;
+
 
     public:
         City();
@@ -44,9 +51,20 @@ class City {
         /// @return True if there is enough modes of transport and false if not
         bool calcTransportSatisfaction();
 
+        //government related functions
+
+        /// @brief Implements a random policy that will increase/decrease citizen satisfaction and costs R 5000 to implement
+        void implementPolicy();
+
         //memento related functions
         CityMemento* saveGame();
         void loadGame(CityMemento* save);
+
+        //add func to calculate demand and set demand vars
+
+        //add func to check efficiency of diff utilities, set satisfaction and print what is not meeting demand
+
+        //add func to upgrade different utilities and set satisfaction after upgrading
 
 
 };

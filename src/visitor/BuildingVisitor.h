@@ -16,6 +16,7 @@ class Park;
 class Estate;
 class House;
 class TownHouse;
+class CompositeNeighborhood;
 
 class BuildingVisitor {
 	public:
@@ -31,6 +32,7 @@ class BuildingVisitor {
 		virtual void visit(Estate* e) = 0;
 		virtual void visit(House* h) = 0;
 		virtual void visit(TownHouse* th) = 0;
+		virtual void visit(CompositeNeighborhood* cn) = 0;
 };
 
 #endif

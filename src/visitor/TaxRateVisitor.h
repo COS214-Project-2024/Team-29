@@ -14,6 +14,7 @@
 #include "../buildingComposite/residential/Estate.h"
 #include "../buildingComposite/residential/House.h"
 #include "../buildingComposite/residential/TownHouse.h"
+#include "../buildingComposite/CompositeNeighbourhood.h"
 
 class TaxRateVisitor : public BuildingVisitor {
 	private:
@@ -33,6 +34,7 @@ class TaxRateVisitor : public BuildingVisitor {
 		virtual void visit(Estate* e);
 		virtual void visit(House* h);
 		virtual void visit(TownHouse* th);
+		virtual void visit(CompositeNeighbourhood* cn);
 		double getTotalTaxRate() const;
 };
 
