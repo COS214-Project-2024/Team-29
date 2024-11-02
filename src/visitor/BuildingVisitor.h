@@ -32,7 +32,8 @@ class BuildingVisitor {
 		virtual void visit(Estate* e) = 0;
 		virtual void visit(House* h) = 0;
 		virtual void visit(TownHouse* th) = 0;
-		virtual void visit(CompositeNeighborhood* cn) = 0;
+		virtual void visit(CompositeNeighbourhood* cn) = 0;
+		virtual double getValue() = 0;
 };
 
 #endif

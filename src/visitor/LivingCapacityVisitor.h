@@ -34,7 +34,7 @@ class LivingCapacityVisitor : public BuildingVisitor {
             virtual void visit(House* h);
             virtual void visit(TownHouse* th);
             virtual void visit(CompositeNeighbourhood* cn);
-            int getTotalLivingCapacity() const;
+            virtual double getValue();
 };
 
 #endif
