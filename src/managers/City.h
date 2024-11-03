@@ -41,6 +41,9 @@ class City {
 
         list<BuildingComponent*> getBuildings(){return buildings;};
 
+        // for the Interface
+        int getPopulation();
+
         //transport related functions
         
         /// @brief Adds a mode of transport to the city
