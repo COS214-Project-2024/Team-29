@@ -40,3 +40,6 @@ googletest/
 
 #.vscode
 .vscode/
+
+# Ignore all backup files of vpp
+doc/*.bak_*
