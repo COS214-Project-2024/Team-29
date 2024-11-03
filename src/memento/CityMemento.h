@@ -3,10 +3,13 @@
 
 #include "../satisfaction/SatisfactionState.h"
 #include "../buildingComposite/BuildingComponent.h"
-#include "../transport/ModeOfTransport.h"
+#include "../transport/TransportManager.h"
+#include "../government/Government.h"
+#include "../utility/UtilityFacade.h"
 
 #include <iostream>
 #include <vector>
+#include <list>
 using namespace std;
 
 class CityMemento {
@@ -23,8 +26,17 @@ class CityMemento {
 
     private:
         SatisfactionState* satisfaction;
-        BuildingComponent* buildings;
-        vector<ModeOfTransport*> modesOfTransport;
+        list<BuildingComponent*> buildings;
+        UtilityFacade* utilitiesManager;
+        TransportManager* transportManager;
+        Government* government;
+
+        float budget;
+        int population;
+        int totalPowerDemand;
+        int totalWaterDemand;
+        int totalWasteDemand;
+        int totalSewageDemand;
 };
 
 #endif
