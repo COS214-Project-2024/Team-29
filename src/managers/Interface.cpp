@@ -19,17 +19,30 @@ void Interface::startSimulation(){
     // increments number of cycles
     do {
         std::cout<<"Cycle "<<this->cycle<<"\n"
-                 <<"==============\n";
+                 <<"====================\n";
 
         // choice loop
         // allows user to make multiple choices per cycle until they quit or go ot the next cycle
         while (handleChoice(choice)){
+            // displays stats about the city
+            std::cout<<"City Stats:\n"
+                <<"--------------------\n"
+                <<"Balance: "<<this->c->getBudget()
+                <<"\tPopulation: "<<this->c->getPopulation()
+                <<"\nPower demand: "<<this->c->getPowerDemand()
+                <<"\tWater demand: "<<this->c->getWaterDemand()
+                <<"\nWaste demand: "<<this->c->getWasteDemand()
+                <<"\tSewage demand: "<<this->c->getSewageDemand()
+                <<"\n====================\n\n";
+
+            // displays the available options to the user
             std::cout<<"Choose an option to manage your city:\n"
-                 <<"\t1. Add building\n"
-                 <<"\t2. Implement a new policy\n"
-                 <<"\t3. Next cycle\n"
-                 <<"\t0. Quit simulation\n"
-                 <<"====================\n\n";
+                <<"--------------------\n"
+                <<"\t1. Add building"
+                <<"\t2. Implement a new policy\n"
+                <<"\t3. Next cycle"
+                <<"\t0. Quit simulation\n"
+                <<"====================\n\n";
             std::cin>>choice;
         }
 
