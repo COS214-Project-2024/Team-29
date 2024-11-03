@@ -34,6 +34,9 @@ class TransportManager {
          * @brief Calculates and retrieves the total capacity of all transport modes.
          * @return Total capacity cost as an int.
          */
+
+        TransportManager* copy(float& budget);
+
         int getTotalCapacity();
         /**
          * @brief Prints out the generated string of the decription of each type of
