@@ -7,6 +7,7 @@
 #include "../government/Government.h"
 #include "../utility/UtilityFacade.h"
 
+
 #include <iostream>
 #include <vector>
 #include <list>
@@ -19,7 +20,7 @@ class CityMemento {
         void setSatisfaction(SatisfactionState* s);
         void setBuildings(list<BuildingComponent*> b);
         void setUtilityManager(UtilityFacade * m);
-        void setGovernment(Government g);
+        void setGovernment(Government * g);
         void setTransportManager(TransportManager * m);
 
         void setBudget(double b);
@@ -32,7 +33,7 @@ class CityMemento {
         SatisfactionState* getSatisfaction() const;
         list<BuildingComponent*> getBuildings() const;
         UtilityFacade * getUtilityManager() const;
-        Government getGovernment() const;
+        Government * getGovernment() const;
         TransportManager * getTransportManager() const;
 
         double getBudget() const;
@@ -45,9 +46,10 @@ class CityMemento {
     private:
         SatisfactionState* satisfaction;
         list<BuildingComponent*> buildings;
+
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
-        Government government;
+        Government * government;
 
         float budget;
         int population;
