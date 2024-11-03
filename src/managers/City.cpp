@@ -15,6 +15,10 @@ void City::setSatisfactionState(SatisfactionState* s){
     this->satisfaction = s;
 }
 
+int City::getPopulation(){
+    return population;
+}
+
 void City::addTransport(string type,string name, float& budget)
 {
     this->transportManager->addTransport(type, name, budget);
