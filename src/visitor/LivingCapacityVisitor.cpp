@@ -58,6 +58,8 @@ void LivingCapacityVisitor::visit(CompositeNeighbourhood* cn) {
     cn->accept(this);
 }
 // Return totalLivingCapacity
-int LivingCapacityVisitor::getTotalLivingCapacity() const {
-    return totalLivingCapacity;
+double LivingCapacityVisitor::getValue(){
+    double temp = totalLivingCapacity;
+    totalLivingCapacity = 0;
+    return temp;
 }

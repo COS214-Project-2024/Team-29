@@ -12,34 +12,15 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Nice to have, libraries that will be linked together, shared libraries
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+# Option to enable/disable testing
+option(ENABLE_TESTS "Build test for the project" OFF)
 
-# Tells CMake we will have unit tests / googletest
-enable_testing()
+# Set variable for subdirectories in 
+# Add src directory
+add_subdirectory(src)
 
-# Add dependency for project
-set(DIRECTORIES
-    src/buildingComposite
-    src/buildingFactory
-    src/government
-    src/managers
-    src/satisfaction
-    src/transport
-    src/utility
-    src/visitor
-)
-
-# Add each directory as a subdirectory
-foreach(DIR ${DIRECTORIES})
-    add_subdirectory(${DIR})
-endforeach()
-
-# Define main executable
-add_executable(${PROJECT_NAME} src/main.cpp)
-
-# Link modules to main executable
-target_link_libraries(${PROJECT_NAME} buildingComposite buildingFactory government managers satisfaction transport utility visitor)
-
-# Keep code seperate from tests
-add_subdirectory(test)
+# Add test directory only if ENABLE_TESTS is ON
+if(ENABLE_TESTS)
+    enable_testing()
+    add_subdirectory(test)
+endif()

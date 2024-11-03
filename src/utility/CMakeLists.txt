@@ -1,9 +1,9 @@
-#Gather source and header files for the utility module
-file(GLOB Sources *.cpp)
-file(GLOB Headers *.h)
+#Gather source and header files for current module
+file(GLOB SOURCES *.cpp)
+file(GLOB HEADERS *.h)
 
 # Define the utility module as a library
-add_library(utility ${Sources} ${Headers})
+add_library(utilityLib ${SOURCES} ${HEADERS})
 
 # Add src as an include directory for this module
-target_include_directories(utility PUBLIC ${CMAKE_SOURCE_DIR}/src)
+target_include_directories(utilityLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

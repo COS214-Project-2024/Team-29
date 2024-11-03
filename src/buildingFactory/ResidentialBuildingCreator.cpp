@@ -6,17 +6,25 @@
 #include "../buildingComposite/residential/House.h"
 #include "../buildingComposite/residential/TownHouse.h"
 
-Building* ResidentialBuildingCreator::createBuilding(std::string buildType){
-    if(buildType == "Estate")
+/* 
+Input: type (int)
+    1 - Townhouse
+    2 - Estate
+    3 - House
+ */
+Building* ResidentialBuildingCreator::createBuilding(int type){
+    switch (type)
     {
-        return new Estate();
-    }
-    else if(buildType == "House")
-    {
-        return new House();
-    }
-    else
-    {
+    case 1:
         return new TownHouse();
+        break;
+    case 2:
+        return new Estate();
+        break;
+    case 3:
+        return new House();
+        break;
+    default:
+        break;
     }
 }

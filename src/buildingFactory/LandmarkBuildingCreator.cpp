@@ -5,17 +5,25 @@
 #include "../buildingComposite/landmark/Park.h"
 #include "../buildingComposite/landmark/Monument.h"
 
-Building* LandmarkBuildingCreator::createBuilding(std::string buildType){
-    if(buildType == "CulturalCentre")
+/*
+Input: type (int)
+    1 - Park
+    2 - CulturalCentre
+    3 - Monument
+*/
+Building* LandmarkBuildingCreator::createBuilding(int type){
+    switch (type)
     {
-        return new CulturalCentre();
-    }
-    else if(buildType == "Park")
-    {
+    case 1:
         return new Park();
-    }
-    else
-    {
+        break;
+    case 2:
+        return new CulturalCentre();
+        break;
+    case 3:
         return new Monument();
+        break;
+    default:
+        break;
     }
 }

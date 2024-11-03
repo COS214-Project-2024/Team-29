@@ -5,17 +5,23 @@
 #include "../buildingComposite/commercial/Shop.h"
 #include "../buildingComposite/commercial/Office.h"
 
-Building* CommercialBuildingCreator::createBuilding(std::string buildType){
-    if(buildType == "Shop")
+// Input: type (int)
+//  1 - Office
+//  2 - Shop
+//  3 - Mall
+Building* CommercialBuildingCreator::createBuilding(int type){
+    switch (type)
     {
-        return new Shop();
-    }
-    else if(buildType == "Mall")
-    {
-        return new Mall();
-    }
-    else
-    {
+    case 1:
         return new Office();
+        break;
+    case 2:
+        return new Shop();
+        break;
+    case 3:
+        return new Mall();
+        break;
+    default:
+        break;
     }
 }
