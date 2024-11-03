@@ -6,18 +6,14 @@
 
 class Interface {
     private:
-        Government* gov;
+        City* c;
+        int cycle;
     
     public:
         /// @brief default constructor for Interface
         Interface();
-        /// @brief calls the construct command from government
-        void build();
-        /// @brief used to generate a random new policy in government
-        void policy();
-        /// @brief changes the tax rate base on user input
-        /// @param change 
-        //void taxes(double change);
+        void startSimulation();
+        bool handleChoice(int choice);
         ~Interface();
 };
 
