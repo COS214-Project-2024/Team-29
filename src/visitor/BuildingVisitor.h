@@ -16,7 +16,7 @@ class Park;
 class Estate;
 class House;
 class TownHouse;
-class CompositeNeighborhood;
+class CompositeNeighbourhood;
 
 class BuildingVisitor {
 	public:

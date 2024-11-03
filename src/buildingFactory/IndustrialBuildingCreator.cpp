@@ -12,16 +12,16 @@
 Building* IndustrialBuildingCreator::createBuilding(int type){
     switch (type)
     {
-    case 1:
-        return new Factory();
+        case 1:
+            return new Factory();
         break;
-    case 2:
-        return new Warehouse();
+        case 2:
+            return new Warehouse();
         break;
-    case 3:
-        return new Plant();
+        case 3:
+            return new Plant();
         break;
-    default:
-        break;
+        default:
+            return nullptr;
     }
 }
