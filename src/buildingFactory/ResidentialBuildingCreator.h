@@ -9,11 +9,7 @@
 class ResidentialBuildingCreator : public BuildingCreator
 {
     public:
-<<<<<<< HEAD
         Building* createBuilding(int bName);
-=======
-        Building* createBuilding(int type);
->>>>>>> develop
 };
 
 #endif
