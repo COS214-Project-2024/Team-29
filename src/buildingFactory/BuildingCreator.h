@@ -5,7 +5,7 @@
 
 class BuildingCreator {
     protected:
-        virtual Building* createBuilding() = 0;
+        virtual Building* createBuilding(int bName) = 0;
 };
 
 #endif

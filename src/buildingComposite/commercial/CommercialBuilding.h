@@ -4,8 +4,13 @@
 #include "../Building.h"
 
 class CommercialBuilding : public Building {
+    protected:
+        int employeeCapacity;
+
     public:
-        void accept(BuildingVisitor* v) override = 0;
+        CommercialBuilding(double taxIncome, double buildCost, int employeeCapacity);
+        int getEmployeeCapacity() const;
+        virtual ~CommercialBuilding() {};
 };
 
 #endif

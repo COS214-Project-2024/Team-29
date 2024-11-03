@@ -1,13 +1,8 @@
 #include "Warehouse.h"
 
+Warehouse::Warehouse(double taxIncome, double buildCost, int employeeCapacity) 
+        : IndustrialBuilding(taxIncome, buildCost, employeeCapacity) {}
+
 void Warehouse::accept(BuildingVisitor* v) {
     v->visit(this);
-}
-
-int Warehouse::getLivingCapacity() const {
-    return 0;
-}
-
-double Warehouse::getTaxRate() const {
-    return 1500;
 }

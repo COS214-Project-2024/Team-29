@@ -6,9 +6,9 @@
 
 class House : public ResidentialBuilding {
     public:
-        void accept(BuildingVisitor* v) override;
-        int getLivingCapacity() const;
-        double getTaxRate() const;
+        House(double taxIncome, double buildCost, int livingCapacity);
+        virtual void accept(BuildingVisitor* v) override;
+        ~House() {};
 };
 
 #endif

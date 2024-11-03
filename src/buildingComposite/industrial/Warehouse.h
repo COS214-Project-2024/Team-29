@@ -6,9 +6,9 @@
 
 class Warehouse : public IndustrialBuilding {
     public:
-        void accept(BuildingVisitor* v) override;
-        int getLivingCapacity() const;
-        double getTaxRate() const;
+        Warehouse(double taxIncome, double buildCost, int employeeCapacity);
+        virtual void accept(BuildingVisitor* v) override;
+        ~Warehouse() {};
 };
 
 #endif

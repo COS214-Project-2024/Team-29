@@ -9,7 +9,7 @@
 class LandmarkBuildingCreator : public BuildingCreator
 {
     public:
-        Building* createBuilding(int type);
+        Building* createBuilding(int bName);
 };
 
 #endif

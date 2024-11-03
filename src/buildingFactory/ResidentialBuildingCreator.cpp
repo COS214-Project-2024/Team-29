@@ -12,17 +12,17 @@ Input: type (int)
     2 - Estate
     3 - House
  */
-Building* ResidentialBuildingCreator::createBuilding(int type){
-    switch (type)
+Building* ResidentialBuildingCreator::createBuilding(int bName) {
+    switch (bName)
     {
         case 1:
-            return new TownHouse();
+            return new TownHouse(150, 120000, 6);
         break;
         case 2:
-            return new Estate();
+            return new Estate(500, 1500000, 8);
         break;
         case 3:
-            return new House();
+            return new House(100, 75000, 4);
         break;
         default:
             return nullptr;

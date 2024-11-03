@@ -4,8 +4,13 @@
 #include "../Building.h"
 
 class LandmarkBuilding : public Building {
+    protected:
+        int satisfactionValue;
+
     public:
-        void accept(BuildingVisitor* v) override = 0;
+        LandmarkBuilding(double taxIncome, double buildCost, int satisfactionValue);
+        int getSatisfactionValue() const;
+        virtual ~LandmarkBuilding() {};
 };
 
 #endif

@@ -1,13 +1,14 @@
 #include "UtilitiesDecorator.h"
 #include <iostream>
 #include <cmath>
+
 UtilitiesDecorator::UtilitiesDecorator(int capacity)
 {
     currentCapacity = capacity;
     level = 0;
 }
 
-bool UtilitiesDecorator::upgardeLevel()
+bool UtilitiesDecorator::upgradeLevel()
 {
     if(level<3)
     {
@@ -33,7 +34,7 @@ int UtilitiesDecorator::getCapacity()
 }
 
 int UtilitiesDecorator::getLevel()
-{;
+{
     return level;
 }
 

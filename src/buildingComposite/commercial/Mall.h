@@ -6,9 +6,9 @@
 
 class Mall : public CommercialBuilding {
     public:
-        void accept(BuildingVisitor* v) override;
-        int getLivingCapacity() const;
-        double getTaxRate() const;
+        Mall(double taxIncome, double buildCost, int employeeCapacity);
+        virtual void accept(BuildingVisitor* v) override;
+        virtual ~Mall() {};
 };
 
 #endif
