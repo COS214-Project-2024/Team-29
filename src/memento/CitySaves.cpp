@@ -1,16 +1,18 @@
-#ifndef CITYSAVES_H
-#define CITYSAVES_H
+#include "CitySaves.h"
 
-#include "CityMemento.h"
+CitySaves::~CitySaves(){
 
-class CitySaves {
-    public:
-        addSave(CityMemento* m);
-        removeSave();
-        CityMemento* getSave();
-        ~CityMemento();
-    private:
-        CityMemento* save;
-};
+}
 
-#endif
+void CitySaves::addSave(CityMemento* m){
+
+}
+
+void CitySaves::removeSave(){
+
+}
+
+CityMemento* CitySaves::getSave(){
+
+}
+
