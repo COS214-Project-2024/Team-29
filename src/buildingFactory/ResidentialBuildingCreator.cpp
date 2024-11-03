@@ -15,16 +15,16 @@ Input: type (int)
 Building* ResidentialBuildingCreator::createBuilding(int type){
     switch (type)
     {
-    case 1:
-        return new TownHouse();
+        case 1:
+            return new TownHouse();
         break;
-    case 2:
-        return new Estate();
+        case 2:
+            return new Estate();
         break;
-    case 3:
-        return new House();
+        case 3:
+            return new House();
         break;
-    default:
-        break;
+        default:
+            return nullptr;
     }
 }
