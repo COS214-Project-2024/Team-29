@@ -6,6 +6,7 @@ CityMemento::~CityMemento()
     delete buildingManager;
     delete utilitiesManager;
     delete transportManager;
+    delete government;
 
 }
 
