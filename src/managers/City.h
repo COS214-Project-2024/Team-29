@@ -41,6 +41,14 @@ class City {
 
         list<BuildingComponent*> getBuildings(){return buildings;};
 
+        // for the Interface
+        int getPopulation();
+        float getBudget();
+        int getPowerDemand();
+        int getWaterDemand();
+        int getWasteDemand();
+        int getSewageDemand();
+
         //transport related functions
         
         /// @brief Adds a mode of transport to the city
