@@ -2,15 +2,15 @@
 #define CITYSAVES_H
 
 #include "CityMemento.h"
-
+#include <vector>
 class CitySaves {
     public:
-        addSave(CityMemento* m);
-        removeSave();
+        void addSave(CityMemento* m);
+        void removeSave();
         CityMemento* getSave();
-        ~CityMemento();
+        ~CitySaves();
     private:
-        CityMemento* save;
+        vector<CityMemento*> save;
 };
 
 #endif
