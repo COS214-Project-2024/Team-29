@@ -70,8 +70,7 @@ bool Interface::handleChoice(int choice){
             <<"====================================\n";
         cin>>type;
         build(type);
-        // TODO: integrate Building Manager here
-        // tell Building Manager to add a building
+        
     } else if (choice == 2){
         this->c->implementPolicy();
     }
@@ -79,6 +78,8 @@ bool Interface::handleChoice(int choice){
 }
 
 void build(int type){
+    // TODO: integrate Building Manager here
+        // tell Building Manager to add a building
     if (type <= 3){
         // build residential building with parameter type = type
     } else if (type <= 6){
