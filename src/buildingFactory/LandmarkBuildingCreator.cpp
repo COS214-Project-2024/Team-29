@@ -15,13 +15,13 @@ Building* LandmarkBuildingCreator::createBuilding(int bName) {
     switch (bName)
     {
         case 1:
-            return new Park();
+            return new Park(0, 300000, 50);
         break;
         case 2:
-            return new CulturalCentre();
+            return new CulturalCentre(0, 800000, 100);
         break;
         case 3:
-            return new Monument();
+            return new Monument(0, 500000, 80);
         break;
         default:
             return nullptr;

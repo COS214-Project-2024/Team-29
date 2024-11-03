@@ -1,14 +1,15 @@
 #include "BuildingManager.h"
+#include "../visitor/TotalVisitor.h"
 
 std::string BuildingManager::createNeighbourhood(std::string nName) {
     // Failure to add if neighbourhood already exists
-    if (neighbourhoodExists(nName)) {
+    if(neighbourhoodExists(nName)) {
         return "Neighbourhood not created as" + nName + " already exists!";
     }
 
     // No neighbourhood found, add to list
     nList.push_back(new CompositeNeighbourhood(nName));
-    return "";
+    return "Neighbourhood " + nName + " created!";
 }
 
 /*
@@ -52,25 +53,44 @@ double BuildingManager::buildBuilding(std::string nName, int bType, int bName, d
             return -1;
     }
 
-    // Check if building was created
-    if (newB == nullptr) {
+    // Check if building in budget
+    if (newB->getBuildCost() > balance) {
+        delete newB;
         return -1;
     }
+
+    // Add building to neighbourhood
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        if ((*it)->getName() == nName) {
+            (*it)->addBuilding(newB);
+            return newB->getBuildCost();
+        }
+    }
+
+    // Neighbourhood not found
+    delete newB;
+    return -1;
 }
 
-double BuildingManager::getTotalTaxIncome() {
-    double totalTaxIncome = 0.0;
+std::string BuildingManager::getTotalPerNeighbourhood() {
+    std::string output = "";
+    BuildingVisitor* v;
     for (auto it = nList.begin(); it != nList.end(); it++) {
-        totalTaxIncome += (*it)->getTaxIncome();
+        v = new TotalVisitor();
+        (*it)->accept(v);
+
+        //Format string
+        output += "Neighbourhood: " + (*it)->getName() + "\n";
+        output += "Total Building Cost: " + std::to_string(((TotalVisitor*)v)->getTotalBuildCost()) + "\n";
+        output += "Total Tax Income: " + std::to_string(((TotalVisitor*)v)->getTotalTaxIncome()) + "\n";
+        output += "Total Living Capacity: " + std::to_string(((TotalVisitor*)v)->getTotalLivingCapacity()) + "\n";
+        output += "Total Employee Capacity: " + std::to_string(((TotalVisitor*)v)->getTotalEmployeeCapacity()) + "\n";
+        output += "Total Satisfaction Value: " + std::to_string(((TotalVisitor*)v)->getTotalSatisfactionValue()) + "\n\n";
     }
-    return totalTaxIncome;
+    return output;  
 }
 
 BuildingManager::~BuildingManager() {
-    delete cCreator;
-    delete iCreator;
-    delete lCreator;
-    delete rCreator;
     for (auto it = nList.begin(); it != nList.end(); it++) {
         delete *it;
     }

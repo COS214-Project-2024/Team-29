@@ -1,5 +1,14 @@
 #include "TotalVisitor.h"
 
+// Constructor
+TotalVisitor::TotalVisitor() {
+    totalBuildCost = 0;
+    totalTaxIncome = 0;
+    totalLivingCapacity = 0;
+    totalEmployeeCapacity = 0;
+    totalSatisfactionValue = 0;
+}
+
 // Visit Functions
 void TotalVisitor::visit(Mall* m) {
     totalTaxIncome += m->getTaxIncome();

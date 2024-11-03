@@ -1,5 +1,5 @@
-#ifndef Total_VISITOR_H
-#define Total_VISITOR_H
+#ifndef TOTAL_VISITOR_H
+#define TOTAL_VISITOR_H
 
 #include "BuildingVisitor.h"
 #include "../buildingComposite/commercial/Mall.h"
@@ -18,13 +18,14 @@
 
 class TotalVisitor : public BuildingVisitor {
         private:
-            double totalBuildCost = 0;
-            double totalTaxIncome = 0;
-            int totalLivingCapacity = 0;
-            int totalEmployeeCapacity = 0;
-            int totalSatisfactionValue = 0;
+            double totalBuildCost;
+            double totalTaxIncome;
+            int totalLivingCapacity;
+            int totalEmployeeCapacity;
+            int totalSatisfactionValue;
 
         public:
+            TotalVisitor();
             virtual void visit(Mall* m);
             virtual void visit(Office* o);
             virtual void visit(Shop* s);
@@ -45,6 +46,8 @@ class TotalVisitor : public BuildingVisitor {
             int getTotalLivingCapacity() const;
             int getTotalEmployeeCapacity() const;
             int getTotalSatisfactionValue() const;
+            //Destructor
+            ~TotalVisitor() {};
 };
 
 #endif
