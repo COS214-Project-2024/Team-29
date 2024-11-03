@@ -18,7 +18,7 @@ class CityMemento {
         ~CityMemento();
 
         void setSatisfaction(SatisfactionState* s);
-        void setBuildingManager(BuildingManager b);
+        void setBuildingManager(BuildingManager * b);
         void setUtilityManager(UtilityFacade * m);
         void setGovernment(Government * g);
         void setTransportManager(TransportManager * m);
@@ -46,7 +46,6 @@ class CityMemento {
     private:
         SatisfactionState* satisfaction;
         BuildingManager* buildingManager;
-
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
         Government * government;
