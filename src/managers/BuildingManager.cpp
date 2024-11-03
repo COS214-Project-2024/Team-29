@@ -86,6 +86,8 @@ std::string BuildingManager::getTotalPerNeighbourhood() {
         output += "Total Living Capacity: " + std::to_string(((TotalVisitor*)v)->getTotalLivingCapacity()) + "\n";
         output += "Total Employee Capacity: " + std::to_string(((TotalVisitor*)v)->getTotalEmployeeCapacity()) + "\n";
         output += "Total Satisfaction Value: " + std::to_string(((TotalVisitor*)v)->getTotalSatisfactionValue()) + "\n\n";
+
+        delete v;
     }
     return output;  
 }
