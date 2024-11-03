@@ -24,7 +24,7 @@ void CityMemento::setUtilityManager(UtilityFacade* m) {
     this->utilitiesManager = m;
 }
 
-void CityMemento::setGovernment(Government g) {
+void CityMemento::setGovernment(Government * g) {
     this->government = g;
 }
 
@@ -68,7 +68,7 @@ UtilityFacade* CityMemento::getUtilityManager() const {
     return this->utilitiesManager;
 }
 
-Government CityMemento::getGovernment() const {
+Government * CityMemento::getGovernment() const {
     return this->government;
 }
 

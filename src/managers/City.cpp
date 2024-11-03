@@ -59,10 +59,19 @@ CityMemento *City::saveGame()
 
 void City::loadGame(CityMemento* save)
 {
-    //corresponds to Memento::setMemento(memento)
-    // this->satisfaction = save->getSatisfaction();
-    // this->buildings = save->getBuildings();
-    // this->modesOfTransport = save->getModesOfTransport();
+    this->satisfaction = save->getSatisfaction();
+    this->buildings  = save->getBuildings();
+
+    this->utilitiesManager = save->getUtilityManager();
+    this->transportManager = save->getTransportManager();
+    this->government = save->getGovernment();
+
+    this->budget = save->getBudget();
+    this->population = save->getPopulation();
+    this->totalPowerDemand = save->getTotalPowerDemand();
+    this->totalWaterDemand = save->getTotalWaterDemand();
+    this->totalWasteDemand = save->getTotalWasteDemand();
+    this->totalSewageDemand = save->getTotalSewageDemand();
 }
 
 City::~City(){
