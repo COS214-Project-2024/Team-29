@@ -17,19 +17,37 @@ class CityMemento {
         ~CityMemento();
 
         void setSatisfaction(SatisfactionState* s);
-        void setBuildings(BuildingComponent* b);
-        void setModesOfTransport(vector<ModeOfTransport> m);
+        void setBuildings(list<BuildingComponent*> b);
+        void setUtilityManager(UtilityFacade * m);
+        void setGovernment(Government g);
+        void setTransportManager(TransportManager * m);
 
-        SatisfactionState* getSatisfaction();
-        BuildingComponent* getBuildings();
-        vector<ModeOfTransport*> getModesOfTransport();
+        void setBudget(double b);
+        void setPopulation(int p);
+        void setTotalPowerDemand(int t);
+        void setTotalWaterDemand(int t);
+        void setTotalWasteDemand(int t);
+        void setTotalSewageDemand(int t);
+
+        SatisfactionState* getSatisfaction() const;
+        list<BuildingComponent*> getBuildings() const;
+        UtilityFacade * getUtilityManager() const;
+        Government getGovernment() const;
+        TransportManager * getTransportManager() const;
+
+        double getBudget() const;
+        int getPopulation() const;
+        int getTotalPowerDemand() const;
+        int getTotalWaterDemand() const;
+        int  getTotalWasteDemand() const;
+        int getTotalSewageDemand()const;
 
     private:
         SatisfactionState* satisfaction;
         list<BuildingComponent*> buildings;
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
-        Government* government;
+        Government government;
 
         float budget;
         int population;
