@@ -3,10 +3,7 @@
 CityMemento::~CityMemento()
 {
     delete satisfaction;
-    for( auto * curr : buildings){
-        delete curr;
-    }
-    buildings.clear();
+    delete buildingManager;
     delete utilitiesManager;
     delete transportManager;
 
@@ -60,7 +57,7 @@ SatisfactionState* CityMemento::getSatisfaction() const {
     return this->satisfaction->clone();
 }
 
-list<BuildingComponent*> CityMemento::getBuildingManager() const {
+BuildingManager* CityMemento::getBuildingManager() const {
     return this->buildingManager->clone();
 }
 
@@ -72,8 +69,8 @@ Government * CityMemento::getGovernment() const {
     return this->government->clone();
 }
 
-TransportManager* CityMemento::getTransportManager() const {
-    return this->transportManager->clone();
+TransportManager* CityMemento::getTransportManager(float& b) const {
+    return this->transportManager->copy(b);
 }
 
 double CityMemento::getBudget() const {
