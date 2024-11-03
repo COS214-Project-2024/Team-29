@@ -9,8 +9,8 @@
 //  1 - Office
 //  2 - Shop
 //  3 - Mall
-Building* CommercialBuildingCreator::createBuilding(int type){
-    switch (type)
+Building* CommercialBuildingCreator::createBuilding(int bName) {
+    switch (bName)
     {
         case 1:
             return new Office();

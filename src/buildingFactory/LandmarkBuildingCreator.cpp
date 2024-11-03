@@ -11,8 +11,8 @@ Input: type (int)
     2 - CulturalCentre
     3 - Monument
 */
-Building* LandmarkBuildingCreator::createBuilding(int type){
-    switch (type)
+Building* LandmarkBuildingCreator::createBuilding(int bName) {
+    switch (bName)
     {
         case 1:
             return new Park();

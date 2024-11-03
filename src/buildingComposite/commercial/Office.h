@@ -6,9 +6,9 @@
 
 class Office : public CommercialBuilding {
     public:
-        void accept(BuildingVisitor* v) override;
-        int getLivingCapacity() const;
-        double getTaxRate() const;
+        Office(double taxIncome, double buildCost, int employeeCapacity);
+        virtual void accept(BuildingVisitor* v) override;
+        virtual ~Office() {};
 };
 
 #endif

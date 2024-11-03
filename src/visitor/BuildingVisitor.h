@@ -3,7 +3,6 @@
 
 #include <list>
 
-class BuildingComponent;  // Forward declaration
 class Mall;
 class Office;
 class Shop;
@@ -33,7 +32,7 @@ class BuildingVisitor {
 		virtual void visit(House* h) = 0;
 		virtual void visit(TownHouse* th) = 0;
 		virtual void visit(CompositeNeighbourhood* cn) = 0;
-		virtual double getValue() = 0;
+		virtual ~BuildingVisitor() {};
 };
 
 #endif

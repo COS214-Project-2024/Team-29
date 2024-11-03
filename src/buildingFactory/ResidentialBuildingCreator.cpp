@@ -12,8 +12,8 @@ Input: type (int)
     2 - Estate
     3 - House
  */
-Building* ResidentialBuildingCreator::createBuilding(int type){
-    switch (type)
+Building* ResidentialBuildingCreator::createBuilding(int bName) {
+    switch (bName)
     {
         case 1:
             return new TownHouse();

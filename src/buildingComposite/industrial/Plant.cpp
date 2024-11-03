@@ -1,13 +1,8 @@
 #include "Plant.h"
 
+Plant::Plant(double taxIncome, double buildCost, int employeeCapacity) 
+        : IndustrialBuilding(taxIncome, buildCost, employeeCapacity) {}
+
 void Plant::accept(BuildingVisitor* v) {
     v->visit(this);
-}
-
-int Plant::getLivingCapacity() const {
-    return 0;
-}
-
-double Plant::getTaxRate() const {
-    return 2000;
 }

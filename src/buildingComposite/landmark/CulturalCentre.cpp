@@ -1,13 +1,8 @@
 #include "CulturalCentre.h"
 
+CulturalCentre::CulturalCentre(double taxIncome, double buildCost, int satisfactionValue) 
+        : LandmarkBuilding(taxIncome, buildCost, satisfactionValue) {}
+
 void CulturalCentre::accept(BuildingVisitor* v) {
     v->visit(this);
-}
-
-int CulturalCentre::getLivingCapacity() const {
-    return 0;
-}
-
-double CulturalCentre::getTaxRate() const {
-    return 800.0;
 }

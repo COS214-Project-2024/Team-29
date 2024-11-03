@@ -6,9 +6,9 @@
 
 class Monument : public LandmarkBuilding {
     public:
-        void accept(BuildingVisitor* v) override;
-        int getLivingCapacity() const;
-        double getTaxRate() const;
+        Monument(double taxIncome, double buildCost, int satisfactionValue);
+        virtual void accept(BuildingVisitor* v) override;
+        ~Monument() {};
 };
 
 #endif

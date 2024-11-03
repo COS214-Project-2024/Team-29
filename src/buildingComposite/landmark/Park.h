@@ -6,9 +6,9 @@
 
 class Park : public LandmarkBuilding {
     public:
-        void accept(BuildingVisitor* v) override;
-        int getLivingCapacity() const;
-        double getTaxRate() const;
+        Park(double taxIncome, double buildCost, int satisfactionValue);
+        virtual void accept(BuildingVisitor* v) override;
+        ~Park() {};
 };
 
 #endif

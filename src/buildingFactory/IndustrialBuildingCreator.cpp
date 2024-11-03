@@ -9,8 +9,8 @@
 //  1 - Factory
 //  2 - Warehouse
 //  3 - Plant
-Building* IndustrialBuildingCreator::createBuilding(int type){
-    switch (type)
+Building* IndustrialBuildingCreator::createBuilding(int bName) {
+    switch (bName)
     {
         case 1:
             return new Factory();

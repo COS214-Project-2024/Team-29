@@ -6,9 +6,9 @@
 
 class CulturalCentre : public LandmarkBuilding {
     public:
-        void accept(BuildingVisitor* v) override;
-        int getLivingCapacity() const;
-        double getTaxRate() const;
+        CulturalCentre(double taxIncome, double buildCost, int satisfactionValue);
+        virtual void accept(BuildingVisitor* v) override;
+        ~CulturalCentre() {};
 };
 
 #endif

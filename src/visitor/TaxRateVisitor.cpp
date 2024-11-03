@@ -1,3 +1,4 @@
+/*
 #include "TaxRateVisitor.h"
 
 // Initiliaze totalTaxRate to 0
@@ -64,3 +65,4 @@ double TaxRateVisitor::getValue(){
 	totalTaxRate = 0;
 	return temp;
 }
+*/

@@ -3,16 +3,21 @@
 
 #include "BuildingComponent.h"
 #include <list> 
+#include <string>
 
 class CompositeNeighbourhood : public BuildingComponent {
     private:
         std::list<BuildingComponent*> buildingsList;
+        std::string nName; // Neighbourhood name
         
     public:
-        CompositeNeighbourhood();
-        void accept(BuildingVisitor* bv);
-        void addBuilding(BuildingComponent* bc);
-        void demolishBuilding(BuildingComponent* bc);
+        CompositeNeighbourhood(std::string nName);
+        virtual void addBuilding(BuildingComponent* bc) override;
+        virtual void demolishBuilding(BuildingComponent* bc) override;
+        virtual double getTaxIncome() const override;
+        virtual double getBuildCost() const override;
+        std::string getName();
+        virtual void accept(BuildingVisitor* bv) override;
         ~CompositeNeighbourhood();
 };
 

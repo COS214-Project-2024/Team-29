@@ -1,5 +1,5 @@
-#ifndef LIVING_CAPACITY_VISITOR_H
-#define LIVING_CAPACITY_VISITOR_H
+#ifndef Total_VISITOR_H
+#define Total_VISITOR_H
 
 #include "BuildingVisitor.h"
 #include "../buildingComposite/commercial/Mall.h"
@@ -16,11 +16,15 @@
 #include "../buildingComposite/residential/TownHouse.h"
 #include "../buildingComposite/CompositeNeighbourhood.h"
 
-class LivingCapacityVisitor : public BuildingVisitor {
+class TotalVisitor : public BuildingVisitor {
         private:
-            int totalLivingCapacity;
+            double totalBuildCost = 0;
+            double totalTaxIncome = 0;
+            int totalLivingCapacity = 0;
+            int totalEmployeeCapacity = 0;
+            int totalSatisfactionValue = 0;
+
         public:
-            LivingCapacityVisitor();
             virtual void visit(Mall* m);
             virtual void visit(Office* o);
             virtual void visit(Shop* s);
@@ -34,7 +38,13 @@ class LivingCapacityVisitor : public BuildingVisitor {
             virtual void visit(House* h);
             virtual void visit(TownHouse* th);
             virtual void visit(CompositeNeighbourhood* cn);
-            virtual double getValue();
+            
+            //Getters
+            double getTotalBuildCost() const;
+            double getTotalTaxIncome() const;
+            int getTotalLivingCapacity() const;
+            int getTotalEmployeeCapacity() const;
+            int getTotalSatisfactionValue() const;
 };
 
 #endif
