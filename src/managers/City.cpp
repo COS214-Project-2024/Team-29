@@ -16,7 +16,27 @@ void City::setSatisfactionState(SatisfactionState* s){
 }
 
 int City::getPopulation(){
-    return population;
+    return this->population;
+}
+
+float City::getBudget(){
+    return this->budget;
+}
+
+int City::getPowerDemand(){
+    return this->totalPowerDemand;
+}
+
+int City::getWaterDemand(){
+    return this->totalWaterDemand;
+}
+
+int City::getWasteDemand(){
+    return this->totalWasteDemand;
+}
+
+int City::getSewageDemand(){
+    return this->totalSewageDemand;
 }
 
 void City::addTransport(string type,string name, float& budget)

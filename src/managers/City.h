@@ -43,6 +43,11 @@ class City {
 
         // for the Interface
         int getPopulation();
+        float getBudget();
+        int getPowerDemand();
+        int getWaterDemand();
+        int getWasteDemand();
+        int getSewageDemand();
 
         //transport related functions
         
