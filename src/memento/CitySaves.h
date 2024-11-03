@@ -2,15 +2,21 @@
 #define CITYSAVES_H
 
 #include "CityMemento.h"
-#include <vector>
+#include <map>
+#include <string>
+#include <iostream>
+using namespace std;
 class CitySaves {
     public:
-        void addSave(CityMemento* m);
-        void removeSave();
-        CityMemento* getSave();
+        /// @brief Adds a CityMemento object to the map while using the name as the key
+        /// @param name The key of the CityMemento
+        /// @param m The CityMemento object to be stored
+        void addSave(string name, CityMemento* m);
+        void removeSave(string name);
+        CityMemento* getSave(string name);
         ~CitySaves();
     private:
-        vector<CityMemento*> save;
+        map<string ,CityMemento*> save;
 };
 
 #endif
