@@ -76,10 +76,11 @@ CityMemento *City::saveGame()
     //save->setBuildingManager(this->buildingManager->clone()); Possibly going to remove this
     
     save->setUtilityManager(this->utilitiesManager->clone());
-    save->setTransportManager(this->transportManager->clone());
+    float temp = budget;
+    save->setTransportManager(this->transportManager->copy(temp));
     save->setGovernment(this->government->clone());
 
-    save->setBudget(this->budget);
+    save->setBudget(temp);
     save->setPopulation(this->population);
     save->setTotalPowerDemand(this->totalPowerDemand);
     save->setTotalWaterDemand(this->totalWaterDemand);
@@ -91,13 +92,13 @@ CityMemento *City::saveGame()
 void City::loadGame(CityMemento* save)
 {
     this->satisfaction = save->getSatisfaction();
-    this->buildings  = save->getBuildings();
-
+    this->buildingManager  = save->getBuildingManager();
+    this->budget = save->getBudget();
     this->utilitiesManager = save->getUtilityManager();
-    this->transportManager = save->getTransportManager();
+    this->transportManager = save->getTransportManager(this->budget);
     this->government = save->getGovernment();
 
-    this->budget = save->getBudget();
+    
     this->population = save->getPopulation();
     this->totalPowerDemand = save->getTotalPowerDemand();
     this->totalWaterDemand = save->getTotalWaterDemand();
