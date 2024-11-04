@@ -23,6 +23,8 @@ class TransportManager {
         /// @param budget The budget of the city at the current point in time
         void addTransport(string type, string name, float& budget);
 
+        TransportManager* copy(float& budget);
+
         int getTotalCapacity();
 
         void printSummary();
