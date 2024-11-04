@@ -24,6 +24,11 @@ class TotalVisitor : public BuildingVisitor {
             int totalEmployeeCapacity;
             int totalSatisfactionValue;
 
+            int totalPowerDemand;
+            int totalWaterDemand;
+            int totalWasteDemand;
+            int totalSewageDemand;
+
         public:
             TotalVisitor();
             virtual void visit(Mall* m);
@@ -46,6 +51,10 @@ class TotalVisitor : public BuildingVisitor {
             int getTotalLivingCapacity() const;
             int getTotalEmployeeCapacity() const;
             int getTotalSatisfactionValue() const;
+            int getTotalPowerDemand() const;
+            int getTotalWaterDemand() const;
+            int getTotalWasteDemand() const;
+            int getTotalSewageDemand() const;
             //Destructor
             ~TotalVisitor() {};
 };
