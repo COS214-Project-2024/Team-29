@@ -24,7 +24,7 @@ void Interface::startSimulation(){
 
         // choice loop
         // allows user to make multiple choices per cycle until they quit or go ot the next cycle
-        while (handleChoice(choice)){
+        while (!handleChoice(choice)){
             // displays stats about the city
             std::cout<<"City Stats:\n"
                 <<"--------------------\n"
