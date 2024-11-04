@@ -5,6 +5,7 @@
 #include "../utility/UtilityFacade.h"
 #include "../government/Government.h"
 #include "../managers/BuildingManager.h"
+#include "../memento/CityMemento.h"
 
 #include <list>
 

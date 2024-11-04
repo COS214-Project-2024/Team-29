@@ -18,23 +18,22 @@ using namespace std;
 class CityMemento {
     public:
         ~CityMemento();
-
+        //Sets for Objects
         void setSatisfaction(SatisfactionState* s);
         void setBuildingManager(BuildingManager * b);
         void setUtilityManager(UtilityFacade * m);
         void setGovernment(Government * g);
         void setTransportManager(TransportManager * m);
+        //Sets for int or float variables
+        void setBudget(float b);
+        void setBuildCost(double b);
+        void setTax(double t);
 
-        void setBudget(double b);
         void setPopulation(int p);
         void setTotalPowerDemand(int t);
         void setTotalWaterDemand(int t);
         void setTotalWasteDemand(int t);
         void setTotalSewageDemand(int t);
-        void setBuildingManager(BuildingManager * b);
-        void setUtilityManager(UtilityFacade * m);
-        void setGovernment(Government * g);
-        void setTransportManager(TransportManager * m);
 
         SatisfactionState* getSatisfaction() const;
         BuildingManager* getBuildingManager() const;
@@ -42,7 +41,9 @@ class CityMemento {
         Government * getGovernment() const;
         TransportManager * getTransportManager(float& b) const;
 
-        double getBudget() const;
+        float getBudget() const;
+        double getBuildCost() const;
+        double getTax() const;
         int getPopulation() const;
         int getTotalPowerDemand() const;
         int getTotalWaterDemand() const;
@@ -57,6 +58,9 @@ class CityMemento {
         Government * government;
 
         float budget;
+        double totalBuildCost;
+        double totalTax;
+        
         int population;
         int totalPowerDemand;
         int totalWaterDemand;

@@ -30,8 +30,16 @@ void CityMemento::setTransportManager(TransportManager* m) {
     this->transportManager = m;
 }
 
-void CityMemento::setBudget(double b) {
+void CityMemento::setBudget(float b) {
     this->budget = b;
+}
+
+void CityMemento::setBuildCost(double b) {
+    this->totalBuildCost = b;
+}
+
+void CityMemento::setTax(double t) {
+    this->totalTax = t;
 }
 
 void CityMemento::setPopulation(int p) {
@@ -74,9 +82,18 @@ TransportManager* CityMemento::getTransportManager(float& b) const {
     return this->transportManager->copy(b);
 }
 
-double CityMemento::getBudget() const {
+float CityMemento::getBudget() const {
     return this->budget;
 }
+
+double CityMemento::getBuildCost() const{
+    return totalBuildCost;
+}
+
+double CityMemento::getTax() const{
+    return totalTax;
+}
+
 
 int CityMemento::getPopulation() const {
     return this->population;

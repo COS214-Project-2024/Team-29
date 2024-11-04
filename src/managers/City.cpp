@@ -69,18 +69,21 @@ void City::implementPolicy()
         
 }
 
-CityMemento *City::saveGame()
+CityMemento* City::saveGame()
 {
     CityMemento* save = new CityMemento();
     save->setSatisfaction(this->satisfaction->clone());
-    //save->setBuildingManager(this->buildingManager->clone()); Possibly going to remove this
-    
+    save->setBuildingManager(this->buildingManager->clone());
     save->setUtilityManager(this->utilitiesManager->clone());
     float temp = budget;
     save->setTransportManager(this->transportManager->copy(temp));
     save->setGovernment(this->government->clone());
 
     save->setBudget(temp);
+    save->setBuildCost(totalBuildCost);
+    save->setTax(totalTax);
+
+
     save->setPopulation(this->population);
     save->setTotalPowerDemand(this->totalPowerDemand);
     save->setTotalWaterDemand(this->totalWaterDemand);
@@ -93,11 +96,14 @@ void City::loadGame(CityMemento* save)
 {
     this->satisfaction = save->getSatisfaction();
     this->buildingManager  = save->getBuildingManager();
+    
+    this->totalBuildCost = save->getBuildCost();
+    this->totalTax = save->getTax();
     this->budget = save->getBudget();
     this->utilitiesManager = save->getUtilityManager();
     this->transportManager = save->getTransportManager(this->budget);
     this->government = save->getGovernment();
-
+    
     
     this->population = save->getPopulation();
     this->totalPowerDemand = save->getTotalPowerDemand();
