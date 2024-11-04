@@ -19,6 +19,17 @@ void TransportManager::addTransport(string type, string name, float& budget)
     }
 }
 
+TransportManager *TransportManager::copy(float &budget)
+{
+    TransportManager* manager = new TransportManager();
+
+    for(ModeOfTransport* tm : this->modesOfTransport) {
+        manager->addTransport(tm->getType(), tm->getName(), budget);
+    }
+
+    return manager;
+}
+
 int TransportManager::getTotalCapacity()
 {
     int total = 0;
