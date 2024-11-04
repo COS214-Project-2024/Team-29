@@ -22,5 +22,5 @@ void Neutral::decSatisfactionState(City* c) {
 }
 
 SatisfactionState* Neutral::clone(){
-    
+    return new Neutral();
 }

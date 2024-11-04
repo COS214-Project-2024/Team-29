@@ -18,3 +18,7 @@ void VerySatisfied::incSatisfactionState(City* c){
 void VerySatisfied::decSatisfactionState(City* c){
     c->setSatisfactionState(new Satisfied());
 }
+
+SatisfactionState* VerySatisfied::clone(){
+    return new VerySatisfied();
+}
