@@ -7,6 +7,7 @@ City::City(){
     this->satisfaction = new Neutral();
     this->transportManager = new TransportManager();
     this->buildingManager = new BuildingManager();
+    this->government = new Government();
 
     //Starting conditions
     this->budget = (float)1000000000;
