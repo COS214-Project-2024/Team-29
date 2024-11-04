@@ -15,13 +15,13 @@ Building* CommercialBuildingCreator::createBuilding(int bName) {
     switch (bName)
     {
         case 1:
-            return new Office(500, 500000, 50);
+            return new Office(5000, 50000, 50, 250, 250, 250, 250);
             break;
         case 2:
-            return new Shop(200, 150000, 10);
+            return new Shop(2000, 15000, 10, 150, 150, 150, 150);
             break;
         case 3:
-            return new Mall(1000, 2000000, 200);
+            return new Mall(10000, 200000, 200, 350, 350, 350, 350);
             break;
         default:
             return nullptr;
