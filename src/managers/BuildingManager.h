@@ -49,6 +49,11 @@ class BuildingManager
          */
         std::string getTotalPerNeighbourhood();
         /**
+         * @brief Retrieves names of all neighbourhoods
+         * @return List of neighbourhood names as a string
+         */
+        std::string getNeighbourhoods();
+        /**
          * @brief Calculates the total cost of all buildings constructed.
          * @return Total construction cost.
          */
