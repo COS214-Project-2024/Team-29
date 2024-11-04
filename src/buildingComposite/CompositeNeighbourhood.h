@@ -20,6 +20,10 @@ class CompositeNeighbourhood : public BuildingComponent {
         
     public:
         /**
+         * @brief Constructs a CompositeNeighbourhood with an empty name.
+         */
+        CompositeNeighbourhood();
+        /**
          * @brief Constructs a CompositeNeighbourhood with a specified name.
          * @param nName Name of the neighbourhood.
          */

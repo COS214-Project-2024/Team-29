@@ -19,16 +19,5 @@ add_executable(${PROJECT_NAME} main.cpp)
 
 # Link libraries created from all the subdirectories
 target_link_libraries(${PROJECT_NAME} 
-    commercialLib
-    industrialLib
-    landmarkLib
-    residentialLib
-    buildingCompositeLib
-    buildingFactoryLib
-    governmentLib
     managersLib
-    satisfactionLib
-    transportLib
-    utilityLib
-    visitorLib
 )

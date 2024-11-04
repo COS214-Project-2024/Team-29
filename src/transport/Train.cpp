@@ -19,13 +19,11 @@ Train::Train(string name, float& budget)
         throw runtime_error("The city does not have enough money for a Train.");
     }
 
-    this->goodsTransportCapacity += capacity;
 }
 
 Train::~Train()
 {
     cout << this->name << " Train destroyed." << endl; 
-    this->goodsTransportCapacity -= capacity;
 }
 
 string Train::getTransportType() {

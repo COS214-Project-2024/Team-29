@@ -1,5 +1,6 @@
 #include "Interface.h"
 #include <iostream>
+#include <string>
 
 Interface::Interface(){
     this->c = new City();
@@ -77,18 +78,40 @@ bool Interface::handleChoice(int choice){
     return false;
 }
 
-void build(int type){
-    // TODO: integrate Building Manager here
-        // tell Building Manager to add a building
+void Interface::build(int type){
+    int bType, bName;
+    std::string nName;
+
     if (type <= 3){
         // build residential building with parameter type = type
+        bType = 4;
+        bName = type;
     } else if (type <= 6){
         // build commercial building with type = (type+1)%4
+        bType = 1;
+        bName = (type+1)%4;
     } else if (type <= 9){
         // build industrial building with type = (type+2)%4
+        bType = 2;
+        bName = (type+2)%4;
     } else if (type <= 12){
         //build landmark with type = (type+3)%4
+        bType = 3;
+        bName = (type+3)%4;
     } else {
         std::cout<<"=> Invalid input\n";
+        return;
     }
+
+    std::cout<<"In which neighbourhood would you like to place the building? ";
+    std::cin>>nName;
+
+    int buildCode = this->c->buildBuilding(nName, bType, bName);
+
+    //Check if building was built
+    if (buildCode == 0) {
+        std::cout<<"=> Building not built, reasons: Not in budget or wrong neighbourhood\n";
+    }
+    //Success
+    std::cout<<"=> Building built\n";
 }

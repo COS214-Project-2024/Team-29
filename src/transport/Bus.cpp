@@ -19,14 +19,11 @@ Bus::Bus(string name, float& budget)
         throw runtime_error("The city does not have enough money for a bus.");
     }
 
-    this->publicTransportCapacity += capacity;
-
 }
 
 Bus::~Bus()
 {
     cout << this->name << " Bus destroyed." << endl; 
-    this->publicTransportCapacity -= capacity;
 }
 
 string Bus::getTransportType() {

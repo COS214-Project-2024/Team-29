@@ -6,8 +6,6 @@
 #include <vector>
 using namespace std;
 
-#include "../buildingComposite/Building.h"
-
 /** 
  * @brief Abstract class for the different modes of transport
  * 
@@ -42,14 +40,6 @@ class ModeOfTransport {
         /// @return [int] The amount of people/goods that the mode of transport can move in a cycle
         int getCapacity();
 
-        /// @brief Get the capacity of public transport
-        /// @return The amount of people that can be transported across the entire city in one cycle
-        int getPublicTransportCapacity();
-
-        /// @brief Returns the capacity of the mode of transport
-        /// @return The amount of goods that the entire city can move in one cycle
-        int getGoodsTransportCapacity();
-
         /** @brief Returns type of transport as a string (Public, Goods, General)
          * 
          * TEMPLATE METHOD - PrimitiveOperation()
@@ -75,12 +65,6 @@ class ModeOfTransport {
 
         /// @brief The type of transport according to what is transported (PublicTransit, GoodsTransport, GeneralTransport)
         TransportType type;
-
-        /// @brief The total capacity of all of the public transport across the city (tram, bus, ferry)
-        static int publicTransportCapacity;
-
-        /// @brief Total capacity of all of the goods transport across the city (train, airport)
-        static int goodsTransportCapacity;
 
 };
 
