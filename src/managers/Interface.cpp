@@ -22,9 +22,9 @@ void Interface::startSimulation() {
     // MAIN LOOP - Increment cycle after each iteration, end when user quits or population reaches 0
     do {
         choice = -1; //Initial value of -1, no steps taken until user changes choice's value
-        std::cout   << "====================\n"
-                    << "Cycle: "    <<this->cycle    <<"\n"
-                    << "====================\n\n";
+        std::cout   << "====================================\n"
+                    << "Cycle: "    << this->cycle    <<"\n"
+                    << "====================================\n\n";
 
         
         // User Choice Loop: Allows user to make multiple choices, per cycle until they quit or proceed to the next cycle.
@@ -52,7 +52,7 @@ void Interface::startSimulation() {
                         << "====================================\n\n";
 
             // USER INPUT: User chooses an option
-            std::cin>>choice;
+            std::cin    >> choice;
             std::cout   << "\n";        //Move to next line for prompt
         }
 
@@ -62,10 +62,10 @@ void Interface::startSimulation() {
 }
 
 // returns true if the simulation should advance to the next cycle
-bool Interface::handleChoice(int choice){
-    if (choice == 3 || choice == 0){
+bool Interface::handleChoice(int choice) {
+    if (choice == 3 || choice == 0) {
         return true;
-    } else if (choice == 1){
+    } else if (choice == 1) {
         int type;   // Type of building to be built
 
         //USER PROMPT
@@ -91,7 +91,7 @@ bool Interface::handleChoice(int choice){
                     << "????????????????????????????????????\n";
 
         //USER INPUT
-        cin>>type;  
+        std::cin    >> type;  
         std::cout   << "\n";        //Move to next line for prompt
         build(type);
         
@@ -101,7 +101,7 @@ bool Interface::handleChoice(int choice){
     return false;   // Case falls through if choice is not 0, 1, 2, or 3
 }
 
-void Interface::build(int type){
+void Interface::build(int type) {
     int bType, bName;
     std::string nName;
 
@@ -133,7 +133,7 @@ void Interface::build(int type){
                 << "=> In which neighbourhood would you like to build your building?\n"
                 << "????????????????????????????????????\n";
     //User Input
-    std::cin>>nName;
+    std::cin    >> nName;
     std::cout   << "\n";        //Move to next line for prompt
 
     int buildCode = this->c->buildBuilding(nName, bType, bName);
