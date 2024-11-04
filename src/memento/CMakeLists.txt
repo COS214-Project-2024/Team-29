@@ -14,5 +14,5 @@ target_link_libraries(mementoLib PUBLIC
     satisfactionLib
     transportLib
     utilityLib
-    managers
+    managersLib
 )

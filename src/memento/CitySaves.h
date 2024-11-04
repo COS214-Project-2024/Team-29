@@ -13,9 +13,6 @@ using namespace std;
  * The CitySaves class provides methods to add, remove, and retrieve saved city states.
  */
 class CitySaves {
-    private:
-        CityMemento* save;  /**< Pointer to the saved city state. */
-
     public:
         /// @brief Adds a CityMemento object to the map while using the name as the key
         /// @param name The key of the CityMemento
