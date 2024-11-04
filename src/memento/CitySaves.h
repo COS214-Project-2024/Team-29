@@ -41,6 +41,10 @@ class CitySaves {
          * @return Pointer to the most recent CityMemento instance.
          */
         CityMemento* getSave();
+        /**
+         * @brief Destructor for CitySaves, cleaning up resources.
+         */
+        ~CityMemento();
 };
 
 #endif
