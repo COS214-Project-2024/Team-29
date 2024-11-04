@@ -39,7 +39,7 @@ bool Government::implementPolicy(float &budget)
 {
 	random_device rd;
 	mt19937 gen(rd());
-	uniform_int_distribution<> distrib(0, policies.size());
+	uniform_int_distribution<> distrib(0, policies.size()-1);
 
 	int policyIndex = distrib(gen);
 
