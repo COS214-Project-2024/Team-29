@@ -25,7 +25,7 @@ class LandmarkBuilding : public Building {
          * @param buildCost The cost required to build.
          * @param satisfactionValue Measure of public satisfaction.
          */
-        LandmarkBuilding(double taxIncome, double buildCost, int satisfactionValue);
+        LandmarkBuilding(double taxIncome, double buildCost, int satisfactionValue, int pow, int water, int waste, int sewage);
         /**
          * @brief Retrieves the public satisfaction value of the Landmark building.
          * @return Satisfaction value as an integer.
@@ -35,6 +35,7 @@ class LandmarkBuilding : public Building {
          * @brief Destroys the LandmarkBuilding object.
          */
         virtual ~LandmarkBuilding() {};
+        virtual BuildingComponent* clone() = 0;   
 };
 
 #endif

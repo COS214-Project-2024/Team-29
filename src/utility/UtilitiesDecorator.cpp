@@ -51,3 +51,11 @@ bool UtilitiesDecorator::isEfficient(int demand)
         return true;
     }
 }
+
+void UtilitiesDecorator::setCapacity(int c){
+    this->currentCapacity = c;
+}
+
+void UtilitiesDecorator::setLevel(int l){
+    this->level = l;
+}

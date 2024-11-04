@@ -31,6 +31,7 @@ class Unsatisfied : public SatisfactionState {
          * @param c Pointer to the City object whose satisfaction is to be decreased.
          */
         void decSatisfactionState(City* c);
+        SatisfactionState* clone();
 };
 
 #endif

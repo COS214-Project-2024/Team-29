@@ -38,6 +38,7 @@ class SatisfactionState {
          * @param c Pointer to the City object whose satisfaction is to be decreased.
          */
         virtual void decSatisfactionState(City* c) = 0;
+        virtual SatisfactionState* clone() = 0;
     
     
 };

@@ -18,3 +18,7 @@ void VeryUnsatisfied::incSatisfactionState(City* c){
 void VeryUnsatisfied::decSatisfactionState(City* c){
     c->setSatisfactionState(new VeryUnsatisfied());
 }
+
+SatisfactionState* VeryUnsatisfied::clone(){
+    return new VeryUnsatisfied();
+}

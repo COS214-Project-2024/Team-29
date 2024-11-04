@@ -39,6 +39,12 @@ class CompositeNeighbourhood : public BuildingComponent {
          * @return Total tax income as a double.
          */
         virtual double getTaxIncome() const override;
+
+        int getPowerDemand() const;
+        int getWaterDemand() const;
+        int getWasteDemand() const;
+        int getSewageDemand() const;
+
         /**
          * @brief Retrieves the total build cost for the neighbourhood.
          * @return Total build cost as a double.
@@ -58,6 +64,10 @@ class CompositeNeighbourhood : public BuildingComponent {
          * @brief Destroys the CompositeNeighbourhood object and its building components.
          */
         ~CompositeNeighbourhood();
+
+        BuildingComponent* clone();
+
+        CompositeNeighbourhood* copy() const;
 };
 
 #endif

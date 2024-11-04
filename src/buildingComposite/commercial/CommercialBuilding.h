@@ -25,7 +25,7 @@ class CommercialBuilding : public Building {
          * @param buildCost The cost required to build.
          * @param employeeCapacity Maximum number of employees accommodated.
          */
-        CommercialBuilding(double taxIncome, double buildCost, int employeeCapacity);
+        CommercialBuilding(double taxIncome, double buildCost, int employeeCapacity, int pow, int water, int waste, int sewage);
         /**
          * @brief Retrieves the employee capacity of the Commercial building.
          * @return Employee capacity as an integer.
@@ -35,6 +35,7 @@ class CommercialBuilding : public Building {
          * @brief Destroys the CommercialBuilding object.
          */
         virtual ~CommercialBuilding() {};
+        virtual BuildingComponent* clone() = 0;   
 };
 
 #endif

@@ -89,5 +89,9 @@ class UtilityFacade {
          * @return The capacity of the sewage management system.
          */
         int getSewageCapacity();
+        
+        /// @brief This returns a clone of the current UtilityFacade
+        /// @return UtilityFacade Clone
+        UtilityFacade * clone();
 };
 #endif

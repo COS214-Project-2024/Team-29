@@ -19,7 +19,7 @@ class Mall : public CommercialBuilding {
          * @param buildCost The cost required to build.
          * @param employeeCapacity Maximum number of employees accommodated.
          */
-        Mall(double taxIncome, double buildCost, int employeeCapacity);
+        Mall(double taxIncome, double buildCost, int employeeCapacity, int pow, int water, int waste, int sewage);
         /**
          * @brief Accepts a visitor object for performing operations on the Mall.
          * Such as calculating total income tax and total capcaity/popolation in the system/city
@@ -31,6 +31,7 @@ class Mall : public CommercialBuilding {
          * @brief Destroys the Mall object.
          */
         virtual ~Mall() {};
+        BuildingComponent* clone(); 
 };
 
 #endif

@@ -19,7 +19,7 @@ class CulturalCentre : public LandmarkBuilding {
          * @param buildCost The cost required to build.
          * @param satisfactionValue Measure of public satisfaction.
          */
-        CulturalCentre(double taxIncome, double buildCost, int satisfactionValue);
+        CulturalCentre(double taxIncome, double buildCost, int satisfactionValue, int pow, int water, int waste, int sewage);
         /**
          * @brief Accepts a visitor object for performing operations on the CulturalCentre.
          * Such as calculating total income tax for the system/city.
@@ -31,6 +31,7 @@ class CulturalCentre : public LandmarkBuilding {
          * @brief Destroys the CulturalCentre object.
          */
         ~CulturalCentre() {};
+        BuildingComponent* clone(); 
 };
 
 #endif

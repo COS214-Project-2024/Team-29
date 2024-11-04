@@ -31,6 +31,11 @@ class TotalVisitor : public BuildingVisitor {
         int totalEmployeeCapacity;  /**< Accumulated total employee capacity. */
         int totalSatisfactionValue; /**< Accumulated total satisfaction value. */
 
+        int totalPowerDemand;
+        int totalWaterDemand;
+        int totalWasteDemand;
+        int totalSewageDemand;
+
     public:
         /**
          * @brief Constructs a TotalVisitor with initial totals set to zero.
@@ -142,6 +147,10 @@ class TotalVisitor : public BuildingVisitor {
          */
 
         int getTotalSatisfactionValue() const;
+        int getTotalPowerDemand() const;
+        int getTotalWaterDemand() const;
+        int getTotalWasteDemand() const;
+        int getTotalSewageDemand() const;
         //Destructor
         /**
          * @brief Destructor for TotalVisitor.

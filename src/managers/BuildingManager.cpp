@@ -1,11 +1,11 @@
 #include "BuildingManager.h"
 #include "../visitor/TotalVisitor.h"
 
-BuildingManager::BuildingManager() {
-    cCreator = new CommercialBuildingCreator();
-    iCreator = new IndustrialBuildingCreator();
-    lCreator = new LandmarkBuildingCreator();
-    rCreator = new ResidentialBuildingCreator();
+BuildingManager::BuildingManager(){
+    cCreator = new CommercialBuildingCreator(); 
+    iCreator = new IndustrialBuildingCreator(); 
+    lCreator = new LandmarkBuildingCreator(); 
+    rCreator = new ResidentialBuildingCreator(); 
 }
 
 std::string BuildingManager::createNeighbourhood(std::string nName) {
@@ -193,4 +193,63 @@ bool BuildingManager::neighbourhoodExists(std::string nName) {
         }
     }
     return false;
+}
+
+int BuildingManager::getTotalPowerDemand(){
+    int total = 0;
+    BuildingVisitor* v;
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalPowerDemand();
+        delete v;
+    }
+    return total;
+}
+
+int BuildingManager::getTotalWaterDemand(){
+    int total = 0;
+    BuildingVisitor* v;
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalWaterDemand();
+        delete v;
+    }
+    return total;
+}
+
+int BuildingManager::getTotalWasteDemand(){
+    int total = 0;
+    BuildingVisitor* v;
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalWasteDemand();
+        delete v;
+    }
+    return total;
+}
+
+int BuildingManager::getTotalSewageDemand(){
+    int total = 0;
+    BuildingVisitor* v;
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalSewageDemand();
+        delete v;
+    }
+    return total;
+}
+
+
+
+
+BuildingManager* BuildingManager::clone(){
+    BuildingManager * clone = new BuildingManager();
+    for(CompositeNeighbourhood * curr : nList){
+        clone->nList.push_back(curr->copy());
+    }
+    return clone;
 }

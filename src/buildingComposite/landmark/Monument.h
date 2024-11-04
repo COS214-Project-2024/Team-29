@@ -19,7 +19,7 @@ class Monument : public LandmarkBuilding {
          * @param buildCost The cost required to build.
          * @param satisfactionValue Measure of public satisfaction.
          */
-        Monument(double taxIncome, double buildCost, int satisfactionValue);
+        Monument(double taxIncome, double buildCost, int satisfactionValue, int pow, int water, int waste, int sewage);
         /**
          * @brief Accepts a visitor object for performing operations on the Monument.
          * Such as calculating total income tax for the system/city.
@@ -31,6 +31,7 @@ class Monument : public LandmarkBuilding {
          * @brief Destroys the Monument object.
          */
         ~Monument() {};
+        BuildingComponent* clone(); 
 };
 
 #endif

@@ -84,26 +84,47 @@ void City::implementPolicy()
         
 }
 
-CityMemento *City::saveGame()
+CityMemento* City::saveGame()
 {
-    /* //corresponds to Memento::createMemento()
     CityMemento* save = new CityMemento();
-    save->setSatisfaction(this->satisfaction);
-    save->setBuildings(this->buildings);
-    save->setModesOfTransport(this->modesOfTransport);  // this has to be changed
-    // save->setGovernment(this->government);
+    save->setSatisfaction(this->satisfaction->clone());
+    save->setBuildingManager(this->buildingManager->clone());
+    save->setUtilityManager(this->utilitiesManager->clone());
+    float temp = budget;
+    save->setTransportManager(this->transportManager->copy(temp));
+    save->setGovernment(this->government->clone());
 
-    //any attributes that get added to city must be here
-    return save; */
-    return nullptr;
+    save->setBudget(temp);
+    save->setBuildCost(totalBuildCost);
+    save->setTax(totalTax);
+
+
+    save->setPopulation(this->population);
+    save->setTotalPowerDemand(this->totalPowerDemand);
+    save->setTotalWaterDemand(this->totalWaterDemand);
+    save->setTotalWasteDemand(this->totalWasteDemand);
+    save->setTotalSewageDemand(this->totalSewageDemand);
+
 }
 
 void City::loadGame(CityMemento* save)
 {
-    //corresponds to Memento::setMemento(memento)
-    // this->satisfaction = save->getSatisfaction();
-    // this->buildings = save->getBuildings();
-    // this->modesOfTransport = save->getModesOfTransport();
+    this->satisfaction = save->getSatisfaction();
+    this->buildingManager  = save->getBuildingManager();
+    
+    this->totalBuildCost = save->getBuildCost();
+    this->totalTax = save->getTax();
+    this->budget = save->getBudget();
+    this->utilitiesManager = save->getUtilityManager();
+    this->transportManager = save->getTransportManager(this->budget);
+    this->government = save->getGovernment();
+    
+    
+    this->population = save->getPopulation();
+    this->totalPowerDemand = save->getTotalPowerDemand();
+    this->totalWaterDemand = save->getTotalWaterDemand();
+    this->totalWasteDemand = save->getTotalWasteDemand();
+    this->totalSewageDemand = save->getTotalSewageDemand();
 }
 
 City::~City(){

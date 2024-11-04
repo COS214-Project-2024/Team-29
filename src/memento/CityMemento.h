@@ -3,10 +3,16 @@
 
 #include "../satisfaction/SatisfactionState.h"
 #include "../buildingComposite/BuildingComponent.h"
-#include "../transport/ModeOfTransport.h"
+#include "../transport/TransportManager.h"
+#include "../government/Government.h"
+#include "../utility/UtilityFacade.h"
+#include "../managers/BuildingManager.h"
+
 
 #include <iostream>
 #include <vector>
+#include <list>
+#include <list>
 using namespace std;
 
 /**
@@ -17,10 +23,6 @@ using namespace std;
  * including satisfaction state, buildings, and modes of transport.
  */
 class CityMemento {
-    private:
-        SatisfactionState* satisfaction;            /**< Pointer to saved satisfaction state. */
-        BuildingComponent* buildings;               /**< Pointer to saved building structure. */
-        vector<ModeOfTransport*> modesOfTransport;  /**< Saved modes of transport. */
 
     public:
         /**
@@ -39,29 +41,39 @@ class CityMemento {
          * @param b Pointer to the BuildingComponent representing the saved building structure.
          */
         void setBuildings(BuildingComponent* b);
-        /**
-         * @brief Sets the modes of transport for the saved state.
-         * @param m Vector of ModeOfTransport instances.
-         */
-        void setModesOfTransport(vector<ModeOfTransport> m);
 
-        //getters
-        /**
-         * @brief Retrieves the saved satisfaction state.
-         * @return Pointer to the saved SatisfactionState.
-         */
-        SatisfactionState* getSatisfaction(); 
-        /**
-         * @brief Retrieves the saved buildings structure.
-         * @return Pointer to the saved BuildingComponent.
-         */
-        BuildingComponent* getBuildings();
-        /**
-         * @brief Retrieves the saved modes of transport.
-         * @return Vector of pointers to saved ModeOfTransport instances.
-         */
-        vector<ModeOfTransport*> getModesOfTransport();
 
+        SatisfactionState* getSatisfaction() const;
+        BuildingManager* getBuildingManager() const;
+        UtilityFacade * getUtilityManager() const;
+        Government * getGovernment() const;
+        TransportManager * getTransportManager(float& b) const;
+
+        float getBudget() const;
+        double getBuildCost() const;
+        double getTax() const;
+        int getPopulation() const;
+        int getTotalPowerDemand() const;
+        int getTotalWaterDemand() const;
+        int  getTotalWasteDemand() const;
+        int getTotalSewageDemand()const;
+
+    private:
+        SatisfactionState* satisfaction;
+        BuildingManager* buildingManager;
+        UtilityFacade* utilitiesManager;
+        TransportManager* transportManager;
+        Government * government;
+
+        float budget;
+        double totalBuildCost;
+        double totalTax;
+        
+        int population;
+        int totalPowerDemand;
+        int totalWaterDemand;
+        int totalWasteDemand;
+        int totalSewageDemand;
 };
 
 #endif

@@ -27,6 +27,7 @@ public:
      * @brief Constructs a Government instance, initializing it with a list of policies from "Policies.txt".
      */
 	Government();
+	Government* clone() const;
 
 	/**
      * @brief Implements a random policy for a set price of R 5000.

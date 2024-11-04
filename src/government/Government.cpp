@@ -23,6 +23,14 @@ Government::Government(){
 	policies.push_back(Policy("Fast Food Ban", false));
 }
 
+Government* Government::clone()const{
+
+    Government* newGovernment = new Government();
+    newGovernment->policies = this->policies;
+    return newGovernment;
+
+}
+
 bool Government::implementPolicy(float &budget)
 {
 	random_device rd;

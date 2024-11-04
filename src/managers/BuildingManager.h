@@ -9,6 +9,7 @@
 
 #include <list>
 #include <string>
+using namespace std;
 
 /**
  * @class BuildingManager
@@ -78,6 +79,12 @@ class BuildingManager
          * @return Satisfaction value.
          */
         int getTotalSatisfactionValue();
+        int getTotalPowerDemand();
+        int getTotalWaterDemand();
+        int getTotalWasteDemand();
+        int getTotalSewageDemand();
+
+
         /**
          * @brief Checks if a neighborhood exists.
          * @param nName Name of the neighborhood.
@@ -88,6 +95,7 @@ class BuildingManager
          * @brief Destructor for BuildingManager.
          */
         ~BuildingManager();
+        BuildingManager * clone();
 };
 
 #endif // BUILDING_MANAGER_H
