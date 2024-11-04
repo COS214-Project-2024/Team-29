@@ -126,6 +126,11 @@ class City {
         //Building related functions 
         void getTotalBuildCost();
         //add func to upgrade different utilities and set satisfaction after upgrading
+        
+        /**
+         * @brief Collects taxes from the city's population and buidlings, and updates the city budget accordingly.
+         */
+        void collectTaxes();
         /**
          * @brief Calculates the total tax income from all buildings by using the buildingManger.
          */
