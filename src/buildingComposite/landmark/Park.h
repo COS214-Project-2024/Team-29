@@ -19,7 +19,7 @@ class Park : public LandmarkBuilding {
          * @param buildCost The cost required to build.
          * @param satisfactionValue Measure of public satisfaction.
          */
-        Park(double taxIncome, double buildCost, int satisfactionValue);
+        Park(double taxIncome, double buildCost, int satisfactionValue, int pow, int water, int waste, int sewage);
         /**
          * @brief Accepts a visitor object for performing operations on the Park.
          * Such as calculating total income tax for the system/city.

@@ -19,7 +19,7 @@ class TownHouse : public ResidentialBuilding {
          * @param buildCost The cost required to build.
          * @param employeeCapacity Maximum number of employees accommodated.
          */
-        TownHouse(double taxIncome, double buildCost, int livingCapacity);
+        TownHouse(double taxIncome, double buildCost, int livingCapacity, int pow, int water, int waste, int sewage);
         /**
          * @brief Accepts a visitor object for performing operations on the TownHouse.
          * Such as calculating total income tax and total capcaity/popolation in the system/city

@@ -27,7 +27,7 @@ class Building : public BuildingComponent
          * @param taxIncome The income generated from tax.
          * @param buildCost The cost required to build.
          */
-        Building(double taxIncome, double buildCost);
+        Building(double taxIncome, double buildCost, int pow, int water, int waste, int sewage);
         /**
          * @brief Retrieves the tax income of the building.
          * @return Tax income as a double.

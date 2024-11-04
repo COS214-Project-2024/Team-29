@@ -25,7 +25,7 @@ class ResidentialBuilding : public Building {
          * @param buildCost The cost required to build.
          * @param livingCapacity Maximum number of residents accommodated.
          */
-        ResidentialBuilding(double taxIncome, double buildCost, int livingCapacity);
+        ResidentialBuilding(double taxIncome, double buildCost, int livingCapacity, int pow, int water, int waste, int sewage);
         /**
          * @brief Retrieves the living capacity of the Residential building.
          * @return Living capacity as an integer.
