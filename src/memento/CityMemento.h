@@ -18,7 +18,7 @@ class CityMemento {
         ~CityMemento();
 
         void setSatisfaction(SatisfactionState* s);
-        void setBuildings(list<BuildingComponent*> b);
+        void setBuildingManager(BuildingManager b);
         void setUtilityManager(UtilityFacade * m);
         void setGovernment(Government * g);
         void setTransportManager(TransportManager * m);
@@ -31,7 +31,7 @@ class CityMemento {
         void setTotalSewageDemand(int t);
 
         SatisfactionState* getSatisfaction() const;
-        list<BuildingComponent*> getBuildings() const;
+        BuildingManager* getBuildingManager() const;
         UtilityFacade * getUtilityManager() const;
         Government * getGovernment() const;
         TransportManager * getTransportManager() const;
@@ -45,7 +45,7 @@ class CityMemento {
 
     private:
         SatisfactionState* satisfaction;
-        list<BuildingComponent*> buildings;
+        BuildingManager* buildingManager;
 
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
