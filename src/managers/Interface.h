@@ -2,7 +2,6 @@
 #define INTERFACE_H
 
 #include "City.h"
-#include "BuildingManager.h"
 
 class Interface {
     private:

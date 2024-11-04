@@ -3,7 +3,6 @@
 
 #include "../transport/TransportManager.h"
 #include "../utility/UtilityFacade.h"
-#include "../memento/CityMemento.h"
 #include "../government/Government.h"
 #include "../managers/BuildingManager.h"
 
