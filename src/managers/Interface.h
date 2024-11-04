@@ -13,7 +13,6 @@ class Interface {
         void updateCityStats();
 
         //Display Prompt Functions
-        void displayWelcomeMessage();
         void displayCityStats();
         void displayCurrentCycle();
         void displayOperationMenu();
@@ -28,6 +27,13 @@ class Interface {
         //Helper Functions
         void incrementCycle();
         int getCycle();
+
+        //UI Functions
+        void clearTerminal();
+
+        //Greeter Functions
+        void displayWelcomeMessage();
+        void displayGoodbyeMessage();
 
     public:
         /// @brief default constructor for Interface
