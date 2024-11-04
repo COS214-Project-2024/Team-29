@@ -21,30 +21,20 @@ class CitySaves {
         /// @param name The key of the CityMemento
         /// @param m The CityMemento object to be stored
         void addSave(string name, CityMemento* m);
+        /**
+         * @brief Removes the last saved state from the collection.
+         */
         void removeSave(string name);
+        /**
+         * @brief Retrieves the most recent save state.
+         * @return Pointer to the most recent CityMemento instance.
+         */
         CityMemento* getSave(string name);
         string toString();
         ~CitySaves();
     private:
         map<string ,CityMemento*> save;
-        /**
-         * @brief Adds a save state to the collection.
-         * @param m Pointer to the CityMemento representing the city state to be saved.
-         */
-        void addSave(CityMemento* m);
-        /**
-         * @brief Removes the last saved state from the collection.
-         */
-        void removeSave();
-        /**
-         * @brief Retrieves the most recent save state.
-         * @return Pointer to the most recent CityMemento instance.
-         */
-        CityMemento* getSave();
-        /**
-         * @brief Destructor for CitySaves, cleaning up resources.
-         */
-        ~CityMemento();
 };
 
 #endif
+
