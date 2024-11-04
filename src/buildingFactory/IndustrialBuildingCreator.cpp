@@ -5,10 +5,12 @@
 #include "../buildingComposite/industrial/Plant.h"
 #include "../buildingComposite/industrial/Warehouse.h"
 
-// Input: type (int)
-//  1 - Factory
-//  2 - Warehouse
-//  3 - Plant
+/*
+Input: type (int)
+    1 - Factory
+    2 - Warehouse
+    3 - Plant
+*/
 Building* IndustrialBuildingCreator::createBuilding(int bName) {
     switch (bName)
     {
