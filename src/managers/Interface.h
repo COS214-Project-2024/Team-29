@@ -72,7 +72,6 @@ class Interface {
         void clearTerminal();
 
         //Greeter Functions
-        void displayWelcomeMessage();
         void displayGoodbyeMessage();
 
     public:
