@@ -52,6 +52,10 @@ int City::getSewageDemand(){
     return this->totalSewageDemand;
 }
 
+std::string City::getNeighbourhoods(){
+    return this->buildingManager->getNeighbourhoods();
+}
+
 void City::addTransport(string type,string name, float& budget)
 {
     this->transportManager->addTransport(type, name, budget);
