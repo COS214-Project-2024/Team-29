@@ -7,6 +7,7 @@ City::City(){
     this->satisfaction = new Neutral();
     this->transportManager = new TransportManager();
     this->buildingManager = new BuildingManager();
+    this->government = new Government();
 
     //Starting conditions
     this->budget = (float)1000000000;
@@ -49,6 +50,10 @@ int City::getWasteDemand(){
 
 int City::getSewageDemand(){
     return this->totalSewageDemand;
+}
+
+std::string City::getNeighbourhoods(){
+    return this->buildingManager->getNeighbourhoods();
 }
 
 void City::addTransport(string type,string name, float& budget)
