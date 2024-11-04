@@ -102,6 +102,16 @@ std::string BuildingManager::getTotalPerNeighbourhood() {
     return output;  
 }
 
+std::string BuildingManager::getNeighbourhoods(){
+    std::string list = "";
+
+    for (auto it = nList.begin(); it != nList.end(); it++){
+        list += " - " + (*it)->getName() + "\n";
+    }
+
+    return list;
+}
+
 double BuildingManager::getTotalBuildCost() {
     double total = 0;
     BuildingVisitor* v;
