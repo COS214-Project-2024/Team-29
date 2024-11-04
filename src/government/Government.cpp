@@ -10,30 +10,17 @@
 #include <random>
 
 Government::Government(){
-	std::ifstream file("Policies.txt");
-        
-        if (!file.is_open()) {
-            std::cerr << "Failed to open file." << std::endl;
-            return;
-        }
-        
-        std::string line;
-        while (std::getline(file, line)) {
-            std::istringstream iss(line);
-            std::string name, impactString;
-            
-            if (std::getline(iss, name, ',') && std::getline(iss, impactString)) {
-                // Trim whitespace from name
-                name.erase(name.find_last_not_of(" \n\r\t") + 1);
-                
-                bool impact = (impactString == "true");
-                policies.push_back(Policy(name, impact));
-            } else {
-                std::cerr << "Error parsing line: " << line << std::endl;
-            }
-        }
-        
-        file.close();
+	policies.push_back(Policy("More public holidays", true));
+	policies.push_back(Policy("Crime reduction Programs", true));
+	policies.push_back(Policy("Green spaces expansion", true));
+	policies.push_back(Policy("Free Public Wifi", true));
+	policies.push_back(Policy("Wildlife Protection", true));
+	policies.push_back(Policy("4 Day work week", true));
+	policies.push_back(Policy("Ban on operating a vehicle while blindfolded", false));
+	policies.push_back(Policy("Increased parking fees", false));
+	policies.push_back(Policy("Alcohol and Tabacco Ban", false));
+	policies.push_back(Policy("Brandy special price increase", false));
+	policies.push_back(Policy("Fast Food Ban", false));
 }
 
 bool Government::implementPolicy(float &budget)
