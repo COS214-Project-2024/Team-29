@@ -31,6 +31,7 @@ class TownHouse : public ResidentialBuilding {
          * @brief Destroys the TownHouse object.
          */
         ~TownHouse() {};
+        BuildingComponent* clone();   
 };
 
 #endif

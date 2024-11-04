@@ -1,6 +1,13 @@
 #include "BuildingManager.h"
 #include "../visitor/TotalVisitor.h"
 
+BuildingManager::BuildingManager(){
+    cCreator = new CommercialBuildingCreator(); 
+    iCreator = new IndustrialBuildingCreator(); 
+    lCreator = new LandmarkBuildingCreator(); 
+    rCreator = new ResidentialBuildingCreator(); 
+}
+
 std::string BuildingManager::createNeighbourhood(std::string nName) {
     // Failure to add if neighbourhood already exists
     if(!neighbourhoodExists(nName)) {
@@ -170,4 +177,12 @@ bool BuildingManager::neighbourhoodExists(std::string nName) {
         }
     }
     return false;
+}
+
+
+BuildingManager* BuildingManager::clone(){
+    BuildingManager * clone = new BuildingManager();
+    
+
+    return clone;
 }

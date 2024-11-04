@@ -62,6 +62,8 @@ class CompositeNeighbourhood : public BuildingComponent {
          * @brief Destroys the CompositeNeighbourhood object and its building components.
          */
         ~CompositeNeighbourhood();
+
+        CompositeNeighbourhood* clone() const;
 };
 
 #endif

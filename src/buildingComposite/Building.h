@@ -40,7 +40,9 @@ class Building : public BuildingComponent
         /**
          * @brief Destroys the Building object.
          */
-        virtual ~Building() {};        
+        virtual ~Building() {};     
+
+        virtual BuildingComponent* clone() = 0;   
 };
 
 #endif

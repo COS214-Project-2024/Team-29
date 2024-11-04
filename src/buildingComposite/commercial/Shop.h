@@ -31,6 +31,7 @@ class Shop : public CommercialBuilding {
          * @brief Destroys the Shop object.
          */
         virtual ~Shop() {};
+        BuildingComponent* clone(); 
 };
 
 #endif

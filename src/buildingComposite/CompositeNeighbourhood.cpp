@@ -47,3 +47,7 @@ CompositeNeighbourhood::~CompositeNeighbourhood() {
         delete *it;
     }
 }
+
+CompositeNeighbourhood* CompositeNeighbourhood::clone() const{
+
+}

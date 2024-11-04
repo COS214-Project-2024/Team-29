@@ -9,6 +9,7 @@
 
 #include <list>
 #include <string>
+using namespace std;
 
 class BuildingManager
 {
@@ -20,7 +21,7 @@ class BuildingManager
 
         std::list<CompositeNeighbourhood*> nList;    // Neighbourhood list
     public:
-        BuildingManager() {};
+        BuildingManager();
         std::string createNeighbourhood(std::string nName); 
         double buildBuilding(std::string nName, int bType, int bName, double balance); 
         std::string getTotalPerNeighbourhood();
@@ -31,6 +32,7 @@ class BuildingManager
         int getTotalSatisfactionValue();
         bool neighbourhoodExists(std::string nName);    // Helper function        
         ~BuildingManager();
+        BuildingManager * clone();
 };
 
 #endif // BUILDING_MANAGER_H

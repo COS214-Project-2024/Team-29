@@ -35,6 +35,7 @@ class LandmarkBuilding : public Building {
          * @brief Destroys the LandmarkBuilding object.
          */
         virtual ~LandmarkBuilding() {};
+        virtual BuildingComponent* clone() = 0;   
 };
 
 #endif

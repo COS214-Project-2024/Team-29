@@ -35,6 +35,7 @@ class IndustrialBuilding : public Building {
          * @brief Destroys the IndustrialBuilding object.
          */
         virtual ~IndustrialBuilding() {};
+        virtual BuildingComponent* clone() = 0;   
 };
 
 #endif

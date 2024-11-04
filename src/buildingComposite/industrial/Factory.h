@@ -31,6 +31,7 @@ class Factory : public IndustrialBuilding {
          * @brief Destroys the Factory object.
          */
         ~Factory() {};
+        BuildingComponent* clone(); 
 };
 
 #endif

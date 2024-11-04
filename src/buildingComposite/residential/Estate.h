@@ -31,6 +31,7 @@ class Estate : public ResidentialBuilding {
          * @brief Destroys the Estate object.
          */
         ~Estate() {};
+        BuildingComponent* clone(); 
 }; 
 
 #endif

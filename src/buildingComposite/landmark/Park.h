@@ -31,6 +31,7 @@ class Park : public LandmarkBuilding {
          * @brief Destroys the Park object.
          */
         ~Park() {};
+        BuildingComponent* clone(); 
 };
 
 #endif

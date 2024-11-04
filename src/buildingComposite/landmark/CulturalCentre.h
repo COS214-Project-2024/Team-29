@@ -31,6 +31,7 @@ class CulturalCentre : public LandmarkBuilding {
          * @brief Destroys the CulturalCentre object.
          */
         ~CulturalCentre() {};
+        BuildingComponent* clone(); 
 };
 
 #endif
