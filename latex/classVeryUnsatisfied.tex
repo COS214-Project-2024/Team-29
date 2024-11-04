@@ -1,0 +1,113 @@
+\hypertarget{classVeryUnsatisfied}{}\doxysection{Very\+Unsatisfied Class Reference}
+\label{classVeryUnsatisfied}\index{VeryUnsatisfied@{VeryUnsatisfied}}
+
+
+Represents a \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} satisfaction state within a city.  
+
+
+
+
+{\ttfamily \#include $<$Very\+Unsatisfied.\+h$>$}
+
+
+
+Inheritance diagram for Very\+Unsatisfied\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classVeryUnsatisfied__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Very\+Unsatisfied\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classVeryUnsatisfied__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVeryUnsatisfied_a3a9e0979efe9955502e3effd111f275c}\label{classVeryUnsatisfied_a3a9e0979efe9955502e3effd111f275c}} 
+\mbox{\hyperlink{classVeryUnsatisfied_a3a9e0979efe9955502e3effd111f275c}{Very\+Unsatisfied}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} satisfaction state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classVeryUnsatisfied_a9d1d999415bed37634eee2766e95a567}{get\+Satisfaction\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current satisfaction level as a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVeryUnsatisfied_a1e234d9b3d0485a4334ef5caec50ddc5}{inc\+Satisfaction\+State}} (\mbox{\hyperlink{classCity}{City}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Increases the satisfaction level of the city from \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} to \mbox{\hyperlink{classUnsatisfied}{Unsatisfied}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVeryUnsatisfied_a214a42f75336c85aed85805ab4189173}{dec\+Satisfaction\+State}} (\mbox{\hyperlink{classCity}{City}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Decreases the satisfaction level of the city from \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} to \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}}. (Lowest \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} satisfaction state within a city. 
+
+The \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} class provides the implementation of a \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} satisfaction state, with operations to adjust the state as necessary. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVeryUnsatisfied_a214a42f75336c85aed85805ab4189173}\label{classVeryUnsatisfied_a214a42f75336c85aed85805ab4189173}} 
+\index{VeryUnsatisfied@{VeryUnsatisfied}!decSatisfactionState@{decSatisfactionState}}
+\index{decSatisfactionState@{decSatisfactionState}!VeryUnsatisfied@{VeryUnsatisfied}}
+\doxysubsubsection{\texorpdfstring{decSatisfactionState()}{decSatisfactionState()}}
+{\footnotesize\ttfamily void Very\+Unsatisfied\+::dec\+Satisfaction\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCity}{City}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Decreases the satisfaction level of the city from \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} to \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}}. (Lowest \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Pointer to the \mbox{\hyperlink{classCity}{City}} object whose satisfaction is to be decreased. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_ab454d10207ba833747670f757d0e77ea}{Satisfaction\+State}}.
+
+\mbox{\Hypertarget{classVeryUnsatisfied_a9d1d999415bed37634eee2766e95a567}\label{classVeryUnsatisfied_a9d1d999415bed37634eee2766e95a567}} 
+\index{VeryUnsatisfied@{VeryUnsatisfied}!getSatisfactionLevel@{getSatisfactionLevel}}
+\index{getSatisfactionLevel@{getSatisfactionLevel}!VeryUnsatisfied@{VeryUnsatisfied}}
+\doxysubsubsection{\texorpdfstring{getSatisfactionLevel()}{getSatisfactionLevel()}}
+{\footnotesize\ttfamily std\+::string Very\+Unsatisfied\+::get\+Satisfaction\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the current satisfaction level as a string. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Very\+Unsatisfied\char`\"{} satisfaction level as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_aa3b1c8ed158ce5964b98f83ed5314124}{Satisfaction\+State}}.
+
+\mbox{\Hypertarget{classVeryUnsatisfied_a1e234d9b3d0485a4334ef5caec50ddc5}\label{classVeryUnsatisfied_a1e234d9b3d0485a4334ef5caec50ddc5}} 
+\index{VeryUnsatisfied@{VeryUnsatisfied}!incSatisfactionState@{incSatisfactionState}}
+\index{incSatisfactionState@{incSatisfactionState}!VeryUnsatisfied@{VeryUnsatisfied}}
+\doxysubsubsection{\texorpdfstring{incSatisfactionState()}{incSatisfactionState()}}
+{\footnotesize\ttfamily void Very\+Unsatisfied\+::inc\+Satisfaction\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCity}{City}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Increases the satisfaction level of the city from \mbox{\hyperlink{classVeryUnsatisfied}{Very\+Unsatisfied}} to \mbox{\hyperlink{classUnsatisfied}{Unsatisfied}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Pointer to the \mbox{\hyperlink{classCity}{City}} object whose satisfaction is to be increased. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_abf0e4b5f9508e973c568774b7dc20ac3}{Satisfaction\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/satisfaction/Very\+Unsatisfied.\+h\item 
+src/satisfaction/Very\+Unsatisfied.\+cpp\end{DoxyCompactItemize}

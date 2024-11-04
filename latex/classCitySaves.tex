@@ -1,0 +1,75 @@
+\hypertarget{classCitySaves}{}\doxysection{City\+Saves Class Reference}
+\label{classCitySaves}\index{CitySaves@{CitySaves}}
+
+
+Manages saving and loading of city states using \mbox{\hyperlink{classCityMemento}{City\+Memento}} objects.  
+
+
+
+
+{\ttfamily \#include $<$City\+Saves.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCitySaves_a8aa8f0fe848eff2c23de29ae12564acb}\label{classCitySaves_a8aa8f0fe848eff2c23de29ae12564acb}} 
+{\bfseries add\+Save} (\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$m)
+\item 
+\mbox{\Hypertarget{classCitySaves_a2cabdab09be3c05e5714a92b4578311a}\label{classCitySaves_a2cabdab09be3c05e5714a92b4578311a}} 
+{\bfseries remove\+Save} ()
+\item 
+\mbox{\Hypertarget{classCitySaves_ac305ab4819b92e74b3112c4a13fb8585}\label{classCitySaves_ac305ab4819b92e74b3112c4a13fb8585}} 
+\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$ {\bfseries get\+Save} ()
+\item 
+\mbox{\hyperlink{classCitySaves_a8aa8f0fe848eff2c23de29ae12564acb}{add\+Save}} (\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Adds a save state to the collection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCitySaves_a2cabdab09be3c05e5714a92b4578311a}\label{classCitySaves_a2cabdab09be3c05e5714a92b4578311a}} 
+\mbox{\hyperlink{classCitySaves_a2cabdab09be3c05e5714a92b4578311a}{remove\+Save}} ()
+\begin{DoxyCompactList}\small\item\em Removes the last saved state from the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$ \mbox{\hyperlink{classCitySaves_ac305ab4819b92e74b3112c4a13fb8585}{get\+Save}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the most recent save state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCitySaves_a0e338c5b6af3a41eb99e63c1fe98abd6}\label{classCitySaves_a0e338c5b6af3a41eb99e63c1fe98abd6}} 
+\mbox{\hyperlink{classCitySaves_a0e338c5b6af3a41eb99e63c1fe98abd6}{$\sim$\+City\+Memento}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classCitySaves}{City\+Saves}}, cleaning up resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages saving and loading of city states using \mbox{\hyperlink{classCityMemento}{City\+Memento}} objects. 
+
+The \mbox{\hyperlink{classCitySaves}{City\+Saves}} class provides methods to add, remove, and retrieve saved city states. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCitySaves_a8aa8f0fe848eff2c23de29ae12564acb}\label{classCitySaves_a8aa8f0fe848eff2c23de29ae12564acb}} 
+\index{CitySaves@{CitySaves}!addSave@{addSave}}
+\index{addSave@{addSave}!CitySaves@{CitySaves}}
+\doxysubsubsection{\texorpdfstring{addSave()}{addSave()}}
+{\footnotesize\ttfamily City\+Saves\+::add\+Save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Adds a save state to the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the \mbox{\hyperlink{classCityMemento}{City\+Memento}} representing the city state to be saved. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCitySaves_ac305ab4819b92e74b3112c4a13fb8585}\label{classCitySaves_ac305ab4819b92e74b3112c4a13fb8585}} 
+\index{CitySaves@{CitySaves}!getSave@{getSave}}
+\index{getSave@{getSave}!CitySaves@{CitySaves}}
+\doxysubsubsection{\texorpdfstring{getSave()}{getSave()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCityMemento}{City\+Memento}}$\ast$ City\+Saves\+::get\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the most recent save state. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the most recent \mbox{\hyperlink{classCityMemento}{City\+Memento}} instance. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/memento/City\+Saves.\+cpp\item 
+src/memento/City\+Saves.\+h\end{DoxyCompactItemize}

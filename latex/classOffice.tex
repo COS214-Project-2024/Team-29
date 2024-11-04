@@ -1,0 +1,97 @@
+\hypertarget{classOffice}{}\doxysection{Office Class Reference}
+\label{classOffice}\index{Office@{Office}}
+
+
+Specialised concrete Commercial\+Buidling class that represents a \mbox{\hyperlink{classOffice}{Office}}.  
+
+
+
+
+{\ttfamily \#include $<$Office.\+h$>$}
+
+
+
+Inheritance diagram for Office\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classOffice__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Office\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classOffice__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOffice_a904dc34ae59af68600df991dd25a9374}{Office}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classCommercialBuilding_ae03369751697f633ed59798953c815b8}{employee\+Capacity}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classOffice}{Office}} with the specified tax income, build cost, and employee capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classOffice_a7bfedd53ed73c458a1a3c0c25a5e26fa}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classOffice}{Office}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOffice_a796b1a296fc281b1b71f6c87f21bb2b3}\label{classOffice_a796b1a296fc281b1b71f6c87f21bb2b3}} 
+virtual \mbox{\hyperlink{classOffice_a796b1a296fc281b1b71f6c87f21bb2b3}{$\sim$\+Office}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classOffice}{Office}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Commercial\+Buidling class that represents a \mbox{\hyperlink{classOffice}{Office}}. 
+
+The \mbox{\hyperlink{classOffice}{Office}} class is a specialised type of \mbox{\hyperlink{classCommercialBuilding}{Commercial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOffice_a904dc34ae59af68600df991dd25a9374}\label{classOffice_a904dc34ae59af68600df991dd25a9374}} 
+\index{Office@{Office}!Office@{Office}}
+\index{Office@{Office}!Office@{Office}}
+\doxysubsubsection{\texorpdfstring{Office()}{Office()}}
+{\footnotesize\ttfamily Office\+::\+Office (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{employee\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classOffice}{Office}} with the specified tax income, build cost, and employee capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOffice_a7bfedd53ed73c458a1a3c0c25a5e26fa}\label{classOffice_a7bfedd53ed73c458a1a3c0c25a5e26fa}} 
+\index{Office@{Office}!accept@{accept}}
+\index{accept@{accept}!Office@{Office}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Office\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classOffice}{Office}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/commercial/Office.\+h\item 
+src/building\+Composite/commercial/Office.\+cpp\end{DoxyCompactItemize}

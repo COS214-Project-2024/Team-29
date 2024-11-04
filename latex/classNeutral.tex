@@ -1,0 +1,113 @@
+\hypertarget{classNeutral}{}\doxysection{Neutral Class Reference}
+\label{classNeutral}\index{Neutral@{Neutral}}
+
+
+Represents a \mbox{\hyperlink{classNeutral}{Neutral}} satisfaction state within a city.  
+
+
+
+
+{\ttfamily \#include $<$Neutral.\+h$>$}
+
+
+
+Inheritance diagram for Neutral\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classNeutral__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Neutral\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classNeutral__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNeutral_aa3a8b3238e5b9a9a9a422bbbf0da6026}\label{classNeutral_aa3a8b3238e5b9a9a9a422bbbf0da6026}} 
+\mbox{\hyperlink{classNeutral_aa3a8b3238e5b9a9a9a422bbbf0da6026}{Neutral}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classNeutral}{Neutral}} satisfaction state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classNeutral_ae8a641b4d06c0b9c01b4bae722327b3c}{get\+Satisfaction\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current satisfaction level as a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeutral_a4499f8899a154da4ecef19bf8b9f82d8}{inc\+Satisfaction\+State}} (\mbox{\hyperlink{classCity}{City}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Increases the satisfaction level of the city from \mbox{\hyperlink{classNeutral}{Neutral}} to \mbox{\hyperlink{classSatisfied}{Satisfied}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeutral_af39d20e155f8af4862e003f336ab3f5d}{dec\+Satisfaction\+State}} (\mbox{\hyperlink{classCity}{City}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Decreases the satisfaction level of the city from \mbox{\hyperlink{classNeutral}{Neutral}} to \mbox{\hyperlink{classUnsatisfied}{Unsatisfied}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{classNeutral}{Neutral}} satisfaction state within a city. 
+
+The \mbox{\hyperlink{classNeutral}{Neutral}} class provides the implementation of a \mbox{\hyperlink{classNeutral}{Neutral}} satisfaction state, with operations to adjust the state as necessary. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNeutral_af39d20e155f8af4862e003f336ab3f5d}\label{classNeutral_af39d20e155f8af4862e003f336ab3f5d}} 
+\index{Neutral@{Neutral}!decSatisfactionState@{decSatisfactionState}}
+\index{decSatisfactionState@{decSatisfactionState}!Neutral@{Neutral}}
+\doxysubsubsection{\texorpdfstring{decSatisfactionState()}{decSatisfactionState()}}
+{\footnotesize\ttfamily void Neutral\+::dec\+Satisfaction\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCity}{City}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Decreases the satisfaction level of the city from \mbox{\hyperlink{classNeutral}{Neutral}} to \mbox{\hyperlink{classUnsatisfied}{Unsatisfied}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Pointer to the \mbox{\hyperlink{classCity}{City}} object whose satisfaction is to be decreased. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_ab454d10207ba833747670f757d0e77ea}{Satisfaction\+State}}.
+
+\mbox{\Hypertarget{classNeutral_ae8a641b4d06c0b9c01b4bae722327b3c}\label{classNeutral_ae8a641b4d06c0b9c01b4bae722327b3c}} 
+\index{Neutral@{Neutral}!getSatisfactionLevel@{getSatisfactionLevel}}
+\index{getSatisfactionLevel@{getSatisfactionLevel}!Neutral@{Neutral}}
+\doxysubsubsection{\texorpdfstring{getSatisfactionLevel()}{getSatisfactionLevel()}}
+{\footnotesize\ttfamily std\+::string Neutral\+::get\+Satisfaction\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the current satisfaction level as a string. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Neutral\char`\"{} satisfaction level as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_aa3b1c8ed158ce5964b98f83ed5314124}{Satisfaction\+State}}.
+
+\mbox{\Hypertarget{classNeutral_a4499f8899a154da4ecef19bf8b9f82d8}\label{classNeutral_a4499f8899a154da4ecef19bf8b9f82d8}} 
+\index{Neutral@{Neutral}!incSatisfactionState@{incSatisfactionState}}
+\index{incSatisfactionState@{incSatisfactionState}!Neutral@{Neutral}}
+\doxysubsubsection{\texorpdfstring{incSatisfactionState()}{incSatisfactionState()}}
+{\footnotesize\ttfamily void Neutral\+::inc\+Satisfaction\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCity}{City}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Increases the satisfaction level of the city from \mbox{\hyperlink{classNeutral}{Neutral}} to \mbox{\hyperlink{classSatisfied}{Satisfied}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Pointer to the \mbox{\hyperlink{classCity}{City}} object whose satisfaction is to be increased. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_abf0e4b5f9508e973c568774b7dc20ac3}{Satisfaction\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/satisfaction/Neutral.\+h\item 
+src/satisfaction/Neutral.\+cpp\end{DoxyCompactItemize}

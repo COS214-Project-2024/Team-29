@@ -1,0 +1,402 @@
+\hypertarget{classTotalVisitor}{}\doxysection{Total\+Visitor Class Reference}
+\label{classTotalVisitor}\index{TotalVisitor@{TotalVisitor}}
+
+
+Visitor class for calculating various totals across building types, including build cost, tax income, and capacities.  
+
+
+
+
+{\ttfamily \#include $<$Total\+Visitor.\+h$>$}
+
+
+
+Inheritance diagram for Total\+Visitor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classTotalVisitor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Total\+Visitor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classTotalVisitor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTotalVisitor_abc15ea8a7f9a0887e23c34f2c6b06204}\label{classTotalVisitor_abc15ea8a7f9a0887e23c34f2c6b06204}} 
+\mbox{\hyperlink{classTotalVisitor_abc15ea8a7f9a0887e23c34f2c6b06204}{Total\+Visitor}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classTotalVisitor}{Total\+Visitor}} with initial totals set to zero. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a701a12eff54fa19f8eb6875fa03492d1}{visit}} (\mbox{\hyperlink{classMall}{Mall}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classMall}{Mall}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a77dcafc0835038bb8a660214b2665a77}{visit}} (\mbox{\hyperlink{classOffice}{Office}} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classOffice}{Office}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a6dc88a6cbdc6b93699172a55d6eaedd3}{visit}} (\mbox{\hyperlink{classShop}{Shop}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classShop}{Shop}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a1fcdeb69db082bf26c6e24a64d9ed410}{visit}} (\mbox{\hyperlink{classFactory}{Factory}} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classFactory}{Factory}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a2b9775281f8e9cbf236a821a8e431bf2}{visit}} (\mbox{\hyperlink{classPlant}{Plant}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classPlant}{Plant}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a2985e86b1aece4f025aedd161441df95}{visit}} (\mbox{\hyperlink{classWarehouse}{Warehouse}} $\ast$w)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classWarehouse}{Warehouse}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_ade9cf18c6d63c19182030fb6609ac9be}{visit}} (\mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} $\ast$cc)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_aa938d341b241794b2e26b2771d24aa46}{visit}} (\mbox{\hyperlink{classMonument}{Monument}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classMonument}{Monument}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a1195ded1cb2ca9a738d3d2a7d876549d}{visit}} (\mbox{\hyperlink{classPark}{Park}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classPark}{Park}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_abd0b503b966a9e19e347fc108c105131}{visit}} (\mbox{\hyperlink{classEstate}{Estate}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classEstate}{Estate}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a574c45e5f91c4b17cbe038ed469eeb5a}{visit}} (\mbox{\hyperlink{classHouse}{House}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classHouse}{House}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_ac4358d66e9accf18e38e0de2b901c06d}{visit}} (\mbox{\hyperlink{classTownHouse}{Town\+House}} $\ast$th)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classTownHouse}{Town\+House}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTotalVisitor_a6962e390cde9155f077eb07c7bd77cea}{visit}} (\mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} $\ast$cn)
+\begin{DoxyCompactList}\small\item\em Visit method for \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} buildings to accumulate totals. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTotalVisitor_a38e9cb76485c2790b4c12bd1c0f97e28}{get\+Total\+Build\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the total build cost. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTotalVisitor_a600374b319404c452de1092488f963a7}{get\+Total\+Tax\+Income}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the total tax income. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTotalVisitor_aecc83de38d5d2f759977323a175dcc07}{get\+Total\+Living\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the total living capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTotalVisitor_ae1a7979243fd4d5ae10b2c9c3f26ca7c}{get\+Total\+Employee\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the total employee capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTotalVisitor_a1402e0a21673127c03f95274a967446d}{get\+Total\+Satisfaction\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the total satisfaction value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTotalVisitor_adeb86114fcd09bcc579b40140fe13200}\label{classTotalVisitor_adeb86114fcd09bcc579b40140fe13200}} 
+\mbox{\hyperlink{classTotalVisitor_adeb86114fcd09bcc579b40140fe13200}{$\sim$\+Total\+Visitor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classTotalVisitor}{Total\+Visitor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Visitor class for calculating various totals across building types, including build cost, tax income, and capacities. 
+
+The \mbox{\hyperlink{classTotalVisitor}{Total\+Visitor}} class implements visit operations for different building types, accumulating totals for build cost, tax income, living capacity, employee capacity, and satisfaction value. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTotalVisitor_a38e9cb76485c2790b4c12bd1c0f97e28}\label{classTotalVisitor_a38e9cb76485c2790b4c12bd1c0f97e28}} 
+\index{TotalVisitor@{TotalVisitor}!getTotalBuildCost@{getTotalBuildCost}}
+\index{getTotalBuildCost@{getTotalBuildCost}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{getTotalBuildCost()}{getTotalBuildCost()}}
+{\footnotesize\ttfamily double Total\+Visitor\+::get\+Total\+Build\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the total build cost. 
+
+\begin{DoxyReturn}{Returns}
+Total build cost as a double. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTotalVisitor_ae1a7979243fd4d5ae10b2c9c3f26ca7c}\label{classTotalVisitor_ae1a7979243fd4d5ae10b2c9c3f26ca7c}} 
+\index{TotalVisitor@{TotalVisitor}!getTotalEmployeeCapacity@{getTotalEmployeeCapacity}}
+\index{getTotalEmployeeCapacity@{getTotalEmployeeCapacity}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{getTotalEmployeeCapacity()}{getTotalEmployeeCapacity()}}
+{\footnotesize\ttfamily int Total\+Visitor\+::get\+Total\+Employee\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the total employee capacity. 
+
+\begin{DoxyReturn}{Returns}
+Total employee capacity as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTotalVisitor_aecc83de38d5d2f759977323a175dcc07}\label{classTotalVisitor_aecc83de38d5d2f759977323a175dcc07}} 
+\index{TotalVisitor@{TotalVisitor}!getTotalLivingCapacity@{getTotalLivingCapacity}}
+\index{getTotalLivingCapacity@{getTotalLivingCapacity}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{getTotalLivingCapacity()}{getTotalLivingCapacity()}}
+{\footnotesize\ttfamily int Total\+Visitor\+::get\+Total\+Living\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the total living capacity. 
+
+\begin{DoxyReturn}{Returns}
+Total living capacity as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTotalVisitor_a1402e0a21673127c03f95274a967446d}\label{classTotalVisitor_a1402e0a21673127c03f95274a967446d}} 
+\index{TotalVisitor@{TotalVisitor}!getTotalSatisfactionValue@{getTotalSatisfactionValue}}
+\index{getTotalSatisfactionValue@{getTotalSatisfactionValue}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{getTotalSatisfactionValue()}{getTotalSatisfactionValue()}}
+{\footnotesize\ttfamily int Total\+Visitor\+::get\+Total\+Satisfaction\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the total satisfaction value. 
+
+\begin{DoxyReturn}{Returns}
+Total satisfaction value as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTotalVisitor_a600374b319404c452de1092488f963a7}\label{classTotalVisitor_a600374b319404c452de1092488f963a7}} 
+\index{TotalVisitor@{TotalVisitor}!getTotalTaxIncome@{getTotalTaxIncome}}
+\index{getTotalTaxIncome@{getTotalTaxIncome}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{getTotalTaxIncome()}{getTotalTaxIncome()}}
+{\footnotesize\ttfamily double Total\+Visitor\+::get\+Total\+Tax\+Income (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the total tax income. 
+
+\begin{DoxyReturn}{Returns}
+Total tax income as a double. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTotalVisitor_a6962e390cde9155f077eb07c7bd77cea}\label{classTotalVisitor_a6962e390cde9155f077eb07c7bd77cea}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} $\ast$}]{cn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cn} & Pointer to a \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_ab675b85ee8a6f6a2fc81115288c448dc}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_ade9cf18c6d63c19182030fb6609ac9be}\label{classTotalVisitor_ade9cf18c6d63c19182030fb6609ac9be}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} $\ast$}]{cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & Pointer to a \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a0f4b4de242408b94e1e7364cfaa90d07}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_abd0b503b966a9e19e347fc108c105131}\label{classTotalVisitor_abd0b503b966a9e19e347fc108c105131}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEstate}{Estate}} $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classEstate}{Estate}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Pointer to an \mbox{\hyperlink{classEstate}{Estate}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a09cb9c70f7062844f1297e97903bb191}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_a1fcdeb69db082bf26c6e24a64d9ed410}\label{classTotalVisitor_a1fcdeb69db082bf26c6e24a64d9ed410}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFactory}{Factory}} $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classFactory}{Factory}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Pointer to a \mbox{\hyperlink{classFactory}{Factory}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a761e794e7e45e5e955f66fe9cf699dcb}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_a574c45e5f91c4b17cbe038ed469eeb5a}\label{classTotalVisitor_a574c45e5f91c4b17cbe038ed469eeb5a}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHouse}{House}} $\ast$}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classHouse}{House}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Pointer to a \mbox{\hyperlink{classHouse}{House}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a46796f061ae4f2b8253586f03ac09435}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_a701a12eff54fa19f8eb6875fa03492d1}\label{classTotalVisitor_a701a12eff54fa19f8eb6875fa03492d1}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [6/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMall}{Mall}} $\ast$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classMall}{Mall}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to a \mbox{\hyperlink{classMall}{Mall}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a7b9286aa5c0cebf4fec2f33f4cc531da}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_aa938d341b241794b2e26b2771d24aa46}\label{classTotalVisitor_aa938d341b241794b2e26b2771d24aa46}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [7/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMonument}{Monument}} $\ast$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classMonument}{Monument}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to a \mbox{\hyperlink{classMonument}{Monument}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a389e0081ed8472aa31efef750b2937b8}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_a77dcafc0835038bb8a660214b2665a77}\label{classTotalVisitor_a77dcafc0835038bb8a660214b2665a77}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [8/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOffice}{Office}} $\ast$}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classOffice}{Office}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Pointer to an \mbox{\hyperlink{classOffice}{Office}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a48e7e5c0d5e9d7cf78956c583c2e23c6}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_a1195ded1cb2ca9a738d3d2a7d876549d}\label{classTotalVisitor_a1195ded1cb2ca9a738d3d2a7d876549d}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [9/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPark}{Park}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classPark}{Park}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to a \mbox{\hyperlink{classPark}{Park}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a0693dbe6b6764dc5d8c98b30c3b963c3}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_a2b9775281f8e9cbf236a821a8e431bf2}\label{classTotalVisitor_a2b9775281f8e9cbf236a821a8e431bf2}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [10/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlant}{Plant}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classPlant}{Plant}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to a \mbox{\hyperlink{classPlant}{Plant}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a82953987762a64b2a116134694b5e6ed}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_a6dc88a6cbdc6b93699172a55d6eaedd3}\label{classTotalVisitor_a6dc88a6cbdc6b93699172a55d6eaedd3}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [11/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classShop}{Shop}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classShop}{Shop}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to a \mbox{\hyperlink{classShop}{Shop}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a885cbffa9f94c2db0c30fd1338746f84}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_ac4358d66e9accf18e38e0de2b901c06d}\label{classTotalVisitor_ac4358d66e9accf18e38e0de2b901c06d}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [12/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTownHouse}{Town\+House}} $\ast$}]{th }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classTownHouse}{Town\+House}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em th} & Pointer to a \mbox{\hyperlink{classTownHouse}{Town\+House}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a0759b8769979db0f1aea7e7c183cb03f}{Building\+Visitor}}.
+
+\mbox{\Hypertarget{classTotalVisitor_a2985e86b1aece4f025aedd161441df95}\label{classTotalVisitor_a2985e86b1aece4f025aedd161441df95}} 
+\index{TotalVisitor@{TotalVisitor}!visit@{visit}}
+\index{visit@{visit}!TotalVisitor@{TotalVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [13/13]}}
+{\footnotesize\ttfamily void Total\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWarehouse}{Warehouse}} $\ast$}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit method for \mbox{\hyperlink{classWarehouse}{Warehouse}} buildings to accumulate totals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Pointer to a \mbox{\hyperlink{classWarehouse}{Warehouse}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingVisitor_a8b08b1bfd904d817ee7df96f1346e0a6}{Building\+Visitor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/visitor/Total\+Visitor.\+h\item 
+src/visitor/Total\+Visitor.\+cpp\end{DoxyCompactItemize}

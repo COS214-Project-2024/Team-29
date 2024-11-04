@@ -1,0 +1,97 @@
+\hypertarget{classCulturalCentre}{}\doxysection{Cultural\+Centre Class Reference}
+\label{classCulturalCentre}\index{CulturalCentre@{CulturalCentre}}
+
+
+Specialised concrete Landmark\+Buidling class that represents a \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}}.  
+
+
+
+
+{\ttfamily \#include $<$Cultural\+Centre.\+h$>$}
+
+
+
+Inheritance diagram for Cultural\+Centre\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classCulturalCentre__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cultural\+Centre\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classCulturalCentre__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCulturalCentre_a622fa257fa46db45a16ea667c940d877}{Cultural\+Centre}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classLandmarkBuilding_a2969e24cb504168dad4049c8e01e44d7}{satisfaction\+Value}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} with the specified tax income, build cost, and satisfaction value. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCulturalCentre_a92709fa0831012c30abb16e80aec73b4}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}}. Such as calculating total income tax for the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCulturalCentre_aa5055fe1741f6d22e02662c06b704289}\label{classCulturalCentre_aa5055fe1741f6d22e02662c06b704289}} 
+\mbox{\hyperlink{classCulturalCentre_aa5055fe1741f6d22e02662c06b704289}{$\sim$\+Cultural\+Centre}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Landmark\+Buidling class that represents a \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}}. 
+
+The \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} class is a specialised type of \mbox{\hyperlink{classLandmarkBuilding}{Landmark\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCulturalCentre_a622fa257fa46db45a16ea667c940d877}\label{classCulturalCentre_a622fa257fa46db45a16ea667c940d877}} 
+\index{CulturalCentre@{CulturalCentre}!CulturalCentre@{CulturalCentre}}
+\index{CulturalCentre@{CulturalCentre}!CulturalCentre@{CulturalCentre}}
+\doxysubsubsection{\texorpdfstring{CulturalCentre()}{CulturalCentre()}}
+{\footnotesize\ttfamily Cultural\+Centre\+::\+Cultural\+Centre (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{satisfaction\+Value }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} with the specified tax income, build cost, and satisfaction value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em satisfaction\+Value} & Measure of public satisfaction. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCulturalCentre_a92709fa0831012c30abb16e80aec73b4}\label{classCulturalCentre_a92709fa0831012c30abb16e80aec73b4}} 
+\index{CulturalCentre@{CulturalCentre}!accept@{accept}}
+\index{accept@{accept}!CulturalCentre@{CulturalCentre}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Cultural\+Centre\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}}. Such as calculating total income tax for the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/landmark/Cultural\+Centre.\+h\item 
+src/building\+Composite/landmark/Cultural\+Centre.\+cpp\end{DoxyCompactItemize}

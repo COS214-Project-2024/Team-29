@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classBuildingVisitor.html" title="Abstract base class defining visitor operations for different types of buildings." alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node2" href="$classTotalVisitor.html" title="Visitor class for calculating various totals across building types, including build cost,..." alt="" coords="171,5,265,32"/>
+</map>

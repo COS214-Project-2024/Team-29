@@ -1,0 +1,142 @@
+\hypertarget{classBuildingComponent}{}\doxysection{Building\+Component Class Reference}
+\label{classBuildingComponent}\index{BuildingComponent@{BuildingComponent}}
+
+
+Abstract class representing a generic building component.  
+
+
+
+
+{\ttfamily \#include $<$Building\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Building\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBuildingComponent__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classBuildingComponent_a046bf1fd7a605db63a7bc8dc0e236811}{add\+Building}} (\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$bc)
+\begin{DoxyCompactList}\small\item\em Adds a building component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBuildingComponent_a1cc4eb578d3514e2c03769f6471ad36a}{demolish\+Building}} (\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$bc)
+\begin{DoxyCompactList}\small\item\em Demolishes a specified building component (removes the building from the component). \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classBuildingComponent_a7854e99d81d5ebe1d4ac6bc0428bffb2}{get\+Tax\+Income}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the tax income of the building component. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classBuildingComponent_a05ac5c6b0484717ab4ced86ea3eda071}{get\+Build\+Cost}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the build cost of the building component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBuildingComponent_a9a6c66d1e75e8892216baa7b6a225996}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v)=0
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the building component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBuildingComponent_a0a21089bfd3b1ba5ac52bd2ca7c1ecc1}\label{classBuildingComponent_a0a21089bfd3b1ba5ac52bd2ca7c1ecc1}} 
+virtual \mbox{\hyperlink{classBuildingComponent_a0a21089bfd3b1ba5ac52bd2ca7c1ecc1}{$\sim$\+Building\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} object. (inline) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class representing a generic building component. 
+
+The \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} class provides a structure for handling individual building components, including operations for adding, demolishing, and retrieving financial data. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBuildingComponent_a9a6c66d1e75e8892216baa7b6a225996}\label{classBuildingComponent_a9a6c66d1e75e8892216baa7b6a225996}} 
+\index{BuildingComponent@{BuildingComponent}!accept@{accept}}
+\index{accept@{accept}!BuildingComponent@{BuildingComponent}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily virtual void Building\+Component\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the building component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTownHouse_af94dd8e520d4a99d1aab975931c22d73}{Town\+House}}, \mbox{\hyperlink{classHouse_af1567ffd66be73b0ccd87aa0f839884a}{House}}, \mbox{\hyperlink{classEstate_a91d0c90d6afd0afb3f3acff77904bd16}{Estate}}, \mbox{\hyperlink{classPark_abec7a474e2239632463e3aaff9a7fa3b}{Park}}, \mbox{\hyperlink{classMonument_acf2f98d1737c9798faeb0e3cda668794}{Monument}}, \mbox{\hyperlink{classCulturalCentre_a92709fa0831012c30abb16e80aec73b4}{Cultural\+Centre}}, \mbox{\hyperlink{classWarehouse_a581825ea9d518d8f12ebd96087cd3289}{Warehouse}}, \mbox{\hyperlink{classPlant_aa1239e82056acd50e117b98761772a59}{Plant}}, \mbox{\hyperlink{classFactory_a01e99b308ef33ecc5732dc8eda26fa5c}{Factory}}, \mbox{\hyperlink{classShop_a99b9ab16984cf7d576672063c888e62f}{Shop}}, \mbox{\hyperlink{classOffice_a7bfedd53ed73c458a1a3c0c25a5e26fa}{Office}}, \mbox{\hyperlink{classMall_a51f39a8dd30bbd453fd46a6670979a9c}{Mall}}, \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}, and \mbox{\hyperlink{classCompositeNeighbourhood_a2a63e00ea1c6f567591b4c4365cb5f26}{Composite\+Neighbourhood}}.
+
+\mbox{\Hypertarget{classBuildingComponent_a046bf1fd7a605db63a7bc8dc0e236811}\label{classBuildingComponent_a046bf1fd7a605db63a7bc8dc0e236811}} 
+\index{BuildingComponent@{BuildingComponent}!addBuilding@{addBuilding}}
+\index{addBuilding@{addBuilding}!BuildingComponent@{BuildingComponent}}
+\doxysubsubsection{\texorpdfstring{addBuilding()}{addBuilding()}}
+{\footnotesize\ttfamily void Building\+Component\+::add\+Building (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$}]{bc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a building component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bc} & Pointer to a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} to add. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classCompositeNeighbourhood_a70b0189eb49aa2e8bd88ffa4b538886f}{Composite\+Neighbourhood}}.
+
+\mbox{\Hypertarget{classBuildingComponent_a1cc4eb578d3514e2c03769f6471ad36a}\label{classBuildingComponent_a1cc4eb578d3514e2c03769f6471ad36a}} 
+\index{BuildingComponent@{BuildingComponent}!demolishBuilding@{demolishBuilding}}
+\index{demolishBuilding@{demolishBuilding}!BuildingComponent@{BuildingComponent}}
+\doxysubsubsection{\texorpdfstring{demolishBuilding()}{demolishBuilding()}}
+{\footnotesize\ttfamily void Building\+Component\+::demolish\+Building (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$}]{bc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Demolishes a specified building component (removes the building from the component). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bc} & Pointer to a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} to demolish. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classCompositeNeighbourhood_a312a4228dcb4208d8092977b7710b4c6}{Composite\+Neighbourhood}}.
+
+\mbox{\Hypertarget{classBuildingComponent_a05ac5c6b0484717ab4ced86ea3eda071}\label{classBuildingComponent_a05ac5c6b0484717ab4ced86ea3eda071}} 
+\index{BuildingComponent@{BuildingComponent}!getBuildCost@{getBuildCost}}
+\index{getBuildCost@{getBuildCost}!BuildingComponent@{BuildingComponent}}
+\doxysubsubsection{\texorpdfstring{getBuildCost()}{getBuildCost()}}
+{\footnotesize\ttfamily virtual double Building\+Component\+::get\+Build\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the build cost of the building component. 
+
+\begin{DoxyReturn}{Returns}
+Build cost as a double. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCompositeNeighbourhood_a5d4037e4ce47f4ba17cd36866399f695}{Composite\+Neighbourhood}}, and \mbox{\hyperlink{classBuilding_a649ecb91d58be68fcaa57d5148c4e701}{Building}}.
+
+\mbox{\Hypertarget{classBuildingComponent_a7854e99d81d5ebe1d4ac6bc0428bffb2}\label{classBuildingComponent_a7854e99d81d5ebe1d4ac6bc0428bffb2}} 
+\index{BuildingComponent@{BuildingComponent}!getTaxIncome@{getTaxIncome}}
+\index{getTaxIncome@{getTaxIncome}!BuildingComponent@{BuildingComponent}}
+\doxysubsubsection{\texorpdfstring{getTaxIncome()}{getTaxIncome()}}
+{\footnotesize\ttfamily virtual double Building\+Component\+::get\+Tax\+Income (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the tax income of the building component. 
+
+\begin{DoxyReturn}{Returns}
+Tax income as a double. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCompositeNeighbourhood_a62cf1961660cd563493932dca80a0cbe}{Composite\+Neighbourhood}}, and \mbox{\hyperlink{classBuilding_a8bed9a552c000823ef2a44f154387fa8}{Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/Building\+Component.\+h\item 
+src/building\+Composite/Building\+Component.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{classCommercialBuildingCreator}{}\doxysection{Commercial\+Building\+Creator Class Reference}
+\label{classCommercialBuildingCreator}\index{CommercialBuildingCreator@{CommercialBuildingCreator}}
+
+
+A concrete factory method for creating buildings.  
+
+
+
+
+{\ttfamily \#include $<$Commercial\+Building\+Creator.\+h$>$}
+
+
+
+Inheritance diagram for Commercial\+Building\+Creator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classCommercialBuildingCreator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Commercial\+Building\+Creator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classCommercialBuildingCreator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBuilding}{Building}} $\ast$ \mbox{\hyperlink{classCommercialBuildingCreator_aadcbb11a15695f780e4e5b06d0671307}{create\+Building}} (int b\+Name)
+\begin{DoxyCompactList}\small\item\em Creates a building object of type Commercial and returns it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A concrete factory method for creating buildings. 
+
+The \mbox{\hyperlink{classCommercialBuildingCreator}{Commercial\+Building\+Creator}} class provides one of the concrete classes for the abstract factory class, Buidling\+Creator, and is responsible for creating \mbox{\hyperlink{classBuilding}{Building}} objects of type Commercial 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommercialBuildingCreator_aadcbb11a15695f780e4e5b06d0671307}\label{classCommercialBuildingCreator_aadcbb11a15695f780e4e5b06d0671307}} 
+\index{CommercialBuildingCreator@{CommercialBuildingCreator}!createBuilding@{createBuilding}}
+\index{createBuilding@{createBuilding}!CommercialBuildingCreator@{CommercialBuildingCreator}}
+\doxysubsubsection{\texorpdfstring{createBuilding()}{createBuilding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuilding}{Building}} $\ast$ Commercial\+Building\+Creator\+::create\+Building (\begin{DoxyParamCaption}\item[{int}]{b\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a building object of type Commercial and returns it. 
+
+create\+Bulding() takes in a int paramenter that defines the type of commercial building
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classOffice}{Office}} \+: b\+Name == 1
+\item \mbox{\hyperlink{classShop}{Shop}} \+: b\+Name == 2
+\item \mbox{\hyperlink{classMall}{Mall}} \+: b\+Name == 3~\newline
+~\newline
+ (returns nullptr if b\+Name$<$1 or b\+Name$>$3)~\newline
+ returns a \mbox{\hyperlink{classBuilding}{Building}} pointer to the object (Building$\ast$).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+Name} & int that determines the type of Commercial building created\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Building$\ast$ to \mbox{\hyperlink{classBuilding}{Building}} object created 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingCreator_ae3f859670acfc139f1c0630cdfaff7d5}{Building\+Creator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Factory/Commercial\+Building\+Creator.\+h\item 
+src/building\+Factory/Commercial\+Building\+Creator.\+cpp\end{DoxyCompactItemize}

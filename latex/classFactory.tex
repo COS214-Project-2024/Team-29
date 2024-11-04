@@ -1,0 +1,97 @@
+\hypertarget{classFactory}{}\doxysection{Factory Class Reference}
+\label{classFactory}\index{Factory@{Factory}}
+
+
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classFactory}{Factory}}.  
+
+
+
+
+{\ttfamily \#include $<$Factory.\+h$>$}
+
+
+
+Inheritance diagram for Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFactory_ad17a6d776c189b7e2caa11e08d089353}{Factory}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classIndustrialBuilding_ab80409f9cb42f9c1a9171f4fbab6a5c1}{employee\+Capacity}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classFactory}{Factory}} with the specified tax income, build cost, and employee capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFactory_a01e99b308ef33ecc5732dc8eda26fa5c}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classFactory}{Factory}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFactory_a8f71456f48e4df402c778a44191ff40e}\label{classFactory_a8f71456f48e4df402c778a44191ff40e}} 
+\mbox{\hyperlink{classFactory_a8f71456f48e4df402c778a44191ff40e}{$\sim$\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classFactory}{Factory}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classFactory}{Factory}}. 
+
+The \mbox{\hyperlink{classFactory}{Factory}} class is a specialised type of \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFactory_ad17a6d776c189b7e2caa11e08d089353}\label{classFactory_ad17a6d776c189b7e2caa11e08d089353}} 
+\index{Factory@{Factory}!Factory@{Factory}}
+\index{Factory@{Factory}!Factory@{Factory}}
+\doxysubsubsection{\texorpdfstring{Factory()}{Factory()}}
+{\footnotesize\ttfamily Factory\+::\+Factory (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{employee\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classFactory}{Factory}} with the specified tax income, build cost, and employee capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFactory_a01e99b308ef33ecc5732dc8eda26fa5c}\label{classFactory_a01e99b308ef33ecc5732dc8eda26fa5c}} 
+\index{Factory@{Factory}!accept@{accept}}
+\index{accept@{accept}!Factory@{Factory}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Factory\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classFactory}{Factory}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/industrial/Factory.\+h\item 
+src/building\+Composite/industrial/Facotry.\+cpp\end{DoxyCompactItemize}

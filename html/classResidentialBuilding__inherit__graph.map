@@ -1,0 +1,8 @@
+<map id="ResidentialBuilding" name="ResidentialBuilding">
+<area shape="rect" id="node1" title="Represents an residential building with specified tax income, construction cost, and living capacity." alt="" coords="49,155,197,181"/>
+<area shape="rect" id="node4" href="$classEstate.html" title="Specialised concrete IndustrialBuidling class that represents an Estate." alt="" coords="5,229,68,256"/>
+<area shape="rect" id="node5" href="$classHouse.html" title="Specialised concrete IndustrialBuidling class that represents a House." alt="" coords="92,229,155,256"/>
+<area shape="rect" id="node6" href="$classTownHouse.html" title="Specialised concrete IndustrialBuidling class that represents a TownHouse." alt="" coords="179,229,275,256"/>
+<area shape="rect" id="node2" href="$classBuilding.html" title="Represents a building component with financial attributes like tax income and construction cost." alt="" coords="86,80,161,107"/>
+<area shape="rect" id="node3" href="$classBuildingComponent.html" title="Abstract class representing a generic building component." alt="" coords="48,5,199,32"/>
+</map>

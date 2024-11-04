@@ -1,0 +1,105 @@
+\hypertarget{classCommercialBuilding}{}\doxysection{Commercial\+Building Class Reference}
+\label{classCommercialBuilding}\index{CommercialBuilding@{CommercialBuilding}}
+
+
+Represents a commercial building with specified tax income, construction cost, and employee capacity.  
+
+
+
+
+{\ttfamily \#include $<$Commercial\+Building.\+h$>$}
+
+
+
+Inheritance diagram for Commercial\+Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classCommercialBuilding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Commercial\+Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classCommercialBuilding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommercialBuilding_a90ad62c0ae79bbd17b4f6736c7e403f5}{Commercial\+Building}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classCommercialBuilding_ae03369751697f633ed59798953c815b8}{employee\+Capacity}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classCommercialBuilding}{Commercial\+Building}} with the specified tax income, build cost, and employee capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCommercialBuilding_a97300c08e4c1762dda2e7c5c1af0dfec}{get\+Employee\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the employee capacity of the Commercial building. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommercialBuilding_aee93bcc9efa7d1866b94b0df2bf7b923}\label{classCommercialBuilding_aee93bcc9efa7d1866b94b0df2bf7b923}} 
+virtual \mbox{\hyperlink{classCommercialBuilding_aee93bcc9efa7d1866b94b0df2bf7b923}{$\sim$\+Commercial\+Building}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classCommercialBuilding}{Commercial\+Building}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classCommercialBuilding_ae03369751697f633ed59798953c815b8}{employee\+Capacity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a commercial building with specified tax income, construction cost, and employee capacity. 
+
+The \mbox{\hyperlink{classCommercialBuilding}{Commercial\+Building}} class acts as an abstarct base class for the concrete classes\+: -\/\mbox{\hyperlink{classMall}{Mall}} -\/\mbox{\hyperlink{classOffice}{Office}} -\/Shop$<$br$>$~\newline
+ provides the var of employee\+Capacity specific to Commercial types of buidlings 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCommercialBuilding_a90ad62c0ae79bbd17b4f6736c7e403f5}\label{classCommercialBuilding_a90ad62c0ae79bbd17b4f6736c7e403f5}} 
+\index{CommercialBuilding@{CommercialBuilding}!CommercialBuilding@{CommercialBuilding}}
+\index{CommercialBuilding@{CommercialBuilding}!CommercialBuilding@{CommercialBuilding}}
+\doxysubsubsection{\texorpdfstring{CommercialBuilding()}{CommercialBuilding()}}
+{\footnotesize\ttfamily Commercial\+Building\+::\+Commercial\+Building (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{employee\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classCommercialBuilding}{Commercial\+Building}} with the specified tax income, build cost, and employee capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommercialBuilding_a97300c08e4c1762dda2e7c5c1af0dfec}\label{classCommercialBuilding_a97300c08e4c1762dda2e7c5c1af0dfec}} 
+\index{CommercialBuilding@{CommercialBuilding}!getEmployeeCapacity@{getEmployeeCapacity}}
+\index{getEmployeeCapacity@{getEmployeeCapacity}!CommercialBuilding@{CommercialBuilding}}
+\doxysubsubsection{\texorpdfstring{getEmployeeCapacity()}{getEmployeeCapacity()}}
+{\footnotesize\ttfamily int Commercial\+Building\+::get\+Employee\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the employee capacity of the Commercial building. 
+
+\begin{DoxyReturn}{Returns}
+Employee capacity as an integer. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCommercialBuilding_ae03369751697f633ed59798953c815b8}\label{classCommercialBuilding_ae03369751697f633ed59798953c815b8}} 
+\index{CommercialBuilding@{CommercialBuilding}!employeeCapacity@{employeeCapacity}}
+\index{employeeCapacity@{employeeCapacity}!CommercialBuilding@{CommercialBuilding}}
+\doxysubsubsection{\texorpdfstring{employeeCapacity}{employeeCapacity}}
+{\footnotesize\ttfamily int Commercial\+Building\+::employee\+Capacity\hspace{0.3cm}{\ttfamily [protected]}}
+
+The number of employees the building can accommodate. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/commercial/Commercial\+Building.\+h\item 
+src/building\+Composite/commercial/Commercial\+Building.\+cpp\end{DoxyCompactItemize}

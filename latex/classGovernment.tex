@@ -1,0 +1,51 @@
+\hypertarget{classGovernment}{}\doxysection{Government Class Reference}
+\label{classGovernment}\index{Government@{Government}}
+
+
+Manages the policies that can be implemented within a city to impact citizen satisfaction and budget.  
+
+
+
+
+{\ttfamily \#include $<$Government.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGovernment_ad06c951e706c3a9e43e18b11c75d8888}\label{classGovernment_ad06c951e706c3a9e43e18b11c75d8888}} 
+\mbox{\hyperlink{classGovernment_ad06c951e706c3a9e43e18b11c75d8888}{Government}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classGovernment}{Government}} instance, initializing it with a list of policies from \char`\"{}\+Policies.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGovernment_a458fe70f49e1876663cd435ef089f56e}{implement\+Policy}} (float \&budget)
+\begin{DoxyCompactList}\small\item\em Implements a random policy for a set price of R 5000. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the policies that can be implemented within a city to impact citizen satisfaction and budget. 
+
+The \mbox{\hyperlink{classGovernment}{Government}} class handles a collection of policies and provides functionality to implement them, which reduces city\textquotesingle{}s budget and affects citizen satisfaction. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGovernment_a458fe70f49e1876663cd435ef089f56e}\label{classGovernment_a458fe70f49e1876663cd435ef089f56e}} 
+\index{Government@{Government}!implementPolicy@{implementPolicy}}
+\index{implementPolicy@{implementPolicy}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{implementPolicy()}{implementPolicy()}}
+{\footnotesize\ttfamily bool Government\+::implement\+Policy (\begin{DoxyParamCaption}\item[{float \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Implements a random policy for a set price of R 5000. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em budget} & A reference to the city\textquotesingle{}s budget for managing costs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the policy positively impacts citizen satisfaction; False otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/government/Government.\+h\item 
+src/government/Government.\+cpp\end{DoxyCompactItemize}

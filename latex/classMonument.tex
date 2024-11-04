@@ -1,0 +1,97 @@
+\hypertarget{classMonument}{}\doxysection{Monument Class Reference}
+\label{classMonument}\index{Monument@{Monument}}
+
+
+Specialised concrete Landmark\+Buidling class that represents a \mbox{\hyperlink{classMonument}{Monument}}.  
+
+
+
+
+{\ttfamily \#include $<$Monument.\+h$>$}
+
+
+
+Inheritance diagram for Monument\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classMonument__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Monument\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classMonument__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMonument_a839ec852baee311e26ff64fe7fee49f0}{Monument}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classLandmarkBuilding_a2969e24cb504168dad4049c8e01e44d7}{satisfaction\+Value}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classMonument}{Monument}} with the specified tax income, build cost, and satisfaction value. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMonument_acf2f98d1737c9798faeb0e3cda668794}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classMonument}{Monument}}. Such as calculating total income tax for the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMonument_aa6d1fb71958d3006da268b2b4ed136c3}\label{classMonument_aa6d1fb71958d3006da268b2b4ed136c3}} 
+\mbox{\hyperlink{classMonument_aa6d1fb71958d3006da268b2b4ed136c3}{$\sim$\+Monument}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classMonument}{Monument}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Landmark\+Buidling class that represents a \mbox{\hyperlink{classMonument}{Monument}}. 
+
+The \mbox{\hyperlink{classMonument}{Monument}} class is a specialised type of \mbox{\hyperlink{classLandmarkBuilding}{Landmark\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMonument_a839ec852baee311e26ff64fe7fee49f0}\label{classMonument_a839ec852baee311e26ff64fe7fee49f0}} 
+\index{Monument@{Monument}!Monument@{Monument}}
+\index{Monument@{Monument}!Monument@{Monument}}
+\doxysubsubsection{\texorpdfstring{Monument()}{Monument()}}
+{\footnotesize\ttfamily Monument\+::\+Monument (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{satisfaction\+Value }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classMonument}{Monument}} with the specified tax income, build cost, and satisfaction value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em satisfaction\+Value} & Measure of public satisfaction. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMonument_acf2f98d1737c9798faeb0e3cda668794}\label{classMonument_acf2f98d1737c9798faeb0e3cda668794}} 
+\index{Monument@{Monument}!accept@{accept}}
+\index{accept@{accept}!Monument@{Monument}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Monument\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classMonument}{Monument}}. Such as calculating total income tax for the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/landmark/Monument.\+h\item 
+src/building\+Composite/landmark/Monument.\+cpp\end{DoxyCompactItemize}

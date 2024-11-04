@@ -1,0 +1,97 @@
+\hypertarget{classResidentialBuilding}{}\doxysection{Residential\+Building Class Reference}
+\label{classResidentialBuilding}\index{ResidentialBuilding@{ResidentialBuilding}}
+
+
+Represents an residential building with specified tax income, construction cost, and living capacity.  
+
+
+
+
+{\ttfamily \#include $<$Residential\+Building.\+h$>$}
+
+
+
+Inheritance diagram for Residential\+Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classResidentialBuilding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Residential\+Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classResidentialBuilding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classResidentialBuilding_a1d0a8ea92b5fdf5e508da5f043f08c1a}{Residential\+Building}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int living\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classResidentialBuilding}{Residential\+Building}} with the specified tax income, build cost, and living capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classResidentialBuilding_aea8d3d475a1ef0480252a4b16625b0cf}{get\+Living\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the living capacity of the Residential building. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classResidentialBuilding_a10e87441e9bce38126a71532ef5c12b7}\label{classResidentialBuilding_a10e87441e9bce38126a71532ef5c12b7}} 
+virtual \mbox{\hyperlink{classResidentialBuilding_a10e87441e9bce38126a71532ef5c12b7}{$\sim$\+Residential\+Building}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classResidentialBuilding}{Residential\+Building}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classResidentialBuilding_a8db904486166b80649b1fdbbd86ffe03}\label{classResidentialBuilding_a8db904486166b80649b1fdbbd86ffe03}} 
+int {\bfseries living\+Capacity}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an residential building with specified tax income, construction cost, and living capacity. 
+
+The \mbox{\hyperlink{classResidentialBuilding}{Residential\+Building}} class acts as an abstarct base class for the concrete classes\+: -\/\mbox{\hyperlink{classEstate}{Estate}} -\/\mbox{\hyperlink{classHouse}{House}} -\/Town\+House$<$br$>$~\newline
+ provides the var of living\+Capacity specific to Residential types of buidlings 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classResidentialBuilding_a1d0a8ea92b5fdf5e508da5f043f08c1a}\label{classResidentialBuilding_a1d0a8ea92b5fdf5e508da5f043f08c1a}} 
+\index{ResidentialBuilding@{ResidentialBuilding}!ResidentialBuilding@{ResidentialBuilding}}
+\index{ResidentialBuilding@{ResidentialBuilding}!ResidentialBuilding@{ResidentialBuilding}}
+\doxysubsubsection{\texorpdfstring{ResidentialBuilding()}{ResidentialBuilding()}}
+{\footnotesize\ttfamily Residential\+Building\+::\+Residential\+Building (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{living\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classResidentialBuilding}{Residential\+Building}} with the specified tax income, build cost, and living capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em living\+Capacity} & Maximum number of residents accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classResidentialBuilding_aea8d3d475a1ef0480252a4b16625b0cf}\label{classResidentialBuilding_aea8d3d475a1ef0480252a4b16625b0cf}} 
+\index{ResidentialBuilding@{ResidentialBuilding}!getLivingCapacity@{getLivingCapacity}}
+\index{getLivingCapacity@{getLivingCapacity}!ResidentialBuilding@{ResidentialBuilding}}
+\doxysubsubsection{\texorpdfstring{getLivingCapacity()}{getLivingCapacity()}}
+{\footnotesize\ttfamily int Residential\+Building\+::get\+Living\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the living capacity of the Residential building. 
+
+\begin{DoxyReturn}{Returns}
+Living capacity as an integer. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/residential/Residential\+Building.\+h\item 
+src/building\+Composite/residential/Residential\+Building.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,97 @@
+\hypertarget{classTownHouse}{}\doxysection{Town\+House Class Reference}
+\label{classTownHouse}\index{TownHouse@{TownHouse}}
+
+
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classTownHouse}{Town\+House}}.  
+
+
+
+
+{\ttfamily \#include $<$Town\+House.\+h$>$}
+
+
+
+Inheritance diagram for Town\+House\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classTownHouse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Town\+House\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classTownHouse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTownHouse_a773e233235e39024ac402dbf0eed88eb}{Town\+House}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int living\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classTownHouse}{Town\+House}} with the specified tax income, build cost, and living capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTownHouse_af94dd8e520d4a99d1aab975931c22d73}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classTownHouse}{Town\+House}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTownHouse_ace5da6232ff74206c4ebe03546771365}\label{classTownHouse_ace5da6232ff74206c4ebe03546771365}} 
+\mbox{\hyperlink{classTownHouse_ace5da6232ff74206c4ebe03546771365}{$\sim$\+Town\+House}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classTownHouse}{Town\+House}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classTownHouse}{Town\+House}}. 
+
+The \mbox{\hyperlink{classTownHouse}{Town\+House}} class is a specialised type of \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTownHouse_a773e233235e39024ac402dbf0eed88eb}\label{classTownHouse_a773e233235e39024ac402dbf0eed88eb}} 
+\index{TownHouse@{TownHouse}!TownHouse@{TownHouse}}
+\index{TownHouse@{TownHouse}!TownHouse@{TownHouse}}
+\doxysubsubsection{\texorpdfstring{TownHouse()}{TownHouse()}}
+{\footnotesize\ttfamily Town\+House\+::\+Town\+House (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{living\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classTownHouse}{Town\+House}} with the specified tax income, build cost, and living capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTownHouse_af94dd8e520d4a99d1aab975931c22d73}\label{classTownHouse_af94dd8e520d4a99d1aab975931c22d73}} 
+\index{TownHouse@{TownHouse}!accept@{accept}}
+\index{accept@{accept}!TownHouse@{TownHouse}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Town\+House\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classTownHouse}{Town\+House}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/residential/Town\+House.\+h\item 
+src/building\+Composite/residential/Town\+House.\+cpp\end{DoxyCompactItemize}

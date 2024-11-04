@@ -1,0 +1,141 @@
+\hypertarget{classFerry}{}\doxysection{Ferry Class Reference}
+\label{classFerry}\index{Ferry@{Ferry}}
+
+
+Represents an ferry with specified cost, capacity, and transport type.  
+
+
+
+
+{\ttfamily \#include $<$Ferry.\+h$>$}
+
+
+
+Inheritance diagram for Ferry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classFerry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ferry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classFerry__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFerry_ae500540862900f0639d07fde80c03c7c}{Ferry}} (string name, float \&budget)
+\begin{DoxyCompactList}\small\item\em Creates a new ferry for the city with specified name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFerry_a108b0399e817202f95b1c5ba7a8b6271}\label{classFerry_a108b0399e817202f95b1c5ba7a8b6271}} 
+\mbox{\hyperlink{classFerry_a108b0399e817202f95b1c5ba7a8b6271}{$\sim$\+Ferry}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classFerry}{Ferry}}, decrements public\+Transport\+Capacity by its own capacity. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classFerry_a61fd18873c3315461149e1f131e1e5aa}{get\+Transport\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of transport associated with the ferry. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classFerry_a4cd246bb7554f6686059a249bb1e7240}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the ferry. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classFerry_a7e32fcd082a5a0781f4fc07a18b37f84}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the specific transport type label of the ferry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents an ferry with specified cost, capacity, and transport type. 
+
+The \mbox{\hyperlink{classFerry}{Ferry}} class is a specialised mode of transport within a city, providing an implementation specific to airports, including attributes for cost, type, and capacity. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFerry_ae500540862900f0639d07fde80c03c7c}\label{classFerry_ae500540862900f0639d07fde80c03c7c}} 
+\index{Ferry@{Ferry}!Ferry@{Ferry}}
+\index{Ferry@{Ferry}!Ferry@{Ferry}}
+\doxysubsubsection{\texorpdfstring{Ferry()}{Ferry()}}
+{\footnotesize\ttfamily Ferry\+::\+Ferry (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{float \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Creates a new ferry for the city with specified name. 
+
+
+\begin{DoxyItemize}
+\item Cost\+: R 1,000,000.
+\item Type\+: Public\+Transport.
+\item Capacity\+: 500,000
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the ferry. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if there is not enough budget to build the ferries. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFerry_a4cd246bb7554f6686059a249bb1e7240}\label{classFerry_a4cd246bb7554f6686059a249bb1e7240}} 
+\index{Ferry@{Ferry}!getName@{getName}}
+\index{getName@{getName}!Ferry@{Ferry}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Ferry\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the name of the ferry. 
+
+\begin{DoxyReturn}{Returns}
+The name of the ferry as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_a6eaf02f55273a4d556705d417fe1ebfd}{Mode\+Of\+Transport}}.
+
+\mbox{\Hypertarget{classFerry_a61fd18873c3315461149e1f131e1e5aa}\label{classFerry_a61fd18873c3315461149e1f131e1e5aa}} 
+\index{Ferry@{Ferry}!getTransportType@{getTransportType}}
+\index{getTransportType@{getTransportType}!Ferry@{Ferry}}
+\doxysubsubsection{\texorpdfstring{getTransportType()}{getTransportType()}}
+{\footnotesize\ttfamily string Ferry\+::get\+Transport\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the type of transport associated with the ferry. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the transport type, ergo -\/ \char`\"{}\+Public\+Transport\char`\"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_aabd8fc73f8db175f8a62c510bf9fd984}{Mode\+Of\+Transport}}.
+
+\mbox{\Hypertarget{classFerry_a7e32fcd082a5a0781f4fc07a18b37f84}\label{classFerry_a7e32fcd082a5a0781f4fc07a18b37f84}} 
+\index{Ferry@{Ferry}!getType@{getType}}
+\index{getType@{getType}!Ferry@{Ferry}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Ferry\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the specific transport type label of the ferry. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the type of transport, \char`\"{}\+Ferry\char`\"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_aaa163719b4fc5e11714e88221d33c03e}{Mode\+Of\+Transport}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/transport/Ferry.\+h\item 
+src/transport/Ferry.\+cpp\end{DoxyCompactItemize}

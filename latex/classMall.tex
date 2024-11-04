@@ -1,0 +1,97 @@
+\hypertarget{classMall}{}\doxysection{Mall Class Reference}
+\label{classMall}\index{Mall@{Mall}}
+
+
+Specialised concrete Commercial\+Buidling class that represents a \mbox{\hyperlink{classMall}{Mall}}.  
+
+
+
+
+{\ttfamily \#include $<$Mall.\+h$>$}
+
+
+
+Inheritance diagram for Mall\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classMall__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mall\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classMall__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMall_abfec6730303666174e321b5a74db8779}{Mall}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classCommercialBuilding_ae03369751697f633ed59798953c815b8}{employee\+Capacity}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classMall}{Mall}} with the specified tax income, build cost, and employee capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMall_a51f39a8dd30bbd453fd46a6670979a9c}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classMall}{Mall}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMall_a1627bfd6a1152a293d6a992a9304eee2}\label{classMall_a1627bfd6a1152a293d6a992a9304eee2}} 
+virtual \mbox{\hyperlink{classMall_a1627bfd6a1152a293d6a992a9304eee2}{$\sim$\+Mall}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classMall}{Mall}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Commercial\+Buidling class that represents a \mbox{\hyperlink{classMall}{Mall}}. 
+
+The \mbox{\hyperlink{classMall}{Mall}} class is a specialised type of \mbox{\hyperlink{classCommercialBuilding}{Commercial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMall_abfec6730303666174e321b5a74db8779}\label{classMall_abfec6730303666174e321b5a74db8779}} 
+\index{Mall@{Mall}!Mall@{Mall}}
+\index{Mall@{Mall}!Mall@{Mall}}
+\doxysubsubsection{\texorpdfstring{Mall()}{Mall()}}
+{\footnotesize\ttfamily Mall\+::\+Mall (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{employee\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classMall}{Mall}} with the specified tax income, build cost, and employee capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMall_a51f39a8dd30bbd453fd46a6670979a9c}\label{classMall_a51f39a8dd30bbd453fd46a6670979a9c}} 
+\index{Mall@{Mall}!accept@{accept}}
+\index{accept@{accept}!Mall@{Mall}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Mall\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classMall}{Mall}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/commercial/Mall.\+h\item 
+src/building\+Composite/commercial/Mall.\+cpp\end{DoxyCompactItemize}

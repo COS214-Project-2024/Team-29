@@ -1,0 +1,74 @@
+\hypertarget{classInterface}{}\doxysection{Interface Class Reference}
+\label{classInterface}\index{Interface@{Interface}}
+
+
+Manages the user interface and simulation control.  
+
+
+
+
+{\ttfamily \#include $<$Interface.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}\label{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}} 
+\mbox{\hyperlink{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}{Interface}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classInterface}{Interface}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_a2423bc762ce55c532ee80302be28d917}\label{classInterface_a2423bc762ce55c532ee80302be28d917}} 
+void \mbox{\hyperlink{classInterface_a2423bc762ce55c532ee80302be28d917}{start\+Simulation}} ()
+\begin{DoxyCompactList}\small\item\em Starts the simulation process. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classInterface_ae7253eeac648006f2aabbdafaccf81c5}{handle\+Choice}} (int choice)
+\begin{DoxyCompactList}\small\item\em Handles user choices during simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_a319ff24b2300f54d825b89acb8ba24aa}{build}} (int type)
+\begin{DoxyCompactList}\small\item\em Initiates building construction within the simulation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_a19179888f29f18f1be54a3dfe98f68c0}\label{classInterface_a19179888f29f18f1be54a3dfe98f68c0}} 
+\mbox{\hyperlink{classInterface_a19179888f29f18f1be54a3dfe98f68c0}{$\sim$\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classInterface}{Interface}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the user interface and simulation control. 
+
+The \mbox{\hyperlink{classInterface}{Interface}} class provides functions to initiate the simulation, handle user choices, and manage building operations. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_a319ff24b2300f54d825b89acb8ba24aa}\label{classInterface_a319ff24b2300f54d825b89acb8ba24aa}} 
+\index{Interface@{Interface}!build@{build}}
+\index{build@{build}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily void Interface\+::build (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Initiates building construction within the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of building to construct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterface_ae7253eeac648006f2aabbdafaccf81c5}\label{classInterface_ae7253eeac648006f2aabbdafaccf81c5}} 
+\index{Interface@{Interface}!handleChoice@{handleChoice}}
+\index{handleChoice@{handleChoice}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{handleChoice()}{handleChoice()}}
+{\footnotesize\ttfamily bool Interface\+::handle\+Choice (\begin{DoxyParamCaption}\item[{int}]{choice }\end{DoxyParamCaption})}
+
+
+
+Handles user choices during simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & User-\/selected choice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the choice is successfully handled, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/managers/Interface.\+h\item 
+src/managers/Interface.\+cpp\end{DoxyCompactItemize}

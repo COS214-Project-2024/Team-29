@@ -1,0 +1,203 @@
+\hypertarget{classBuildingManager}{}\doxysection{Building\+Manager Class Reference}
+\label{classBuildingManager}\index{BuildingManager@{BuildingManager}}
+
+
+Manages creation and operations of various buildings in neighborhoods.  
+
+
+
+
+{\ttfamily \#include $<$Building\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBuildingManager_ae393b30d59cd8c3f745ea9189f81cd44}\label{classBuildingManager_ae393b30d59cd8c3f745ea9189f81cd44}} 
+\mbox{\hyperlink{classBuildingManager_ae393b30d59cd8c3f745ea9189f81cd44}{Building\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classBuildingManager}{Building\+Manager}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBuildingManager_a93e8d4d2369188b820e948a17f6e82cc}{create\+Neighbourhood}} (std\+::string n\+Name)
+\begin{DoxyCompactList}\small\item\em Creates a new neighborhood with the given name. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBuildingManager_a79ecf3ca7b9bc796daf5ff01f0a997c0}{build\+Building}} (std\+::string n\+Name, int b\+Type, int b\+Name, double balance)
+\begin{DoxyCompactList}\small\item\em Builds a building within a neighborhood. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBuildingManager_a056de80ba0edeb28ff8127204bf19ede}{get\+Total\+Per\+Neighbourhood}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves total building statistics per neighborhood. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBuildingManager_a3be46f35d329051de0df0833b097a414}{get\+Neighbourhoods}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves names of all neighbourhoods. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBuildingManager_a1a3a54f2c51b8483c4749c3aacc1565a}{get\+Total\+Build\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total cost of all buildings constructed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBuildingManager_a2c1a7e17566ba4fe8d9f895cf87ee2ba}{get\+Total\+Tax\+Income}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total tax income from all buildings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBuildingManager_ac2d7a7802bcf01667fdf1fe17796f84b}{get\+Total\+Living\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total living capacity provided by buildings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBuildingManager_a27087c01a43fadb7831ea61dc0eaaa67}{get\+Total\+Employee\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total employee capacity provided by buildings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBuildingManager_a3e77274c062ee131f260f4ae04bc0943}{get\+Total\+Satisfaction\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the overall satisfaction value contributed by buildings. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBuildingManager_aa7da1335fa923aef7ed734129190def8}{neighbourhood\+Exists}} (std\+::string n\+Name)
+\begin{DoxyCompactList}\small\item\em Checks if a neighborhood exists. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBuildingManager_ae1018d56c81a769f15705b2f1b4da592}\label{classBuildingManager_ae1018d56c81a769f15705b2f1b4da592}} 
+\mbox{\hyperlink{classBuildingManager_ae1018d56c81a769f15705b2f1b4da592}{$\sim$\+Building\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classBuildingManager}{Building\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages creation and operations of various buildings in neighborhoods. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBuildingManager_a79ecf3ca7b9bc796daf5ff01f0a997c0}\label{classBuildingManager_a79ecf3ca7b9bc796daf5ff01f0a997c0}} 
+\index{BuildingManager@{BuildingManager}!buildBuilding@{buildBuilding}}
+\index{buildBuilding@{buildBuilding}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{buildBuilding()}{buildBuilding()}}
+{\footnotesize\ttfamily double Building\+Manager\+::build\+Building (\begin{DoxyParamCaption}\item[{std\+::string}]{n\+Name,  }\item[{int}]{b\+Type,  }\item[{int}]{b\+Name,  }\item[{double}]{balance }\end{DoxyParamCaption})}
+
+
+
+Builds a building within a neighborhood. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Name} & Name of the neighborhood. \\
+\hline
+{\em b\+Type} & Type of building. \\
+\hline
+{\em b\+Name} & Name of the building. \\
+\hline
+{\em balance} & Current balance of the city or neighborhood. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated balance after building cost deduction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_a93e8d4d2369188b820e948a17f6e82cc}\label{classBuildingManager_a93e8d4d2369188b820e948a17f6e82cc}} 
+\index{BuildingManager@{BuildingManager}!createNeighbourhood@{createNeighbourhood}}
+\index{createNeighbourhood@{createNeighbourhood}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{createNeighbourhood()}{createNeighbourhood()}}
+{\footnotesize\ttfamily std\+::string Building\+Manager\+::create\+Neighbourhood (\begin{DoxyParamCaption}\item[{std\+::string}]{n\+Name }\end{DoxyParamCaption})}
+
+
+
+Creates a new neighborhood with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Name} & Name of the neighborhood. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status message of the creation operation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_a3be46f35d329051de0df0833b097a414}\label{classBuildingManager_a3be46f35d329051de0df0833b097a414}} 
+\index{BuildingManager@{BuildingManager}!getNeighbourhoods@{getNeighbourhoods}}
+\index{getNeighbourhoods@{getNeighbourhoods}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{getNeighbourhoods()}{getNeighbourhoods()}}
+{\footnotesize\ttfamily std\+::string Building\+Manager\+::get\+Neighbourhoods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves names of all neighbourhoods. 
+
+\begin{DoxyReturn}{Returns}
+List of neighbourhood names as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_a1a3a54f2c51b8483c4749c3aacc1565a}\label{classBuildingManager_a1a3a54f2c51b8483c4749c3aacc1565a}} 
+\index{BuildingManager@{BuildingManager}!getTotalBuildCost@{getTotalBuildCost}}
+\index{getTotalBuildCost@{getTotalBuildCost}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{getTotalBuildCost()}{getTotalBuildCost()}}
+{\footnotesize\ttfamily double Building\+Manager\+::get\+Total\+Build\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total cost of all buildings constructed. 
+
+\begin{DoxyReturn}{Returns}
+Total construction cost. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_a27087c01a43fadb7831ea61dc0eaaa67}\label{classBuildingManager_a27087c01a43fadb7831ea61dc0eaaa67}} 
+\index{BuildingManager@{BuildingManager}!getTotalEmployeeCapacity@{getTotalEmployeeCapacity}}
+\index{getTotalEmployeeCapacity@{getTotalEmployeeCapacity}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{getTotalEmployeeCapacity()}{getTotalEmployeeCapacity()}}
+{\footnotesize\ttfamily int Building\+Manager\+::get\+Total\+Employee\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total employee capacity provided by buildings. 
+
+\begin{DoxyReturn}{Returns}
+Total employee capacity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_ac2d7a7802bcf01667fdf1fe17796f84b}\label{classBuildingManager_ac2d7a7802bcf01667fdf1fe17796f84b}} 
+\index{BuildingManager@{BuildingManager}!getTotalLivingCapacity@{getTotalLivingCapacity}}
+\index{getTotalLivingCapacity@{getTotalLivingCapacity}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{getTotalLivingCapacity()}{getTotalLivingCapacity()}}
+{\footnotesize\ttfamily int Building\+Manager\+::get\+Total\+Living\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total living capacity provided by buildings. 
+
+\begin{DoxyReturn}{Returns}
+Total living capacity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_a056de80ba0edeb28ff8127204bf19ede}\label{classBuildingManager_a056de80ba0edeb28ff8127204bf19ede}} 
+\index{BuildingManager@{BuildingManager}!getTotalPerNeighbourhood@{getTotalPerNeighbourhood}}
+\index{getTotalPerNeighbourhood@{getTotalPerNeighbourhood}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{getTotalPerNeighbourhood()}{getTotalPerNeighbourhood()}}
+{\footnotesize\ttfamily std\+::string Building\+Manager\+::get\+Total\+Per\+Neighbourhood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves total building statistics per neighborhood. 
+
+\begin{DoxyReturn}{Returns}
+Summary of buildings in each neighborhood as a string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_a3e77274c062ee131f260f4ae04bc0943}\label{classBuildingManager_a3e77274c062ee131f260f4ae04bc0943}} 
+\index{BuildingManager@{BuildingManager}!getTotalSatisfactionValue@{getTotalSatisfactionValue}}
+\index{getTotalSatisfactionValue@{getTotalSatisfactionValue}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{getTotalSatisfactionValue()}{getTotalSatisfactionValue()}}
+{\footnotesize\ttfamily int Building\+Manager\+::get\+Total\+Satisfaction\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the overall satisfaction value contributed by buildings. 
+
+\begin{DoxyReturn}{Returns}
+Satisfaction value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_a2c1a7e17566ba4fe8d9f895cf87ee2ba}\label{classBuildingManager_a2c1a7e17566ba4fe8d9f895cf87ee2ba}} 
+\index{BuildingManager@{BuildingManager}!getTotalTaxIncome@{getTotalTaxIncome}}
+\index{getTotalTaxIncome@{getTotalTaxIncome}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{getTotalTaxIncome()}{getTotalTaxIncome()}}
+{\footnotesize\ttfamily double Building\+Manager\+::get\+Total\+Tax\+Income (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total tax income from all buildings. 
+
+\begin{DoxyReturn}{Returns}
+Total tax income. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuildingManager_aa7da1335fa923aef7ed734129190def8}\label{classBuildingManager_aa7da1335fa923aef7ed734129190def8}} 
+\index{BuildingManager@{BuildingManager}!neighbourhoodExists@{neighbourhoodExists}}
+\index{neighbourhoodExists@{neighbourhoodExists}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{\texorpdfstring{neighbourhoodExists()}{neighbourhoodExists()}}
+{\footnotesize\ttfamily bool Building\+Manager\+::neighbourhood\+Exists (\begin{DoxyParamCaption}\item[{std\+::string}]{n\+Name }\end{DoxyParamCaption})}
+
+
+
+Checks if a neighborhood exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Name} & Name of the neighborhood. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the neighborhood exists, otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/managers/Building\+Manager.\+h\item 
+src/managers/Building\+Manager.\+cpp\end{DoxyCompactItemize}

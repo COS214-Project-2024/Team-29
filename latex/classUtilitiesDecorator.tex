@@ -1,0 +1,127 @@
+\hypertarget{classUtilitiesDecorator}{}\doxysection{Utilities\+Decorator Class Reference}
+\label{classUtilitiesDecorator}\index{UtilitiesDecorator@{UtilitiesDecorator}}
+
+
+The base decorator class for the various utility systems.  
+
+
+
+
+{\ttfamily \#include $<$Utilities\+Decorator.\+h$>$}
+
+
+
+Inheritance diagram for Utilities\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUtilitiesDecorator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUtilitiesDecorator_a429d9a70b8b0fa76d5a4107629221a03}{Utilities\+Decorator}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classUtilitiesDecorator}{Utilities\+Decorator}}. Initialises level to 0. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUtilitiesDecorator_ae43ecf2a86e64354c9b76f37cb722f45}{upgrade\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Attempts to upgrade the utility level. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilitiesDecorator_a287c3c04d1a8da335dea543183d4ccdd}{get\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current capacity of the utility. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilitiesDecorator_a7da1aa08581f36fcb8ddf2c07cb91b86}{get\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current level of the utility. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUtilitiesDecorator_a06dbdda7bb94fe2e78cf62a9ad225cbe}{is\+Efficient}} (int demand)
+\begin{DoxyCompactList}\small\item\em Checks if the utility is efficient given a demand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base decorator class for the various utility systems. 
+
+The \mbox{\hyperlink{classUtilitiesDecorator}{Utilities\+Decorator}} class provides basic attributes and methods for managing the level and capacity of utility systems. It offers functionality for upgrading levels, checking capacity, and determining efficiency based on demand. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUtilitiesDecorator_a429d9a70b8b0fa76d5a4107629221a03}\label{classUtilitiesDecorator_a429d9a70b8b0fa76d5a4107629221a03}} 
+\index{UtilitiesDecorator@{UtilitiesDecorator}!UtilitiesDecorator@{UtilitiesDecorator}}
+\index{UtilitiesDecorator@{UtilitiesDecorator}!UtilitiesDecorator@{UtilitiesDecorator}}
+\doxysubsubsection{\texorpdfstring{UtilitiesDecorator()}{UtilitiesDecorator()}}
+{\footnotesize\ttfamily Utilities\+Decorator\+::\+Utilities\+Decorator (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classUtilitiesDecorator}{Utilities\+Decorator}}. Initialises level to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Initial capacity of the utility. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUtilitiesDecorator_a287c3c04d1a8da335dea543183d4ccdd}\label{classUtilitiesDecorator_a287c3c04d1a8da335dea543183d4ccdd}} 
+\index{UtilitiesDecorator@{UtilitiesDecorator}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!UtilitiesDecorator@{UtilitiesDecorator}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Utilities\+Decorator\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current capacity of the utility. 
+
+\begin{DoxyReturn}{Returns}
+The current capacity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilitiesDecorator_a7da1aa08581f36fcb8ddf2c07cb91b86}\label{classUtilitiesDecorator_a7da1aa08581f36fcb8ddf2c07cb91b86}} 
+\index{UtilitiesDecorator@{UtilitiesDecorator}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!UtilitiesDecorator@{UtilitiesDecorator}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily int Utilities\+Decorator\+::get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current level of the utility. 
+
+\begin{DoxyReturn}{Returns}
+The current level. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilitiesDecorator_a06dbdda7bb94fe2e78cf62a9ad225cbe}\label{classUtilitiesDecorator_a06dbdda7bb94fe2e78cf62a9ad225cbe}} 
+\index{UtilitiesDecorator@{UtilitiesDecorator}!isEfficient@{isEfficient}}
+\index{isEfficient@{isEfficient}!UtilitiesDecorator@{UtilitiesDecorator}}
+\doxysubsubsection{\texorpdfstring{isEfficient()}{isEfficient()}}
+{\footnotesize\ttfamily bool Utilities\+Decorator\+::is\+Efficient (\begin{DoxyParamCaption}\item[{int}]{demand }\end{DoxyParamCaption})}
+
+
+
+Checks if the utility is efficient given a demand. 
+
+Determines if the utility’s capacity at the current level can meet the demand. If demand is greater than {\ttfamily capacity $\ast$ 2$^\wedge$level}, it returns false; otherwise, true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em demand} & The demand to check efficiency against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the utility is efficient; false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilitiesDecorator_ae43ecf2a86e64354c9b76f37cb722f45}\label{classUtilitiesDecorator_ae43ecf2a86e64354c9b76f37cb722f45}} 
+\index{UtilitiesDecorator@{UtilitiesDecorator}!upgradeLevel@{upgradeLevel}}
+\index{upgradeLevel@{upgradeLevel}!UtilitiesDecorator@{UtilitiesDecorator}}
+\doxysubsubsection{\texorpdfstring{upgradeLevel()}{upgradeLevel()}}
+{\footnotesize\ttfamily bool Utilities\+Decorator\+::upgrade\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempts to upgrade the utility level. 
+
+Increases the level by one if it is below the maximum level of 5. Returns true if the upgrade is successful, false if already at max level.
+
+\begin{DoxyReturn}{Returns}
+True if upgrade is successful; false if already at max level. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utility/Utilities\+Decorator.\+h\item 
+src/utility/Utilities\+Decorator.\+cpp\end{DoxyCompactItemize}

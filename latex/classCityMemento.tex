@@ -1,0 +1,127 @@
+\hypertarget{classCityMemento}{}\doxysection{City\+Memento Class Reference}
+\label{classCityMemento}\index{CityMemento@{CityMemento}}
+
+
+Stores snapshots of city components, allowing the city state to be saved and restored.  
+
+
+
+
+{\ttfamily \#include $<$City\+Memento.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCityMemento_a7ffeeffaf33281bda09ad943344bb9f8}\label{classCityMemento_a7ffeeffaf33281bda09ad943344bb9f8}} 
+\mbox{\hyperlink{classCityMemento_a7ffeeffaf33281bda09ad943344bb9f8}{$\sim$\+City\+Memento}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classCityMemento}{City\+Memento}}, cleaning up resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a1f1e01bafa4254e73dd8077333c57107}{set\+Satisfaction}} (\mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Sets the satisfaction state of the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a911a6bd22a5c60abdda2fff01bba6b18}{set\+Buildings}} (\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Sets the saved buildings of the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a341e419f2a475ba61b80c02ecf49ecf3}{set\+Modes\+Of\+Transport}} (vector$<$ \mbox{\hyperlink{classModeOfTransport}{Mode\+Of\+Transport}} $>$ m)
+\begin{DoxyCompactList}\small\item\em Sets the modes of transport for the saved state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$ \mbox{\hyperlink{classCityMemento_a536ddaae7fa622ec133a9ea62db133a7}{get\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the saved satisfaction state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classCityMemento_a114844f4057c4d466ed87d30160c5db2}{get\+Buildings}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the saved buildings structure. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classModeOfTransport}{Mode\+Of\+Transport}} $\ast$ $>$ \mbox{\hyperlink{classCityMemento_ab0c32c07a6e4ffdbbad163eed1a50e97}{get\+Modes\+Of\+Transport}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the saved modes of transport. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores snapshots of city components, allowing the city state to be saved and restored. 
+
+The \mbox{\hyperlink{classCityMemento}{City\+Memento}} class provides mechanisms to set and retrieve saved states of various city components, including satisfaction state, buildings, and modes of transport. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCityMemento_a114844f4057c4d466ed87d30160c5db2}\label{classCityMemento_a114844f4057c4d466ed87d30160c5db2}} 
+\index{CityMemento@{CityMemento}!getBuildings@{getBuildings}}
+\index{getBuildings@{getBuildings}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getBuildings()}{getBuildings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ City\+Memento\+::get\+Buildings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the saved buildings structure. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the saved \mbox{\hyperlink{classBuildingComponent}{Building\+Component}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_ab0c32c07a6e4ffdbbad163eed1a50e97}\label{classCityMemento_ab0c32c07a6e4ffdbbad163eed1a50e97}} 
+\index{CityMemento@{CityMemento}!getModesOfTransport@{getModesOfTransport}}
+\index{getModesOfTransport@{getModesOfTransport}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getModesOfTransport()}{getModesOfTransport()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classModeOfTransport}{Mode\+Of\+Transport}} $\ast$ $>$ City\+Memento\+::get\+Modes\+Of\+Transport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the saved modes of transport. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to saved \mbox{\hyperlink{classModeOfTransport}{Mode\+Of\+Transport}} instances. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a536ddaae7fa622ec133a9ea62db133a7}\label{classCityMemento_a536ddaae7fa622ec133a9ea62db133a7}} 
+\index{CityMemento@{CityMemento}!getSatisfaction@{getSatisfaction}}
+\index{getSatisfaction@{getSatisfaction}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getSatisfaction()}{getSatisfaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$ City\+Memento\+::get\+Satisfaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the saved satisfaction state. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the saved \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a911a6bd22a5c60abdda2fff01bba6b18}\label{classCityMemento_a911a6bd22a5c60abdda2fff01bba6b18}} 
+\index{CityMemento@{CityMemento}!setBuildings@{setBuildings}}
+\index{setBuildings@{setBuildings}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setBuildings()}{setBuildings()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Buildings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Sets the saved buildings of the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Pointer to the \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} representing the saved building structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a341e419f2a475ba61b80c02ecf49ecf3}\label{classCityMemento_a341e419f2a475ba61b80c02ecf49ecf3}} 
+\index{CityMemento@{CityMemento}!setModesOfTransport@{setModesOfTransport}}
+\index{setModesOfTransport@{setModesOfTransport}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setModesOfTransport()}{setModesOfTransport()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Modes\+Of\+Transport (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classModeOfTransport}{Mode\+Of\+Transport}} $>$}]{m }\end{DoxyParamCaption})}
+
+
+
+Sets the modes of transport for the saved state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Vector of \mbox{\hyperlink{classModeOfTransport}{Mode\+Of\+Transport}} instances. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a1f1e01bafa4254e73dd8077333c57107}\label{classCityMemento_a1f1e01bafa4254e73dd8077333c57107}} 
+\index{CityMemento@{CityMemento}!setSatisfaction@{setSatisfaction}}
+\index{setSatisfaction@{setSatisfaction}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setSatisfaction()}{setSatisfaction()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Satisfaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Sets the satisfaction state of the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to the \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} to be saved. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/memento/City\+Memento.\+h\item 
+src/memento/City\+Memento.\+cpp\end{DoxyCompactItemize}

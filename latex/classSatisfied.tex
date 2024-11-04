@@ -1,0 +1,113 @@
+\hypertarget{classSatisfied}{}\doxysection{Satisfied Class Reference}
+\label{classSatisfied}\index{Satisfied@{Satisfied}}
+
+
+Represents a \mbox{\hyperlink{classSatisfied}{Satisfied}} satisfaction state within a city.  
+
+
+
+
+{\ttfamily \#include $<$Satisfied.\+h$>$}
+
+
+
+Inheritance diagram for Satisfied\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classSatisfied__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Satisfied\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classSatisfied__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSatisfied_a7eae2239c3f49be6f1a111f3afabcccb}\label{classSatisfied_a7eae2239c3f49be6f1a111f3afabcccb}} 
+\mbox{\hyperlink{classSatisfied_a7eae2239c3f49be6f1a111f3afabcccb}{Satisfied}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classSatisfied}{Satisfied}} satisfaction state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSatisfied_a4e80b5515f128609a3ac5913ab705826}{get\+Satisfaction\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current satisfaction level as a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSatisfied_a1146858064c6f88b6c4a780c5af77d85}{inc\+Satisfaction\+State}} (\mbox{\hyperlink{classCity}{City}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Increases the satisfaction level of the city from \mbox{\hyperlink{classSatisfied}{Satisfied}} to \mbox{\hyperlink{classVerySatisfied}{Very\+Satisfied}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSatisfied_a12615639586e1f5d68464a31c99ec42c}{dec\+Satisfaction\+State}} (\mbox{\hyperlink{classCity}{City}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Decreases the satisfaction level of the city from \mbox{\hyperlink{classSatisfied}{Satisfied}} to \mbox{\hyperlink{classNeutral}{Neutral}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{classSatisfied}{Satisfied}} satisfaction state within a city. 
+
+The \mbox{\hyperlink{classSatisfied}{Satisfied}} class provides the implementation of a \mbox{\hyperlink{classSatisfied}{Satisfied}} satisfaction state, with operations to adjust the state as necessary. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSatisfied_a12615639586e1f5d68464a31c99ec42c}\label{classSatisfied_a12615639586e1f5d68464a31c99ec42c}} 
+\index{Satisfied@{Satisfied}!decSatisfactionState@{decSatisfactionState}}
+\index{decSatisfactionState@{decSatisfactionState}!Satisfied@{Satisfied}}
+\doxysubsubsection{\texorpdfstring{decSatisfactionState()}{decSatisfactionState()}}
+{\footnotesize\ttfamily void Satisfied\+::dec\+Satisfaction\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCity}{City}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Decreases the satisfaction level of the city from \mbox{\hyperlink{classSatisfied}{Satisfied}} to \mbox{\hyperlink{classNeutral}{Neutral}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Pointer to the \mbox{\hyperlink{classCity}{City}} object whose satisfaction is to be decreased. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_ab454d10207ba833747670f757d0e77ea}{Satisfaction\+State}}.
+
+\mbox{\Hypertarget{classSatisfied_a4e80b5515f128609a3ac5913ab705826}\label{classSatisfied_a4e80b5515f128609a3ac5913ab705826}} 
+\index{Satisfied@{Satisfied}!getSatisfactionLevel@{getSatisfactionLevel}}
+\index{getSatisfactionLevel@{getSatisfactionLevel}!Satisfied@{Satisfied}}
+\doxysubsubsection{\texorpdfstring{getSatisfactionLevel()}{getSatisfactionLevel()}}
+{\footnotesize\ttfamily std\+::string Satisfied\+::get\+Satisfaction\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the current satisfaction level as a string. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Satisfied\char`\"{} satisfaction level as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_aa3b1c8ed158ce5964b98f83ed5314124}{Satisfaction\+State}}.
+
+\mbox{\Hypertarget{classSatisfied_a1146858064c6f88b6c4a780c5af77d85}\label{classSatisfied_a1146858064c6f88b6c4a780c5af77d85}} 
+\index{Satisfied@{Satisfied}!incSatisfactionState@{incSatisfactionState}}
+\index{incSatisfactionState@{incSatisfactionState}!Satisfied@{Satisfied}}
+\doxysubsubsection{\texorpdfstring{incSatisfactionState()}{incSatisfactionState()}}
+{\footnotesize\ttfamily void Satisfied\+::inc\+Satisfaction\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCity}{City}} $\ast$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Increases the satisfaction level of the city from \mbox{\hyperlink{classSatisfied}{Satisfied}} to \mbox{\hyperlink{classVerySatisfied}{Very\+Satisfied}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Pointer to the \mbox{\hyperlink{classCity}{City}} object whose satisfaction is to be increased. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSatisfactionState_abf0e4b5f9508e973c568774b7dc20ac3}{Satisfaction\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/satisfaction/Satisfied.\+h\item 
+src/satisfaction/Satisfied.\+cpp\end{DoxyCompactItemize}

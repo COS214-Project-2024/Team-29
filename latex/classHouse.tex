@@ -1,0 +1,97 @@
+\hypertarget{classHouse}{}\doxysection{House Class Reference}
+\label{classHouse}\index{House@{House}}
+
+
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classHouse}{House}}.  
+
+
+
+
+{\ttfamily \#include $<$House.\+h$>$}
+
+
+
+Inheritance diagram for House\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classHouse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for House\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classHouse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHouse_a4f6ec39d26949ea6c6ac3b57e7df5fce}{House}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int living\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classHouse}{House}} with the specified tax income, build cost, and living capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classHouse_af1567ffd66be73b0ccd87aa0f839884a}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classHouse}{House}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHouse_a11165764f3cdd033c70543e07a34ab95}\label{classHouse_a11165764f3cdd033c70543e07a34ab95}} 
+\mbox{\hyperlink{classHouse_a11165764f3cdd033c70543e07a34ab95}{$\sim$\+House}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classHouse}{House}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classHouse}{House}}. 
+
+The \mbox{\hyperlink{classHouse}{House}} class is a specialised type of \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHouse_a4f6ec39d26949ea6c6ac3b57e7df5fce}\label{classHouse_a4f6ec39d26949ea6c6ac3b57e7df5fce}} 
+\index{House@{House}!House@{House}}
+\index{House@{House}!House@{House}}
+\doxysubsubsection{\texorpdfstring{House()}{House()}}
+{\footnotesize\ttfamily House\+::\+House (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{living\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classHouse}{House}} with the specified tax income, build cost, and living capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHouse_af1567ffd66be73b0ccd87aa0f839884a}\label{classHouse_af1567ffd66be73b0ccd87aa0f839884a}} 
+\index{House@{House}!accept@{accept}}
+\index{accept@{accept}!House@{House}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void House\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classHouse}{House}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/residential/House.\+h\item 
+src/building\+Composite/residential/House.\+cpp\end{DoxyCompactItemize}
