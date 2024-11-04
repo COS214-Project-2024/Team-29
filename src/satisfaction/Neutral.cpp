@@ -20,3 +20,7 @@ void Neutral::decSatisfactionState(City* c) {
         c->setSatisfactionState(new Unsatisfied()); 
     }
 }
+
+SatisfactionState* Neutral::clone(){
+    
+}

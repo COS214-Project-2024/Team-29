@@ -14,6 +14,7 @@ class CitySaves {
         void addSave(string name, CityMemento* m);
         void removeSave(string name);
         CityMemento* getSave(string name);
+        string toString();
         ~CitySaves();
     private:
         map<string ,CityMemento*> save;
