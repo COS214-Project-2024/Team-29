@@ -72,3 +72,21 @@ int UtilityFacade::getSewageCapacity()
 {
     return sewageManagement->getCapacity();
 }
+
+UtilityFacade* UtilityFacade::clone(){
+    UtilityFacade* clone = new UtilityFacade();
+    clone->powerPlant->setCapacity(this->powerPlant->getCapacity());
+    clone->powerPlant->setLevel(this->powerPlant->getLevel());
+
+    clone->sewageManagement->setCapacity(this->sewageManagement->getCapacity());
+    clone->sewageManagement->setLevel(this->sewageManagement->getLevel());
+
+    clone->wasteManagement->setCapacity(this->wasteManagement->getCapacity());
+    clone->wasteManagement->setLevel(this->wasteManagement->getLevel());
+
+    clone->waterSupply->setCapacity(this->waterSupply->getCapacity());
+    clone->waterSupply->setLevel(this->waterSupply->getLevel());
+
+    return clone;
+}
+

@@ -58,6 +58,14 @@ class UtilitiesDecorator {
          * @return True if the utility is efficient; false otherwise.
          */
         bool isEfficient(int demand);
+
+        /// @brief Changes the currentCapacity variable to the passed in parameters value
+        /// @param c New Capacity value that currentCapacity will change to
+        void setCapacity(int c);
+
+        /// @brief Changes the level variable to the passed in parameters value
+        /// @param l New level value to change to
+        void setLevel(int l);
 };
 
 #endif
