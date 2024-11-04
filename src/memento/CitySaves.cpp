@@ -1,7 +1,10 @@
 #include "CitySaves.h"
 
 CitySaves::~CitySaves(){
-    
+    for(auto& pair : save){
+        delete pair.second;
+    }
+    save.clear();
 }
 
 void CitySaves::addSave(string name, CityMemento* m){
@@ -23,9 +26,21 @@ void CitySaves::removeSave(string name){
 }
 
 CityMemento* CitySaves::getSave(string name){
-    
+    auto it = save.find(name);
+    if(it != save.end()){
+        return it->second;
+    }
+    return nullptr;
 }
 
 string CitySaves::toString(){
-    return ;
+    string out = "Saves: \n";
+    for(const auto& pair : save){
+        int index = 1;
+        string name = pair.first;
+        out += "" + to_string(index) + " " + name + "\n";
+        index++;
+    }
+
+    return out;
 }
