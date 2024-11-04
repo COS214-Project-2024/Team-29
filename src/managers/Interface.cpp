@@ -2,49 +2,58 @@
 #include <iostream>
 #include <string>
 
-Interface::Interface(){
+Interface::Interface() {
     this->c = new City();
     this->cycle = 0;
 }
 
-Interface::~Interface(){
+Interface::~Interface() {
     delete this->c;
 }
 
-void Interface::startSimulation(){
-    // initial value of -1 so that nothing is done until the user makes a choice
-    int choice = -1;
-    std::cout<<"Welcome to our city building simulator"<<std::endl;
+void Interface::startSimulation() {
+    int choice;
 
-    // main game loop
-    // increments number of cycles
+    // Welcome Message
+    std::cout   << "====================================\n"
+                << "Welcome to City Kings\n"
+                << "====================================\n\n";
+
+    // MAIN LOOP - Increment cycle after each iteration, end when user quits or population reaches 0
     do {
-        std::cout<<"Cycle "<<this->cycle<<"\n"
-                 <<"====================\n";
+        choice = -1; //Initial value of -1, no steps taken until user changes choice's value
+        std::cout   << "====================\n"
+                    << "Cycle: "    <<this->cycle    <<"\n"
+                    << "====================\n\n";
 
-        // choice loop
-        // allows user to make multiple choices per cycle until they quit or go ot the next cycle
-        while (!handleChoice(choice)){
-            // displays stats about the city
-            std::cout<<"City Stats:\n"
-                <<"--------------------\n"
-                <<"Balance: "<<this->c->getBudget()
-                <<"\tPopulation: "<<this->c->getPopulation()
-                <<"\nPower demand: "<<this->c->getPowerDemand()
-                <<"\tWater demand: "<<this->c->getWaterDemand()
-                <<"\nWaste demand: "<<this->c->getWasteDemand()
-                <<"\tSewage demand: "<<this->c->getSewageDemand()
-                <<"\n====================\n\n";
+        
+        // User Choice Loop: Allows user to make multiple choices, per cycle until they quit or proceed to the next cycle.
+        while (!handleChoice(choice)) {
+            // Display current stats about the city
+            std::cout   << "------------------------------------\n"
+                        << "City Stats:\n"
+                        << "------------------------------------\n"
+                        << "\tBalance: "        << this->c->getBudget()        << "\n"
+                        << "\tPopulation: "     << this->c->getPopulation()    << "\n"
+                        << "\tPower demand: "   << this->c->getPowerDemand()   << "\n"
+                        << "\tWater demand: "   << this->c->getWaterDemand()   << "\n"
+                        << "\tWaste demand: "   << this->c->getWasteDemand()   << "\n"
+                        << "\tSewage demand: "  << this->c->getSewageDemand()  << "\n"
+                        << "------------------------------------\n\n";
+                        
+            // USER PROMPT: displays the available options to the user
+            std::cout   << "====================================\n"
+                        << "=> Choose an option to manage your city:\n"
+                        << "====================================\n"
+                        << "\t1. Add building\n"
+                        << "\t2. Implement a new policy\n"
+                        << "\t3. Next cycle\n"
+                        << "\t0. Quit simulation\n"
+                        << "====================================\n\n";
 
-            // displays the available options to the user
-            std::cout<<"Choose an option to manage your city:\n"
-                <<"--------------------\n"
-                <<"\t1. Add building"
-                <<"\t2. Implement a new policy\n"
-                <<"\t3. Next cycle"
-                <<"\t0. Quit simulation\n"
-                <<"====================\n\n";
+            // USER INPUT: User chooses an option
             std::cin>>choice;
+            std::cout   << "\n";        //Move to next line for prompt
         }
 
         cycle++;
@@ -57,25 +66,39 @@ bool Interface::handleChoice(int choice){
     if (choice == 3 || choice == 0){
         return true;
     } else if (choice == 1){
-        int type;
-        std::cout<<"Select which building you would like to add:\n"
-            <<"------------------------------------\n"
-            <<"Residential Buildings:\n"
-            <<"\t1. Townhouse\n\t2. Estate\n\t3. House\n"
-            <<"Commercial Buildings:\n"
-            <<"\t4. Office\n\t5. Shop\n\t6. Mall\n"
-            <<"Industrial Buildings:\n"
-            <<"\t7. Factory\n\t8. Warehouse\n\t9. Plant\n"
-            <<"Landmark Buildings:\n"
-            <<"\t10. Park\n\t11. Cultural Centre\n\t12. Park\n"
-            <<"====================================\n";
-        cin>>type;
+        int type;   // Type of building to be built
+
+        //USER PROMPT
+        std::cout   << "????????????????????????????????????\n"
+                    << "=> Which building would you like to build?\n"
+                    << "????????????????????????????????????\n"
+                    << "Residential Buildings:\n"
+                    << "\t1. Townhouse\n"
+                    << "\t2. Estate\n"
+                    << "\t3. House\n"
+                    << "Commercial Buildings:\n"
+                    << "\t4. Office\n"
+                    << "\t5. Shop\n"
+                    << "\t6. Mall\n"
+                    << "Industrial Buildings:\n"
+                    << "\t7. Factory\n"
+                    << "\t8. Warehouse\n"
+                    << "\t9. Plant\n"
+                    << "Landmark Buildings:\n"
+                    << "\t10. Park\n"
+                    << "\t11. Cultural Centre\n"
+                    << "\t12. Park\n"
+                    << "????????????????????????????????????\n";
+
+        //USER INPUT
+        cin>>type;  
+        std::cout   << "\n";        //Move to next line for prompt
         build(type);
         
     } else if (choice == 2){
         this->c->implementPolicy();
     }
-    return false;
+    return false;   // Case falls through if choice is not 0, 1, 2, or 3
 }
 
 void Interface::build(int type){
@@ -99,19 +122,35 @@ void Interface::build(int type){
         bType = 3;
         bName = (type+3)%4;
     } else {
-        std::cout<<"=> Invalid input\n";
+        std::cout   << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+                    << "=> Invalid input\n"
+                    << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n";
         return;
     }
 
-    std::cout<<"In which neighbourhood would you like to place the building? ";
+    //User Prompt
+    std::cout   << "????????????????????????????????????\n"
+                << "=> In which neighbourhood would you like to build your building?\n"
+                << "????????????????????????????????????\n";
+    //User Input
     std::cin>>nName;
+    std::cout   << "\n";        //Move to next line for prompt
 
     int buildCode = this->c->buildBuilding(nName, bType, bName);
 
-    //Check if building was built
+    //Failure Message
     if (buildCode == 0) {
-        std::cout<<"=> Building not built, reasons: Not in budget or wrong neighbourhood\n";
-    }
-    //Success
-    std::cout<<"=> Building built\n";
+        
+        std::cout   << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+                    << "=> Building not built!!!\n" 
+                    << "=> Reasons:\n" 
+                    << "\tNot in budget or\n"
+                    << "\tIncorrect neighbourhood name\n"
+                    << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n";
+    } 
+                 
+    //Success Message
+    std::cout   << "------------------------------------\n"
+                << "=> Building built\n"
+                << "------------------------------------\n\n";
 }
