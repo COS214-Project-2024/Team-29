@@ -30,6 +30,12 @@ class BuildingManager
         int getTotalLivingCapacity();
         int getTotalEmployeeCapacity();
         int getTotalSatisfactionValue();
+        int getTotalPowerDemand();
+        int getTotalWaterDemand();
+        int getTotalWasteDemand();
+        int getTotalSewageDemand();
+
+
         bool neighbourhoodExists(std::string nName);    // Helper function        
         ~BuildingManager();
         BuildingManager * clone();
