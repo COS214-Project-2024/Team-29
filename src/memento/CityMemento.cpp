@@ -16,8 +16,8 @@ void CityMemento::setSatisfaction(SatisfactionState* s) {
     this->satisfaction = s;
 }
 
-void CityMemento::setBuildings(list<BuildingComponent*> b) {
-    this->buildings = b;
+void CityMemento::setBuildingManager(BuildingManager b) {
+    this->buildingManager = b;
 }
 
 void CityMemento::setUtilityManager(UtilityFacade* m) {
@@ -57,23 +57,23 @@ void CityMemento::setTotalSewageDemand(int t) {
 }
 
 SatisfactionState* CityMemento::getSatisfaction() const {
-    return this->satisfaction;
+    return this->satisfaction->clone();
 }
 
-list<BuildingComponent*> CityMemento::getBuildings() const {
-    return this->buildings;
+list<BuildingComponent*> CityMemento::getBuildingManager() const {
+    return this->buildingManager->clone();
 }
 
 UtilityFacade* CityMemento::getUtilityManager() const {
-    return this->utilitiesManager;
+    return this->utilitiesManager->clone();
 }
 
 Government * CityMemento::getGovernment() const {
-    return this->government;
+    return this->government->clone();
 }
 
 TransportManager* CityMemento::getTransportManager() const {
-    return this->transportManager;
+    return this->transportManager->clone();
 }
 
 double CityMemento::getBudget() const {
