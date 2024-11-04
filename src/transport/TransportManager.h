@@ -30,11 +30,18 @@ class TransportManager {
          * @param budget Reference to the city's budget for managing costs.
          */
         void addTransport(string type, string name, float& budget);
+        /**
+         * @brief Calculates and retrieves the total capacity of all transport modes.
+         * @return Total capacity cost as an int.
+         */
+        TransportManager* copy(float& budget);
+
 
         /**
          * @brief Calculates and retrieves the total capacity of all transport modes.
          * @return Total capacity cost as an int.
          */
+
         int getTotalCapacity();
         /**
          * @brief Prints out the generated string of the decription of each type of
@@ -44,8 +51,7 @@ class TransportManager {
         /**
          * @brief Destroys the TransportManager and deallocates transport objects.
          */
-  
-        TransportManager* copy(float& budget);
+
         ~TransportManager();
 
 };

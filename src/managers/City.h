@@ -1,16 +1,12 @@
 #ifndef CITY_H
 #define CITY_H
 
-
-
-#include "../buildingComposite/BuildingComponent.h"
-
 #include "../transport/TransportManager.h"
 #include "../utility/UtilityFacade.h"
 #include "../memento/CityMemento.h"
 #include "../government/Government.h"
-#include "../visitor/TaxRateVisitor.h"
-#include "../visitor/BuildingVisitor.h"
+#include "../managers/BuildingManager.h"
+
 #include <list>
 
 class SatisfactionState;  // Forward declaration
@@ -20,12 +16,15 @@ class Government;
 class City {
     private:
         SatisfactionState* satisfaction;
-        list<BuildingComponent*> buildings;
+        BuildingManager* buildingManager;
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
         Government* government;
 
         float budget;
+        double totalBuildCost;
+        double totalTax;
+
         int population;
         int totalPowerDemand;
         int totalWaterDemand;
@@ -38,8 +37,6 @@ class City {
         ~City();
 
         void setSatisfactionState(SatisfactionState* s);
-
-        list<BuildingComponent*> getBuildings(){return buildings;};
 
         // for the Interface
         int getPopulation();
@@ -76,10 +73,18 @@ class City {
 
         //add func to check efficiency of diff utilities, set satisfaction and print what is not meeting demand
 
+        
+
+        //Building related functions 
+        void getTotalBuildCost();
         //add func to upgrade different utilities and set satisfaction after upgrading
         /// @brief Calculates the total Tax income accumulated from all of the buildings
-        void caclulateTotalTax();
+        void getTotalTax();
+        void getTotalLivingCapacity();
+        void getTotalEmployeeCapacity();
+        void getTotalSatisfactionValue();
 
+        int buildBuilding(std::string nName, int bType, int bName);
 };
 
 #endif
