@@ -7,9 +7,14 @@
 #include "../government/Government.h"
 #include "../utility/UtilityFacade.h"
 
+#include "../transport/TransportManager.h"
+#include "../government/Government.h"
+#include "../utility/UtilityFacade.h"
+
 
 #include <iostream>
 #include <vector>
+#include <list>
 #include <list>
 using namespace std;
 
@@ -18,6 +23,17 @@ class CityMemento {
         ~CityMemento();
 
         void setSatisfaction(SatisfactionState* s);
+        void setBuildingManager(BuildingManager * b);
+        void setUtilityManager(UtilityFacade * m);
+        void setGovernment(Government * g);
+        void setTransportManager(TransportManager * m);
+
+        void setBudget(double b);
+        void setPopulation(int p);
+        void setTotalPowerDemand(int t);
+        void setTotalWaterDemand(int t);
+        void setTotalWasteDemand(int t);
+        void setTotalSewageDemand(int t);
         void setBuildingManager(BuildingManager * b);
         void setUtilityManager(UtilityFacade * m);
         void setGovernment(Government * g);
@@ -45,6 +61,17 @@ class CityMemento {
 
     private:
         SatisfactionState* satisfaction;
+        BuildingManager* buildingManager;
+        UtilityFacade* utilitiesManager;
+        TransportManager* transportManager;
+        Government * government;
+
+        float budget;
+        int population;
+        int totalPowerDemand;
+        int totalWaterDemand;
+        int totalWasteDemand;
+        int totalSewageDemand;
         BuildingManager* buildingManager;
         UtilityFacade* utilitiesManager;
         TransportManager* transportManager;
