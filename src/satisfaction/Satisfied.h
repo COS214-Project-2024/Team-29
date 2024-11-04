@@ -9,6 +9,7 @@ class Satisfied : public SatisfactionState {
         std::string getSatisfactionLevel();
         void incSatisfactionState(City* c);
         void decSatisfactionState(City* c);
+        SatisfactionState* clone();
 };
 
 #endif
