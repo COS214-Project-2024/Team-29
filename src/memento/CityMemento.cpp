@@ -72,8 +72,8 @@ Government * CityMemento::getGovernment() const {
     return this->government->clone();
 }
 
-TransportManager* CityMemento::getTransportManager() const {
-    return this->transportManager->clone();
+TransportManager* CityMemento::getTransportManager(float &b) const {
+    return this->transportManager->copy(b);
 }
 
 double CityMemento::getBudget() const {

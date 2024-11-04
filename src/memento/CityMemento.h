@@ -34,7 +34,7 @@ class CityMemento {
         BuildingManager* getBuildingManager() const;
         UtilityFacade * getUtilityManager() const;
         Government * getGovernment() const;
-        TransportManager * getTransportManager() const;
+        TransportManager * getTransportManager(float& b) const;
 
         double getBudget() const;
         int getPopulation() const;
