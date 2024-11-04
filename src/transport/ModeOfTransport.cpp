@@ -15,13 +15,3 @@ int ModeOfTransport::getCapacity()
 {
     return this->capacity;
 }
-
-int ModeOfTransport::getPublicTransportCapacity()
-{
-    return this->publicTransportCapacity;
-}
-
-int ModeOfTransport::getGoodsTransportCapacity()
-{
-    return this->goodsTransportCapacity;
-}
