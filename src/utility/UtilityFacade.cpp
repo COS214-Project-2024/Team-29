@@ -12,25 +12,25 @@ void UtilityFacade::checkAndUpgradeUtilities(int demand)
 {
     if(powerPlant->isEfficient(demand))
     {
-        powerPlant->upgardeLevel();
+        powerPlant->upgradeLevel();
         std::cout<<"Power Plant has been upgraded since demand was to high\n";
     }
 
     if(powerPlant->isEfficient(demand))
     {
-        sewageManagement->upgardeLevel();
+        sewageManagement->upgradeLevel();
         std::cout<<"Sewage Management has been upgraded since demand was to high\n";
     }
 
     if(powerPlant->isEfficient(demand))
     {
-        wasteManagement->upgardeLevel();
+        wasteManagement->upgradeLevel();
         std::cout<<"Waste Management has been upgraded since demand was to high\n";
     }
 
     if(powerPlant->isEfficient(demand))
     {
-        waterSupply->upgardeLevel();
+        waterSupply->upgradeLevel();
         std::cout<<"Water Supply has been upgraded since demand was to high\n";
     }
 }
