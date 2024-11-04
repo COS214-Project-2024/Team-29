@@ -19,16 +19,11 @@ Airport::Airport(string name, float& budget)
         throw runtime_error("The city does not have enough money for an Airport.");
     }
 
-    this->publicTransportCapacity += capacity/2;
-    this->goodsTransportCapacity += capacity/2;
-
 }
 
 Airport::~Airport()
 {
     cout << this->name << " Airport destroyed." << endl; 
-    this->publicTransportCapacity -= capacity/2;
-    this->goodsTransportCapacity -= capacity/2;
 }
 
 string Airport::getTransportType() {
