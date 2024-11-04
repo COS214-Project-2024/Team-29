@@ -6,8 +6,6 @@
 #include <vector>
 using namespace std;
 
-#include "../buildingComposite/Building.h"
-
 /** 
  * @brief Abstract class for the different modes of transport
  * 

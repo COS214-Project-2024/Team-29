@@ -29,9 +29,7 @@ class BuildingManager
         int getTotalLivingCapacity();
         int getTotalEmployeeCapacity();
         int getTotalSatisfactionValue();
-        bool neighbourhoodExists(std::string nName);    // Helper function
-
-        
+        bool neighbourhoodExists(std::string nName);    // Helper function        
         ~BuildingManager();
 };
 
