@@ -9,7 +9,7 @@ City::City(){
     this->buildingManager = new BuildingManager();
 
     //Starting conditions
-    this->budget = (float)100000;
+    this->budget = (float)1000000000;
     this->population = 10;
     this->buildingManager->createNeighbourhood("StarterNeighbourhood");
     this->buildBuilding("StarterNeighbourhood", 1, 2);  //Shop
@@ -17,6 +17,7 @@ City::City(){
     this->buildBuilding("StarterNeighbourhood", 3, 1);  //Park
     this->buildBuilding("StarterNeighbourhood", 4, 1);  //Townhouse
     this->buildBuilding("StarterNeighbourhood", 4, 3);  //House
+    this->budget = (float)100000;
 }
 
 void City::setSatisfactionState(SatisfactionState* s){

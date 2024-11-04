@@ -102,12 +102,13 @@ void Interface::build(int type) {
 
     int buildCode = this->c->buildBuilding(nName, bType, bName);
 
-    //Failure Message
+    
     if (buildCode == 0) {
-        displayBuildingFailureMessage();
+        displayBuildingFailureMessage();    //Failure Message
     } 
-    //Success Message
-    displayBuildingSuccessMessage();
+    else {  
+        displayBuildingSuccessMessage();    //Success Message
+    }
 }
 
 /*
