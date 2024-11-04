@@ -6,7 +6,16 @@
 #include <string>
 #include <iostream>
 using namespace std;
+/**
+ * @class CitySaves
+ * @brief Manages saving and loading of city states using CityMemento objects.
+ *
+ * The CitySaves class provides methods to add, remove, and retrieve saved city states.
+ */
 class CitySaves {
+    private:
+        CityMemento* save;  /**< Pointer to the saved city state. */
+
     public:
         /// @brief Adds a CityMemento object to the map while using the name as the key
         /// @param name The key of the CityMemento
@@ -18,6 +27,24 @@ class CitySaves {
         ~CitySaves();
     private:
         map<string ,CityMemento*> save;
+        /**
+         * @brief Adds a save state to the collection.
+         * @param m Pointer to the CityMemento representing the city state to be saved.
+         */
+        void addSave(CityMemento* m);
+        /**
+         * @brief Removes the last saved state from the collection.
+         */
+        void removeSave();
+        /**
+         * @brief Retrieves the most recent save state.
+         * @return Pointer to the most recent CityMemento instance.
+         */
+        CityMemento* getSave();
+        /**
+         * @brief Destructor for CitySaves, cleaning up resources.
+         */
+        ~CityMemento();
 };
 
 #endif

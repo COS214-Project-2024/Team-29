@@ -1,88 +1,93 @@
 #include "Interface.h"
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
-Interface::Interface(){
+// ANSI color codes
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define GREEN   "\033[32m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+
+Interface::Interface() {
     this->c = new City();
     this->cycle = 0;
 }
 
-Interface::~Interface(){
+Interface::~Interface() {
     delete this->c;
 }
 
-void Interface::startSimulation(){
-    // initial value of -1 so that nothing is done until the user makes a choice
-    int choice = -1;
-    std::cout<<"Welcome to our city building simulator"<<std::endl;
+void Interface::startSimulation() {
+    // Initial Prompt
+    displayWelcomeMessage();
 
-    // main game loop
-    // increments number of cycles
-    do {
-        std::cout<<"Cycle "<<this->cycle<<"\n"
-                 <<"====================\n";
+    int choice = -1; //Initial value of -1, no steps taken until user changes choice's value
 
-        // choice loop
-        // allows user to make multiple choices per cycle until they quit or go ot the next cycle
-        while (handleChoice(choice)){
-            // displays stats about the city
-            std::cout<<"City Stats:\n"
-                <<"--------------------\n"
-                <<"Balance: "<<this->c->getBudget()
-                <<"\tPopulation: "<<this->c->getPopulation()
-                <<"\nPower demand: "<<this->c->getPowerDemand()
-                <<"\tWater demand: "<<this->c->getWaterDemand()
-                <<"\nWaste demand: "<<this->c->getWasteDemand()
-                <<"\tSewage demand: "<<this->c->getSewageDemand()
-                <<"\n====================\n\n";
+    // MAIN LOOP - Increment cycle after each iteration, end when user quits or population reaches 0
+    while (choice != 0 && this->c->getPopulation() > 0) {
 
-            // displays the available options to the user
-            std::cout<<"Choose an option to manage your city:\n"
-                <<"--------------------\n"
-                <<"\t1. Add building"
-                <<"\t2. Implement a new policy\n"
-                <<"\t3. Next cycle"
-                <<"\t0. Quit simulation\n"
-                <<"====================\n\n";
-            std::cin>>choice;
-        }
+        choice = -1; //Initial value of -1, no steps taken until user changes choice's value
 
-        cycle++;
+        // User Choice Loop: Allows user to make multiple choices, per cycle until they quit or proceed to the next cycle.
+        do {
+            displayCurrentCycle();
+            displayCityStats();
+            displayOperationMenu(); // USER PROMPT:
 
-    } while (choice != 0 && this->c->getPopulation() > 0);
+            // USER INPUT: User chooses an option
+            std::cin    >> choice;
+            std::cout   << "\n";        //Move to next line for prompt
+        } while( !handleChoice(choice) );
+
+        incrementCycle();
+        updateCityStats();
+        clearTerminal();
+    }
+
+    // End of Simulation
+    clearTerminal();
+    displayCityStats();
+    displayGoodbyeMessage();
 }
 
 // returns true if the simulation should advance to the next cycle
-bool Interface::handleChoice(int choice){
-    if (choice == 3 || choice == 0){
-        return true;
-    } else if (choice == 1){
-        int type;
-        std::cout<<"Select which building you would like to add:\n"
-            <<"------------------------------------\n"
-            <<"Residential Buildings:\n"
-            <<"\t1. Townhouse\n\t2. Estate\n\t3. House\n"
-            <<"Commercial Buildings:\n"
-            <<"\t4. Office\n\t5. Shop\n\t6. Mall\n"
-            <<"Industrial Buildings:\n"
-            <<"\t7. Factory\n\t8. Warehouse\n\t9. Plant\n"
-            <<"Landmark Buildings:\n"
-            <<"\t10. Park\n\t11. Cultural Centre\n\t12. Park\n"
-            <<"====================================\n";
-        cin>>type;
-        build(type);
-        
-    } else if (choice == 2){
-        this->c->implementPolicy();
+bool Interface::handleChoice(int choice) {
+    clearTerminal();    //Fresh output before simulation starts
+    switch( choice ) {
+        case 0:
+            return true;
+            break;
+        case 1:
+            int type;   // Type of building to be built
+
+            //USER PROMPT
+            displayBuildingMenu();
+
+            //USER INPUT
+            std::cin    >> type;  
+            std::cout   << "\n";        //Move to next line for prompt
+            build(type);
+            break;
+        case 2:
+            this->c->implementPolicy();
+            break;
+        case 3:
+            return true;
+            break;
+        default:
+            displayInvalidInputMessage();
+            break;
     }
     return false;
 }
 
-void Interface::build(int type){
+void Interface::build(int type) {
     int bType, bName;
     std::string nName;
 
-    if (type <= 3){
+    if (type <= 3) {
         // build residential building with parameter type = type
         bType = 4;
         bName = type;
@@ -99,19 +104,159 @@ void Interface::build(int type){
         bType = 3;
         bName = (type+3)%4;
     } else {
-        std::cout<<"=> Invalid input\n";
+        displayInvalidInputMessage();
         return;
     }
 
-    std::cout<<"In which neighbourhood would you like to place the building? ";
-    std::cin>>nName;
+    //USER PROMPT
+    displayNeighbourHoodQuery();
+    //USER INPUT
+    std::cin    >> nName;
+    std::cout   << "\n";        //Move to next line for prompt
 
     int buildCode = this->c->buildBuilding(nName, bType, bName);
 
-    //Check if building was built
+    
     if (buildCode == 0) {
-        std::cout<<"=> Building not built, reasons: Not in budget or wrong neighbourhood\n";
+        displayBuildingFailureMessage();    //Failure Message
+    } 
+    else {  
+        displayBuildingSuccessMessage();    //Success Message
     }
-    //Success
-    std::cout<<"=> Building built\n";
+}
+
+/*
+    Cycle Helper Functions
+*/
+void Interface::updateCityStats() {
+    this->c->collectTaxes();
+}
+
+void Interface::incrementCycle() {
+    this->cycle++;
+}
+
+int Interface::getCycle() {
+    return this->cycle;
+}
+
+/*
+    Display Prompt Functions
+*/
+void Interface::displayCityStats() {
+    std::cout   << YELLOW   << "====================================\n"
+                            << "City Stats:\n"
+                            << "====================================\n"
+                            << "\tBalance: "        << this->c->getBudget()         << "\n"
+                            << "\tPopulation: "     << this->c->getPopulation()     << "\n"
+                            << "\tPower demand: "   << this->c->getPowerDemand()    << "\n"
+                            << "\tWater demand: "   << this->c->getWaterDemand()    << "\n"
+                            << "\tWaste demand: "   << this->c->getWasteDemand()    << "\n"
+                            << "\tSewage demand: "  << this->c->getSewageDemand()   << "\n"
+                            << "====================================\n\n"           << RESET;
+}
+
+void Interface::displayCurrentCycle() {
+    std::cout   << YELLOW   << "====================================\n"
+                            << "Cycle: " << this->getCycle() << "\n"
+                            << "====================================\n\n";
+}
+
+void Interface::displayOperationMenu() {
+    std::cout   << "????????????????????????????????????\n"
+                << "=> Choose an option to manage your city:\n"
+                << "????????????????????????????????????\n"
+                << "\t1. Add building\n"
+                << "\t2. Implement a new policy\n"
+                << "\t3. Next cycle\n"
+                << "\t0. Quit simulation\n"
+                << "????????????????????????????????????\n\n";
+}
+
+void Interface::displayBuildingMenu() {
+    clearTerminal();
+    displayCityStats();
+    std::cout   << "????????????????????????????????????\n"
+                << "=> Which building would you like to build?\n"
+                << "????????????????????????????????????\n"
+                << "Residential Buildings:\n"
+                << "\t1. Townhouse\n"
+                << "\t2. Estate\n"
+                << "\t3. House\n"
+                << "Commercial Buildings:\n"
+                << "\t4. Office\n"
+                << "\t5. Shop\n"
+                << "\t6. Mall\n"
+                << "Industrial Buildings:\n"
+                << "\t7. Factory\n"
+                << "\t8. Warehouse\n"
+                << "\t9. Plant\n"
+                << "Landmark Buildings:\n"
+                << "\t10. Park\n"
+                << "\t11. Cultural Centre\n"
+                << "\t12. Park\n"
+                << "????????????????????????????????????\n";
+}
+
+void Interface::displayNeighbourHoodQuery() {
+    clearTerminal();
+    std::cout   << "????????????????????????????????????\n"
+                << "=> In which neighbourhood would you like to build your building?\n"
+                << "------------------------------------\n"
+                << this->c->getNeighbourhoods() << "\n"
+                << "????????????????????????????????????\n";
+}
+
+/*
+    Error Messages
+*/
+void Interface::displayInvalidInputMessage() {
+    clearTerminal();
+    std::cout   << RED  << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+                        << "=> Invalid input\n"
+                        << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"   << RESET;
+}
+
+void Interface::displayBuildingFailureMessage() {
+    clearTerminal();
+    std::cout   << RED  << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+                        << "=> Building not built!!!\n" 
+                        << "=> Reasons:\n" 
+                        << "\tNot in budget or\n"
+                        << "\tIncorrect neighbourhood name\n"
+                        << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"   << RESET;
+}
+
+/*
+    Success Messages
+*/
+void Interface::displayBuildingSuccessMessage() {
+    clearTerminal();
+    std::cout   << GREEN    << "------------------------------------\n"
+                            << "=> Building built\n"
+                            << "------------------------------------\n\n"   << RESET;
+}
+
+/*
+    Greeter Message Functions
+*/
+void Interface::displayWelcomeMessage() {
+    clearTerminal();
+    std::cout   << BLUE << "====================================\n"
+                        << "Welcome to City Kings\n"
+                        << "====================================\n\n"   << RESET;
+}
+
+void Interface::displayGoodbyeMessage() {
+    clearTerminal();
+    std::cout   << BLUE <<"====================================\n"
+                        << "Hope to see you again in the City of Kings!\n"
+                        << "====================================\n\n"       << RESET;
+}
+
+/*
+    UI Functions
+*/
+void Interface::clearTerminal() {
+    system("clear");
 }

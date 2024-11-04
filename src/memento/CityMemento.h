@@ -15,25 +15,33 @@
 #include <list>
 using namespace std;
 
+/**
+ * @class CityMemento
+ * @brief Stores snapshots of city components, allowing the city state to be saved and restored.
+ *
+ * The CityMemento class provides mechanisms to set and retrieve saved states of various city components,
+ * including satisfaction state, buildings, and modes of transport.
+ */
 class CityMemento {
-    public:
-        ~CityMemento();
-        //Sets for Objects
-        void setSatisfaction(SatisfactionState* s);
-        void setBuildingManager(BuildingManager * b);
-        void setUtilityManager(UtilityFacade * m);
-        void setGovernment(Government * g);
-        void setTransportManager(TransportManager * m);
-        //Sets for int or float variables
-        void setBudget(float b);
-        void setBuildCost(double b);
-        void setTax(double t);
 
-        void setPopulation(int p);
-        void setTotalPowerDemand(int t);
-        void setTotalWaterDemand(int t);
-        void setTotalWasteDemand(int t);
-        void setTotalSewageDemand(int t);
+    public:
+        /**
+         * @brief Destructor for CityMemento, cleaning up resources.
+         */
+        ~CityMemento();
+
+        //setters
+        /**
+         * @brief Sets the satisfaction state of the city.
+         * @param s Pointer to the SatisfactionState to be saved.
+         */
+        void setSatisfaction(SatisfactionState* s);
+        /**
+         * @brief Sets the saved buildings of the city.
+         * @param b Pointer to the BuildingComponent representing the saved building structure.
+         */
+        void setBuildings(BuildingComponent* b);
+
 
         SatisfactionState* getSatisfaction() const;
         BuildingManager* getBuildingManager() const;

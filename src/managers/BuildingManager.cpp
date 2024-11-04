@@ -10,7 +10,7 @@ BuildingManager::BuildingManager(){
 
 std::string BuildingManager::createNeighbourhood(std::string nName) {
     // Failure to add if neighbourhood already exists
-    if(!neighbourhoodExists(nName)) {
+    if(neighbourhoodExists(nName)) {
         return "Neighbourhood not created as" + nName + " already exists!";
     }
 
@@ -39,6 +39,7 @@ double BuildingManager::buildBuilding(std::string nName, int bType, int bName, d
     
     //Check if neighbourhood exists
     if (!neighbourhoodExists(nName)) {
+        std::cout << "Neighbourhood not found" << std::endl;
         return -1;
     }
 
@@ -99,6 +100,16 @@ std::string BuildingManager::getTotalPerNeighbourhood() {
         delete v;
     }
     return output;  
+}
+
+std::string BuildingManager::getNeighbourhoods(){
+    std::string list = "";
+
+    for (auto it = nList.begin(); it != nList.end(); it++){
+        list += " - " + (*it)->getName() + "\n";
+    }
+
+    return list;
 }
 
 double BuildingManager::getTotalBuildCost() {
@@ -165,6 +176,11 @@ BuildingManager::~BuildingManager() {
     for (auto it = nList.begin(); it != nList.end(); it++) {
         delete *it;
     }
+
+    delete cCreator;
+    delete iCreator;
+    delete lCreator;
+    delete rCreator;
 }
 
 /*
