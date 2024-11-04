@@ -6,3 +6,8 @@ Estate::Estate(double taxIncome, double buildCost, int livingCapacity)
 void Estate::accept(BuildingVisitor* v) {
     v->visit(this);
 }
+
+BuildingComponent* Estate::clone(){
+    BuildingComponent * clone = new Estate(this->taxIncome, this->buildCost, this->livingCapacity);
+    return clone;
+}

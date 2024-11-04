@@ -6,3 +6,8 @@ TownHouse::TownHouse(double taxIncome, double buildCost, int livingCapacity)
 void TownHouse::accept(BuildingVisitor* v) {
     v->visit(this);
 }
+
+BuildingComponent* TownHouse::clone(){
+    BuildingComponent * clone = new TownHouse(this->taxIncome, this->buildCost, this->livingCapacity);
+    return clone;
+}

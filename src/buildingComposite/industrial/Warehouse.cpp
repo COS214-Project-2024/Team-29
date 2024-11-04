@@ -6,3 +6,8 @@ Warehouse::Warehouse(double taxIncome, double buildCost, int employeeCapacity)
 void Warehouse::accept(BuildingVisitor* v) {
     v->visit(this);
 }
+
+BuildingComponent* Warehouse::clone(){
+    BuildingComponent * clone = new Warehouse(this->taxIncome, this->buildCost, this->employeeCapacity);
+    return clone;
+}
