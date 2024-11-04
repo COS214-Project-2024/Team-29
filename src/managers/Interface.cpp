@@ -49,6 +49,8 @@ void Interface::startSimulation(){
 
         cycle++;
 
+        endCycle();
+
     } while (choice != 0 && this->c->getPopulation() > 0);
 }
 
@@ -110,4 +112,9 @@ void Interface::build(int type){
     std::cin>>nName;
 
     bm->buildBuilding(nName, bType, bName, this->c->getBudget());
+}
+
+void Interface::endCycle(){
+    // add everything that needs to happen at the end of each cycle
+    // eg. inc/dec total budget, any satisfaction changes, city growth
 }

@@ -15,6 +15,7 @@ class Interface {
         void startSimulation();
         bool handleChoice(int choice);
         void build(int type);
+        void endCycle();
         ~Interface();
 };
 
