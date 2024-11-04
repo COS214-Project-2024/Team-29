@@ -35,6 +35,14 @@ Government::Government(){
     file.close();
 }
 
+Government* Government::clone()const{
+
+    Government* newGovernment = new Government();
+    newGovernment->policies = this->policies;
+    return newGovernment;
+
+}
+
 bool Government::implementPolicy(float &budget)
 {
 	random_device rd;
