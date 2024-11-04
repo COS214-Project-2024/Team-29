@@ -31,5 +31,7 @@ bool Government::implementPolicy(float &budget)
 
 	int policyIndex = distrib(gen);
 
+	cout << "Policy: " << policies.at(policyIndex).getName() << " implemented" << endl;
+
 	return this->policies.at(policyIndex).getImpact();
 }
