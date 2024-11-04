@@ -2,6 +2,8 @@
 #define NEUTRAL_H
 
 #include "SatisfactionState.h"
+#include "Satisfied.h"
+#include "Unsatisfied.h"
 
 /**
  * @class Neutral
