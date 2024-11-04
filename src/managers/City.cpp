@@ -6,6 +6,8 @@ City::City(){
     // Buildings, transport, utilities, satisfaction
     this->satisfaction = new Neutral();
     this->transportManager = new TransportManager();
+    this->buildingManager = new BuildingManager();
+    budget = 0; // initial budget
 }
 
 void City::setSatisfactionState(SatisfactionState* s){
@@ -97,10 +99,41 @@ City::~City(){
 
 }
 
-void City::caclulateTotalTax(){
-    BuildingVisitor * tax = new TaxRateVisitor();
-    for(auto * hood : buildings){
-        hood->accept(tax);
+void City::getTotalBuildCost() {
+    totalBuildCost = buildingManager->getTotalBuildCost();
+}
+
+void City::getTotalTax(){
+    budget += (float)buildingManager->getTotalTaxIncome();  //C-style cast to float
+}
+
+void City::getTotalLivingCapacity() {
+    population = buildingManager->getTotalLivingCapacity();
+}
+
+void City::getTotalEmployeeCapacity() {
+    population = buildingManager->getTotalEmployeeCapacity();
+}
+
+void City::getTotalSatisfactionValue() {
+    population = buildingManager->getTotalSatisfactionValue();
+}
+
+/*
+    * Function to build a building in the city
+    * @param nName Name of the neighbourhood
+    * @param bType Type of building
+    * @param bName Name of the building
+    * @return 1 if building is built, 0 if not
+*/
+int City::buildBuilding(std::string nName, int bType, int bName) {
+    double buildingCost = buildingManager->buildBuilding(nName, bType, bName, (double)budget);
+
+    // If not building error, update budget
+    if(buildingCost != -1){
+        budget -= (float)buildingCost;
+        return 1;   // Return success code
     }
-    budget = tax->getValue();
+
+    return 0;   // Return error code
 }

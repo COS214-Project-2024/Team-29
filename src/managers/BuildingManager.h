@@ -24,7 +24,14 @@ class BuildingManager
         std::string createNeighbourhood(std::string nName); 
         double buildBuilding(std::string nName, int bType, int bName, double balance); 
         std::string getTotalPerNeighbourhood();
+        double getTotalBuildCost();
+        double getTotalTaxIncome();
+        int getTotalLivingCapacity();
+        int getTotalEmployeeCapacity();
+        int getTotalSatisfactionValue();
         bool neighbourhoodExists(std::string nName);    // Helper function
+
+        
         ~BuildingManager();
 };
 

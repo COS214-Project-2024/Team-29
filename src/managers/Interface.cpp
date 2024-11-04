@@ -79,9 +79,6 @@ bool Interface::handleChoice(int choice){
 }
 
 void Interface::build(int type){
-    //change this line to use city's building manager instead of creating a new one
-    BuildingManager* bm = new BuildingManager();
-
     int bType, bName;
     std::string nName;
 
@@ -109,5 +106,12 @@ void Interface::build(int type){
     std::cout<<"In which neighbourhood would you like to place the building? ";
     std::cin>>nName;
 
-    bm->buildBuilding(nName, bType, bName, this->c->getBudget());
+    int buildCode = this->c->buildBuilding(nName, bType, bName);
+
+    //Check if building was built
+    if (buildCode == 0) {
+        std::cout<<"=> Building not built, reasons: Not in budget or wrong neighbourhood\n";
+    }
+    //Success
+    std::cout<<"=> Building built\n";
 }

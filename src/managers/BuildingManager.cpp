@@ -3,7 +3,7 @@
 
 std::string BuildingManager::createNeighbourhood(std::string nName) {
     // Failure to add if neighbourhood already exists
-    if(neighbourhoodExists(nName)) {
+    if(!neighbourhoodExists(nName)) {
         return "Neighbourhood not created as" + nName + " already exists!";
     }
 
@@ -20,8 +20,6 @@ std::string BuildingManager::createNeighbourhood(std::string nName) {
     Output: 
     Success: Building cost
     Failure: -1
-
-    Note: No need to check if neighbourhood exists as input checked in main
     bType:
         1 - Commercial
         2 - Industrial
@@ -32,7 +30,11 @@ std::string BuildingManager::createNeighbourhood(std::string nName) {
 */
 double BuildingManager::buildBuilding(std::string nName, int bType, int bName, double balance) {
     
-    //No need to check if neighbourhood exists as input checked in main
+    //Check if neighbourhood exists
+    if (!neighbourhoodExists(nName)) {
+        return -1;
+    }
+
     BuildingComponent* newB = nullptr;
     
     // Create building based on type
@@ -90,6 +92,66 @@ std::string BuildingManager::getTotalPerNeighbourhood() {
         delete v;
     }
     return output;  
+}
+
+double BuildingManager::getTotalBuildCost() {
+    double total = 0;
+    BuildingVisitor* v;
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalBuildCost();
+        delete v;
+    }
+    return total;
+}
+
+double BuildingManager::getTotalTaxIncome() {
+    double total = 0;
+    BuildingVisitor* v;
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalTaxIncome();
+        delete v;
+    }
+    return total;
+}
+
+int BuildingManager::getTotalLivingCapacity() {
+    int total = 0;
+    BuildingVisitor* v = new TotalVisitor();
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalLivingCapacity();
+        delete v;
+    }
+    return total;
+}
+
+int BuildingManager::getTotalEmployeeCapacity() {
+    int total = 0;
+    BuildingVisitor* v;
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalEmployeeCapacity();
+        delete v;
+    }
+    return total;
+}
+
+int BuildingManager::getTotalSatisfactionValue() {
+    int total = 0;
+    BuildingVisitor* v;
+    for (auto it = nList.begin(); it != nList.end(); it++) {
+        v = new TotalVisitor();
+        (*it)->accept(v);
+        total += ((TotalVisitor*)v)->getTotalSatisfactionValue();
+        delete v;
+    }
+    return total;
 }
 
 BuildingManager::~BuildingManager() {
