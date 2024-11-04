@@ -19,14 +19,12 @@ Ferry::Ferry(string name, float& budget)
         throw runtime_error("The city does not have enough money for a ferry.");
     }
 
-    this->publicTransportCapacity += capacity;
 
 }
 
 Ferry::~Ferry()
 {
     cout << this->name << " Ferry destroyed." << endl; 
-    this->publicTransportCapacity -= capacity;
 }
 
 string Ferry::getTransportType() {
