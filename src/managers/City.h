@@ -85,7 +85,6 @@ class City {
          */
         int getSewageDemand();
 
-
         //transport related functions
         /**
          * @brief Adds a mode of transport to the city thruogh the transportManager attribute.

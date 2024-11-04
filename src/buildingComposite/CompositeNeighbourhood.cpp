@@ -1,7 +1,5 @@
 #include "CompositeNeighbourhood.h"
 
-CompositeNeighbourhood::CompositeNeighbourhood() : nName("") {};
-
 CompositeNeighbourhood::CompositeNeighbourhood(std::string nName) : nName(nName) {};
 
 void CompositeNeighbourhood::addBuilding(BuildingComponent* bc) {

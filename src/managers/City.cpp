@@ -7,7 +7,17 @@ City::City(){
     this->satisfaction = new Neutral();
     this->transportManager = new TransportManager();
     this->buildingManager = new BuildingManager();
-    budget = 0; // initial budget
+
+    //Starting conditions
+    this->budget = (float)1000000000;
+    this->population = 10;
+    this->buildingManager->createNeighbourhood("StarterNeighbourhood");
+    this->buildBuilding("StarterNeighbourhood", 1, 2);  //Shop
+    this->buildBuilding("StarterNeighbourhood", 2, 1);  //Factory
+    this->buildBuilding("StarterNeighbourhood", 3, 1);  //Park
+    this->buildBuilding("StarterNeighbourhood", 4, 1);  //Townhouse
+    this->buildBuilding("StarterNeighbourhood", 4, 3);  //House
+    this->budget = (float)100000;
 }
 
 void City::setSatisfactionState(SatisfactionState* s){
@@ -94,16 +104,15 @@ void City::loadGame(CityMemento* save)
 City::~City(){
     // delete other class variables here
     delete satisfaction;
-
     delete transportManager; 
-
+    delete buildingManager;
 }
 
 void City::getTotalBuildCost() {
     totalBuildCost = buildingManager->getTotalBuildCost();
 }
 
-void City::getTotalTax(){
+void City::collectTaxes(){
     budget += (float)buildingManager->getTotalTaxIncome();  //C-style cast to float
 }
 
@@ -127,11 +136,11 @@ void City::getTotalSatisfactionValue() {
     * @return 1 if building is built, 0 if not
 */
 int City::buildBuilding(std::string nName, int bType, int bName) {
-    double buildingCost = buildingManager->buildBuilding(nName, bType, bName, (double)budget);
+    double buildingCost = this->buildingManager->buildBuilding(nName, bType, bName, (double)budget);
 
     // If not building error, update budget
     if(buildingCost != -1){
-        budget -= (float)buildingCost;
+        budget = budget - (float)buildingCost;
         return 1;   // Return success code
     }
 

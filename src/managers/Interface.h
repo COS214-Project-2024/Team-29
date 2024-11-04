@@ -13,7 +13,27 @@ class Interface {
     private:
         City* c;    /**< Pointer to the City instance. */
         int cycle;  /**< Simulation cycle counter. */
-    
+
+        //City Functions
+        void updateCityStats();
+
+        //Display Prompt Functions
+        void displayWelcomeMessage();
+        void displayCityStats();
+        void displayCurrentCycle();
+        void displayOperationMenu();
+        void displayBuildingMenu();
+        void displayNeighbourHoodQuery();
+
+        //Display Failure/Success Messages
+        void displayInvalidInputMessage();
+        void displayBuildingFailureMessage();
+        void displayBuildingSuccessMessage();
+        
+        //Helper Functions
+        void incrementCycle();
+        int getCycle();
+
     public:
         /**
          * @brief Default constructor for Interface.
