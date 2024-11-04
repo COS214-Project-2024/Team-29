@@ -34,8 +34,13 @@ class TransportManager {
          * @brief Calculates and retrieves the total capacity of all transport modes.
          * @return Total capacity cost as an int.
          */
-
         TransportManager* copy(float& budget);
+
+
+        /**
+         * @brief Calculates and retrieves the total capacity of all transport modes.
+         * @return Total capacity cost as an int.
+         */
 
         int getTotalCapacity();
         /**
@@ -46,6 +51,7 @@ class TransportManager {
         /**
          * @brief Destroys the TransportManager and deallocates transport objects.
          */
+
         ~TransportManager();
 
 };
