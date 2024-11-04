@@ -2,6 +2,8 @@
 #define NEUTRAL_H
 
 #include "SatisfactionState.h"
+#include "Satisfied.h"
+#include "Unsatisfied.h"
 
 class Neutral : public SatisfactionState {
     public:
@@ -9,6 +11,7 @@ class Neutral : public SatisfactionState {
         std::string getSatisfactionLevel();
         void incSatisfactionState(City* c);
         void decSatisfactionState(City* c);
+        SatisfactionState* clone();
 };
 
 #endif

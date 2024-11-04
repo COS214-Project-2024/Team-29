@@ -19,6 +19,7 @@ private:
 public:
 	/// @brief Creates an instance of governent and initialises it with the list of policies in "Policies.txt"
 	Government();
+	Government* clone() const;
 
 	/// @brief Implements a random policy for the set price of R 5000
 	/// @param budget A reference to the city budget

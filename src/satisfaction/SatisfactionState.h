@@ -10,6 +10,7 @@ class SatisfactionState {
         virtual std::string getSatisfactionLevel() = 0;
         virtual void incSatisfactionState(City* c) = 0;
         virtual void decSatisfactionState(City* c) = 0;
+        virtual SatisfactionState* clone() = 0;
     
     protected:
         std::string state;
