@@ -28,7 +28,13 @@ class BuildingComponent
          * @brief Retrieves the tax income of the building component.
          * @return Tax income as a double.
          */
-        virtual double getTaxIncome() const = 0;     
+        virtual double getTaxIncome() const = 0;
+
+        virtual int getPowerDemand() const = 0;
+        virtual int getWaterDemand() const = 0;
+        virtual int getWasteDemand() const = 0;
+        virtual int getSewageDemand() const = 0;
+             
         /**
          * @brief Retrieves the build cost of the building component.
          * @return Build cost as a double.
@@ -44,6 +50,7 @@ class BuildingComponent
          */
         virtual ~BuildingComponent() {};
         virtual BuildingComponent* clone() = 0;
+        
 };
 
 #endif

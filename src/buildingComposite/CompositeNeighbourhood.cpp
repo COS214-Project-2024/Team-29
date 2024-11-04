@@ -1,6 +1,5 @@
 #include "CompositeNeighbourhood.h"
 
-CompositeNeighbourhood::CompositeNeighbourhood() : nName("") {};
 
 CompositeNeighbourhood::CompositeNeighbourhood(std::string nName) : nName(nName) {};
 
@@ -59,4 +58,34 @@ CompositeNeighbourhood* CompositeNeighbourhood::copy() const{
         clone->addBuilding(curr->clone());
     }
     return clone;
+}
+
+
+int CompositeNeighbourhood::getPowerDemand() const {
+    int totalPower = 0;
+    for( auto * building : buildingsList) {
+        totalPower += building->getPowerDemand();
+    }
+    return totalPower;
+}
+int CompositeNeighbourhood::getWaterDemand() const {
+    int totalWater = 0;
+    for( auto * building : buildingsList) {
+        totalWater += building->getWaterDemand();
+    }
+    return totalWater;
+}
+int CompositeNeighbourhood::getWasteDemand() const {
+    int totalWaste = 0;
+    for( auto * building : buildingsList) {
+        totalWaste += building->getWasteDemand();
+    }
+    return totalWaste;
+}
+int CompositeNeighbourhood::getSewageDemand() const {
+    int totalSewage = 0;
+    for( auto * building : buildingsList) {
+        totalSewage += building->getSewageDemand();
+    }
+    return totalSewage;
 }

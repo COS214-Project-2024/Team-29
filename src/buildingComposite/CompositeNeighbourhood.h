@@ -20,10 +20,6 @@ class CompositeNeighbourhood : public BuildingComponent {
         
     public:
         /**
-         * @brief Constructs a CompositeNeighbourhood with an empty name.
-         */
-        CompositeNeighbourhood();
-        /**
          * @brief Constructs a CompositeNeighbourhood with a specified name.
          * @param nName Name of the neighbourhood.
          */
@@ -43,6 +39,12 @@ class CompositeNeighbourhood : public BuildingComponent {
          * @return Total tax income as a double.
          */
         virtual double getTaxIncome() const override;
+
+        int getPowerDemand() const;
+        int getWaterDemand() const;
+        int getWasteDemand() const;
+        int getSewageDemand() const;
+
         /**
          * @brief Retrieves the total build cost for the neighbourhood.
          * @return Total build cost as a double.
