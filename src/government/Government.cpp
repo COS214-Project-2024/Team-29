@@ -10,29 +10,30 @@
 #include <random>
 
 Government::Government(){
-	//get list of policies
-	ifstream file("Policies.txt");
-    
-    if (!file.is_open()) {
-        std::cerr << "Failed to open file." << std::endl;
-        return;
-    }
-    
-    string line;
-    while (getline(file, line)) {
-        istringstream iss(line);
-        string name;
-        string impactString;
+	std::ifstream file("Policies.txt");
         
-        if (getline(iss, name, ',') && getline(iss, impactString)) {
-            bool impact = (impactString == "true");
-            this->policies.push_back(Policy(name, impact));
-        } else {
-            cerr << "Error parsing line: " << line << endl;
+        if (!file.is_open()) {
+            std::cerr << "Failed to open file." << std::endl;
+            return;
         }
-    }
-    
-    file.close();
+        
+        std::string line;
+        while (std::getline(file, line)) {
+            std::istringstream iss(line);
+            std::string name, impactString;
+            
+            if (std::getline(iss, name, ',') && std::getline(iss, impactString)) {
+                // Trim whitespace from name
+                name.erase(name.find_last_not_of(" \n\r\t") + 1);
+                
+                bool impact = (impactString == "true");
+                policies.push_back(Policy(name, impact));
+            } else {
+                std::cerr << "Error parsing line: " << line << std::endl;
+            }
+        }
+        
+        file.close();
 }
 
 bool Government::implementPolicy(float &budget)
