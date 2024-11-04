@@ -13,7 +13,7 @@ void CityMemento::setSatisfaction(SatisfactionState* s) {
     this->satisfaction = s;
 }
 
-void CityMemento::setBuildingManager(BuildingManager b) {
+void CityMemento::setBuildingManager(BuildingManager * b) {
     this->buildingManager = b;
 }
 
