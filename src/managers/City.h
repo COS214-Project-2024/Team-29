@@ -84,6 +84,11 @@ class City {
          * @return Total sewage demand as an integer.
          */
         int getSewageDemand();
+        /**
+         * @brief Fetches a list of all neighbourhood names
+         * @return List of names of neighbourhoods as a string
+         */
+        std::string getNeighbourhoods();
 
         //transport related functions
         /**

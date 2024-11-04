@@ -17,17 +17,17 @@
 class BuildingManager
 {
     private:
-            CommercialBuildingCreator* cCreator;    /**< Pointer to commercial building creator. */
-            IndustrialBuildingCreator* iCreator;    /**< Pointer to industrial building creator. */
-            LandmarkBuildingCreator* lCreator;      /**< Pointer to landmark building creator. */
-            ResidentialBuildingCreator* rCreator;   /**< Pointer to residential building creator. */
+        CommercialBuildingCreator* cCreator;    /**< Pointer to commercial building creator. */
+        IndustrialBuildingCreator* iCreator;    /**< Pointer to industrial building creator. */
+        LandmarkBuildingCreator* lCreator;      /**< Pointer to landmark building creator. */
+        ResidentialBuildingCreator* rCreator;   /**< Pointer to residential building creator. */
 
         std::list<CompositeNeighbourhood*> nList;   /**< List of neighborhoods. */
     public:
         /**
          * @brief Default constructor for BuildingManager.
          */
-        BuildingManager() {};
+        BuildingManager();
         /**
          * @brief Creates a new neighborhood with the given name.
          * @param nName Name of the neighborhood.
@@ -48,6 +48,11 @@ class BuildingManager
          * @return Summary of buildings in each neighborhood as a string.
          */
         std::string getTotalPerNeighbourhood();
+        /**
+         * @brief Retrieves names of all neighbourhoods
+         * @return List of neighbourhood names as a string
+         */
+        std::string getNeighbourhoods();
         /**
          * @brief Calculates the total cost of all buildings constructed.
          * @return Total construction cost.

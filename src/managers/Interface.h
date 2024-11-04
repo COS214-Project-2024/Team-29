@@ -68,6 +68,12 @@ class Interface {
          */
         int getCycle();
 
+        //UI Functions
+        void clearTerminal();
+
+        //Greeter Functions
+        void displayGoodbyeMessage();
+
     public:
         /**
          * @brief Default constructor for Interface.
