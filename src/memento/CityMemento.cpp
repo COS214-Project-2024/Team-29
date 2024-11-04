@@ -57,7 +57,7 @@ SatisfactionState* CityMemento::getSatisfaction() const {
     return this->satisfaction->clone();
 }
 
-BuildingManager* CityMemento::getBuildingManager() const {
+BuildingManager * CityMemento::getBuildingManager() const {
     return this->buildingManager->clone();
 }
 
@@ -69,7 +69,7 @@ Government * CityMemento::getGovernment() const {
     return this->government->clone();
 }
 
-TransportManager* CityMemento::getTransportManager(float& b) const {
+TransportManager* CityMemento::getTransportManager(float &b) const {
     return this->transportManager->copy(b);
 }
 

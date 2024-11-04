@@ -7,6 +7,10 @@
 #include "../government/Government.h"
 #include "../utility/UtilityFacade.h"
 
+#include "../transport/TransportManager.h"
+#include "../government/Government.h"
+#include "../utility/UtilityFacade.h"
+
 
 #include <iostream>
 #include <vector>
@@ -30,6 +34,18 @@ class CityMemento {
         void setTotalWasteDemand(int t);
         void setTotalSewageDemand(int t);
 
+        SatisfactionState* getSatisfaction() const;
+        BuildingManager* getBuildingManager() const;
+        UtilityFacade * getUtilityManager() const;
+        Government * getGovernment() const;
+        TransportManager * getTransportManager(float& b) const;
+
+        double getBudget() const;
+        int getPopulation() const;
+        int getTotalPowerDemand() const;
+        int getTotalWaterDemand() const;
+        int  getTotalWasteDemand() const;
+        int getTotalSewageDemand()const;
         SatisfactionState* getSatisfaction() const;
         BuildingManager* getBuildingManager() const;
         UtilityFacade * getUtilityManager() const;
