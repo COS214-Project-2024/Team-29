@@ -63,7 +63,9 @@ class CompositeNeighbourhood : public BuildingComponent {
          */
         ~CompositeNeighbourhood();
 
-        CompositeNeighbourhood* clone() const;
+        BuildingComponent* clone();
+
+        CompositeNeighbourhood* copy() const;
 };
 
 #endif

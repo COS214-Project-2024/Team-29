@@ -43,6 +43,7 @@ class BuildingComponent
          * @brief Destroys the BuildingComponent object. (inline)
          */
         virtual ~BuildingComponent() {};
+        virtual BuildingComponent* clone() = 0;
 };
 
 #endif

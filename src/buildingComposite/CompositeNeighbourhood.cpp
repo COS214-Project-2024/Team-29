@@ -48,6 +48,15 @@ CompositeNeighbourhood::~CompositeNeighbourhood() {
     }
 }
 
-CompositeNeighbourhood* CompositeNeighbourhood::clone() const{
+BuildingComponent * CompositeNeighbourhood::clone(){
+    //No implementation needed
+    return nullptr;
+}    
 
+CompositeNeighbourhood* CompositeNeighbourhood::copy() const{
+    CompositeNeighbourhood * clone = new CompositeNeighbourhood(this->nName);
+    for(BuildingComponent * curr : this->buildingsList){
+        clone->addBuilding(curr->clone());
+    }
+    return clone;
 }

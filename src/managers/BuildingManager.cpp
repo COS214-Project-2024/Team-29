@@ -182,7 +182,8 @@ bool BuildingManager::neighbourhoodExists(std::string nName) {
 
 BuildingManager* BuildingManager::clone(){
     BuildingManager * clone = new BuildingManager();
-    
-
+    for(CompositeNeighbourhood * curr : nList){
+        clone->nList.push_back(curr->copy());
+    }
     return clone;
 }
