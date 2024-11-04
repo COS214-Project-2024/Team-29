@@ -7,7 +7,16 @@ City::City(){
     this->satisfaction = new Neutral();
     this->transportManager = new TransportManager();
     this->buildingManager = new BuildingManager();
-    budget = 0; // initial budget
+
+    //Starting conditions
+    budget = 5000;
+    population = 10;
+    this->buildingManager->createNeighbourhood("StarterNeighbourhood");
+    this->buildBuilding("StarterNeighbourhood", 1, 2);  //Shop
+    this->buildBuilding("StarterNeighbourhood", 2, 1);  //Factory
+    this->buildBuilding("StarterNeighbourhood", 3, 1);  //Park
+    this->buildBuilding("StarterNeighbourhood", 4, 1);  //Townhouse
+    this->buildBuilding("StarterNeighbourhood", 4, 3);  //House
 }
 
 void City::setSatisfactionState(SatisfactionState* s){
