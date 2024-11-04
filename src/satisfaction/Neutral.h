@@ -2,6 +2,8 @@
 #define NEUTRAL_H
 
 #include "SatisfactionState.h"
+#include "Satisfied.h"
+#include "Unsatisfied.h"
 
 /**
  * @class Neutral
@@ -31,6 +33,7 @@ class Neutral : public SatisfactionState {
          * @param c Pointer to the City object whose satisfaction is to be decreased.
          */
         void decSatisfactionState(City* c);
+        SatisfactionState* clone();
 };
 
 #endif

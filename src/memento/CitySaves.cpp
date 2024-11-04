@@ -26,3 +26,6 @@ CityMemento* CitySaves::getSave(string name){
     
 }
 
+string CitySaves::toString(){
+    return ;
+}
