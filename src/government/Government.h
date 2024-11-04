@@ -1,7 +1,7 @@
 #ifndef GOVERNMENT_H
 #define GOVERNMENT_H
 
-#include "../managers/City.h"
+
 #include "Policy.h"
 
 #include <iostream>

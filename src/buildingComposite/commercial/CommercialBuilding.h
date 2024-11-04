@@ -3,9 +3,38 @@
 
 #include "../Building.h"
 
+/**
+ * @class CommercialBuilding
+ * @brief Represents a commercial building with specified tax income, construction cost, and employee capacity.
+ *
+ * The CommercialBuilding class acts as an abstarct base class for the concrete classes:
+ * -Mall
+ * -Office
+ * -Shop<br><br>
+ * provides the var of employeeCapacity specific to Commercial types of buidlings
+ * 
+ */
 class CommercialBuilding : public Building {
+    protected:
+        int employeeCapacity;/**< The number of employees the building can accommodate. */
+
     public:
-        void accept(BuildingVisitor* v) override = 0;
+        /**
+         * @brief Constructs a CommercialBuilding with the specified tax income, build cost, and employee capacity.
+         * @param taxIncome The income generated from tax.
+         * @param buildCost The cost required to build.
+         * @param employeeCapacity Maximum number of employees accommodated.
+         */
+        CommercialBuilding(double taxIncome, double buildCost, int employeeCapacity);
+        /**
+         * @brief Retrieves the employee capacity of the Commercial building.
+         * @return Employee capacity as an integer.
+         */
+        int getEmployeeCapacity() const;
+        /**
+         * @brief Destroys the CommercialBuilding object.
+         */
+        virtual ~CommercialBuilding() {};
 };
 
 #endif

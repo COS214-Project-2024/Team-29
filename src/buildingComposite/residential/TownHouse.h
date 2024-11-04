@@ -4,11 +4,33 @@
 #include "ResidentialBuilding.h"
 #include "../../visitor/BuildingVisitor.h"
 
+/**
+ * @class TownHouse
+ * @brief Specialised concrete IndustrialBuidling class that represents a TownHouse.
+ *
+ * The TownHouse class is a specialised type of IndustrialBuilding that includes
+ * the ability to accept visitor objects for extended operations.
+ */
 class TownHouse : public ResidentialBuilding {
     public:
-        void accept(BuildingVisitor* v) override;
-        int getLivingCapacity() const;
-        double getTaxRate() const;
+        /**
+         * @brief Constructs a TownHouse with the specified tax income, build cost, and living capacity.
+         * @param taxIncome The income generated from tax.
+         * @param buildCost The cost required to build.
+         * @param employeeCapacity Maximum number of employees accommodated.
+         */
+        TownHouse(double taxIncome, double buildCost, int livingCapacity);
+        /**
+         * @brief Accepts a visitor object for performing operations on the TownHouse.
+         * Such as calculating total income tax and total capcaity/popolation in the system/city
+         * 
+         * @param v Pointer to a BuildingVisitor object.
+         */
+        virtual void accept(BuildingVisitor* v) override;
+        /**
+         * @brief Destroys the TownHouse object.
+         */
+        ~TownHouse() {};
 };
 
 #endif

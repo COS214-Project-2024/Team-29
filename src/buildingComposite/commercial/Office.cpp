@@ -1,13 +1,8 @@
 #include "Office.h"
 
+Office::Office(double taxIncome, double buildCost, int employeeCapacity) 
+        : CommercialBuilding(taxIncome, buildCost, employeeCapacity) {}
+
 void Office::accept(BuildingVisitor* v) {
     v->visit(this);
-}
-
-int Office::getLivingCapacity() const {
-    return 0;
-}
-
-double Office::getTaxRate() const {
-    return 500.0;
 }

@@ -50,20 +50,6 @@ class ModeOfTransport {
         /// @return The amount of goods that the entire city can move in one cycle
         int getGoodsTransportCapacity();
 
-    protected:
-
-        /// @brief The amount of people/goods that the mode of transport can move in a cycle
-        int capacity;
-
-        /// @brief The type of transport according to what is transported (PublicTransit, GoodsTransport, GeneralTransport)
-        TransportType type;
-
-        /// @brief The total capacity of all of the public transport across the city (tram, bus, ferry)
-        static int publicTransportCapacity;
-
-        /// @brief Total capacity of all of the goods transport across the city (train, airport)
-        static int goodsTransportCapacity;
-
         /** @brief Returns type of transport as a string (Public, Goods, General)
          * 
          * TEMPLATE METHOD - PrimitiveOperation()
@@ -81,6 +67,20 @@ class ModeOfTransport {
          * TEMPLATE METHOD - PrimitiveOperation()
          */
         virtual string getType() = 0;
+
+    protected:
+
+        /// @brief The amount of people/goods that the mode of transport can move in a cycle
+        int capacity;
+
+        /// @brief The type of transport according to what is transported (PublicTransit, GoodsTransport, GeneralTransport)
+        TransportType type;
+
+        /// @brief The total capacity of all of the public transport across the city (tram, bus, ferry)
+        static int publicTransportCapacity;
+
+        /// @brief Total capacity of all of the goods transport across the city (train, airport)
+        static int goodsTransportCapacity;
 
 };
 

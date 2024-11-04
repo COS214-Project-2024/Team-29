@@ -1,4 +1,4 @@
-#ifndef TAXCOLLECTOR_H
+/*#ifndef TAXCOLLECTOR_H
 #define TAXCOLLECTOR_H
 
 #include "BuildingVisitor.h"
@@ -38,4 +38,4 @@ class TaxRateVisitor : public BuildingVisitor {
 		double getValue();
 };
 
-#endif
+#endif*/

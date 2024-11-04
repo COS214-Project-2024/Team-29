@@ -3,9 +3,38 @@
 
 #include "../Building.h"
 
+/**
+ * @class ResidentialBuilding
+ * @brief Represents an residential building with specified tax income, construction cost, and living capacity.
+ *
+ * The ResidentialBuilding class acts as an abstarct base class for the concrete classes:
+ * -Estate
+ * -House
+ * -TownHouse<br><br>
+ * provides the var of livingCapacity specific to Residential types of buidlings
+ * 
+ */
 class ResidentialBuilding : public Building {
+    protected:
+        int livingCapacity;
+    
     public:
-        void accept(BuildingVisitor* v) override = 0;
+        /**
+         * @brief Constructs a ResidentialBuilding with the specified tax income, build cost, and living capacity.
+         * @param taxIncome The income generated from tax.
+         * @param buildCost The cost required to build.
+         * @param livingCapacity Maximum number of residents accommodated.
+         */
+        ResidentialBuilding(double taxIncome, double buildCost, int livingCapacity);
+        /**
+         * @brief Retrieves the living capacity of the Residential building.
+         * @return Living capacity as an integer.
+         */
+        int getLivingCapacity() const;
+        /**
+         * @brief Destroys the ResidentialBuilding object.
+         */
+        virtual ~ResidentialBuilding() {};    
 };
 
 #endif
