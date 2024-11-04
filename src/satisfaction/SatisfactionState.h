@@ -40,7 +40,6 @@ class SatisfactionState {
         virtual void decSatisfactionState(City* c) = 0;
         virtual SatisfactionState* clone() = 0;
     
-    
 };
 
 #endif
