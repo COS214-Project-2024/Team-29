@@ -109,6 +109,7 @@ CityMemento* City::saveGame()
     save->setTotalWasteDemand(this->totalWasteDemand);
     save->setTotalSewageDemand(this->totalSewageDemand);
 
+    return save;
 }
 
 void City::loadGame(CityMemento* save)
