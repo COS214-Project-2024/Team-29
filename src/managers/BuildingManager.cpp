@@ -3,13 +3,15 @@
 
 std::string BuildingManager::createNeighbourhood(std::string nName) {
     // Failure to add if neighbourhood already exists
-    if(!neighbourhoodExists(nName)) {
+    if(neighbourhoodExists(nName)) {
         return "Neighbourhood not created as" + nName + " already exists!";
     }
 
+    std::cout << "Neighbourhood " << nName << " created!" << std::endl;
     // No neighbourhood found, add to list
     nList.push_back(new CompositeNeighbourhood(nName));
     return "Neighbourhood " + nName + " created!";
+    std::cout << "Neighbourhood " << nName << " created!" << std::endl;
 }
 
 /*
@@ -32,6 +34,7 @@ double BuildingManager::buildBuilding(std::string nName, int bType, int bName, d
     
     //Check if neighbourhood exists
     if (!neighbourhoodExists(nName)) {
+        std::cout << "Neighbourhood not found" << std::endl;
         return -1;
     }
 
@@ -58,6 +61,7 @@ double BuildingManager::buildBuilding(std::string nName, int bType, int bName, d
     // Check if building in budget
     if (newB->getBuildCost() > balance) {
         delete newB;
+        std::cout << "Building not in budget" << std::endl;
         return -1;
     }
 

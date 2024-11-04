@@ -37,7 +37,7 @@ class City {
 
         void setSatisfactionState(SatisfactionState* s);
 
-        // for the Interface
+        // Interface Based Functions
         int getPopulation();
         float getBudget();
         int getPowerDemand();
@@ -45,7 +45,11 @@ class City {
         int getWasteDemand();
         int getSewageDemand();
 
-        //transport related functions
+        //City stats related functions
+        /// @brief Calculates the total Tax income accumulated from all of the buildings
+        void collectTaxes();
+
+        // Transport related functions
         
         /// @brief Adds a mode of transport to the city
         /// @param type "Airport", "Bus", "Ferry", "Train"
@@ -77,8 +81,7 @@ class City {
         //Building related functions 
         void getTotalBuildCost();
         //add func to upgrade different utilities and set satisfaction after upgrading
-        /// @brief Calculates the total Tax income accumulated from all of the buildings
-        void getTotalTax();
+       
         void getTotalLivingCapacity();
         void getTotalEmployeeCapacity();
         void getTotalSatisfactionValue();
