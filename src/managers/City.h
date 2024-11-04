@@ -99,6 +99,7 @@ class City {
          * @param budget Reference to the city's budget.
          */
         void addTransport(string type, string name, float& budget);
+        void addTransport();
         /**
          * @brief Prints the list of all transport modes in the city through the transportManager attribute.
          */

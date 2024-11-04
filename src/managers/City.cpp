@@ -61,6 +61,10 @@ void City::addTransport(string type,string name, float& budget)
     this->transportManager->addTransport(type, name, budget);
 }
 
+void City::addTransport() {
+    this->transportManager->addTransport("Train","Gautrain",this->budget);
+}
+
 void City::printTransport()
 {
     this->transportManager->printSummary();
