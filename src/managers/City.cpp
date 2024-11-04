@@ -69,16 +69,21 @@ void City::implementPolicy()
 
 CityMemento *City::saveGame()
 {
-    /* //corresponds to Memento::createMemento()
     CityMemento* save = new CityMemento();
-    save->setSatisfaction(this->satisfaction);
-    save->setBuildings(this->buildings);
-    save->setModesOfTransport(this->modesOfTransport);  // this has to be changed
-    // save->setGovernment(this->government);
+    save->setSatisfaction(this->satisfaction->clone());
+    //save->setBuildingManager(this->buildingManager->clone()); Possibly going to remove this
+    
+    save->setUtilityManager(this->utilitiesManager->clone());
+    save->setTransportManager(this->transportManager->clone());
+    save->setGovernment(this->government->clone());
 
-    //any attributes that get added to city must be here
-    return save; */
-    return nullptr;
+    save->setBudget(this->budget);
+    save->setPopulation(this->population);
+    save->setTotalPowerDemand(this->totalPowerDemand);
+    save->setTotalWaterDemand(this->totalWaterDemand);
+    save->setTotalWasteDemand(this->totalWasteDemand);
+    save->setTotalSewageDemand(this->totalSewageDemand);
+
 }
 
 void City::loadGame(CityMemento* save)
