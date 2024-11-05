@@ -29,3 +29,7 @@ git clone https://github.com/COS214-Project-2024/TheCityKings.git
 7. make
 8. cd src
 9. ./TheCityKings
+
+##Project Discription:
+* This project is a Building Simulation that models various types of buildings within a city environment. It showcases the implementation of three fundamental design patterns in C++
+* The simulation includes different building categories such as residential, commercial, industrial, and landmark buildings. Each building type has unique attributes and behaviors that influence factors like tax income, building costs, employment opportunities, and citizen satisfaction.
