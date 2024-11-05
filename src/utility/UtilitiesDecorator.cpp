@@ -2,28 +2,33 @@
 #include <iostream>
 #include <cmath>
 
-UtilitiesDecorator::UtilitiesDecorator(int capacity)
+UtilitiesDecorator::UtilitiesDecorator(int capacity,int cost)
 {
     currentCapacity = capacity;
     level = 0;
+    costOfUpgrade = cost;
 }
 
-bool UtilitiesDecorator::upgradeLevel()
+void UtilitiesDecorator::upgradeLevel()
 {
-    if(level<3)
-    {
-        ++level;
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    level = level + 1;
 }
 
 int UtilitiesDecorator::getCapacity()
 {   
     int out = currentCapacity;
+
+    for(int i=1;i<=level;i++)
+    {
+        out = out*3;
+    }
+
+    return out;
+}
+
+int UtilitiesDecorator::getUpgradeCost()
+{
+    int out = costOfUpgrade;
 
     for(int i=1;i<=level;i++)
     {
@@ -36,20 +41,6 @@ int UtilitiesDecorator::getCapacity()
 int UtilitiesDecorator::getLevel()
 {
     return level;
-}
-
-bool UtilitiesDecorator::isEfficient(int demand)
-{
-    int currentProduction = getCapacity();
-
-    if(currentProduction<demand)
-    {
-        return false;
-    }
-    else
-    {
-        return true;
-    }
 }
 
 void UtilitiesDecorator::setCapacity(int c){

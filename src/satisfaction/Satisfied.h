@@ -31,6 +31,11 @@ class Satisfied : public SatisfactionState {
          * @param c Pointer to the City object whose satisfaction is to be decreased.
          */
         void decSatisfactionState(City* c);
+        /**
+         * @brief This returns a copy of the satisfied state.
+         *
+         * @return SatisfactionState pointer to copy.
+         */
         SatisfactionState* clone();
 };
 

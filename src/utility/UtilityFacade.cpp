@@ -8,33 +8,6 @@ UtilityFacade::UtilityFacade()
     waterSupply = new WaterSupplyDecorator(); 
 }
 
-void UtilityFacade::checkAndUpgradeUtilities(int demand)
-{
-    if(powerPlant->isEfficient(demand))
-    {
-        powerPlant->upgradeLevel();
-        std::cout<<"Power Plant has been upgraded since demand was to high\n";
-    }
-
-    if(powerPlant->isEfficient(demand))
-    {
-        sewageManagement->upgradeLevel();
-        std::cout<<"Sewage Management has been upgraded since demand was to high\n";
-    }
-
-    if(powerPlant->isEfficient(demand))
-    {
-        wasteManagement->upgradeLevel();
-        std::cout<<"Waste Management has been upgraded since demand was to high\n";
-    }
-
-    if(powerPlant->isEfficient(demand))
-    {
-        waterSupply->upgradeLevel();
-        std::cout<<"Water Supply has been upgraded since demand was to high\n";
-    }
-}
-
 void UtilityFacade::printResourceDistribution()
 {
     std::cout<<"Current Utilities Output Capacities"<<std::endl;
@@ -71,6 +44,80 @@ int UtilityFacade::getWasteCapacity()
 int UtilityFacade::getSewageCapacity()
 {
     return sewageManagement->getCapacity();
+}
+
+int UtilityFacade::getPowerUpgradeCost() const
+{
+    return powerPlant->getUpgradeCost();
+}
+
+int UtilityFacade::getWaterUpgradeCost() const
+{
+    return waterSupply->getUpgradeCost();
+}
+
+int UtilityFacade::getWasteUpgradeCost() const
+{
+    return wasteManagement->getUpgradeCost();
+}
+
+int UtilityFacade::getSewageUpgradeCost() const
+{
+    return sewageManagement->getUpgradeCost();
+}
+
+float UtilityFacade::upgradeUtility(int type, float balance)
+{
+    switch(type){
+        case 1: //power
+                int cost = powerPlant->getUpgradeCost();
+                if(cost<balance)
+                {
+                    powerPlant->upgradeLevel();
+                    return cost;
+                }
+                else
+                {
+                    return -1;
+                }
+            break;
+        case 2: //water
+                int cost = waterSupply->getUpgradeCost();
+                if(cost<balance)
+                {
+                    waterSupply->upgradeLevel();
+                    return cost;
+                }
+                else
+                {
+                    return -1;
+                }
+            break;
+        case 3: //waste
+                int cost = wasteManagement->getUpgradeCost();
+                if(cost<balance)
+                {
+                    wasteManagement->upgradeLevel();
+                    return cost;
+                }
+                else
+                {
+                    return -1;
+                }
+            break;
+        case 4: //sewage
+                int cost = sewageManagement->getUpgradeCost();
+                if(cost<balance)
+                {
+                    sewageManagement->upgradeLevel();
+                    return cost;
+                }
+                else
+                {
+                    return -1;
+                }
+            break;
+    }
 }
 
 UtilityFacade* UtilityFacade::clone(){
