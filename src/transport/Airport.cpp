@@ -1,29 +1,17 @@
 #include "Airport.h"
 
-Airport::Airport(string name, float& budget)
-{
+Airport::Airport(string name, float& budget) {
     this->name = name;
-    this->cost = 10000000;
-    this->capacity = 1000000;
+    this->cost = 1000;
+    this->capacity = 100;
     this->type = TransportType::GeneralTransport;
 
-    if(cost < budget) {
-        cout << this->name << " Airport bought." << endl; 
-        budget -= cost;
-    }
-    else if(cost == budget) {
-        cout << this->name << " Airport bought, but you just blew your remaining budget on an Airport." << endl;
+    if(cost <= budget) {
         budget -= cost;
     }
     else {
-        throw runtime_error("The city does not have enough money for an Airport.");
+        throw std::runtime_error("This airport is out of your budget ;)");
     }
-
-}
-
-Airport::~Airport()
-{
-    cout << this->name << " Airport destroyed." << endl; 
 }
 
 string Airport::getTransportType() {
@@ -36,4 +24,12 @@ string Airport::getName() {
 
 string Airport::getType() {
     return "Airport";
+}
+
+float Airport::getCost() {
+    return this->cost;
+}
+
+Airport::~Airport() {
+    cout << this->name << " Airport destroyed." << endl; 
 }

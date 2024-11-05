@@ -16,7 +16,7 @@ std::string BuildingManager::createNeighbourhood(std::string nName) {
 
     // No neighbourhood found, add to list
     nList.push_back(new CompositeNeighbourhood(nName));
-    return "Neighbourhood " + nName + " created!";
+    return "Successfully created neighbourhood.";
 }
 
 /*

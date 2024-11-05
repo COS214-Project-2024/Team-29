@@ -1,29 +1,17 @@
 #include "Train.h"
 
-Train::Train(string name, float& budget)
-{
+Train::Train(string name, float& budget) {
     this->name = name;
-    this->cost = 500000;
-    this->capacity = 100000;
+    this->cost = 5000;
+    this->capacity = 100;
     this->type = TransportType::GoodsTransport;
 
-    if(cost < budget) {
-        cout << this->name << " Train bought." << endl; 
-        budget -= cost;
-    }
-    else if(cost == budget) {
-        cout << this->name << " Train bought, but you just blew your remaining budget on a Train." << endl;
+    if (cost <= budget) {
         budget -= cost;
     }
     else {
-        throw runtime_error("The city does not have enough money for a Train.");
+        throw std::runtime_error("This train is out of your budget ;)");
     }
-
-}
-
-Train::~Train()
-{
-    cout << this->name << " Train destroyed." << endl; 
 }
 
 string Train::getTransportType() {
@@ -36,4 +24,12 @@ string Train::getName() {
 
 string Train::getType() {
     return "Train";
+}
+
+float Train::getCost() {
+    return this->cost;
+}
+
+Train::~Train() {
+    cout << this->name << " Train destroyed." << endl; 
 }

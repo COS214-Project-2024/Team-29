@@ -96,10 +96,9 @@ class City {
          * @brief Adds a mode of transport to the city thruogh the transportManager attribute.
          * @param type The type of transport (e.g., "Airport", "Bus", "Ferry", "Train").
          * @param name The name of the transport mode (e.g., "Gautrain").
-         * @param budget Reference to the city's budget.
          */
-        void addTransport(string type, string name, float& budget);
-        void addTransport();
+        void buildTransport(string type, string name);
+        
         /**
          * @brief Prints the list of all transport modes in the city through the transportManager attribute.
          */
@@ -162,6 +161,13 @@ class City {
          * @return Status code of the building operation.
          */
         int buildBuilding(std::string nName, int bType, int bName);
+
+        /**
+         * @brief Builds a new neighbourhood in the city.
+         * @param nName Name of the neighbourhood.
+         * @return Status code of the neighbourhood creation operation.
+         */
+        std::string buildNeighbourhood(std::string nName);
 };
 
 #endif

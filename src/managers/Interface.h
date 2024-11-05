@@ -11,28 +11,56 @@
  */
 class Interface {
     private:
+        /*
+            CLASS VARIABLES
+        */
         City* c;    /**< Pointer to the City instance. */
         int cycle;  /**< Simulation cycle counter. */
 
-        //City Functions
-        /**
-         * @brief Updates the city stats, mainly the cities taxes.
-         */
-        void updateCityStats();
 
-        //Display Prompt Functions
-        /**
-         * @brief Displays a welcome message to the user at the start of the simulation.
-         */
-        void displayWelcomeMessage();
+
+        /* 
+            CITY MANAGEMENT FUNCTIONS
+        */
         /**
          * @brief Displays the current statistics of the city, including resources and population.
          */
         void displayCityStats();
         /**
+         * @brief Updates the city stats, mainly the cities taxes.
+         */
+        void updateCityStats();
+        
+        
+
+
+        /*
+            GAME LOOP FUNCTIONS
+        */
+        /**
          * @brief Shows the current simulation cycle number.
          */
         void displayCurrentCycle();
+        /**
+         * @brief Advances the simulation to the next cycle by incrementing the cycle counter.
+         */
+        void incrementCycle();
+        /**
+         * @brief Retrieves the current simulation cycle.
+         * @return The current cycle count.
+         */
+        int getCycle();
+        /**
+         * @brief Advances the simulation by a specified number of cycles.
+         */
+        void nextCycle();
+
+
+
+
+        /*
+            DISPLAY PROMPT FUNCTIONS
+        */
         /**
          * @brief Displays the operation menu, listing available user actions for city management.
          */
@@ -44,9 +72,23 @@ class Interface {
         /**
          * @brief Prompts the user to specify the neighborhood for a new building.
          */
-        void displayNeighbourHoodQuery();
+        void displayNeighbourhoodMenu();
+        /**
+         * @brief Shows a menu with transport modes available for construction.
+         */
+        void displayTransportMenu();
 
-        //Display Failure/Success Messages
+
+        /*
+            OPERATION FUNCTIONS
+        */
+
+        void buildNeighbourhood();
+        void buildTransport();
+
+        /*
+            DISPLAY FAILURE MESSAGES
+        */
         /**
          * @brief Shows a message indicating invalid input was received.
          */
@@ -56,32 +98,73 @@ class Interface {
          */
         void displayBuildingFailureMessage();
         /**
+         * @brief Shows a message indicating that neighbourhood construction failed.
+         * @param errMsg The error message to display.
+         */
+        void displayNeighbourhoodFailureMessage(const std::string& errMsg);
+        /**
+         * @brief Shows a message indicating that transport construction failed.\
+         * @param errMsg The error message to display.
+         */
+        void displayTransportFailureMessage(const std::string& errMsg);
+        
+
+
+        /*
+            DISPLAY SUCCESS MESSAGES
+        */
+        /**
          * @brief Displays a success message when a building is successfully constructed.
          */
         void displayBuildingSuccessMessage();
-        
-        //Helper Functions
         /**
-         * @brief Advances the simulation to the next cycle by incrementing the cycle counter.
+         * @brief Displays a success message when a neighbourhood is successfully constructed.
+         * @param Result of the neighbourhood construction operation.
          */
-        void incrementCycle();
+        void displayNeighbourhoodSuccessMessage(const std::string& r);
         /**
-         * @brief Retrieves the current simulation cycle.
-         * @return The current cycle count.
+         * @brief Displays a success message when a transport is successfully constructed.
+         * @param Result of the transport construction operation.
          */
-        int getCycle();
+        void displayTransportSuccessMessage();
 
-        //UI Functions
+
+
+
+        /*
+            UI HELPER FUNCTIONS
+        */
         /**
          * @brief Clears the terminal for a cleaner UI for the client
          */
         void clearTerminal();
+        /**
+         * @brief Pauses the program for a specified number of seconds.
+         */
+        void sleepProgram();
 
-        //Greeter Functions
+
+
+        /*
+            DISPLAY GREETER MESSAGES
+        */
         /**
          * @brief Displays a goodbye message to user for the end of the game
          */
         void displayGoodbyeMessage();
+        /**
+         * @brief Displays a welcome message to the user at the start of the simulation.
+         */
+        void displayWelcomeMessage();
+
+
+        
+        /*
+            NEW METHODS FOR INTERFACE
+        */
+        
+        void displayCurrentTransport();
+        
 
     public:
         /**
