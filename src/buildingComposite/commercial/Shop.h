@@ -31,6 +31,10 @@ class Shop : public CommercialBuilding {
          * @brief Destroys the Shop object.
          */
         virtual ~Shop() {};
+        /**
+         * @brief Creates a copy of the current shop for saving in CityMemento.
+         * @return Pointer to copy of the current Shop as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

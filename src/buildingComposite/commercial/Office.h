@@ -31,6 +31,10 @@ class Office : public CommercialBuilding {
          * @brief Destroys the Office object.
          */
         virtual ~Office() {};
+        /**
+         * @brief Creates a copy of the current office for saving in CityMemento.
+         * @return Pointer to copy of the current Office as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

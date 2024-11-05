@@ -35,6 +35,10 @@ class IndustrialBuilding : public Building {
          * @brief Destroys the IndustrialBuilding object.
          */
         virtual ~IndustrialBuilding() {};
+        /**
+         * @brief Creates a copy of the current industrial building for saving in CityMemento.
+         * @return Pointer to copy of the current IndustrialBuidling as a BuildingComponent type.
+         */
         virtual BuildingComponent* clone() = 0;   
 };
 

@@ -31,6 +31,10 @@ class Monument : public LandmarkBuilding {
          * @brief Destroys the Monument object.
          */
         ~Monument() {};
+        /**
+         * @brief Creates a copy of the current monument for saving in CityMemento.
+         * @return Pointer to copy of the current Monument as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

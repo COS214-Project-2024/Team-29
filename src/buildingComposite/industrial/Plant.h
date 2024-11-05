@@ -31,6 +31,10 @@ class Plant : public IndustrialBuilding {
          * @brief Destroys the Plant object.
          */
         ~Plant() {};
+        /**
+         * @brief Creates a copy of the current plant for saving in CityMemento.
+         * @return Pointer to copy of the current Plant as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

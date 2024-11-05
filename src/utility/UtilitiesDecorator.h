@@ -15,49 +15,39 @@ class UtilitiesDecorator {
         int level;     
         ///@brief The current capacity of the utility
         int currentCapacity;
+        /// @brief The base cost to upgrade the utility
+        int costOfUpgrade;
 
     public:
         /**
          * @brief Constructor for UtilitiesDecorator.
          * Initialises level to 0.
          * @param capacity Initial capacity of the utility.
+         * @param cost Base cost of the utility.
          */
-        UtilitiesDecorator(int capacity);
-
+        UtilitiesDecorator(int capacity, int cost);
         /**
-         * @brief Attempts to upgrade the utility level.
-         *
-         * Increases the level by one if it is below the maximum level of 5.
-         * Returns true if the upgrade is successful, false if already at max level.
-         *
-         * @return True if upgrade is successful; false if already at max level.
+         * @brief Upgrades the utility level by incrementing for each upgrade.
          */
-        bool upgradeLevel();
-
+        void upgradeLevel();
         /**
          * @brief Gets the current capacity of the utility.
          *
          * @return The current capacity.
          */
         int getCapacity();
-
+        /**
+         * @brief Gets the cost to upgrade the utility (cost == cost*3^level).
+         *
+         * @return The current capacity.
+         */
+        int getUpgradeCost();
         /**
          * @brief Gets the current level of the utility.
          *
          * @return The current level.
          */
         int getLevel();
-
-        /**
-         * @brief Checks if the utility is efficient given a demand.
-         *
-         * Determines if the utility’s capacity at the current level can meet the demand.
-         * If demand is greater than `capacity * 2^level`, it returns false; otherwise, true.
-         *
-         * @param demand The demand to check efficiency against.
-         * @return True if the utility is efficient; false otherwise.
-         */
-        bool isEfficient(int demand);
 
         /// @brief Changes the currentCapacity variable to the passed in parameters value
         /// @param c New Capacity value that currentCapacity will change to

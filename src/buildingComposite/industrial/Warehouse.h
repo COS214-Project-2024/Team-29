@@ -31,6 +31,10 @@ class Warehouse : public IndustrialBuilding {
          * @brief Destroys the Warehouse object.
          */
         ~Warehouse() {};
+        /**
+         * @brief Creates a copy of the current warehouse for saving in CityMemento.
+         * @return Pointer to copy of the current Warehouse as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

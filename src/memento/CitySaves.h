@@ -14,9 +14,10 @@ using namespace std;
  */
 class CitySaves {
     public:
-        /// @brief Adds a CityMemento object to the map while using the name as the key
-        /// @param name The key of the CityMemento
-        /// @param m The CityMemento object to be stored
+        /**
+         * @brief Adds a save state to the collection.
+         * @param m Pointer to the CityMemento representing the city state to be saved.
+         */
         void addSave(string name, CityMemento* m);
         /**
          * @brief Removes the last saved state from the collection.
@@ -27,10 +28,18 @@ class CitySaves {
          * @return Pointer to the most recent CityMemento instance.
          */
         CityMemento* getSave(string name);
+        
+        /**
+         * @brief Creates and reutrns a string to display to the user all the current saves.
+         * @return String to print to user.
+         */
         string toString();
+        /**
+         * @brief Destructor for CitySaves, cleaning up resources.
+         */
         ~CitySaves();
     private:
-        map<string ,CityMemento*> save;
+        map<string ,CityMemento*> save; /**< Map object to store the different city saves */
 };
 
 #endif

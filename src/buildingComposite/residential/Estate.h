@@ -31,6 +31,10 @@ class Estate : public ResidentialBuilding {
          * @brief Destroys the Estate object.
          */
         ~Estate() {};
+        /**
+         * @brief Creates a copy of the current estate for saving in CityMemento.
+         * @return Pointer to copy of the current Estate as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 }; 
 

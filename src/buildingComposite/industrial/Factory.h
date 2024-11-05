@@ -31,6 +31,10 @@ class Factory : public IndustrialBuilding {
          * @brief Destroys the Factory object.
          */
         ~Factory() {};
+        /**
+         * @brief Creates a copy of the current factory for saving in CityMemento.
+         * @return Pointer to copy of the current Factory as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

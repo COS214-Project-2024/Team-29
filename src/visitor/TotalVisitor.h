@@ -31,10 +31,10 @@ class TotalVisitor : public BuildingVisitor {
         int totalEmployeeCapacity;  /**< Accumulated total employee capacity. */
         int totalSatisfactionValue; /**< Accumulated total satisfaction value. */
 
-        int totalPowerDemand;
-        int totalWaterDemand;
-        int totalWasteDemand;
-        int totalSewageDemand;
+        int totalPowerDemand;       /**< Total power demand for the city. */
+        int totalWaterDemand;       /**< Total water demand for the city. */
+        int totalWasteDemand;       /**< Total waste demand for the city. */
+        int totalSewageDemand;      /**< Total sewage demand for the city. */
 
     public:
         /**
@@ -126,31 +126,55 @@ class TotalVisitor : public BuildingVisitor {
          * @return Total build cost as a double.
          */
         double getTotalBuildCost() const;
+
         /**
          * @brief Retrieves the total tax income.
          * @return Total tax income as a double.
          */
         double getTotalTaxIncome() const;
+
         /**
          * @brief Retrieves the total living capacity.
          * @return Total living capacity as an integer.
          */
         int getTotalLivingCapacity() const;
+
         /**
          * @brief Retrieves the total employee capacity.
          * @return Total employee capacity as an integer.
          */
         int getTotalEmployeeCapacity() const;
+
         /**
          * @brief Retrieves the total satisfaction value.
          * @return Total satisfaction value as an integer.
          */
-
         int getTotalSatisfactionValue() const;
+
+        /**
+         * @brief Retrieves the total power demand value.
+         * @return Total totalPowerDemand value as an integer.
+         */
         int getTotalPowerDemand() const;
+
+        /**
+         * @brief Retrieves the total water demand value.
+         * @return Total totalWaterDemand value as an integer.
+         */
         int getTotalWaterDemand() const;
+
+        /**
+         * @brief Retrieves the total waste demand value.
+         * @return Total totalWasteDemand value as an integer.
+         */
         int getTotalWasteDemand() const;
+        
+        /**
+         * @brief Retrieves the total sewage demand value.
+         * @return Total totalSewageDemand value as an integer.
+         */
         int getTotalSewageDemand() const;
+
         //Destructor
         /**
          * @brief Destructor for TotalVisitor.

@@ -30,9 +30,25 @@ class BuildingComponent
          */
         virtual double getTaxIncome() const = 0;
 
+        /**
+         * @brief Retrieves the powerDemand of the building.
+         * @return Power demand as an int.
+         */
         virtual int getPowerDemand() const = 0;
+        /**
+         * @brief Retrieves the waterDemand of the building.
+         * @return Water demand as an int.
+         */
         virtual int getWaterDemand() const = 0;
+        /**
+         * @brief Retrieves the waterDemand of the building.
+         * @return Waste demand as an int.
+         */
         virtual int getWasteDemand() const = 0;
+        /**
+         * @brief Retrieves the wasteDemand of the building.
+         * @return Sewage demand as an int.
+         */
         virtual int getSewageDemand() const = 0;
              
         /**
@@ -49,6 +65,11 @@ class BuildingComponent
          * @brief Destroys the BuildingComponent object. (inline)
          */
         virtual ~BuildingComponent() {};
+
+        /**
+         * @brief Creates a copy of the current building for saving in CityMemento.
+         * @return Pointer to copy of the current building as a BuildingComponent type.
+         */
         virtual BuildingComponent* clone() = 0;
         
 };

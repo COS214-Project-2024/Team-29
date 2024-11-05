@@ -31,6 +31,10 @@ class Mall : public CommercialBuilding {
          * @brief Destroys the Mall object.
          */
         virtual ~Mall() {};
+        /**
+         * @brief Creates a copy of the current mall for saving in CityMemento.
+         * @return Pointer to copy of the current Mall as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

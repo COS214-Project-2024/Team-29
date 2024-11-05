@@ -40,9 +40,25 @@ class CompositeNeighbourhood : public BuildingComponent {
          */
         virtual double getTaxIncome() const override;
 
+        /**
+         * @brief Retrieves the powerDemand of the building.
+         * @return Power demand as an int.
+         */
         int getPowerDemand() const;
+        /**
+         * @brief Retrieves the waterDemand of the building.
+         * @return Water demand as an int.
+         */
         int getWaterDemand() const;
+        /**
+         * @brief Retrieves the waterDemand of the building.
+         * @return Waste demand as an int.
+         */
         int getWasteDemand() const;
+        /**
+         * @brief Retrieves the wasteDemand of the building.
+         * @return Sewage demand as an int.
+         */
         int getSewageDemand() const;
 
         /**
@@ -65,8 +81,16 @@ class CompositeNeighbourhood : public BuildingComponent {
          */
         ~CompositeNeighbourhood();
 
-        BuildingComponent* clone();
+        /**
+         * @brief Returns nullptr since no implementation is needed for the inherited function.
+         * @return nullptr
 
+         */
+        BuildingComponent* clone();
+        /**
+         * @brief Creates a deep copy of the current neighbourhood for saving in CityMemento.
+         * @return Pointer to copy of the current neighbourhood as a CompositeNeighbourhood type.
+         */
         CompositeNeighbourhood* copy() const;
 };
 

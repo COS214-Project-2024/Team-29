@@ -1,3 +1,3 @@
 #include "SewageManagementDecorator.h"
 
-SewageManagementDecorator::SewageManagementDecorator():UtilitiesDecorator(180){}
+SewageManagementDecorator::SewageManagementDecorator():UtilitiesDecorator(600,4500){}

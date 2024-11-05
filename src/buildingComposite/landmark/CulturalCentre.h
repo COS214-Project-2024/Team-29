@@ -31,6 +31,10 @@ class CulturalCentre : public LandmarkBuilding {
          * @brief Destroys the CulturalCentre object.
          */
         ~CulturalCentre() {};
+        /**
+         * @brief Creates a copy of the current cultural centre for saving in CityMemento.
+         * @return Pointer to copy of the current CulturalCentre as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

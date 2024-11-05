@@ -1,3 +1,3 @@
 #include "PowerPlantDecorator.h"
 
-PowerPlantDecorator::PowerPlantDecorator():UtilitiesDecorator(100){}
+PowerPlantDecorator::PowerPlantDecorator():UtilitiesDecorator(700,5500){}

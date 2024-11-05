@@ -45,16 +45,6 @@ class UtilityFacade {
         ~UtilityFacade();
 
         /**
-         * @brief Checks and upgrades utility systems based on the specified demand.
-         * 
-         * This method assesses each utility's current capacity and upgrades them
-         * if the demand exceeds available resources.
-         *
-         * @param demand The required capacity to fulfill current demand.
-         */
-        void checkAndUpgradeUtilities(int demand);
-
-        /**
          * @brief Prints the current distribution of resources across utilities.
          * 
          * Provides an overview of resource availability for power, water, waste, 
@@ -89,9 +79,41 @@ class UtilityFacade {
          * @return The capacity of the sewage management system.
          */
         int getSewageCapacity();
-        
-        /// @brief This returns a clone of the current UtilityFacade
-        /// @return UtilityFacade Clone
+        /**
+         * @brief Retrieves the current price to upgrade power.
+         *
+         * @return The cost to upgrade the power.
+         */
+        int getPowerUpgradeCost() const;
+        /**
+         * @brief Retrieves the current price to upgrade waterSupply.
+         *
+         * @return The cost to upgrade the waterSupply.
+         */
+        int getWaterUpgradeCost() const;
+        /**
+         * @brief Retrieves the current price to upgrade wasteManagement.
+         *
+         * @return The cost to upgrade the wasteManagement.
+         */
+        int getWasteUpgradeCost() const;
+        /**
+         * @brief Retrieves the current price to upgrade sewageManagement.
+         *
+         * @return The cost to upgrade the sewageManagement.
+         */
+        int getSewageUpgradeCost() const;
+        /**
+         * @brief Upgrades the specified utility to the next level if balance allows.
+         *
+         * @return The cost to upgrade the utility as a float.
+         */
+        float upgradeUtility(int type, float balance);
+        /**
+         * @brief This returns a deep copy of the current UtilityFacade.
+         *
+         * @return UtilityFacade pointer to clone.
+         */
         UtilityFacade * clone();
 };
 #endif
