@@ -27,6 +27,10 @@ public:
      * @brief Constructs a Government instance, initializing it with a list of policies from "Policies.txt".
      */
 	Government();
+     /**
+      * @brief Creates a deep copy of the current government for saving in CityMemento.
+      * @return Pointer to copy of the current government as a Government type.
+      */
 	Government* clone() const;
 
 	/**

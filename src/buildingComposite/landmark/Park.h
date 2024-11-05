@@ -31,6 +31,10 @@ class Park : public LandmarkBuilding {
          * @brief Destroys the Park object.
          */
         ~Park() {};
+        /**
+         * @brief Creates a copy of the current park for saving in CityMemento.
+         * @return Pointer to copy of the current Park as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

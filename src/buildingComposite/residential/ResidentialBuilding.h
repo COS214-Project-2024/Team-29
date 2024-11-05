@@ -35,6 +35,10 @@ class ResidentialBuilding : public Building {
          * @brief Destroys the ResidentialBuilding object.
          */
         virtual ~ResidentialBuilding() {};   
+        /**
+         * @brief Creates a copy of the current residential building for saving in CityMemento.
+         * @return Pointer to copy of the current ResidentialBuilding as a BuildingComponent type.
+         */
         virtual BuildingComponent* clone() = 0;    
 };
 

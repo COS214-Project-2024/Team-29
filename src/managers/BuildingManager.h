@@ -79,9 +79,25 @@ class BuildingManager
          * @return Satisfaction value.
          */
         int getTotalSatisfactionValue();
+        /**
+         * @brief Calculates the total power demand contributed by all buildings and neighbourhoods.
+         * @return totalPowerDemand
+         */
         int getTotalPowerDemand();
+        /**
+         * @brief Calculates the total water demand contributed by all buildings and neighbourhoods.
+         * @return totalWaterDemand
+         */
         int getTotalWaterDemand();
+        /**
+         * @brief Calculates the total waste demand contributed by all buildings and neighbourhoods.
+         * @return totalWasteDemand
+         */
         int getTotalWasteDemand();
+        /**
+         * @brief Calculates the total sewage demand contributed by all buildings and neighbourhoods.
+         * @return totalSewageDemand
+         */
         int getTotalSewageDemand();
 
 
@@ -95,6 +111,10 @@ class BuildingManager
          * @brief Destructor for BuildingManager.
          */
         ~BuildingManager();
+        /**
+         * @brief Creates a deep copy of the current BuildingManager for saving in CityMemento.
+         * @return Pointer to deep copy of the current BuildingManager as a BuildingManager type.
+         */
         BuildingManager * clone();
 };
 

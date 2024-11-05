@@ -35,6 +35,10 @@ class LandmarkBuilding : public Building {
          * @brief Destroys the LandmarkBuilding object.
          */
         virtual ~LandmarkBuilding() {};
+        /**
+         * @brief Creates a copy of the current landmark building for saving in CityMemento.
+         * @return Pointer to copy of the current LandmarkBuilding as a BuildingComponent type.
+         */
         virtual BuildingComponent* clone() = 0;   
 };
 

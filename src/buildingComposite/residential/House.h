@@ -31,6 +31,10 @@ class House : public ResidentialBuilding {
          * @brief Destroys the House object.
          */
         ~House() {};
+        /**
+         * @brief Creates a copy of the current house for saving in CityMemento.
+         * @return Pointer to copy of the current House as a BuildingComponent type.
+         */
         BuildingComponent* clone(); 
 };
 

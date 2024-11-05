@@ -16,7 +16,7 @@
  */
 class CommercialBuilding : public Building {
     protected:
-        int employeeCapacity;/**< The number of employees the building can accommodate. */
+        int employeeCapacity;   /**< The number of employees the building can accommodate. */
 
     public:
         /**
@@ -35,6 +35,10 @@ class CommercialBuilding : public Building {
          * @brief Destroys the CommercialBuilding object.
          */
         virtual ~CommercialBuilding() {};
+        /**
+         * @brief Creates a copy of the current commercial building for saving in CityMemento.
+         * @return Pointer to copy of the current CommercialBuilding as a BuildingComponent type.
+         */
         virtual BuildingComponent* clone() = 0;   
 };
 
