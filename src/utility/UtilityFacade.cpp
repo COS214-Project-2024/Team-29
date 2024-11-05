@@ -70,6 +70,7 @@ float UtilityFacade::upgradeUtility(int type, float balance)
 {
     switch(type){
         case 1: //power
+            {
                 int cost = powerPlant->getUpgradeCost();
                 if(cost<balance)
                 {
@@ -80,8 +81,10 @@ float UtilityFacade::upgradeUtility(int type, float balance)
                 {
                     return -1;
                 }
+            }
             break;
         case 2: //water
+            {
                 int cost = waterSupply->getUpgradeCost();
                 if(cost<balance)
                 {
@@ -92,8 +95,10 @@ float UtilityFacade::upgradeUtility(int type, float balance)
                 {
                     return -1;
                 }
+            }
             break;
         case 3: //waste
+            {
                 int cost = wasteManagement->getUpgradeCost();
                 if(cost<balance)
                 {
@@ -104,8 +109,10 @@ float UtilityFacade::upgradeUtility(int type, float balance)
                 {
                     return -1;
                 }
+            }
             break;
         case 4: //sewage
+            {
                 int cost = sewageManagement->getUpgradeCost();
                 if(cost<balance)
                 {
@@ -116,7 +123,10 @@ float UtilityFacade::upgradeUtility(int type, float balance)
                 {
                     return -1;
                 }
+            }
             break;
+        default:
+            return -1;
     }
 }
 
