@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classBuildingCreator.html" title="The abstract class for the factory method for creating buildings." alt="" coords="5,81,128,108"/>
+<area shape="rect" id="node2" href="$classCommercialBuildingCreator.html" title="A concrete factory method for creating buildings." alt="" coords="176,5,379,32"/>
+<area shape="rect" id="node3" href="$classIndustrialBuildingCreator.html" title="A concrete factory method for creating buildings." alt="" coords="185,56,369,83"/>
+<area shape="rect" id="node4" href="$classLandmarkBuildingCreator.html" title="A concrete factory method for creating buildings." alt="" coords="183,107,371,133"/>
+<area shape="rect" id="node5" href="$classResidentialBuildingCreator.html" title="A concrete factory method for creating buildings." alt="" coords="179,157,375,184"/>
+</map>

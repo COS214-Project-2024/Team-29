@@ -1,0 +1,83 @@
+\hypertarget{classLandmarkBuildingCreator}{}\doxysection{Landmark\+Building\+Creator Class Reference}
+\label{classLandmarkBuildingCreator}\index{LandmarkBuildingCreator@{LandmarkBuildingCreator}}
+
+
+A concrete factory method for creating buildings.  
+
+
+
+
+{\ttfamily \#include $<$Landmark\+Building\+Creator.\+h$>$}
+
+
+
+Inheritance diagram for Landmark\+Building\+Creator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classLandmarkBuildingCreator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Landmark\+Building\+Creator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classLandmarkBuildingCreator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBuilding}{Building}} $\ast$ \mbox{\hyperlink{classLandmarkBuildingCreator_a0798cf3039d31ba12ea95a66b54480a8}{create\+Building}} (int b\+Name)
+\begin{DoxyCompactList}\small\item\em Creates a building object of type Landmark and returns it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A concrete factory method for creating buildings. 
+
+The \mbox{\hyperlink{classLandmarkBuildingCreator}{Landmark\+Building\+Creator}} class provides one of the concrete classes for the abstract factory class, Buidling\+Creator, and is responsible for creating \mbox{\hyperlink{classBuilding}{Building}} objects of type Landmark 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLandmarkBuildingCreator_a0798cf3039d31ba12ea95a66b54480a8}\label{classLandmarkBuildingCreator_a0798cf3039d31ba12ea95a66b54480a8}} 
+\index{LandmarkBuildingCreator@{LandmarkBuildingCreator}!createBuilding@{createBuilding}}
+\index{createBuilding@{createBuilding}!LandmarkBuildingCreator@{LandmarkBuildingCreator}}
+\doxysubsubsection{\texorpdfstring{createBuilding()}{createBuilding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuilding}{Building}} $\ast$ Landmark\+Building\+Creator\+::create\+Building (\begin{DoxyParamCaption}\item[{int}]{b\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a building object of type Landmark and returns it. 
+
+create\+Bulding() takes in a int paramenter that defines the type of landmark building
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classPark}{Park}} \+: b\+Name == 1
+\item \mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} \+: b\+Name == 2
+\item \mbox{\hyperlink{classMonument}{Monument}} \+: b\+Name == 3~\newline
+~\newline
+ (returns nullptr if b\+Name$<$1 or b\+Name$>$3)~\newline
+ returns a \mbox{\hyperlink{classBuilding}{Building}} pointer to the object (Building$\ast$).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+Name} & int that determines the type of Landmark building created\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Building$\ast$ to \mbox{\hyperlink{classBuilding}{Building}} object created 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingCreator_ae3f859670acfc139f1c0630cdfaff7d5}{Building\+Creator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Factory/Landmark\+Building\+Creator.\+h\item 
+src/building\+Factory/Landmark\+Building\+Creator.\+cpp\end{DoxyCompactItemize}

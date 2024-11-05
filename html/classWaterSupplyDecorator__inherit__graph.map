@@ -1,0 +1,4 @@
+<map id="WaterSupplyDecorator" name="WaterSupplyDecorator">
+<area shape="rect" id="node1" title="A decorator class for the water supply utility." alt="" coords="5,80,173,107"/>
+<area shape="rect" id="node2" href="$classUtilitiesDecorator.html" title="The base decorator class for the various utility systems." alt="" coords="21,5,158,32"/>
+</map>

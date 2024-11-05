@@ -1,0 +1,4 @@
+<map id="Train" name="Train">
+<area shape="rect" id="node1" title="Represents an train with specified cost, capacity, and transport type." alt="" coords="45,80,99,107"/>
+<area shape="rect" id="node2" href="$classModeOfTransport.html" title="Abstract class for the different modes of transport." alt="" coords="5,5,139,32"/>
+</map>

@@ -1,0 +1,61 @@
+\hypertarget{classBuildingCreator}{}\doxysection{Building\+Creator Class Reference}
+\label{classBuildingCreator}\index{BuildingCreator@{BuildingCreator}}
+
+
+The abstract class for the factory method for creating buildings.  
+
+
+
+
+{\ttfamily \#include $<$Building\+Creator.\+h$>$}
+
+
+
+Inheritance diagram for Building\+Creator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBuildingCreator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classBuilding}{Building}} $\ast$ \mbox{\hyperlink{classBuildingCreator_ae3f859670acfc139f1c0630cdfaff7d5}{create\+Building}} (int b\+Name)=0
+\begin{DoxyCompactList}\small\item\em Virtual function for the concrete creator classes that creates a building object based on an input parameter b\+Name and returns the pointer to that created object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The abstract class for the factory method for creating buildings. 
+
+The \mbox{\hyperlink{classBuildingCreator}{Building\+Creator}} class provides the abstract template and method for the concrete factory classes (\mbox{\hyperlink{classCommercialBuildingCreator}{Commercial\+Building\+Creator}}, \mbox{\hyperlink{classIndustrialBuildingCreator}{Industrial\+Building\+Creator}}, \mbox{\hyperlink{classLandmarkBuildingCreator}{Landmark\+Building\+Creator}}, \mbox{\hyperlink{classResidentialBuildingCreator}{Residential\+Building\+Creator}}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBuildingCreator_ae3f859670acfc139f1c0630cdfaff7d5}\label{classBuildingCreator_ae3f859670acfc139f1c0630cdfaff7d5}} 
+\index{BuildingCreator@{BuildingCreator}!createBuilding@{createBuilding}}
+\index{createBuilding@{createBuilding}!BuildingCreator@{BuildingCreator}}
+\doxysubsubsection{\texorpdfstring{createBuilding()}{createBuilding()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classBuilding}{Building}}$\ast$ Building\+Creator\+::create\+Building (\begin{DoxyParamCaption}\item[{int}]{b\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Virtual function for the concrete creator classes that creates a building object based on an input parameter b\+Name and returns the pointer to that created object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+Name} & Input int that determines the type of building created\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Building$\ast$ to \mbox{\hyperlink{classBuilding}{Building}} object created 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classResidentialBuildingCreator_a4b7e511e15cb65968bc6ad08ec1ed97f}{Residential\+Building\+Creator}}, \mbox{\hyperlink{classLandmarkBuildingCreator_a0798cf3039d31ba12ea95a66b54480a8}{Landmark\+Building\+Creator}}, \mbox{\hyperlink{classIndustrialBuildingCreator_a3cf4668f14d2662db1bb352aa7c1dcef}{Industrial\+Building\+Creator}}, and \mbox{\hyperlink{classCommercialBuildingCreator_aadcbb11a15695f780e4e5b06d0671307}{Commercial\+Building\+Creator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Factory/Building\+Creator.\+h\end{DoxyCompactItemize}

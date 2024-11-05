@@ -1,0 +1,5 @@
+<map id="LandmarkBuilding" name="LandmarkBuilding">
+<area shape="rect" id="node1" title="Represents an landmark building with specified tax income, construction cost, and satisfaction value." alt="" coords="11,155,151,181"/>
+<area shape="rect" id="node2" href="$classBuilding.html" title="Represents a building component with financial attributes like tax income and construction cost." alt="" coords="43,80,118,107"/>
+<area shape="rect" id="node3" href="$classBuildingComponent.html" title="Abstract class representing a generic building component." alt="" coords="5,5,156,32"/>
+</map>

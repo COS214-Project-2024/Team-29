@@ -1,0 +1,116 @@
+\hypertarget{classPark}{}\doxysection{Park Class Reference}
+\label{classPark}\index{Park@{Park}}
+
+
+Specialised concrete Landmark\+Buidling class that represents a \mbox{\hyperlink{classPark}{Park}}.  
+
+
+
+
+{\ttfamily \#include $<$Park.\+h$>$}
+
+
+
+Inheritance diagram for Park\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classPark__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Park\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classPark__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPark_a12469fbbb79c8d4003219a44287ea7a7}{Park}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classLandmarkBuilding_a2969e24cb504168dad4049c8e01e44d7}{satisfaction\+Value}}, int pow, int water, int waste, int sewage)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classPark}{Park}} with the specified tax income, build cost, and satisfaction value. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPark_abec7a474e2239632463e3aaff9a7fa3b}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classPark}{Park}}. Such as calculating total income tax for the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPark_aae611d70a5a38a5716cb2358a4a62c7c}\label{classPark_aae611d70a5a38a5716cb2358a4a62c7c}} 
+\mbox{\hyperlink{classPark_aae611d70a5a38a5716cb2358a4a62c7c}{$\sim$\+Park}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classPark}{Park}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classPark_a75a7a7a50150f1579565359259482987}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current park for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Landmark\+Buidling class that represents a \mbox{\hyperlink{classPark}{Park}}. 
+
+The \mbox{\hyperlink{classPark}{Park}} class is a specialised type of \mbox{\hyperlink{classLandmarkBuilding}{Landmark\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPark_a12469fbbb79c8d4003219a44287ea7a7}\label{classPark_a12469fbbb79c8d4003219a44287ea7a7}} 
+\index{Park@{Park}!Park@{Park}}
+\index{Park@{Park}!Park@{Park}}
+\doxysubsubsection{\texorpdfstring{Park()}{Park()}}
+{\footnotesize\ttfamily Park\+::\+Park (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{satisfaction\+Value,  }\item[{int}]{pow,  }\item[{int}]{water,  }\item[{int}]{waste,  }\item[{int}]{sewage }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classPark}{Park}} with the specified tax income, build cost, and satisfaction value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em satisfaction\+Value} & Measure of public satisfaction. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPark_abec7a474e2239632463e3aaff9a7fa3b}\label{classPark_abec7a474e2239632463e3aaff9a7fa3b}} 
+\index{Park@{Park}!accept@{accept}}
+\index{accept@{accept}!Park@{Park}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Park\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classPark}{Park}}. Such as calculating total income tax for the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+\mbox{\Hypertarget{classPark_a75a7a7a50150f1579565359259482987}\label{classPark_a75a7a7a50150f1579565359259482987}} 
+\index{Park@{Park}!clone@{clone}}
+\index{clone@{clone}!Park@{Park}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ Park\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of the current park for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current \mbox{\hyperlink{classPark}{Park}} as a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLandmarkBuilding_a7b21f6e8317c81957338f1269ae95392}{Landmark\+Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/landmark/Park.\+h\item 
+src/building\+Composite/landmark/Park.\+cpp\end{DoxyCompactItemize}

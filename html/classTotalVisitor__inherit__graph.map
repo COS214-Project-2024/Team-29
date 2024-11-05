@@ -1,0 +1,4 @@
+<map id="TotalVisitor" name="TotalVisitor">
+<area shape="rect" id="node1" title="Visitor class for calculating various totals across building types, including build cost,..." alt="" coords="17,80,111,107"/>
+<area shape="rect" id="node2" href="$classBuildingVisitor.html" title="Abstract base class defining visitor operations for different types of buildings." alt="" coords="5,5,123,32"/>
+</map>

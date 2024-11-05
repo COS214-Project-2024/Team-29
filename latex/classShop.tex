@@ -1,0 +1,116 @@
+\hypertarget{classShop}{}\doxysection{Shop Class Reference}
+\label{classShop}\index{Shop@{Shop}}
+
+
+Specialised concrete Commercial\+Buidling class that represents a \mbox{\hyperlink{classShop}{Shop}}.  
+
+
+
+
+{\ttfamily \#include $<$Shop.\+h$>$}
+
+
+
+Inheritance diagram for Shop\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classShop__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Shop\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classShop__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classShop_a01fa9d82c30378b5d87f5f5d417d1331}{Shop}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classCommercialBuilding_ae03369751697f633ed59798953c815b8}{employee\+Capacity}}, int pow, int water, int waste, int sewage)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classShop}{Shop}} with the specified tax income, build cost, and employee capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classShop_a99b9ab16984cf7d576672063c888e62f}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classShop}{Shop}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShop_ae2772948ed500791837d6002e38d7d83}\label{classShop_ae2772948ed500791837d6002e38d7d83}} 
+virtual \mbox{\hyperlink{classShop_ae2772948ed500791837d6002e38d7d83}{$\sim$\+Shop}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classShop}{Shop}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classShop_a486e5aa5069b1cfda67900bf4c3f76bd}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current shop for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Commercial\+Buidling class that represents a \mbox{\hyperlink{classShop}{Shop}}. 
+
+The \mbox{\hyperlink{classShop}{Shop}} class is a specialised type of \mbox{\hyperlink{classCommercialBuilding}{Commercial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classShop_a01fa9d82c30378b5d87f5f5d417d1331}\label{classShop_a01fa9d82c30378b5d87f5f5d417d1331}} 
+\index{Shop@{Shop}!Shop@{Shop}}
+\index{Shop@{Shop}!Shop@{Shop}}
+\doxysubsubsection{\texorpdfstring{Shop()}{Shop()}}
+{\footnotesize\ttfamily Shop\+::\+Shop (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{employee\+Capacity,  }\item[{int}]{pow,  }\item[{int}]{water,  }\item[{int}]{waste,  }\item[{int}]{sewage }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classShop}{Shop}} with the specified tax income, build cost, and employee capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classShop_a99b9ab16984cf7d576672063c888e62f}\label{classShop_a99b9ab16984cf7d576672063c888e62f}} 
+\index{Shop@{Shop}!accept@{accept}}
+\index{accept@{accept}!Shop@{Shop}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Shop\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classShop}{Shop}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+\mbox{\Hypertarget{classShop_a486e5aa5069b1cfda67900bf4c3f76bd}\label{classShop_a486e5aa5069b1cfda67900bf4c3f76bd}} 
+\index{Shop@{Shop}!clone@{clone}}
+\index{clone@{clone}!Shop@{Shop}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ Shop\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of the current shop for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current \mbox{\hyperlink{classShop}{Shop}} as a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommercialBuilding_a7e1af1c674b1b93314a9491b0dca1628}{Commercial\+Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/commercial/Shop.\+h\item 
+src/building\+Composite/commercial/Shop.\+cpp\end{DoxyCompactItemize}

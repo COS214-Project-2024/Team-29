@@ -1,0 +1,217 @@
+\hypertarget{classUtilityFacade}{}\doxysection{Utility\+Facade Class Reference}
+\label{classUtilityFacade}\index{UtilityFacade@{UtilityFacade}}
+
+
+A facade class to manage and upgrade utility systems.  
+
+
+
+
+{\ttfamily \#include $<$Utility\+Facade.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUtilityFacade_a0a950b576fe1d55c1bea6ec6abf8875d}{Utility\+Facade}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUtilityFacade_a2176328a9a0347c2ad27a3675d05606c}{$\sim$\+Utility\+Facade}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUtilityFacade_ab400ce5e906f5f726971ae8e8093141e}{print\+Resource\+Distribution}} ()
+\begin{DoxyCompactList}\small\item\em Prints the current distribution of resources across utilities. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilityFacade_a9bb1427507bd865293ad78886ba60a43}{get\+Power\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current power capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilityFacade_a852653940d6ec107ed7321a5b0f6b8b6}{get\+Water\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current water capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilityFacade_afb0cf879f1f0a4c03f42f29d8501c7d1}{get\+Waste\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current waste management capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilityFacade_a82f36c60ea57eee2d4e59ff1b7768523}{get\+Sewage\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current sewage management capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilityFacade_af706271255bb5c9c6e8d3830a2ea7280}{get\+Power\+Upgrade\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current price to upgrade power. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilityFacade_ac519771fc4d64f9a5b9150c4c44b90b6}{get\+Water\+Upgrade\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current price to upgrade water\+Supply. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilityFacade_a742bcbc342ff89cb30817cdcef723582}{get\+Waste\+Upgrade\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current price to upgrade waste\+Management. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUtilityFacade_a723d19be0cc49047ff776b6179bc7fcf}{get\+Sewage\+Upgrade\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current price to upgrade sewage\+Management. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classUtilityFacade_abebbf8800dbe5b9221dc6b03fd94ac5c}{upgrade\+Utility}} (int type, float balance)
+\begin{DoxyCompactList}\small\item\em Upgrades the specified utility to the next level if balance allows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}} $\ast$ \mbox{\hyperlink{classUtilityFacade_a4c4d979fde9ffac528557a3a37918e94}{clone}} ()
+\begin{DoxyCompactList}\small\item\em This returns a deep copy of the current \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A facade class to manage and upgrade utility systems. 
+
+The \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}} class provides a simplified interface for managing various utility systems (power, water, waste, and sewage management). It allows checking and upgrading utilities based on demand, as well as printing and retrieving resource capacities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUtilityFacade_a0a950b576fe1d55c1bea6ec6abf8875d}\label{classUtilityFacade_a0a950b576fe1d55c1bea6ec6abf8875d}} 
+\index{UtilityFacade@{UtilityFacade}!UtilityFacade@{UtilityFacade}}
+\index{UtilityFacade@{UtilityFacade}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{UtilityFacade()}{UtilityFacade()}}
+{\footnotesize\ttfamily Utility\+Facade\+::\+Utility\+Facade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}}. 
+
+Initializes utility decorators for power, water, waste, and sewage systems. \mbox{\Hypertarget{classUtilityFacade_a2176328a9a0347c2ad27a3675d05606c}\label{classUtilityFacade_a2176328a9a0347c2ad27a3675d05606c}} 
+\index{UtilityFacade@{UtilityFacade}!````~UtilityFacade@{$\sim$UtilityFacade}}
+\index{````~UtilityFacade@{$\sim$UtilityFacade}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{$\sim$UtilityFacade()}{~UtilityFacade()}}
+{\footnotesize\ttfamily Utility\+Facade\+::$\sim$\+Utility\+Facade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}}. 
+
+Cleans up allocated resources for each utility decorator. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUtilityFacade_a4c4d979fde9ffac528557a3a37918e94}\label{classUtilityFacade_a4c4d979fde9ffac528557a3a37918e94}} 
+\index{UtilityFacade@{UtilityFacade}!clone@{clone}}
+\index{clone@{clone}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}} $\ast$ Utility\+Facade\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This returns a deep copy of the current \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}} pointer to clone. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_a9bb1427507bd865293ad78886ba60a43}\label{classUtilityFacade_a9bb1427507bd865293ad78886ba60a43}} 
+\index{UtilityFacade@{UtilityFacade}!getPowerCapacity@{getPowerCapacity}}
+\index{getPowerCapacity@{getPowerCapacity}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{getPowerCapacity()}{getPowerCapacity()}}
+{\footnotesize\ttfamily int Utility\+Facade\+::get\+Power\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current power capacity. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the power plant. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_af706271255bb5c9c6e8d3830a2ea7280}\label{classUtilityFacade_af706271255bb5c9c6e8d3830a2ea7280}} 
+\index{UtilityFacade@{UtilityFacade}!getPowerUpgradeCost@{getPowerUpgradeCost}}
+\index{getPowerUpgradeCost@{getPowerUpgradeCost}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{getPowerUpgradeCost()}{getPowerUpgradeCost()}}
+{\footnotesize\ttfamily int Utility\+Facade\+::get\+Power\+Upgrade\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current price to upgrade power. 
+
+\begin{DoxyReturn}{Returns}
+The cost to upgrade the power. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_a82f36c60ea57eee2d4e59ff1b7768523}\label{classUtilityFacade_a82f36c60ea57eee2d4e59ff1b7768523}} 
+\index{UtilityFacade@{UtilityFacade}!getSewageCapacity@{getSewageCapacity}}
+\index{getSewageCapacity@{getSewageCapacity}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{getSewageCapacity()}{getSewageCapacity()}}
+{\footnotesize\ttfamily int Utility\+Facade\+::get\+Sewage\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current sewage management capacity. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the sewage management system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_a723d19be0cc49047ff776b6179bc7fcf}\label{classUtilityFacade_a723d19be0cc49047ff776b6179bc7fcf}} 
+\index{UtilityFacade@{UtilityFacade}!getSewageUpgradeCost@{getSewageUpgradeCost}}
+\index{getSewageUpgradeCost@{getSewageUpgradeCost}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{getSewageUpgradeCost()}{getSewageUpgradeCost()}}
+{\footnotesize\ttfamily int Utility\+Facade\+::get\+Sewage\+Upgrade\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current price to upgrade sewage\+Management. 
+
+\begin{DoxyReturn}{Returns}
+The cost to upgrade the sewage\+Management. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_afb0cf879f1f0a4c03f42f29d8501c7d1}\label{classUtilityFacade_afb0cf879f1f0a4c03f42f29d8501c7d1}} 
+\index{UtilityFacade@{UtilityFacade}!getWasteCapacity@{getWasteCapacity}}
+\index{getWasteCapacity@{getWasteCapacity}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{getWasteCapacity()}{getWasteCapacity()}}
+{\footnotesize\ttfamily int Utility\+Facade\+::get\+Waste\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current waste management capacity. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the waste management system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_a742bcbc342ff89cb30817cdcef723582}\label{classUtilityFacade_a742bcbc342ff89cb30817cdcef723582}} 
+\index{UtilityFacade@{UtilityFacade}!getWasteUpgradeCost@{getWasteUpgradeCost}}
+\index{getWasteUpgradeCost@{getWasteUpgradeCost}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{getWasteUpgradeCost()}{getWasteUpgradeCost()}}
+{\footnotesize\ttfamily int Utility\+Facade\+::get\+Waste\+Upgrade\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current price to upgrade waste\+Management. 
+
+\begin{DoxyReturn}{Returns}
+The cost to upgrade the waste\+Management. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_a852653940d6ec107ed7321a5b0f6b8b6}\label{classUtilityFacade_a852653940d6ec107ed7321a5b0f6b8b6}} 
+\index{UtilityFacade@{UtilityFacade}!getWaterCapacity@{getWaterCapacity}}
+\index{getWaterCapacity@{getWaterCapacity}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{getWaterCapacity()}{getWaterCapacity()}}
+{\footnotesize\ttfamily int Utility\+Facade\+::get\+Water\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current water capacity. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the water supply. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_ac519771fc4d64f9a5b9150c4c44b90b6}\label{classUtilityFacade_ac519771fc4d64f9a5b9150c4c44b90b6}} 
+\index{UtilityFacade@{UtilityFacade}!getWaterUpgradeCost@{getWaterUpgradeCost}}
+\index{getWaterUpgradeCost@{getWaterUpgradeCost}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{getWaterUpgradeCost()}{getWaterUpgradeCost()}}
+{\footnotesize\ttfamily int Utility\+Facade\+::get\+Water\+Upgrade\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current price to upgrade water\+Supply. 
+
+\begin{DoxyReturn}{Returns}
+The cost to upgrade the water\+Supply. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUtilityFacade_ab400ce5e906f5f726971ae8e8093141e}\label{classUtilityFacade_ab400ce5e906f5f726971ae8e8093141e}} 
+\index{UtilityFacade@{UtilityFacade}!printResourceDistribution@{printResourceDistribution}}
+\index{printResourceDistribution@{printResourceDistribution}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{printResourceDistribution()}{printResourceDistribution()}}
+{\footnotesize\ttfamily void Utility\+Facade\+::print\+Resource\+Distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the current distribution of resources across utilities. 
+
+Provides an overview of resource availability for power, water, waste, and sewage management systems. \mbox{\Hypertarget{classUtilityFacade_abebbf8800dbe5b9221dc6b03fd94ac5c}\label{classUtilityFacade_abebbf8800dbe5b9221dc6b03fd94ac5c}} 
+\index{UtilityFacade@{UtilityFacade}!upgradeUtility@{upgradeUtility}}
+\index{upgradeUtility@{upgradeUtility}!UtilityFacade@{UtilityFacade}}
+\doxysubsubsection{\texorpdfstring{upgradeUtility()}{upgradeUtility()}}
+{\footnotesize\ttfamily float Utility\+Facade\+::upgrade\+Utility (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{float}]{balance }\end{DoxyParamCaption})}
+
+
+
+Upgrades the specified utility to the next level if balance allows. 
+
+\begin{DoxyReturn}{Returns}
+The cost to upgrade the utility as a float. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utility/Utility\+Facade.\+h\item 
+src/utility/Utility\+Facade.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,297 @@
+\hypertarget{classCompositeNeighbourhood}{}\doxysection{Composite\+Neighbourhood Class Reference}
+\label{classCompositeNeighbourhood}\index{CompositeNeighbourhood@{CompositeNeighbourhood}}
+
+
+Represents a composite neighbourhood containing multiple building components.  
+
+
+
+
+{\ttfamily \#include $<$Composite\+Neighbourhood.\+h$>$}
+
+
+
+Inheritance diagram for Composite\+Neighbourhood\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classCompositeNeighbourhood__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Composite\+Neighbourhood\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classCompositeNeighbourhood__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCompositeNeighbourhood_a027942dfc3da7c90c456ae3a7ceb2038}{Composite\+Neighbourhood}} (std\+::string n\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} with a specified name. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCompositeNeighbourhood_a70b0189eb49aa2e8bd88ffa4b538886f}{add\+Building}} (\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$bc) override
+\begin{DoxyCompactList}\small\item\em Adds a building component to the neighbourhood. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCompositeNeighbourhood_a312a4228dcb4208d8092977b7710b4c6}{demolish\+Building}} (\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$bc) override
+\begin{DoxyCompactList}\small\item\em Demolishes a specified building component from the neighbourhood. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classCompositeNeighbourhood_a62cf1961660cd563493932dca80a0cbe}{get\+Tax\+Income}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the total tax income for the neighbourhood. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCompositeNeighbourhood_a3c57a84cf0c7b6b528f02d655f9157da}{get\+Power\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the power\+Demand of the building. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCompositeNeighbourhood_a8dbf3e7fabf96efd4568204c9271dbbd}{get\+Water\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the water\+Demand of the building. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCompositeNeighbourhood_ac842fb87074b68a649061b151add79e1}{get\+Waste\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the water\+Demand of the building. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCompositeNeighbourhood_a71f61d6eabc71d816ab19d9faa708c90}{get\+Sewage\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the waste\+Demand of the building. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classCompositeNeighbourhood_a5d4037e4ce47f4ba17cd36866399f695}{get\+Build\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the total build cost for the neighbourhood. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCompositeNeighbourhood_a1c1ef20c85bb1bc0bc2e5a84a9de2e20}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the neighbourhood. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCompositeNeighbourhood_a2a63e00ea1c6f567591b4c4365cb5f26}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$bv) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the neighbourhood. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCompositeNeighbourhood_a33159b8818aa0fbc35fdb652ea8d9ec0}\label{classCompositeNeighbourhood_a33159b8818aa0fbc35fdb652ea8d9ec0}} 
+\mbox{\hyperlink{classCompositeNeighbourhood_a33159b8818aa0fbc35fdb652ea8d9ec0}{$\sim$\+Composite\+Neighbourhood}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} object and its building components. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classCompositeNeighbourhood_a15c8abf11b695cc40ac0d854819c1082}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Returns nullptr since no implementation is needed for the inherited function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} $\ast$ \mbox{\hyperlink{classCompositeNeighbourhood_ac5e2c4322c29cc7faa38c6f12fd42494}{copy}} () const
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the current neighbourhood for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a composite neighbourhood containing multiple building components. 
+
+The \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} class allows managing a collection of \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} objects, enabling operations such as adding, demolishing, and calculating the tax income of buildings within the neighbourhood. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCompositeNeighbourhood_a027942dfc3da7c90c456ae3a7ceb2038}\label{classCompositeNeighbourhood_a027942dfc3da7c90c456ae3a7ceb2038}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{CompositeNeighbourhood()}{CompositeNeighbourhood()}}
+{\footnotesize\ttfamily Composite\+Neighbourhood\+::\+Composite\+Neighbourhood (\begin{DoxyParamCaption}\item[{std\+::string}]{n\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} with a specified name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Name} & Name of the neighbourhood. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCompositeNeighbourhood_a2a63e00ea1c6f567591b4c4365cb5f26}\label{classCompositeNeighbourhood_a2a63e00ea1c6f567591b4c4365cb5f26}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!accept@{accept}}
+\index{accept@{accept}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Composite\+Neighbourhood\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{bv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the neighbourhood. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a9a6c66d1e75e8892216baa7b6a225996}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_a70b0189eb49aa2e8bd88ffa4b538886f}\label{classCompositeNeighbourhood_a70b0189eb49aa2e8bd88ffa4b538886f}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!addBuilding@{addBuilding}}
+\index{addBuilding@{addBuilding}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{addBuilding()}{addBuilding()}}
+{\footnotesize\ttfamily void Composite\+Neighbourhood\+::add\+Building (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$}]{bc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a building component to the neighbourhood. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bc} & Pointer to a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} to add. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classBuildingComponent_a046bf1fd7a605db63a7bc8dc0e236811}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_a15c8abf11b695cc40ac0d854819c1082}\label{classCompositeNeighbourhood_a15c8abf11b695cc40ac0d854819c1082}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!clone@{clone}}
+\index{clone@{clone}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ Composite\+Neighbourhood\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns nullptr since no implementation is needed for the inherited function. 
+
+\begin{DoxyReturn}{Returns}
+nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a591ff384615059ceb4692f512e372123}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_ac5e2c4322c29cc7faa38c6f12fd42494}\label{classCompositeNeighbourhood_ac5e2c4322c29cc7faa38c6f12fd42494}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!copy@{copy}}
+\index{copy@{copy}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} $\ast$ Composite\+Neighbourhood\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Creates a deep copy of the current neighbourhood for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current neighbourhood as a \mbox{\hyperlink{classCompositeNeighbourhood}{Composite\+Neighbourhood}} type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCompositeNeighbourhood_a312a4228dcb4208d8092977b7710b4c6}\label{classCompositeNeighbourhood_a312a4228dcb4208d8092977b7710b4c6}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!demolishBuilding@{demolishBuilding}}
+\index{demolishBuilding@{demolishBuilding}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{demolishBuilding()}{demolishBuilding()}}
+{\footnotesize\ttfamily void Composite\+Neighbourhood\+::demolish\+Building (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$}]{bc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Demolishes a specified building component from the neighbourhood. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bc} & Pointer to a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classBuildingComponent_a1cc4eb578d3514e2c03769f6471ad36a}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_a5d4037e4ce47f4ba17cd36866399f695}\label{classCompositeNeighbourhood_a5d4037e4ce47f4ba17cd36866399f695}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!getBuildCost@{getBuildCost}}
+\index{getBuildCost@{getBuildCost}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{getBuildCost()}{getBuildCost()}}
+{\footnotesize\ttfamily double Composite\+Neighbourhood\+::get\+Build\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the total build cost for the neighbourhood. 
+
+\begin{DoxyReturn}{Returns}
+Total build cost as a double. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a05ac5c6b0484717ab4ced86ea3eda071}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_a1c1ef20c85bb1bc0bc2e5a84a9de2e20}\label{classCompositeNeighbourhood_a1c1ef20c85bb1bc0bc2e5a84a9de2e20}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!getName@{getName}}
+\index{getName@{getName}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Composite\+Neighbourhood\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of the neighbourhood. 
+
+\begin{DoxyReturn}{Returns}
+Name of the neighbourhood as string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCompositeNeighbourhood_a3c57a84cf0c7b6b528f02d655f9157da}\label{classCompositeNeighbourhood_a3c57a84cf0c7b6b528f02d655f9157da}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!getPowerDemand@{getPowerDemand}}
+\index{getPowerDemand@{getPowerDemand}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{getPowerDemand()}{getPowerDemand()}}
+{\footnotesize\ttfamily int Composite\+Neighbourhood\+::get\+Power\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the power\+Demand of the building. 
+
+\begin{DoxyReturn}{Returns}
+Power demand as an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a1614de4f3ff4ebbb75d09fde8374fd6b}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_a71f61d6eabc71d816ab19d9faa708c90}\label{classCompositeNeighbourhood_a71f61d6eabc71d816ab19d9faa708c90}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!getSewageDemand@{getSewageDemand}}
+\index{getSewageDemand@{getSewageDemand}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{getSewageDemand()}{getSewageDemand()}}
+{\footnotesize\ttfamily int Composite\+Neighbourhood\+::get\+Sewage\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the waste\+Demand of the building. 
+
+\begin{DoxyReturn}{Returns}
+Sewage demand as an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a3dc7acad5a77f67cc2c118b37c8ab4a2}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_a62cf1961660cd563493932dca80a0cbe}\label{classCompositeNeighbourhood_a62cf1961660cd563493932dca80a0cbe}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!getTaxIncome@{getTaxIncome}}
+\index{getTaxIncome@{getTaxIncome}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{getTaxIncome()}{getTaxIncome()}}
+{\footnotesize\ttfamily double Composite\+Neighbourhood\+::get\+Tax\+Income (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the total tax income for the neighbourhood. 
+
+\begin{DoxyReturn}{Returns}
+Total tax income as a double. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a7854e99d81d5ebe1d4ac6bc0428bffb2}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_ac842fb87074b68a649061b151add79e1}\label{classCompositeNeighbourhood_ac842fb87074b68a649061b151add79e1}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!getWasteDemand@{getWasteDemand}}
+\index{getWasteDemand@{getWasteDemand}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{getWasteDemand()}{getWasteDemand()}}
+{\footnotesize\ttfamily int Composite\+Neighbourhood\+::get\+Waste\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the water\+Demand of the building. 
+
+\begin{DoxyReturn}{Returns}
+Waste demand as an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_af811a174883f34999075ae2fe7d0af64}{Building\+Component}}.
+
+\mbox{\Hypertarget{classCompositeNeighbourhood_a8dbf3e7fabf96efd4568204c9271dbbd}\label{classCompositeNeighbourhood_a8dbf3e7fabf96efd4568204c9271dbbd}} 
+\index{CompositeNeighbourhood@{CompositeNeighbourhood}!getWaterDemand@{getWaterDemand}}
+\index{getWaterDemand@{getWaterDemand}!CompositeNeighbourhood@{CompositeNeighbourhood}}
+\doxysubsubsection{\texorpdfstring{getWaterDemand()}{getWaterDemand()}}
+{\footnotesize\ttfamily int Composite\+Neighbourhood\+::get\+Water\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the water\+Demand of the building. 
+
+\begin{DoxyReturn}{Returns}
+Water demand as an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a62b5af79935bb46533ea834f62e12c74}{Building\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/Composite\+Neighbourhood.\+h\item 
+src/building\+Composite/Composite\+Neighbourhood.\+cpp\end{DoxyCompactItemize}

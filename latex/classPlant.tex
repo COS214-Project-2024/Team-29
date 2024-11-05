@@ -1,0 +1,116 @@
+\hypertarget{classPlant}{}\doxysection{Plant Class Reference}
+\label{classPlant}\index{Plant@{Plant}}
+
+
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classPlant}{Plant}}.  
+
+
+
+
+{\ttfamily \#include $<$Plant.\+h$>$}
+
+
+
+Inheritance diagram for Plant\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classPlant__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Plant\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classPlant__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlant_ab22d1f8f3b11fbba7dbd7d92a467709d}{Plant}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classIndustrialBuilding_ab80409f9cb42f9c1a9171f4fbab6a5c1}{employee\+Capacity}}, int pow, int water, int waste, int sewage)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classPlant}{Plant}} with the specified tax income, build cost, and employee capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPlant_aa1239e82056acd50e117b98761772a59}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classPlant}{Plant}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlant_ab0effb2b143e6da7b65ebd13a3b1fc29}\label{classPlant_ab0effb2b143e6da7b65ebd13a3b1fc29}} 
+\mbox{\hyperlink{classPlant_ab0effb2b143e6da7b65ebd13a3b1fc29}{$\sim$\+Plant}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classPlant}{Plant}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classPlant_a41d624aabeab1a12539c9552df304d5f}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current plant for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classPlant}{Plant}}. 
+
+The \mbox{\hyperlink{classPlant}{Plant}} class is a specialised type of \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlant_ab22d1f8f3b11fbba7dbd7d92a467709d}\label{classPlant_ab22d1f8f3b11fbba7dbd7d92a467709d}} 
+\index{Plant@{Plant}!Plant@{Plant}}
+\index{Plant@{Plant}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{Plant()}{Plant()}}
+{\footnotesize\ttfamily Plant\+::\+Plant (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{employee\+Capacity,  }\item[{int}]{pow,  }\item[{int}]{water,  }\item[{int}]{waste,  }\item[{int}]{sewage }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classPlant}{Plant}} with the specified tax income, build cost, and employee capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlant_aa1239e82056acd50e117b98761772a59}\label{classPlant_aa1239e82056acd50e117b98761772a59}} 
+\index{Plant@{Plant}!accept@{accept}}
+\index{accept@{accept}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Plant\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classPlant}{Plant}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+\mbox{\Hypertarget{classPlant_a41d624aabeab1a12539c9552df304d5f}\label{classPlant_a41d624aabeab1a12539c9552df304d5f}} 
+\index{Plant@{Plant}!clone@{clone}}
+\index{clone@{clone}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ Plant\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of the current plant for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current \mbox{\hyperlink{classPlant}{Plant}} as a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIndustrialBuilding_abed52948688b7fbeb434e4c74baeceed}{Industrial\+Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/industrial/Plant.\+h\item 
+src/building\+Composite/industrial/Plant.\+cpp\end{DoxyCompactItemize}

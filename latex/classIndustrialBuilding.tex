@@ -1,0 +1,128 @@
+\hypertarget{classIndustrialBuilding}{}\doxysection{Industrial\+Building Class Reference}
+\label{classIndustrialBuilding}\index{IndustrialBuilding@{IndustrialBuilding}}
+
+
+Represents an industrial building with specified tax income, construction cost, and employee capacity.  
+
+
+
+
+{\ttfamily \#include $<$Industrial\+Building.\+h$>$}
+
+
+
+Inheritance diagram for Industrial\+Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classIndustrialBuilding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Industrial\+Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classIndustrialBuilding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIndustrialBuilding_a45bf81b3b8e6d00f0588a50bcbbfd796}{Industrial\+Building}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classIndustrialBuilding_ab80409f9cb42f9c1a9171f4fbab6a5c1}{employee\+Capacity}}, int pow, int water, int waste, int sewage)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} with the specified tax income, build cost, and employee capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIndustrialBuilding_a10a92a8036f4fc0320178fbd68193045}{get\+Employee\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the employee capacity of the Industrial building. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIndustrialBuilding_a0532c1f541fb5970ca3ea0fe1d4415ef}\label{classIndustrialBuilding_a0532c1f541fb5970ca3ea0fe1d4415ef}} 
+virtual \mbox{\hyperlink{classIndustrialBuilding_a0532c1f541fb5970ca3ea0fe1d4415ef}{$\sim$\+Industrial\+Building}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classIndustrialBuilding_abed52948688b7fbeb434e4c74baeceed}{clone}} ()=0
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current industrial building for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classIndustrialBuilding_ab80409f9cb42f9c1a9171f4fbab6a5c1}{employee\+Capacity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an industrial building with specified tax income, construction cost, and employee capacity. 
+
+The \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} class acts as an abstarct base class for the concrete classes\+: -\/\mbox{\hyperlink{classFactory}{Factory}} -\/\mbox{\hyperlink{classPlant}{Plant}} -\/Warehouse$<$br$>$~\newline
+ provides the var of employee\+Capacity specific to Industrial types of buidlings 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIndustrialBuilding_a45bf81b3b8e6d00f0588a50bcbbfd796}\label{classIndustrialBuilding_a45bf81b3b8e6d00f0588a50bcbbfd796}} 
+\index{IndustrialBuilding@{IndustrialBuilding}!IndustrialBuilding@{IndustrialBuilding}}
+\index{IndustrialBuilding@{IndustrialBuilding}!IndustrialBuilding@{IndustrialBuilding}}
+\doxysubsubsection{\texorpdfstring{IndustrialBuilding()}{IndustrialBuilding()}}
+{\footnotesize\ttfamily Industrial\+Building\+::\+Industrial\+Building (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{employee\+Capacity,  }\item[{int}]{pow,  }\item[{int}]{water,  }\item[{int}]{waste,  }\item[{int}]{sewage }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} with the specified tax income, build cost, and employee capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIndustrialBuilding_abed52948688b7fbeb434e4c74baeceed}\label{classIndustrialBuilding_abed52948688b7fbeb434e4c74baeceed}} 
+\index{IndustrialBuilding@{IndustrialBuilding}!clone@{clone}}
+\index{clone@{clone}!IndustrialBuilding@{IndustrialBuilding}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classBuildingComponent}{Building\+Component}}$\ast$ Industrial\+Building\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a copy of the current industrial building for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current Industrial\+Buidling as a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuilding_a2d21e31aa92b325466f5a30bec0dfcb4}{Building}}.
+
+
+
+Implemented in \mbox{\hyperlink{classWarehouse_aee5bc379feb385593f913ebbc223b579}{Warehouse}}, \mbox{\hyperlink{classPlant_a41d624aabeab1a12539c9552df304d5f}{Plant}}, and \mbox{\hyperlink{classFactory_a6960df9179c766f396f7d0d9b8d7b8e8}{Factory}}.
+
+\mbox{\Hypertarget{classIndustrialBuilding_a10a92a8036f4fc0320178fbd68193045}\label{classIndustrialBuilding_a10a92a8036f4fc0320178fbd68193045}} 
+\index{IndustrialBuilding@{IndustrialBuilding}!getEmployeeCapacity@{getEmployeeCapacity}}
+\index{getEmployeeCapacity@{getEmployeeCapacity}!IndustrialBuilding@{IndustrialBuilding}}
+\doxysubsubsection{\texorpdfstring{getEmployeeCapacity()}{getEmployeeCapacity()}}
+{\footnotesize\ttfamily int Industrial\+Building\+::get\+Employee\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the employee capacity of the Industrial building. 
+
+\begin{DoxyReturn}{Returns}
+Employee capacity as an integer. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classIndustrialBuilding_ab80409f9cb42f9c1a9171f4fbab6a5c1}\label{classIndustrialBuilding_ab80409f9cb42f9c1a9171f4fbab6a5c1}} 
+\index{IndustrialBuilding@{IndustrialBuilding}!employeeCapacity@{employeeCapacity}}
+\index{employeeCapacity@{employeeCapacity}!IndustrialBuilding@{IndustrialBuilding}}
+\doxysubsubsection{\texorpdfstring{employeeCapacity}{employeeCapacity}}
+{\footnotesize\ttfamily int Industrial\+Building\+::employee\+Capacity\hspace{0.3cm}{\ttfamily [protected]}}
+
+The number of employees the building can accommodate. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/industrial/Industrial\+Building.\+h\item 
+src/building\+Composite/industrial/Industrial\+Building.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,137 @@
+\hypertarget{classModeOfTransport}{}\doxysection{Mode\+Of\+Transport Class Reference}
+\label{classModeOfTransport}\index{ModeOfTransport@{ModeOfTransport}}
+
+
+Abstract class for the different modes of transport.  
+
+
+
+
+{\ttfamily \#include $<$Mode\+Of\+Transport.\+h$>$}
+
+
+
+Inheritance diagram for Mode\+Of\+Transport\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classModeOfTransport__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModeOfTransport_a57e4180322f8ec772a35cf293f7489f7}\label{classModeOfTransport_a57e4180322f8ec772a35cf293f7489f7}} 
+enum class {\bfseries Transport\+Type} \{ {\bfseries Public\+Transport}
+, {\bfseries Goods\+Transport}
+, {\bfseries General\+Transport}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classModeOfTransport_ad6ea693efb7e4b4d69fd221b910be058}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Generates a string with a description of the mode of transport. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classModeOfTransport_af50d6d0e888db47bcf3e8ad0d41eed51}{get\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Returns the capacity of the mode of transport. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{classModeOfTransport_aabd8fc73f8db175f8a62c510bf9fd984}{get\+Transport\+Type}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns type of transport as a string (Public, Goods, General) \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{classModeOfTransport_a6eaf02f55273a4d556705d417fe1ebfd}{get\+Name}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns name of the method of transport as a string eg. Gautrain. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{classModeOfTransport_aaa163719b4fc5e11714e88221d33c03e}{get\+Type}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns type of transport as a string (\mbox{\hyperlink{classTrain}{Train}}, \mbox{\hyperlink{classBus}{Bus}}, \mbox{\hyperlink{classAirport}{Airport}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModeOfTransport_af60f4c3ae602c9ee3526a081c3ab37a4}\label{classModeOfTransport_af60f4c3ae602c9ee3526a081c3ab37a4}} 
+int \mbox{\hyperlink{classModeOfTransport_af60f4c3ae602c9ee3526a081c3ab37a4}{capacity}}
+\begin{DoxyCompactList}\small\item\em The amount of people/goods that the mode of transport can move in a cycle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModeOfTransport_a470767658dcdb2f11d44cb213d7835d9}\label{classModeOfTransport_a470767658dcdb2f11d44cb213d7835d9}} 
+Transport\+Type \mbox{\hyperlink{classModeOfTransport_a470767658dcdb2f11d44cb213d7835d9}{type}}
+\begin{DoxyCompactList}\small\item\em The type of transport according to what is transported (Public\+Transit, Goods\+Transport, General\+Transport) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for the different modes of transport. 
+
+
+\begin{DoxyItemize}
+\item Template Method\+: Abstract\+Class 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classModeOfTransport_af50d6d0e888db47bcf3e8ad0d41eed51}\label{classModeOfTransport_af50d6d0e888db47bcf3e8ad0d41eed51}} 
+\index{ModeOfTransport@{ModeOfTransport}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!ModeOfTransport@{ModeOfTransport}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Mode\+Of\+Transport\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the capacity of the mode of transport. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}int\mbox{]} The amount of people/goods that the mode of transport can move in a cycle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModeOfTransport_a6eaf02f55273a4d556705d417fe1ebfd}\label{classModeOfTransport_a6eaf02f55273a4d556705d417fe1ebfd}} 
+\index{ModeOfTransport@{ModeOfTransport}!getName@{getName}}
+\index{getName@{getName}!ModeOfTransport@{ModeOfTransport}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual string Mode\+Of\+Transport\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns name of the method of transport as a string eg. Gautrain. 
+
+TEMPLATE METHOD -\/ Primitive\+Operation() 
+
+Implemented in \mbox{\hyperlink{classTrain_af91453ff52f616b5f4e0a0247510667d}{Train}}, \mbox{\hyperlink{classFerry_a4cd246bb7554f6686059a249bb1e7240}{Ferry}}, \mbox{\hyperlink{classBus_ab739b1eb212fdfe22caad5eaea451484}{Bus}}, and \mbox{\hyperlink{classAirport_a939b886a8a9675e22418f2c9a490bdcb}{Airport}}.
+
+\mbox{\Hypertarget{classModeOfTransport_aabd8fc73f8db175f8a62c510bf9fd984}\label{classModeOfTransport_aabd8fc73f8db175f8a62c510bf9fd984}} 
+\index{ModeOfTransport@{ModeOfTransport}!getTransportType@{getTransportType}}
+\index{getTransportType@{getTransportType}!ModeOfTransport@{ModeOfTransport}}
+\doxysubsubsection{\texorpdfstring{getTransportType()}{getTransportType()}}
+{\footnotesize\ttfamily virtual string Mode\+Of\+Transport\+::get\+Transport\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns type of transport as a string (Public, Goods, General) 
+
+TEMPLATE METHOD -\/ Primitive\+Operation() 
+
+Implemented in \mbox{\hyperlink{classTrain_a9f0a6a9a44b0acccee0cf44d55198b86}{Train}}, \mbox{\hyperlink{classFerry_a61fd18873c3315461149e1f131e1e5aa}{Ferry}}, \mbox{\hyperlink{classBus_abe41fc02547032a0ce5942e6337310f0}{Bus}}, and \mbox{\hyperlink{classAirport_a5af4ce399fb5f4a42f5b32850b7ddd5a}{Airport}}.
+
+\mbox{\Hypertarget{classModeOfTransport_aaa163719b4fc5e11714e88221d33c03e}\label{classModeOfTransport_aaa163719b4fc5e11714e88221d33c03e}} 
+\index{ModeOfTransport@{ModeOfTransport}!getType@{getType}}
+\index{getType@{getType}!ModeOfTransport@{ModeOfTransport}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual string Mode\+Of\+Transport\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns type of transport as a string (\mbox{\hyperlink{classTrain}{Train}}, \mbox{\hyperlink{classBus}{Bus}}, \mbox{\hyperlink{classAirport}{Airport}}) 
+
+TEMPLATE METHOD -\/ Primitive\+Operation() 
+
+Implemented in \mbox{\hyperlink{classTrain_ab47e33bc702a9823c8ab80f90fb317ef}{Train}}, \mbox{\hyperlink{classFerry_a7e32fcd082a5a0781f4fc07a18b37f84}{Ferry}}, \mbox{\hyperlink{classBus_a874aefbe282bc89357dad167f03906fe}{Bus}}, and \mbox{\hyperlink{classAirport_a30ce87651fa03459250e93fdf6b3a968}{Airport}}.
+
+\mbox{\Hypertarget{classModeOfTransport_ad6ea693efb7e4b4d69fd221b910be058}\label{classModeOfTransport_ad6ea693efb7e4b4d69fd221b910be058}} 
+\index{ModeOfTransport@{ModeOfTransport}!toString@{toString}}
+\index{toString@{toString}!ModeOfTransport@{ModeOfTransport}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Mode\+Of\+Transport\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a string with a description of the mode of transport. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} eg. \char`\"{}\+Train\+: Goods\+Transport, Name\+: Gautrain, Capacity\+: 100000\char`\"{}
+\end{DoxyReturn}
+TEMPLATE METHOD -\/ template\+Method() 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/transport/Mode\+Of\+Transport.\+h\item 
+src/transport/Mode\+Of\+Transport.\+cpp\end{DoxyCompactItemize}

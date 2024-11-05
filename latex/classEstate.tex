@@ -1,0 +1,116 @@
+\hypertarget{classEstate}{}\doxysection{Estate Class Reference}
+\label{classEstate}\index{Estate@{Estate}}
+
+
+Specialised concrete Industrial\+Buidling class that represents an \mbox{\hyperlink{classEstate}{Estate}}.  
+
+
+
+
+{\ttfamily \#include $<$Estate.\+h$>$}
+
+
+
+Inheritance diagram for Estate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classEstate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Estate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classEstate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEstate_af1a18208affe2baafa5fa5e1d80d61f0}{Estate}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int living\+Capacity, int pow, int water, int waste, int sewage)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classEstate}{Estate}} with the specified tax income, build cost, and living capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEstate_a91d0c90d6afd0afb3f3acff77904bd16}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classEstate}{Estate}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEstate_a3042b5da85800a8ef60ffec609829f40}\label{classEstate_a3042b5da85800a8ef60ffec609829f40}} 
+\mbox{\hyperlink{classEstate_a3042b5da85800a8ef60ffec609829f40}{$\sim$\+Estate}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classEstate}{Estate}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classEstate_a6c3031b21345ed41ef83defacf8e8013}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current estate for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Industrial\+Buidling class that represents an \mbox{\hyperlink{classEstate}{Estate}}. 
+
+The \mbox{\hyperlink{classEstate}{Estate}} class is a specialised type of \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEstate_af1a18208affe2baafa5fa5e1d80d61f0}\label{classEstate_af1a18208affe2baafa5fa5e1d80d61f0}} 
+\index{Estate@{Estate}!Estate@{Estate}}
+\index{Estate@{Estate}!Estate@{Estate}}
+\doxysubsubsection{\texorpdfstring{Estate()}{Estate()}}
+{\footnotesize\ttfamily Estate\+::\+Estate (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{living\+Capacity,  }\item[{int}]{pow,  }\item[{int}]{water,  }\item[{int}]{waste,  }\item[{int}]{sewage }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classEstate}{Estate}} with the specified tax income, build cost, and living capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEstate_a91d0c90d6afd0afb3f3acff77904bd16}\label{classEstate_a91d0c90d6afd0afb3f3acff77904bd16}} 
+\index{Estate@{Estate}!accept@{accept}}
+\index{accept@{accept}!Estate@{Estate}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Estate\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classEstate}{Estate}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+\mbox{\Hypertarget{classEstate_a6c3031b21345ed41ef83defacf8e8013}\label{classEstate_a6c3031b21345ed41ef83defacf8e8013}} 
+\index{Estate@{Estate}!clone@{clone}}
+\index{clone@{clone}!Estate@{Estate}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ Estate\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of the current estate for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current \mbox{\hyperlink{classEstate}{Estate}} as a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classResidentialBuilding_aa428d1494058942cad40dc39f157e3f6}{Residential\+Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/residential/Estate.\+h\item 
+src/building\+Composite/residential/Estate.\+cpp\end{DoxyCompactItemize}

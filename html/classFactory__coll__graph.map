@@ -1,0 +1,6 @@
+<map id="Factory" name="Factory">
+<area shape="rect" id="node1" title="Specialised concrete IndustrialBuidling class that represents a Factory." alt="" coords="46,229,115,256"/>
+<area shape="rect" id="node2" href="$classIndustrialBuilding.html" title="Represents an industrial building with specified tax income, construction cost, and employee capacity..." alt="" coords="13,155,149,181"/>
+<area shape="rect" id="node3" href="$classBuilding.html" title="Represents a building component with financial attributes like tax income and construction cost." alt="" coords="43,80,118,107"/>
+<area shape="rect" id="node4" href="$classBuildingComponent.html" title="Abstract class representing a generic building component." alt="" coords="5,5,156,32"/>
+</map>

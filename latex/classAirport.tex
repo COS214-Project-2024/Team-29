@@ -1,0 +1,141 @@
+\hypertarget{classAirport}{}\doxysection{Airport Class Reference}
+\label{classAirport}\index{Airport@{Airport}}
+
+
+Represents an airport with specified cost, capacity, and transport type.  
+
+
+
+
+{\ttfamily \#include $<$Airport.\+h$>$}
+
+
+
+Inheritance diagram for Airport\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classAirport__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Airport\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classAirport__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAirport_ac7bbf28240728fa3582d81afe2f3f51d}{Airport}} (string name, float \&budget)
+\begin{DoxyCompactList}\small\item\em Creates a new airport for the city with specified name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAirport_a2c42073a186171586f3ac66d84af97ca}\label{classAirport_a2c42073a186171586f3ac66d84af97ca}} 
+\mbox{\hyperlink{classAirport_a2c42073a186171586f3ac66d84af97ca}{$\sim$\+Airport}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classAirport}{Airport}}, decrements public\+Transport\+Capacity and goods\+Transport\+Capacity by half its own capacity (since its capacity is divided evenly). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAirport_a5af4ce399fb5f4a42f5b32850b7ddd5a}{get\+Transport\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of transport associated with the airport. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAirport_a939b886a8a9675e22418f2c9a490bdcb}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the airport. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAirport_a30ce87651fa03459250e93fdf6b3a968}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the specific transport type label of the airport. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents an airport with specified cost, capacity, and transport type. 
+
+The \mbox{\hyperlink{classAirport}{Airport}} class is a specialised mode of transport within a city, providing an implementation specific to airports, including attributes for cost, type, and capacity. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAirport_ac7bbf28240728fa3582d81afe2f3f51d}\label{classAirport_ac7bbf28240728fa3582d81afe2f3f51d}} 
+\index{Airport@{Airport}!Airport@{Airport}}
+\index{Airport@{Airport}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{Airport()}{Airport()}}
+{\footnotesize\ttfamily Airport\+::\+Airport (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{float \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Creates a new airport for the city with specified name. 
+
+
+\begin{DoxyItemize}
+\item Cost\+: R 10,000,000.
+\item Type\+: General Transport.
+\item Capacity\+: 1,000,000 (General Transport capacity splits evenly between goods and public transport).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the airport. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if there is not enough budget to build the airports. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAirport_a939b886a8a9675e22418f2c9a490bdcb}\label{classAirport_a939b886a8a9675e22418f2c9a490bdcb}} 
+\index{Airport@{Airport}!getName@{getName}}
+\index{getName@{getName}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Airport\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the name of the airport. 
+
+\begin{DoxyReturn}{Returns}
+The name of the airport as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_a6eaf02f55273a4d556705d417fe1ebfd}{Mode\+Of\+Transport}}.
+
+\mbox{\Hypertarget{classAirport_a5af4ce399fb5f4a42f5b32850b7ddd5a}\label{classAirport_a5af4ce399fb5f4a42f5b32850b7ddd5a}} 
+\index{Airport@{Airport}!getTransportType@{getTransportType}}
+\index{getTransportType@{getTransportType}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getTransportType()}{getTransportType()}}
+{\footnotesize\ttfamily string Airport\+::get\+Transport\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the type of transport associated with the airport. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the transport type, ergo -\/ \char`\"{}\+General\+Transport\char`\"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_aabd8fc73f8db175f8a62c510bf9fd984}{Mode\+Of\+Transport}}.
+
+\mbox{\Hypertarget{classAirport_a30ce87651fa03459250e93fdf6b3a968}\label{classAirport_a30ce87651fa03459250e93fdf6b3a968}} 
+\index{Airport@{Airport}!getType@{getType}}
+\index{getType@{getType}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Airport\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the specific transport type label of the airport. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the type of transport, \char`\"{}\+Airport\char`\"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_aaa163719b4fc5e11714e88221d33c03e}{Mode\+Of\+Transport}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/transport/Airport.\+h\item 
+src/transport/Airport.\+cpp\end{DoxyCompactItemize}

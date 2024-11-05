@@ -1,0 +1,116 @@
+\hypertarget{classWarehouse}{}\doxysection{Warehouse Class Reference}
+\label{classWarehouse}\index{Warehouse@{Warehouse}}
+
+
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classWarehouse}{Warehouse}}.  
+
+
+
+
+{\ttfamily \#include $<$Warehouse.\+h$>$}
+
+
+
+Inheritance diagram for Warehouse\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classWarehouse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Warehouse\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classWarehouse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWarehouse_a0388b546069bd10ece41f7c0f91d85a6}{Warehouse}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classIndustrialBuilding_ab80409f9cb42f9c1a9171f4fbab6a5c1}{employee\+Capacity}}, int pow, int water, int waste, int sewage)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classWarehouse}{Warehouse}} with the specified tax income, build cost, and employee capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWarehouse_a581825ea9d518d8f12ebd96087cd3289}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$v) override
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the \mbox{\hyperlink{classWarehouse}{Warehouse}}. Such as calculating total income tax and total capcaity/popolation in the system/city. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWarehouse_a2ff79dc26f107b668d2e5fa7b2eeafc4}\label{classWarehouse_a2ff79dc26f107b668d2e5fa7b2eeafc4}} 
+\mbox{\hyperlink{classWarehouse_a2ff79dc26f107b668d2e5fa7b2eeafc4}{$\sim$\+Warehouse}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classWarehouse}{Warehouse}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classWarehouse_aee5bc379feb385593f913ebbc223b579}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current warehouse for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specialised concrete Industrial\+Buidling class that represents a \mbox{\hyperlink{classWarehouse}{Warehouse}}. 
+
+The \mbox{\hyperlink{classWarehouse}{Warehouse}} class is a specialised type of \mbox{\hyperlink{classIndustrialBuilding}{Industrial\+Building}} that includes the ability to accept visitor objects for extended operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWarehouse_a0388b546069bd10ece41f7c0f91d85a6}\label{classWarehouse_a0388b546069bd10ece41f7c0f91d85a6}} 
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{Warehouse()}{Warehouse()}}
+{\footnotesize\ttfamily Warehouse\+::\+Warehouse (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{employee\+Capacity,  }\item[{int}]{pow,  }\item[{int}]{water,  }\item[{int}]{waste,  }\item[{int}]{sewage }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classWarehouse}{Warehouse}} with the specified tax income, build cost, and employee capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em employee\+Capacity} & Maximum number of employees accommodated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWarehouse_a581825ea9d518d8f12ebd96087cd3289}\label{classWarehouse_a581825ea9d518d8f12ebd96087cd3289}} 
+\index{Warehouse@{Warehouse}!accept@{accept}}
+\index{accept@{accept}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Warehouse\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the \mbox{\hyperlink{classWarehouse}{Warehouse}}. Such as calculating total income tax and total capcaity/popolation in the system/city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{Building}}.
+
+\mbox{\Hypertarget{classWarehouse_aee5bc379feb385593f913ebbc223b579}\label{classWarehouse_aee5bc379feb385593f913ebbc223b579}} 
+\index{Warehouse@{Warehouse}!clone@{clone}}
+\index{clone@{clone}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ Warehouse\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of the current warehouse for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current \mbox{\hyperlink{classWarehouse}{Warehouse}} as a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIndustrialBuilding_abed52948688b7fbeb434e4c74baeceed}{Industrial\+Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/industrial/Warehouse.\+h\item 
+src/building\+Composite/industrial/Warehouse.\+cpp\end{DoxyCompactItemize}
