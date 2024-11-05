@@ -1,30 +1,17 @@
 #include "Ferry.h"
 
-Ferry::Ferry(string name, float& budget)
-{
+Ferry::Ferry(string name, float& budget) {
     this->name = name;
-    this->cost = 1000000;
-    this->capacity = 500000;
+    this->cost = 1000;
+    this->capacity = 500;
     this->type = TransportType::PublicTransport;
 
-    if(cost < budget) {
-        cout << this->name << " Ferry constructed." << endl; 
-        budget -= cost;
-    }
-    else if(cost == budget) {
-        cout << this->name << " Ferry constructed, but you just blew your remaining budget on a ferry." << endl;
+    if (cost <= budget) {
         budget -= cost;
     }
     else {
-        throw runtime_error("The city does not have enough money for a ferry.");
+        throw std::runtime_error("This ferry is out of your budget ;)");
     }
-
-
-}
-
-Ferry::~Ferry()
-{
-    cout << this->name << " Ferry destroyed." << endl; 
 }
 
 string Ferry::getTransportType() {
@@ -39,4 +26,10 @@ string Ferry::getType() {
     return "Ferry";
 }
 
+float Ferry::getCost() {
+    return this->cost;
+}
 
+Ferry::~Ferry() {
+    cout << this->name << " Ferry destroyed." << endl; 
+}

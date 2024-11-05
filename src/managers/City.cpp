@@ -56,14 +56,6 @@ std::string City::getNeighbourhoods(){
     return this->buildingManager->getNeighbourhoods();
 }
 
-void City::addTransport(string type,string name, float& budget)
-{
-    this->transportManager->addTransport(type, name, budget);
-}
-
-void City::addTransport() {
-    this->transportManager->addTransport("Train","Gautrain",this->budget);
-}
 
 void City::printTransport()
 {
@@ -159,13 +151,22 @@ void City::getTotalSatisfactionValue() {
     population = buildingManager->getTotalSatisfactionValue();
 }
 
+
 /*
-    * Function to build a building in the city
-    * @param nName Name of the neighbourhood
-    * @param bType Type of building
-    * @param bName Name of the building
-    * @return 1 if building is built, 0 if not
+    OPERATION FUNCTIONS
 */
+std::string City::buildNeighbourhood(std::string nName) {
+    return this->buildingManager->createNeighbourhood(nName);
+}
+
+void City::buildTransport(std::string type, std::string name) {
+    try {
+        this->transportManager->addTransport(type, name, budget);
+    } catch (const std::runtime_error &e) {
+        throw;  // Rethrow the exception
+    }
+}
+
 int City::buildBuilding(std::string nName, int bType, int bName) {
     double buildingCost = this->buildingManager->buildBuilding(nName, bType, bName, (double)budget);
 

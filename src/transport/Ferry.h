@@ -30,26 +30,35 @@ class Ferry: public ModeOfTransport {
          * @throws runtime_error if there is not enough budget to build the ferries.
          */
         Ferry(string name, float& budget);
+
         /**
          * @brief Destructor for Ferry, decrements publicTransportCapacity by its own capacity.
          */
         ~Ferry();
+
         /**
          * @brief Gets the type of transport associated with the ferry.
          * @return A string representing the transport type, ergo - "PublicTransport".
          */
         string getTransportType();
+
         /**
          * @brief Gets the name of the ferry.
          * @return The name of the ferry as a string.
          */
         string getName();
+        
         /**
          * @brief Gets the specific transport type label of the ferry.
          * @return A string representing the type  of transport, "Ferry".
          */
         string getType();
 
+        /**
+         * @brief Gets the cost of the ferry.
+         * @return The cost of the ferry as a float.
+         */
+        float getCost();
 };
 
 #endif

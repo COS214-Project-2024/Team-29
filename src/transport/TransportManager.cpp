@@ -1,22 +1,27 @@
 #include "TransportManager.h"
 
-void TransportManager::addTransport(string type, string name, float& budget)
+void TransportManager::addTransport(std::string type, string name, float& budget)
 {
-    if(type == "Airport") {
-        modesOfTransport.push_back(new Airport(name, budget));
+    try {
+        if (type == "Airport") {
+            modesOfTransport.push_back(new Airport(name, budget));
+        }
+        else if (type == "Bus") {
+            modesOfTransport.push_back(new Bus(name, budget));
+        }
+        else if (type == "Ferry") {
+            modesOfTransport.push_back(new Ferry(name, budget));
+        }
+        else if (type == "Train") {
+            modesOfTransport.push_back(new Train(name, budget));
+        }
+        else {
+            throw std::runtime_error("Invalid transport type selected.");
+        }
     }
-    else if(type == "Bus") {
-        modesOfTransport.push_back(new Bus(name, budget));
-    }
-    else if(type == "Ferry") {
-        modesOfTransport.push_back(new Ferry(name, budget));
-    }
-    else if(type == "Train") {
-        modesOfTransport.push_back(new Train(name, budget));
-    }
-    else {
-        cout << "idk how you got here but something went terribly wrong :(" << endl;
-    }
+    catch (const std::runtime_error &e) {
+        throw;  // Rethrow the exception
+    }      
 }
 
 TransportManager *TransportManager::copy(float &budget)

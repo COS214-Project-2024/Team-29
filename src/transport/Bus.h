@@ -30,26 +30,35 @@ class Bus: public ModeOfTransport {
          * @throws runtime_error if there is not enough budget to build the buses.
          */
         Bus(string name, float& budget);
+        
         /**
          * @brief Destructor for Bus, decrements publicTransportCapacity by its own capacity.
          */
         ~Bus();
+
         /**
          * @brief Gets the type of transport associated with the bus.
          * @return A string representing the transport type, ergo - "PublicTransport".
          */
         string getTransportType();
+
         /**
          * @brief Gets the name of the bus.
          * @return The name of the bus as a string.
          */
         string getName();
+
         /**
          * @brief Gets the specific transport type label of the bus.
          * @return A string representing the type  of transport, "Bus".
          */
         string getType();
 
+        /**
+         * @brief Gets the cost of the bus.
+         * @return The cost of the bus as a float.
+         */
+        float getCost();
 };
 
 #endif

@@ -51,6 +51,12 @@ class Airport: public ModeOfTransport {
          */
         string getType();
 
+        /**
+         * @brief Gets the cost of the airport.
+         * @return The cost of the airport as a float.
+         */
+        float getCost();
+
 };
 
 #endif

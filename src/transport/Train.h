@@ -30,26 +30,35 @@ class Train: public ModeOfTransport {
          * @throws runtime_error if there is not enough budget to build the trains.
          */
         Train(string name, float& budget);
+
         /**
          * @brief Destructor for Train, decrements goodTransportCapacity by its own capacity.
          */
         ~Train();
+        
         /**
          * @brief Gets the type of transport associated with the train.
          * @return A string representing the transport type, ergo - "GoodsTransport".
          */
         string getTransportType();
+
         /**
          * @brief Gets the name of the train.
          * @return The name of the train as a string.
          */
         string getName();
+
         /**
          * @brief Gets the specific transport type label of the train.
          * @return A string representing the type  of transport, "Train".
          */
         string getType();
-        
+
+        /**
+         * @brief Gets the cost of the train.
+         * @return The cost of the train as a float.
+         */
+        float getCost();
 };
 
 #endif
