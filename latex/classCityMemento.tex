@@ -1,0 +1,447 @@
+\hypertarget{classCityMemento}{}\doxysection{City\+Memento Class Reference}
+\label{classCityMemento}\index{CityMemento@{CityMemento}}
+
+
+Stores snapshots of city components, allowing the city state to be saved and restored.  
+
+
+
+
+{\ttfamily \#include $<$City\+Memento.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCityMemento_a7ffeeffaf33281bda09ad943344bb9f8}\label{classCityMemento_a7ffeeffaf33281bda09ad943344bb9f8}} 
+\mbox{\hyperlink{classCityMemento_a7ffeeffaf33281bda09ad943344bb9f8}{$\sim$\+City\+Memento}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classCityMemento}{City\+Memento}}, cleaning up resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a1f1e01bafa4254e73dd8077333c57107}{set\+Satisfaction}} (\mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Sets the satisfaction state of the city to the memento object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a3efb200268a01f3174c5a158069e79e3}{set\+Building\+Manager}} (\mbox{\hyperlink{classBuildingManager}{Building\+Manager}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Sets the saved building\+Manager object of the city to the memento object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a7579228ad65c2943e86937f2abfbbed8}{set\+Utility\+Manager}} (\mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Sets the saved utility\+Manager object of the city to the memento object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_af94ed8809927d86cd80da1cff3cced20}{set\+Government}} (\mbox{\hyperlink{classGovernment}{Government}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Sets the saved government object of the city to the memento object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_afd862bdef927ea09367798a56659184a}{set\+Transport\+Manager}} (\mbox{\hyperlink{classTransportManager}{Transport\+Manager}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Sets the saved transport\+Manager object of the city to the memento object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_adae18a2635635cc025fcf0b648c986b6}{set\+Budget}} (float b)
+\begin{DoxyCompactList}\small\item\em Sets the memento budget to input budget value for the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a93c33e5957fd97ffc180a4f75498bf79}{set\+Build\+Cost}} (double b)
+\begin{DoxyCompactList}\small\item\em Sets the memento total\+Build\+Cost to input total build cost value for the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_ae06e987b43657aa73977195a6c1f4afc}{set\+Tax}} (double t)
+\begin{DoxyCompactList}\small\item\em Sets the memento total\+Tax to input total tax value for the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_ac28f7d75f87cb840f202e84a9f23da3c}{set\+Population}} (int p)
+\begin{DoxyCompactList}\small\item\em Sets the memento population to input population value for the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_ac98fdd44f36caacabe980e3785e62553}{set\+Total\+Power\+Demand}} (int t)
+\begin{DoxyCompactList}\small\item\em Sets the memento total\+Power\+Demand to input total power demand for the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a418497eef694d72544dcf0c822ab08c0}{set\+Total\+Water\+Demand}} (int t)
+\begin{DoxyCompactList}\small\item\em Sets the memento total\+Water\+Demand to input total water demand for the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a04d9c11c827690e983610351a5860198}{set\+Total\+Waste\+Demand}} (int t)
+\begin{DoxyCompactList}\small\item\em Sets the memento total\+Waste\+Demand to input total waste demand for the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCityMemento_a8d9daa4c90b9ffe97223d32afb3f53ba}{set\+Total\+Sewage\+Demand}} (int t)
+\begin{DoxyCompactList}\small\item\em Sets the memento total\+Sewage\+Demand to input total sewage demand for the city. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$ \mbox{\hyperlink{classCityMemento_a46872e70c1b5a9b60bed065edcb7eaef}{get\+Satisfaction}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the saved satisfaction state from the current object to save. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuildingManager}{Building\+Manager}} $\ast$ \mbox{\hyperlink{classCityMemento_a38b9ec2dc71779e093a91216d33c6657}{get\+Building\+Manager}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the saved pointer to buidling manager from the current object to save. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}} $\ast$ \mbox{\hyperlink{classCityMemento_a1a41b34dcadbf6978316ed82abb5f054}{get\+Utility\+Manager}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the saved pointer to utility facade from the current object to save. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGovernment}{Government}} $\ast$ \mbox{\hyperlink{classCityMemento_aeabcea54e6f9c04bd1ba1b89b47f84e0}{get\+Government}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the saved pointer to government object from the current object to save. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTransportManager}{Transport\+Manager}} $\ast$ \mbox{\hyperlink{classCityMemento_a10394bcd1cbe39b4b1af5ec4e2374a2e}{get\+Transport\+Manager}} (float \&b) const
+\begin{DoxyCompactList}\small\item\em Retrieves the saved pointer to transport manager from the current object to save. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classCityMemento_a17eb9782323f2a995c08cc12feae98b7}{get\+Budget}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current budget in the memento. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classCityMemento_acd3973eb3b5c3c3446ae6c2bf6d5b4bd}{get\+Build\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current total\+Build\+Cost in the memento. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classCityMemento_a14ea67650ff12fa34a3aac13d1eadd67}{get\+Tax}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current total\+Tax in the memento. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCityMemento_a6c6e602a1a2ca1da7c07059f920078fb}{get\+Population}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current population in the memento. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCityMemento_a0bbd6dfc7b63f954db48e45cf5ffa9e0}{get\+Total\+Power\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current total\+Power\+Demand in the memento. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCityMemento_a8e404e972ab5437522ff76f46d4ebaa8}{get\+Total\+Water\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current total\+Water\+Demand in the memento. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCityMemento_af92bf0624f8cb05898dae2ee6de84fb3}{get\+Total\+Waste\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current total\+Waste\+Demand in the memento. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCityMemento_a92100d67bf6d2b580255cb6d0a6cc7e2}{get\+Total\+Sewage\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current total\+Sewage\+Demand in the memento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores snapshots of city components, allowing the city state to be saved and restored. 
+
+The \mbox{\hyperlink{classCityMemento}{City\+Memento}} class provides mechanisms to set and retrieve saved states of various city components, including satisfaction state, buildings, and modes of transport. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCityMemento_a17eb9782323f2a995c08cc12feae98b7}\label{classCityMemento_a17eb9782323f2a995c08cc12feae98b7}} 
+\index{CityMemento@{CityMemento}!getBudget@{getBudget}}
+\index{getBudget@{getBudget}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getBudget()}{getBudget()}}
+{\footnotesize\ttfamily float City\+Memento\+::get\+Budget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current budget in the memento. 
+
+\begin{DoxyReturn}{Returns}
+Current budget value of the memnto called on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_acd3973eb3b5c3c3446ae6c2bf6d5b4bd}\label{classCityMemento_acd3973eb3b5c3c3446ae6c2bf6d5b4bd}} 
+\index{CityMemento@{CityMemento}!getBuildCost@{getBuildCost}}
+\index{getBuildCost@{getBuildCost}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getBuildCost()}{getBuildCost()}}
+{\footnotesize\ttfamily double City\+Memento\+::get\+Build\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current total\+Build\+Cost in the memento. 
+
+\begin{DoxyReturn}{Returns}
+Current total\+Build\+Cost value of the memnto called on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a38b9ec2dc71779e093a91216d33c6657}\label{classCityMemento_a38b9ec2dc71779e093a91216d33c6657}} 
+\index{CityMemento@{CityMemento}!getBuildingManager@{getBuildingManager}}
+\index{getBuildingManager@{getBuildingManager}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getBuildingManager()}{getBuildingManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuildingManager}{Building\+Manager}} $\ast$ City\+Memento\+::get\+Building\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the saved pointer to buidling manager from the current object to save. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the saved \mbox{\hyperlink{classBuildingManager}{Building\+Manager}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_aeabcea54e6f9c04bd1ba1b89b47f84e0}\label{classCityMemento_aeabcea54e6f9c04bd1ba1b89b47f84e0}} 
+\index{CityMemento@{CityMemento}!getGovernment@{getGovernment}}
+\index{getGovernment@{getGovernment}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getGovernment()}{getGovernment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGovernment}{Government}} $\ast$ City\+Memento\+::get\+Government (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the saved pointer to government object from the current object to save. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the saved \mbox{\hyperlink{classGovernment}{Government}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a6c6e602a1a2ca1da7c07059f920078fb}\label{classCityMemento_a6c6e602a1a2ca1da7c07059f920078fb}} 
+\index{CityMemento@{CityMemento}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily int City\+Memento\+::get\+Population (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current population in the memento. 
+
+\begin{DoxyReturn}{Returns}
+Current population value of the memnto called on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a46872e70c1b5a9b60bed065edcb7eaef}\label{classCityMemento_a46872e70c1b5a9b60bed065edcb7eaef}} 
+\index{CityMemento@{CityMemento}!getSatisfaction@{getSatisfaction}}
+\index{getSatisfaction@{getSatisfaction}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getSatisfaction()}{getSatisfaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$ City\+Memento\+::get\+Satisfaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the saved satisfaction state from the current object to save. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the saved \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a14ea67650ff12fa34a3aac13d1eadd67}\label{classCityMemento_a14ea67650ff12fa34a3aac13d1eadd67}} 
+\index{CityMemento@{CityMemento}!getTax@{getTax}}
+\index{getTax@{getTax}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getTax()}{getTax()}}
+{\footnotesize\ttfamily double City\+Memento\+::get\+Tax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current total\+Tax in the memento. 
+
+\begin{DoxyReturn}{Returns}
+Current total\+Tax value of the memnto called on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a0bbd6dfc7b63f954db48e45cf5ffa9e0}\label{classCityMemento_a0bbd6dfc7b63f954db48e45cf5ffa9e0}} 
+\index{CityMemento@{CityMemento}!getTotalPowerDemand@{getTotalPowerDemand}}
+\index{getTotalPowerDemand@{getTotalPowerDemand}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getTotalPowerDemand()}{getTotalPowerDemand()}}
+{\footnotesize\ttfamily int City\+Memento\+::get\+Total\+Power\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current total\+Power\+Demand in the memento. 
+
+\begin{DoxyReturn}{Returns}
+Current total\+Power\+Demand value of the memnto called on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a92100d67bf6d2b580255cb6d0a6cc7e2}\label{classCityMemento_a92100d67bf6d2b580255cb6d0a6cc7e2}} 
+\index{CityMemento@{CityMemento}!getTotalSewageDemand@{getTotalSewageDemand}}
+\index{getTotalSewageDemand@{getTotalSewageDemand}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getTotalSewageDemand()}{getTotalSewageDemand()}}
+{\footnotesize\ttfamily int City\+Memento\+::get\+Total\+Sewage\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current total\+Sewage\+Demand in the memento. 
+
+\begin{DoxyReturn}{Returns}
+Current total\+Sewage\+Demand value of the memnto called on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_af92bf0624f8cb05898dae2ee6de84fb3}\label{classCityMemento_af92bf0624f8cb05898dae2ee6de84fb3}} 
+\index{CityMemento@{CityMemento}!getTotalWasteDemand@{getTotalWasteDemand}}
+\index{getTotalWasteDemand@{getTotalWasteDemand}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getTotalWasteDemand()}{getTotalWasteDemand()}}
+{\footnotesize\ttfamily int City\+Memento\+::get\+Total\+Waste\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current total\+Waste\+Demand in the memento. 
+
+\begin{DoxyReturn}{Returns}
+Current total\+Waste\+Demand value of the memnto called on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a8e404e972ab5437522ff76f46d4ebaa8}\label{classCityMemento_a8e404e972ab5437522ff76f46d4ebaa8}} 
+\index{CityMemento@{CityMemento}!getTotalWaterDemand@{getTotalWaterDemand}}
+\index{getTotalWaterDemand@{getTotalWaterDemand}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getTotalWaterDemand()}{getTotalWaterDemand()}}
+{\footnotesize\ttfamily int City\+Memento\+::get\+Total\+Water\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current total\+Water\+Demand in the memento. 
+
+\begin{DoxyReturn}{Returns}
+Current total\+Water\+Demand value of the memnto called on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a10394bcd1cbe39b4b1af5ec4e2374a2e}\label{classCityMemento_a10394bcd1cbe39b4b1af5ec4e2374a2e}} 
+\index{CityMemento@{CityMemento}!getTransportManager@{getTransportManager}}
+\index{getTransportManager@{getTransportManager}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getTransportManager()}{getTransportManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTransportManager}{Transport\+Manager}} $\ast$ City\+Memento\+::get\+Transport\+Manager (\begin{DoxyParamCaption}\item[{float \&}]{b }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the saved pointer to transport manager from the current object to save. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the saved \mbox{\hyperlink{classTransportManager}{Transport\+Manager}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_a1a41b34dcadbf6978316ed82abb5f054}\label{classCityMemento_a1a41b34dcadbf6978316ed82abb5f054}} 
+\index{CityMemento@{CityMemento}!getUtilityManager@{getUtilityManager}}
+\index{getUtilityManager@{getUtilityManager}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{getUtilityManager()}{getUtilityManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}} $\ast$ City\+Memento\+::get\+Utility\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the saved pointer to utility facade from the current object to save. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the saved \mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCityMemento_adae18a2635635cc025fcf0b648c986b6}\label{classCityMemento_adae18a2635635cc025fcf0b648c986b6}} 
+\index{CityMemento@{CityMemento}!setBudget@{setBudget}}
+\index{setBudget@{setBudget}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setBudget()}{setBudget()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Budget (\begin{DoxyParamCaption}\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Sets the memento budget to input budget value for the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Float to be set to memento budget. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a93c33e5957fd97ffc180a4f75498bf79}\label{classCityMemento_a93c33e5957fd97ffc180a4f75498bf79}} 
+\index{CityMemento@{CityMemento}!setBuildCost@{setBuildCost}}
+\index{setBuildCost@{setBuildCost}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setBuildCost()}{setBuildCost()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Build\+Cost (\begin{DoxyParamCaption}\item[{double}]{b }\end{DoxyParamCaption})}
+
+
+
+Sets the memento total\+Build\+Cost to input total build cost value for the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Double to be set to memento total\+Build\+Cost. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a3efb200268a01f3174c5a158069e79e3}\label{classCityMemento_a3efb200268a01f3174c5a158069e79e3}} 
+\index{CityMemento@{CityMemento}!setBuildingManager@{setBuildingManager}}
+\index{setBuildingManager@{setBuildingManager}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setBuildingManager()}{setBuildingManager()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Building\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingManager}{Building\+Manager}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Sets the saved building\+Manager object of the city to the memento object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Pointer to the \mbox{\hyperlink{classBuildingManager}{Building\+Manager}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_af94ed8809927d86cd80da1cff3cced20}\label{classCityMemento_af94ed8809927d86cd80da1cff3cced20}} 
+\index{CityMemento@{CityMemento}!setGovernment@{setGovernment}}
+\index{setGovernment@{setGovernment}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setGovernment()}{setGovernment()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Government (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGovernment}{Government}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Sets the saved government object of the city to the memento object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Pointer to the \mbox{\hyperlink{classBuildingManager}{Building\+Manager}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_ac28f7d75f87cb840f202e84a9f23da3c}\label{classCityMemento_ac28f7d75f87cb840f202e84a9f23da3c}} 
+\index{CityMemento@{CityMemento}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Population (\begin{DoxyParamCaption}\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Sets the memento population to input population value for the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Int to be set to memento population. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a1f1e01bafa4254e73dd8077333c57107}\label{classCityMemento_a1f1e01bafa4254e73dd8077333c57107}} 
+\index{CityMemento@{CityMemento}!setSatisfaction@{setSatisfaction}}
+\index{setSatisfaction@{setSatisfaction}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setSatisfaction()}{setSatisfaction()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Satisfaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Sets the satisfaction state of the city to the memento object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to the \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} to be saved. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_ae06e987b43657aa73977195a6c1f4afc}\label{classCityMemento_ae06e987b43657aa73977195a6c1f4afc}} 
+\index{CityMemento@{CityMemento}!setTax@{setTax}}
+\index{setTax@{setTax}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setTax()}{setTax()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Tax (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the memento total\+Tax to input total tax value for the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Double to be set to memento total\+Build\+Cost. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_ac98fdd44f36caacabe980e3785e62553}\label{classCityMemento_ac98fdd44f36caacabe980e3785e62553}} 
+\index{CityMemento@{CityMemento}!setTotalPowerDemand@{setTotalPowerDemand}}
+\index{setTotalPowerDemand@{setTotalPowerDemand}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setTotalPowerDemand()}{setTotalPowerDemand()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Total\+Power\+Demand (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the memento total\+Power\+Demand to input total power demand for the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Int to be set to memento total\+Power\+Demand. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a8d9daa4c90b9ffe97223d32afb3f53ba}\label{classCityMemento_a8d9daa4c90b9ffe97223d32afb3f53ba}} 
+\index{CityMemento@{CityMemento}!setTotalSewageDemand@{setTotalSewageDemand}}
+\index{setTotalSewageDemand@{setTotalSewageDemand}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setTotalSewageDemand()}{setTotalSewageDemand()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Total\+Sewage\+Demand (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the memento total\+Sewage\+Demand to input total sewage demand for the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Int to be set to memento total\+Power\+Demand. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a04d9c11c827690e983610351a5860198}\label{classCityMemento_a04d9c11c827690e983610351a5860198}} 
+\index{CityMemento@{CityMemento}!setTotalWasteDemand@{setTotalWasteDemand}}
+\index{setTotalWasteDemand@{setTotalWasteDemand}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setTotalWasteDemand()}{setTotalWasteDemand()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Total\+Waste\+Demand (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the memento total\+Waste\+Demand to input total waste demand for the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Int to be set to memento total\+Waste\+Demand. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a418497eef694d72544dcf0c822ab08c0}\label{classCityMemento_a418497eef694d72544dcf0c822ab08c0}} 
+\index{CityMemento@{CityMemento}!setTotalWaterDemand@{setTotalWaterDemand}}
+\index{setTotalWaterDemand@{setTotalWaterDemand}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setTotalWaterDemand()}{setTotalWaterDemand()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Total\+Water\+Demand (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the memento total\+Water\+Demand to input total water demand for the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Int to be set to memento total\+Water\+Demand. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_afd862bdef927ea09367798a56659184a}\label{classCityMemento_afd862bdef927ea09367798a56659184a}} 
+\index{CityMemento@{CityMemento}!setTransportManager@{setTransportManager}}
+\index{setTransportManager@{setTransportManager}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setTransportManager()}{setTransportManager()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Transport\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTransportManager}{Transport\+Manager}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Sets the saved transport\+Manager object of the city to the memento object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Pointer to the \mbox{\hyperlink{classTransportManager}{Transport\+Manager}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCityMemento_a7579228ad65c2943e86937f2abfbbed8}\label{classCityMemento_a7579228ad65c2943e86937f2abfbbed8}} 
+\index{CityMemento@{CityMemento}!setUtilityManager@{setUtilityManager}}
+\index{setUtilityManager@{setUtilityManager}!CityMemento@{CityMemento}}
+\doxysubsubsection{\texorpdfstring{setUtilityManager()}{setUtilityManager()}}
+{\footnotesize\ttfamily void City\+Memento\+::set\+Utility\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUtilityFacade}{Utility\+Facade}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Sets the saved utility\+Manager object of the city to the memento object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Pointer to the Utility\+Manager. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/memento/City\+Memento.\+h\item 
+src/memento/City\+Memento.\+cpp\end{DoxyCompactItemize}

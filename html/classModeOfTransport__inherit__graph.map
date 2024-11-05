@@ -1,0 +1,7 @@
+<map id="ModeOfTransport" name="ModeOfTransport">
+<area shape="rect" id="node1" title="Abstract class for the different modes of transport." alt="" coords="91,5,224,32"/>
+<area shape="rect" id="node2" href="$classAirport.html" title="Represents an airport with specified cost, capacity, and transport type." alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node3" href="$classBus.html" title="Represents an bus with specified cost, capacity, and transport type." alt="" coords="97,80,143,107"/>
+<area shape="rect" id="node4" href="$classFerry.html" title="Represents an ferry with specified cost, capacity, and transport type." alt="" coords="167,80,222,107"/>
+<area shape="rect" id="node5" href="$classTrain.html" title="Represents an train with specified cost, capacity, and transport type." alt="" coords="247,80,300,107"/>
+</map>

@@ -1,0 +1,85 @@
+\hypertarget{classTransportManager}{}\doxysection{Transport\+Manager Class Reference}
+\label{classTransportManager}\index{TransportManager@{TransportManager}}
+
+
+Manages a collection of various transportation modes within a city.  
+
+
+
+
+{\ttfamily \#include $<$Transport\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTransportManager_aaae5d506437bb19b78e74848fc0f7cd8}{add\+Transport}} (string type, string name, float \&budget)
+\begin{DoxyCompactList}\small\item\em Adds a mode of transport to the city\textquotesingle{}s transport system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTransportManager}{Transport\+Manager}} $\ast$ \mbox{\hyperlink{classTransportManager_a6446ff4f89f552edaf9cbac8e834fe74}{copy}} (float \&budget)
+\begin{DoxyCompactList}\small\item\em Calculates and retrieves the total capacity of all transport modes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTransportManager_a47d8cce0837d878e5b94cf4e9d668832}{get\+Total\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Calculates and retrieves the total capacity of all transport modes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransportManager_a3f14f9500960c2bec3eac71583e499e0}\label{classTransportManager_a3f14f9500960c2bec3eac71583e499e0}} 
+void \mbox{\hyperlink{classTransportManager_a3f14f9500960c2bec3eac71583e499e0}{print\+Summary}} ()
+\begin{DoxyCompactList}\small\item\em Prints out the generated string of the decription of each type of transport mode in the city\textquotesingle{}s transport system. (Uses each transport system\textquotesingle{}s To\+String()) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransportManager_a1452b6db9a94b71930272b238d7a2f14}\label{classTransportManager_a1452b6db9a94b71930272b238d7a2f14}} 
+\mbox{\hyperlink{classTransportManager_a1452b6db9a94b71930272b238d7a2f14}{$\sim$\+Transport\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classTransportManager}{Transport\+Manager}} and deallocates transport objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a collection of various transportation modes within a city. 
+
+The \mbox{\hyperlink{classTransportManager}{Transport\+Manager}} class provides functionalities for adding, managing, and accessing different transport modes such as airports, buses, ferries, and trains. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransportManager_aaae5d506437bb19b78e74848fc0f7cd8}\label{classTransportManager_aaae5d506437bb19b78e74848fc0f7cd8}} 
+\index{TransportManager@{TransportManager}!addTransport@{addTransport}}
+\index{addTransport@{addTransport}!TransportManager@{TransportManager}}
+\doxysubsubsection{\texorpdfstring{addTransport()}{addTransport()}}
+{\footnotesize\ttfamily void Transport\+Manager\+::add\+Transport (\begin{DoxyParamCaption}\item[{string}]{type,  }\item[{string}]{name,  }\item[{float \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Adds a mode of transport to the city\textquotesingle{}s transport system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of transport (\char`\"{}\+Airport\char`\"{}, \char`\"{}\+Bus\char`\"{}, \char`\"{}\+Ferry\char`\"{}, \char`\"{}\+Train\char`\"{}). \\
+\hline
+{\em name} & The name of the transport mode, e.\+g., \char`\"{}\+Gautrain\char`\"{}. \\
+\hline
+{\em budget} & Reference to the city\textquotesingle{}s budget for managing costs. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransportManager_a6446ff4f89f552edaf9cbac8e834fe74}\label{classTransportManager_a6446ff4f89f552edaf9cbac8e834fe74}} 
+\index{TransportManager@{TransportManager}!copy@{copy}}
+\index{copy@{copy}!TransportManager@{TransportManager}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTransportManager}{Transport\+Manager}} $\ast$ Transport\+Manager\+::copy (\begin{DoxyParamCaption}\item[{float \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Calculates and retrieves the total capacity of all transport modes. 
+
+\begin{DoxyReturn}{Returns}
+Total capacity cost as an int. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransportManager_a47d8cce0837d878e5b94cf4e9d668832}\label{classTransportManager_a47d8cce0837d878e5b94cf4e9d668832}} 
+\index{TransportManager@{TransportManager}!getTotalCapacity@{getTotalCapacity}}
+\index{getTotalCapacity@{getTotalCapacity}!TransportManager@{TransportManager}}
+\doxysubsubsection{\texorpdfstring{getTotalCapacity()}{getTotalCapacity()}}
+{\footnotesize\ttfamily int Transport\+Manager\+::get\+Total\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates and retrieves the total capacity of all transport modes. 
+
+\begin{DoxyReturn}{Returns}
+Total capacity cost as an int. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/transport/Transport\+Manager.\+h\item 
+src/transport/Transport\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{classCitySaves}{}\doxysection{City\+Saves Class Reference}
+\label{classCitySaves}\index{CitySaves@{CitySaves}}
+
+
+Manages saving and loading of city states using \mbox{\hyperlink{classCityMemento}{City\+Memento}} objects.  
+
+
+
+
+{\ttfamily \#include $<$City\+Saves.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCitySaves_af1b040e805b3a7e2f80acf7d44e1a5ff}{add\+Save}} (string name, \mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Adds a save state to the collection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCitySaves_adbb4497ab094e654e3d172c7328f4729}\label{classCitySaves_adbb4497ab094e654e3d172c7328f4729}} 
+void \mbox{\hyperlink{classCitySaves_adbb4497ab094e654e3d172c7328f4729}{remove\+Save}} (string name)
+\begin{DoxyCompactList}\small\item\em Removes the last saved state from the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$ \mbox{\hyperlink{classCitySaves_ae06d5e987beb155828652df22f0083ba}{get\+Save}} (string name)
+\begin{DoxyCompactList}\small\item\em Retrieves the most recent save state. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCitySaves_a0797d710d0240897625491f1930eadae}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Creates and reutrns a string to display to the user all the current saves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCitySaves_adbfff701822d0e2e4d5712d5493c449c}\label{classCitySaves_adbfff701822d0e2e4d5712d5493c449c}} 
+\mbox{\hyperlink{classCitySaves_adbfff701822d0e2e4d5712d5493c449c}{$\sim$\+City\+Saves}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classCitySaves}{City\+Saves}}, cleaning up resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages saving and loading of city states using \mbox{\hyperlink{classCityMemento}{City\+Memento}} objects. 
+
+The \mbox{\hyperlink{classCitySaves}{City\+Saves}} class provides methods to add, remove, and retrieve saved city states. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCitySaves_af1b040e805b3a7e2f80acf7d44e1a5ff}\label{classCitySaves_af1b040e805b3a7e2f80acf7d44e1a5ff}} 
+\index{CitySaves@{CitySaves}!addSave@{addSave}}
+\index{addSave@{addSave}!CitySaves@{CitySaves}}
+\doxysubsubsection{\texorpdfstring{addSave()}{addSave()}}
+{\footnotesize\ttfamily void City\+Saves\+::add\+Save (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Adds a save state to the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the \mbox{\hyperlink{classCityMemento}{City\+Memento}} representing the city state to be saved. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCitySaves_ae06d5e987beb155828652df22f0083ba}\label{classCitySaves_ae06d5e987beb155828652df22f0083ba}} 
+\index{CitySaves@{CitySaves}!getSave@{getSave}}
+\index{getSave@{getSave}!CitySaves@{CitySaves}}
+\doxysubsubsection{\texorpdfstring{getSave()}{getSave()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$ City\+Saves\+::get\+Save (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Retrieves the most recent save state. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the most recent \mbox{\hyperlink{classCityMemento}{City\+Memento}} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCitySaves_a0797d710d0240897625491f1930eadae}\label{classCitySaves_a0797d710d0240897625491f1930eadae}} 
+\index{CitySaves@{CitySaves}!toString@{toString}}
+\index{toString@{toString}!CitySaves@{CitySaves}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string City\+Saves\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates and reutrns a string to display to the user all the current saves. 
+
+\begin{DoxyReturn}{Returns}
+String to print to user. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/memento/City\+Saves.\+h\item 
+src/memento/City\+Saves.\+cpp\end{DoxyCompactItemize}

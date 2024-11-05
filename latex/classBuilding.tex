@@ -1,0 +1,289 @@
+\hypertarget{classBuilding}{}\doxysection{Building Class Reference}
+\label{classBuilding}\index{Building@{Building}}
+
+
+Represents a building component with financial attributes like tax income and construction cost.  
+
+
+
+
+{\ttfamily \#include $<$Building.\+h$>$}
+
+
+
+Inheritance diagram for Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBuilding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classBuilding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBuilding_a7bc2469887817c7604445020cad1d63e}{Building}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int pow, int water, int waste, int sewage)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classBuilding}{Building}} object with specified tax income and build cost. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classBuilding_a8bed9a552c000823ef2a44f154387fa8}{get\+Tax\+Income}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the tax income of the building. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBuilding_a58bd2519b845865e9651765839eac839}{get\+Power\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the power\+Demand of the building. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBuilding_a80030df81dd6d75731fb73dd4e473acc}{get\+Water\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the water\+Demand of the building. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBuilding_a551202010f817841d7be4e25a11996e8}{get\+Waste\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the water\+Demand of the building. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBuilding_a24f675c094e3a1ce8399030e79e92b2f}{get\+Sewage\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the waste\+Demand of the building. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classBuilding_a649ecb91d58be68fcaa57d5148c4e701}{get\+Build\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the build cost of the building. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBuilding_ab8a303da75803cfb6006f676c59d2a65}{accept}} (\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$bv)=0
+\begin{DoxyCompactList}\small\item\em Accepts a visitor object for performing operations on the building. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBuilding_ab9ff99f3c9aabd5bf5f9e9658b718c19}\label{classBuilding_ab9ff99f3c9aabd5bf5f9e9658b718c19}} 
+virtual \mbox{\hyperlink{classBuilding_ab9ff99f3c9aabd5bf5f9e9658b718c19}{$\sim$\+Building}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classBuilding}{Building}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classBuilding_a2d21e31aa92b325466f5a30bec0dfcb4}{clone}} ()=0
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current building for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}
+\item 
+double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}
+\item 
+int \mbox{\hyperlink{classBuilding_aa9615b2d9d22aba8497a59c6fdb03732}{power\+Demand}}
+\item 
+int \mbox{\hyperlink{classBuilding_af6f3ebef11fa0842b89a02303544adbf}{water\+Demand}}
+\item 
+int \mbox{\hyperlink{classBuilding_aa19952505f18aef9951a6f316e2582b8}{waste\+Demand}}
+\item 
+int \mbox{\hyperlink{classBuilding_a58a23dd167a8b9eee1bc7828421a241b}{sewage\+Demand}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a building component with financial attributes like tax income and construction cost. 
+
+The \mbox{\hyperlink{classBuilding}{Building}} class provides a base structure for building objects, allowing retrieval of tax income and construction cost. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBuilding_a7bc2469887817c7604445020cad1d63e}\label{classBuilding_a7bc2469887817c7604445020cad1d63e}} 
+\index{Building@{Building}!Building@{Building}}
+\index{Building@{Building}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{Building()}{Building()}}
+{\footnotesize\ttfamily Building\+::\+Building (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{pow,  }\item[{int}]{water,  }\item[{int}]{waste,  }\item[{int}]{sewage }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classBuilding}{Building}} object with specified tax income and build cost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBuilding_ab8a303da75803cfb6006f676c59d2a65}\label{classBuilding_ab8a303da75803cfb6006f676c59d2a65}} 
+\index{Building@{Building}!accept@{accept}}
+\index{accept@{accept}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily virtual void Building\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} $\ast$}]{bv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Accepts a visitor object for performing operations on the building. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bv} & Pointer to a \mbox{\hyperlink{classBuildingVisitor}{Building\+Visitor}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a9a6c66d1e75e8892216baa7b6a225996}{Building\+Component}}.
+
+
+
+Implemented in \mbox{\hyperlink{classTownHouse_af94dd8e520d4a99d1aab975931c22d73}{Town\+House}}, \mbox{\hyperlink{classHouse_af1567ffd66be73b0ccd87aa0f839884a}{House}}, \mbox{\hyperlink{classEstate_a91d0c90d6afd0afb3f3acff77904bd16}{Estate}}, \mbox{\hyperlink{classPark_abec7a474e2239632463e3aaff9a7fa3b}{Park}}, \mbox{\hyperlink{classMonument_acf2f98d1737c9798faeb0e3cda668794}{Monument}}, \mbox{\hyperlink{classCulturalCentre_a92709fa0831012c30abb16e80aec73b4}{Cultural\+Centre}}, \mbox{\hyperlink{classWarehouse_a581825ea9d518d8f12ebd96087cd3289}{Warehouse}}, \mbox{\hyperlink{classPlant_aa1239e82056acd50e117b98761772a59}{Plant}}, \mbox{\hyperlink{classFactory_a01e99b308ef33ecc5732dc8eda26fa5c}{Factory}}, \mbox{\hyperlink{classShop_a99b9ab16984cf7d576672063c888e62f}{Shop}}, \mbox{\hyperlink{classOffice_a7bfedd53ed73c458a1a3c0c25a5e26fa}{Office}}, and \mbox{\hyperlink{classMall_a51f39a8dd30bbd453fd46a6670979a9c}{Mall}}.
+
+\mbox{\Hypertarget{classBuilding_a2d21e31aa92b325466f5a30bec0dfcb4}\label{classBuilding_a2d21e31aa92b325466f5a30bec0dfcb4}} 
+\index{Building@{Building}!clone@{clone}}
+\index{clone@{clone}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classBuildingComponent}{Building\+Component}}$\ast$ Building\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a copy of the current building for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current building as a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a591ff384615059ceb4692f512e372123}{Building\+Component}}.
+
+
+
+Implemented in \mbox{\hyperlink{classResidentialBuilding_aa428d1494058942cad40dc39f157e3f6}{Residential\+Building}}, \mbox{\hyperlink{classLandmarkBuilding_a7b21f6e8317c81957338f1269ae95392}{Landmark\+Building}}, \mbox{\hyperlink{classIndustrialBuilding_abed52948688b7fbeb434e4c74baeceed}{Industrial\+Building}}, \mbox{\hyperlink{classCommercialBuilding_a7e1af1c674b1b93314a9491b0dca1628}{Commercial\+Building}}, \mbox{\hyperlink{classTownHouse_a670062bc2e7b14e0e66841ce3d045794}{Town\+House}}, \mbox{\hyperlink{classHouse_ae09b72e219612a4025bac101a52dfb81}{House}}, \mbox{\hyperlink{classEstate_a6c3031b21345ed41ef83defacf8e8013}{Estate}}, \mbox{\hyperlink{classPark_a75a7a7a50150f1579565359259482987}{Park}}, \mbox{\hyperlink{classMonument_ac0d834edff0ddec42a97160858720bb6}{Monument}}, \mbox{\hyperlink{classCulturalCentre_af8bd63c7df133517ac5b97ba8f875bc0}{Cultural\+Centre}}, \mbox{\hyperlink{classWarehouse_aee5bc379feb385593f913ebbc223b579}{Warehouse}}, \mbox{\hyperlink{classPlant_a41d624aabeab1a12539c9552df304d5f}{Plant}}, \mbox{\hyperlink{classFactory_a6960df9179c766f396f7d0d9b8d7b8e8}{Factory}}, \mbox{\hyperlink{classShop_a486e5aa5069b1cfda67900bf4c3f76bd}{Shop}}, \mbox{\hyperlink{classOffice_a2c8730d71507ae9fc7e61ecc817600a9}{Office}}, and \mbox{\hyperlink{classMall_a7bf563e9158e0bb460cf2db888e681be}{Mall}}.
+
+\mbox{\Hypertarget{classBuilding_a649ecb91d58be68fcaa57d5148c4e701}\label{classBuilding_a649ecb91d58be68fcaa57d5148c4e701}} 
+\index{Building@{Building}!getBuildCost@{getBuildCost}}
+\index{getBuildCost@{getBuildCost}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{getBuildCost()}{getBuildCost()}}
+{\footnotesize\ttfamily double Building\+::get\+Build\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the build cost of the building. 
+
+\begin{DoxyReturn}{Returns}
+Build cost as a double. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a05ac5c6b0484717ab4ced86ea3eda071}{Building\+Component}}.
+
+\mbox{\Hypertarget{classBuilding_a58bd2519b845865e9651765839eac839}\label{classBuilding_a58bd2519b845865e9651765839eac839}} 
+\index{Building@{Building}!getPowerDemand@{getPowerDemand}}
+\index{getPowerDemand@{getPowerDemand}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{getPowerDemand()}{getPowerDemand()}}
+{\footnotesize\ttfamily int Building\+::get\+Power\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the power\+Demand of the building. 
+
+\begin{DoxyReturn}{Returns}
+Power demand as an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a1614de4f3ff4ebbb75d09fde8374fd6b}{Building\+Component}}.
+
+\mbox{\Hypertarget{classBuilding_a24f675c094e3a1ce8399030e79e92b2f}\label{classBuilding_a24f675c094e3a1ce8399030e79e92b2f}} 
+\index{Building@{Building}!getSewageDemand@{getSewageDemand}}
+\index{getSewageDemand@{getSewageDemand}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{getSewageDemand()}{getSewageDemand()}}
+{\footnotesize\ttfamily int Building\+::get\+Sewage\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the waste\+Demand of the building. 
+
+\begin{DoxyReturn}{Returns}
+Sewage demand as an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a3dc7acad5a77f67cc2c118b37c8ab4a2}{Building\+Component}}.
+
+\mbox{\Hypertarget{classBuilding_a8bed9a552c000823ef2a44f154387fa8}\label{classBuilding_a8bed9a552c000823ef2a44f154387fa8}} 
+\index{Building@{Building}!getTaxIncome@{getTaxIncome}}
+\index{getTaxIncome@{getTaxIncome}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{getTaxIncome()}{getTaxIncome()}}
+{\footnotesize\ttfamily double Building\+::get\+Tax\+Income (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the tax income of the building. 
+
+\begin{DoxyReturn}{Returns}
+Tax income as a double. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a7854e99d81d5ebe1d4ac6bc0428bffb2}{Building\+Component}}.
+
+\mbox{\Hypertarget{classBuilding_a551202010f817841d7be4e25a11996e8}\label{classBuilding_a551202010f817841d7be4e25a11996e8}} 
+\index{Building@{Building}!getWasteDemand@{getWasteDemand}}
+\index{getWasteDemand@{getWasteDemand}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{getWasteDemand()}{getWasteDemand()}}
+{\footnotesize\ttfamily int Building\+::get\+Waste\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the water\+Demand of the building. 
+
+\begin{DoxyReturn}{Returns}
+Waste demand as an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_af811a174883f34999075ae2fe7d0af64}{Building\+Component}}.
+
+\mbox{\Hypertarget{classBuilding_a80030df81dd6d75731fb73dd4e473acc}\label{classBuilding_a80030df81dd6d75731fb73dd4e473acc}} 
+\index{Building@{Building}!getWaterDemand@{getWaterDemand}}
+\index{getWaterDemand@{getWaterDemand}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{getWaterDemand()}{getWaterDemand()}}
+{\footnotesize\ttfamily int Building\+::get\+Water\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the water\+Demand of the building. 
+
+\begin{DoxyReturn}{Returns}
+Water demand as an int. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingComponent_a62b5af79935bb46533ea834f62e12c74}{Building\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBuilding_a1764dafe016145158f038aae7ecfbda6}\label{classBuilding_a1764dafe016145158f038aae7ecfbda6}} 
+\index{Building@{Building}!buildCost@{buildCost}}
+\index{buildCost@{buildCost}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{buildCost}{buildCost}}
+{\footnotesize\ttfamily double Building\+::build\+Cost\hspace{0.3cm}{\ttfamily [protected]}}
+
+Cost to construct the building. \mbox{\Hypertarget{classBuilding_aa9615b2d9d22aba8497a59c6fdb03732}\label{classBuilding_aa9615b2d9d22aba8497a59c6fdb03732}} 
+\index{Building@{Building}!powerDemand@{powerDemand}}
+\index{powerDemand@{powerDemand}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{powerDemand}{powerDemand}}
+{\footnotesize\ttfamily int Building\+::power\+Demand\hspace{0.3cm}{\ttfamily [protected]}}
+
+Power demand for the building. \mbox{\Hypertarget{classBuilding_a58a23dd167a8b9eee1bc7828421a241b}\label{classBuilding_a58a23dd167a8b9eee1bc7828421a241b}} 
+\index{Building@{Building}!sewageDemand@{sewageDemand}}
+\index{sewageDemand@{sewageDemand}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{sewageDemand}{sewageDemand}}
+{\footnotesize\ttfamily int Building\+::sewage\+Demand\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sewage demand for the building. \mbox{\Hypertarget{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}\label{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}} 
+\index{Building@{Building}!taxIncome@{taxIncome}}
+\index{taxIncome@{taxIncome}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{taxIncome}{taxIncome}}
+{\footnotesize\ttfamily double Building\+::tax\+Income\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tax income generated by the building. \mbox{\Hypertarget{classBuilding_aa19952505f18aef9951a6f316e2582b8}\label{classBuilding_aa19952505f18aef9951a6f316e2582b8}} 
+\index{Building@{Building}!wasteDemand@{wasteDemand}}
+\index{wasteDemand@{wasteDemand}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{wasteDemand}{wasteDemand}}
+{\footnotesize\ttfamily int Building\+::waste\+Demand\hspace{0.3cm}{\ttfamily [protected]}}
+
+Waste demand for the building. \mbox{\Hypertarget{classBuilding_af6f3ebef11fa0842b89a02303544adbf}\label{classBuilding_af6f3ebef11fa0842b89a02303544adbf}} 
+\index{Building@{Building}!waterDemand@{waterDemand}}
+\index{waterDemand@{waterDemand}!Building@{Building}}
+\doxysubsubsection{\texorpdfstring{waterDemand}{waterDemand}}
+{\footnotesize\ttfamily int Building\+::water\+Demand\hspace{0.3cm}{\ttfamily [protected]}}
+
+Water demand for the building. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/Building.\+h\item 
+src/building\+Composite/Building.\+cpp\end{DoxyCompactItemize}

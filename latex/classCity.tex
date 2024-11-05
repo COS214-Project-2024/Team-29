@@ -1,0 +1,275 @@
+\hypertarget{classCity}{}\doxysection{City Class Reference}
+\label{classCity}\index{City@{City}}
+
+
+Manages city operations, including budget, population, utility demands, transport, and government policies.  
+
+
+
+
+{\ttfamily \#include $<$City.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCity_a1b1f549430f0a7ecd0ec7b1605415193}\label{classCity_a1b1f549430f0a7ecd0ec7b1605415193}} 
+\mbox{\hyperlink{classCity_a1b1f549430f0a7ecd0ec7b1605415193}{City}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classCity}{City}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCity_ae95feee8a1d4e1f14ea41ec89b47304f}\label{classCity_ae95feee8a1d4e1f14ea41ec89b47304f}} 
+\mbox{\hyperlink{classCity_ae95feee8a1d4e1f14ea41ec89b47304f}{$\sim$\+City}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classCity}{City}} instance and deallocates resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCity_ab641c7d57c73f15e08d7cc1991847935}{set\+Satisfaction\+State}} (\mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Sets the satisfaction state of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCity_a98eaea565d670a1fa6b98aa07b6af860}{get\+Population}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current population of the city. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classCity_a44db676e610146ea623c7b47fb51f915}{get\+Budget}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current budget of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCity_a94e764927a73abf70f4e7c1b5fb3d57e}{get\+Power\+Demand}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total power demand of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCity_a2c94e47f826edd3b318192949fc36f3b}{get\+Water\+Demand}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total water demand of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCity_a082b12f0c0d139c4bfca5b546ccedb45}{get\+Waste\+Demand}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total waste demand of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCity_a54e57be98eed85a8c9e81819691ff004}{get\+Sewage\+Demand}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total sewage demand of the city. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCity_a8f1e9479d7d80728662d6841a36ddc0d}{get\+Neighbourhoods}} ()
+\begin{DoxyCompactList}\small\item\em Fetches a list of all neighbourhood names. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCity_a065f7164418382fa4d56840e351e54b8}{add\+Transport}} (string type, string name, float \&budget)
+\begin{DoxyCompactList}\small\item\em Adds a mode of transport to the city thruogh the transport\+Manager attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCity_a731e53e5b34cbf8f637ffee4bb6c091b}\label{classCity_a731e53e5b34cbf8f637ffee4bb6c091b}} 
+void {\bfseries add\+Transport} ()
+\item 
+\mbox{\Hypertarget{classCity_ab7622d6ec56c255c582d943786447c18}\label{classCity_ab7622d6ec56c255c582d943786447c18}} 
+void \mbox{\hyperlink{classCity_ab7622d6ec56c255c582d943786447c18}{print\+Transport}} ()
+\begin{DoxyCompactList}\small\item\em Prints the list of all transport modes in the city through the transport\+Manager attribute. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCity_a9c7d349c262eca55c4f038301b00eea6}{calc\+Transport\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Calculates if the transport system meets the population’s needs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCity_a0066dadf349132e8c3f67b2e5b30ab93}\label{classCity_a0066dadf349132e8c3f67b2e5b30ab93}} 
+void \mbox{\hyperlink{classCity_a0066dadf349132e8c3f67b2e5b30ab93}{implement\+Policy}} ()
+\begin{DoxyCompactList}\small\item\em Implements a random policy that affects citizen satisfaction and costs R 5000. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$ \mbox{\hyperlink{classCity_a79f441640c87766232016e60a1a97308}{save\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Saves the current state of the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCity_ac7a71484aeec1606119d6013b3fe508e}{load\+Game}} (\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$save)
+\begin{DoxyCompactList}\small\item\em Loads a previously saved city state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCity_a4b22ee82dc568e7c584bebd589b7b4cf}\label{classCity_a4b22ee82dc568e7c584bebd589b7b4cf}} 
+void {\bfseries get\+Total\+Build\+Cost} ()
+\item 
+\mbox{\Hypertarget{classCity_aad7d20d97872357ab2d0ca297019f087}\label{classCity_aad7d20d97872357ab2d0ca297019f087}} 
+void \mbox{\hyperlink{classCity_aad7d20d97872357ab2d0ca297019f087}{collect\+Taxes}} ()
+\begin{DoxyCompactList}\small\item\em Collects taxes from the city\textquotesingle{}s population and buidlings, and updates the city budget accordingly. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCity_af234096f7b907225b91c8ce17d67bdd9}\label{classCity_af234096f7b907225b91c8ce17d67bdd9}} 
+void \mbox{\hyperlink{classCity_af234096f7b907225b91c8ce17d67bdd9}{get\+Total\+Tax}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total tax income from all buildings by using the building\+Manger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCity_a8601691f6fb733d66490341ed7f48274}\label{classCity_a8601691f6fb733d66490341ed7f48274}} 
+void \mbox{\hyperlink{classCity_a8601691f6fb733d66490341ed7f48274}{get\+Total\+Living\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total living capacity from all buildings by using the building\+Manger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCity_a7bd21f3350e0dc6d1ca122f73687bd19}\label{classCity_a7bd21f3350e0dc6d1ca122f73687bd19}} 
+void \mbox{\hyperlink{classCity_a7bd21f3350e0dc6d1ca122f73687bd19}{get\+Total\+Employee\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total empleyee capcity from all buildings by using the building\+Manger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCity_a9e4b1670266ea833d372bd92fe6f1213}\label{classCity_a9e4b1670266ea833d372bd92fe6f1213}} 
+void \mbox{\hyperlink{classCity_a9e4b1670266ea833d372bd92fe6f1213}{get\+Total\+Satisfaction\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total satisfaction value from all buildings by using the building\+Manger. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCity_a8dd15fe5967fbb8b918796efbd2ba0d6}{build\+Building}} (std\+::string n\+Name, int b\+Type, int b\+Name)
+\begin{DoxyCompactList}\small\item\em Builds a new building in the city. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages city operations, including budget, population, utility demands, transport, and government policies. 
+
+The \mbox{\hyperlink{classCity}{City}} class provides functionality for managing various aspects of a city, such as buildings, utilities, transport, and policies, and calculates demands and satisfaction levels. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCity_a065f7164418382fa4d56840e351e54b8}\label{classCity_a065f7164418382fa4d56840e351e54b8}} 
+\index{City@{City}!addTransport@{addTransport}}
+\index{addTransport@{addTransport}!City@{City}}
+\doxysubsubsection{\texorpdfstring{addTransport()}{addTransport()}}
+{\footnotesize\ttfamily void City\+::add\+Transport (\begin{DoxyParamCaption}\item[{string}]{type,  }\item[{string}]{name,  }\item[{float \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Adds a mode of transport to the city thruogh the transport\+Manager attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of transport (e.\+g., \char`\"{}\+Airport\char`\"{}, \char`\"{}\+Bus\char`\"{}, \char`\"{}\+Ferry\char`\"{}, \char`\"{}\+Train\char`\"{}). \\
+\hline
+{\em name} & The name of the transport mode (e.\+g., \char`\"{}\+Gautrain\char`\"{}). \\
+\hline
+{\em budget} & Reference to the city\textquotesingle{}s budget. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCity_a8dd15fe5967fbb8b918796efbd2ba0d6}\label{classCity_a8dd15fe5967fbb8b918796efbd2ba0d6}} 
+\index{City@{City}!buildBuilding@{buildBuilding}}
+\index{buildBuilding@{buildBuilding}!City@{City}}
+\doxysubsubsection{\texorpdfstring{buildBuilding()}{buildBuilding()}}
+{\footnotesize\ttfamily int City\+::build\+Building (\begin{DoxyParamCaption}\item[{std\+::string}]{n\+Name,  }\item[{int}]{b\+Type,  }\item[{int}]{b\+Name }\end{DoxyParamCaption})}
+
+
+
+Builds a new building in the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Name} & Name of the neighborhood. \\
+\hline
+{\em b\+Type} & \mbox{\hyperlink{classBuilding}{Building}} type. \\
+\hline
+{\em b\+Name} & \mbox{\hyperlink{classBuilding}{Building}} name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code of the building operation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_a9c7d349c262eca55c4f038301b00eea6}\label{classCity_a9c7d349c262eca55c4f038301b00eea6}} 
+\index{City@{City}!calcTransportSatisfaction@{calcTransportSatisfaction}}
+\index{calcTransportSatisfaction@{calcTransportSatisfaction}!City@{City}}
+\doxysubsubsection{\texorpdfstring{calcTransportSatisfaction()}{calcTransportSatisfaction()}}
+{\footnotesize\ttfamily bool City\+::calc\+Transport\+Satisfaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates if the transport system meets the population’s needs. 
+
+\begin{DoxyReturn}{Returns}
+True if the transport system is sufficient; false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_a44db676e610146ea623c7b47fb51f915}\label{classCity_a44db676e610146ea623c7b47fb51f915}} 
+\index{City@{City}!getBudget@{getBudget}}
+\index{getBudget@{getBudget}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getBudget()}{getBudget()}}
+{\footnotesize\ttfamily float City\+::get\+Budget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current budget of the city. 
+
+\begin{DoxyReturn}{Returns}
+The city\textquotesingle{}s budget as a float. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_a8f1e9479d7d80728662d6841a36ddc0d}\label{classCity_a8f1e9479d7d80728662d6841a36ddc0d}} 
+\index{City@{City}!getNeighbourhoods@{getNeighbourhoods}}
+\index{getNeighbourhoods@{getNeighbourhoods}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getNeighbourhoods()}{getNeighbourhoods()}}
+{\footnotesize\ttfamily std\+::string City\+::get\+Neighbourhoods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fetches a list of all neighbourhood names. 
+
+\begin{DoxyReturn}{Returns}
+List of names of neighbourhoods as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_a98eaea565d670a1fa6b98aa07b6af860}\label{classCity_a98eaea565d670a1fa6b98aa07b6af860}} 
+\index{City@{City}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily int City\+::get\+Population (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current population of the city. 
+
+\begin{DoxyReturn}{Returns}
+The population as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_a94e764927a73abf70f4e7c1b5fb3d57e}\label{classCity_a94e764927a73abf70f4e7c1b5fb3d57e}} 
+\index{City@{City}!getPowerDemand@{getPowerDemand}}
+\index{getPowerDemand@{getPowerDemand}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getPowerDemand()}{getPowerDemand()}}
+{\footnotesize\ttfamily int City\+::get\+Power\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the total power demand of the city. 
+
+\begin{DoxyReturn}{Returns}
+Total power demand as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_a54e57be98eed85a8c9e81819691ff004}\label{classCity_a54e57be98eed85a8c9e81819691ff004}} 
+\index{City@{City}!getSewageDemand@{getSewageDemand}}
+\index{getSewageDemand@{getSewageDemand}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getSewageDemand()}{getSewageDemand()}}
+{\footnotesize\ttfamily int City\+::get\+Sewage\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the total sewage demand of the city. 
+
+\begin{DoxyReturn}{Returns}
+Total sewage demand as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_a082b12f0c0d139c4bfca5b546ccedb45}\label{classCity_a082b12f0c0d139c4bfca5b546ccedb45}} 
+\index{City@{City}!getWasteDemand@{getWasteDemand}}
+\index{getWasteDemand@{getWasteDemand}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getWasteDemand()}{getWasteDemand()}}
+{\footnotesize\ttfamily int City\+::get\+Waste\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the total waste demand of the city. 
+
+\begin{DoxyReturn}{Returns}
+Total waste demand as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_a2c94e47f826edd3b318192949fc36f3b}\label{classCity_a2c94e47f826edd3b318192949fc36f3b}} 
+\index{City@{City}!getWaterDemand@{getWaterDemand}}
+\index{getWaterDemand@{getWaterDemand}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getWaterDemand()}{getWaterDemand()}}
+{\footnotesize\ttfamily int City\+::get\+Water\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the total water demand of the city. 
+
+\begin{DoxyReturn}{Returns}
+Total water demand as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_ac7a71484aeec1606119d6013b3fe508e}\label{classCity_ac7a71484aeec1606119d6013b3fe508e}} 
+\index{City@{City}!loadGame@{loadGame}}
+\index{loadGame@{loadGame}!City@{City}}
+\doxysubsubsection{\texorpdfstring{loadGame()}{loadGame()}}
+{\footnotesize\ttfamily void City\+::load\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$}]{save }\end{DoxyParamCaption})}
+
+
+
+Loads a previously saved city state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em save} & A pointer to the \mbox{\hyperlink{classCityMemento}{City\+Memento}} containing the saved state to load. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCity_a79f441640c87766232016e60a1a97308}\label{classCity_a79f441640c87766232016e60a1a97308}} 
+\index{City@{City}!saveGame@{saveGame}}
+\index{saveGame@{saveGame}!City@{City}}
+\doxysubsubsection{\texorpdfstring{saveGame()}{saveGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCityMemento}{City\+Memento}} $\ast$ City\+::save\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the current state of the city. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a \mbox{\hyperlink{classCityMemento}{City\+Memento}} containing the saved state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCity_ab641c7d57c73f15e08d7cc1991847935}\label{classCity_ab641c7d57c73f15e08d7cc1991847935}} 
+\index{City@{City}!setSatisfactionState@{setSatisfactionState}}
+\index{setSatisfactionState@{setSatisfactionState}!City@{City}}
+\doxysubsubsection{\texorpdfstring{setSatisfactionState()}{setSatisfactionState()}}
+{\footnotesize\ttfamily void City\+::set\+Satisfaction\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Sets the satisfaction state of the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to the new \mbox{\hyperlink{classSatisfactionState}{Satisfaction\+State}}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/managers/City.\+h\item 
+src/managers/City.\+cpp\end{DoxyCompactItemize}

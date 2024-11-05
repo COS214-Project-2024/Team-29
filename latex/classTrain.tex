@@ -1,0 +1,141 @@
+\hypertarget{classTrain}{}\doxysection{Train Class Reference}
+\label{classTrain}\index{Train@{Train}}
+
+
+Represents an train with specified cost, capacity, and transport type.  
+
+
+
+
+{\ttfamily \#include $<$Train.\+h$>$}
+
+
+
+Inheritance diagram for Train\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classTrain__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Train\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classTrain__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTrain_a3a8098b25996a11832f4560d475ef458}{Train}} (string name, float \&budget)
+\begin{DoxyCompactList}\small\item\em Creates a new train for the city with specified name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTrain_a28c78c0d21e7fbce79cb94927f23c11e}\label{classTrain_a28c78c0d21e7fbce79cb94927f23c11e}} 
+\mbox{\hyperlink{classTrain_a28c78c0d21e7fbce79cb94927f23c11e}{$\sim$\+Train}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classTrain}{Train}}, decrements good\+Transport\+Capacity by its own capacity. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classTrain_a9f0a6a9a44b0acccee0cf44d55198b86}{get\+Transport\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of transport associated with the train. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classTrain_af91453ff52f616b5f4e0a0247510667d}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the train. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classTrain_ab47e33bc702a9823c8ab80f90fb317ef}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the specific transport type label of the train. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents an train with specified cost, capacity, and transport type. 
+
+The \mbox{\hyperlink{classTrain}{Train}} class is a specialised mode of transport within a city, providing an implementation specific to airports, including attributes for cost, type, and capacity. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTrain_a3a8098b25996a11832f4560d475ef458}\label{classTrain_a3a8098b25996a11832f4560d475ef458}} 
+\index{Train@{Train}!Train@{Train}}
+\index{Train@{Train}!Train@{Train}}
+\doxysubsubsection{\texorpdfstring{Train()}{Train()}}
+{\footnotesize\ttfamily Train\+::\+Train (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{float \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Creates a new train for the city with specified name. 
+
+
+\begin{DoxyItemize}
+\item Cost\+: R 500,000.
+\item Type\+: Goods\+Transport.
+\item Capacity\+: 100,000
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the train. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if there is not enough budget to build the trains. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTrain_af91453ff52f616b5f4e0a0247510667d}\label{classTrain_af91453ff52f616b5f4e0a0247510667d}} 
+\index{Train@{Train}!getName@{getName}}
+\index{getName@{getName}!Train@{Train}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Train\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the name of the train. 
+
+\begin{DoxyReturn}{Returns}
+The name of the train as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_a6eaf02f55273a4d556705d417fe1ebfd}{Mode\+Of\+Transport}}.
+
+\mbox{\Hypertarget{classTrain_a9f0a6a9a44b0acccee0cf44d55198b86}\label{classTrain_a9f0a6a9a44b0acccee0cf44d55198b86}} 
+\index{Train@{Train}!getTransportType@{getTransportType}}
+\index{getTransportType@{getTransportType}!Train@{Train}}
+\doxysubsubsection{\texorpdfstring{getTransportType()}{getTransportType()}}
+{\footnotesize\ttfamily string Train\+::get\+Transport\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the type of transport associated with the train. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the transport type, ergo -\/ \char`\"{}\+Goods\+Transport\char`\"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_aabd8fc73f8db175f8a62c510bf9fd984}{Mode\+Of\+Transport}}.
+
+\mbox{\Hypertarget{classTrain_ab47e33bc702a9823c8ab80f90fb317ef}\label{classTrain_ab47e33bc702a9823c8ab80f90fb317ef}} 
+\index{Train@{Train}!getType@{getType}}
+\index{getType@{getType}!Train@{Train}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Train\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the specific transport type label of the train. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the type of transport, \char`\"{}\+Train\char`\"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_aaa163719b4fc5e11714e88221d33c03e}{Mode\+Of\+Transport}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/transport/Train.\+h\item 
+src/transport/Train.\+cpp\end{DoxyCompactItemize}

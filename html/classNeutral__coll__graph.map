@@ -1,0 +1,4 @@
+<map id="Neutral" name="Neutral">
+<area shape="rect" id="node1" title="Represents a Neutral satisfaction state within a city." alt="" coords="37,80,107,107"/>
+<area shape="rect" id="node2" href="$classSatisfactionState.html" title="Abstract class representing a satisfaction state with operations to adjust the city&#39;s satisfaction le..." alt="" coords="5,5,139,32"/>
+</map>

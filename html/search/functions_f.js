@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['satisfied_332',['Satisfied',['../classSatisfied.html#a7eae2239c3f49be6f1a111f3afabcccb',1,'Satisfied']]],
+  ['savegame_333',['saveGame',['../classCity.html#a79f441640c87766232016e60a1a97308',1,'City']]],
+  ['setbudget_334',['setBudget',['../classCityMemento.html#adae18a2635635cc025fcf0b648c986b6',1,'CityMemento']]],
+  ['setbuildcost_335',['setBuildCost',['../classCityMemento.html#a93c33e5957fd97ffc180a4f75498bf79',1,'CityMemento']]],
+  ['setbuildingmanager_336',['setBuildingManager',['../classCityMemento.html#a3efb200268a01f3174c5a158069e79e3',1,'CityMemento']]],
+  ['setcapacity_337',['setCapacity',['../classUtilitiesDecorator.html#aa90cc381ee6d2a0214078bf647acebf1',1,'UtilitiesDecorator']]],
+  ['setgovernment_338',['setGovernment',['../classCityMemento.html#af94ed8809927d86cd80da1cff3cced20',1,'CityMemento']]],
+  ['setlevel_339',['setLevel',['../classUtilitiesDecorator.html#a113b2ff358fe5fc9d4b42018917f7371',1,'UtilitiesDecorator']]],
+  ['setpopulation_340',['setPopulation',['../classCityMemento.html#ac28f7d75f87cb840f202e84a9f23da3c',1,'CityMemento']]],
+  ['setsatisfaction_341',['setSatisfaction',['../classCityMemento.html#a1f1e01bafa4254e73dd8077333c57107',1,'CityMemento']]],
+  ['setsatisfactionstate_342',['setSatisfactionState',['../classCity.html#ab641c7d57c73f15e08d7cc1991847935',1,'City']]],
+  ['settax_343',['setTax',['../classCityMemento.html#ae06e987b43657aa73977195a6c1f4afc',1,'CityMemento']]],
+  ['settotalpowerdemand_344',['setTotalPowerDemand',['../classCityMemento.html#ac98fdd44f36caacabe980e3785e62553',1,'CityMemento']]],
+  ['settotalsewagedemand_345',['setTotalSewageDemand',['../classCityMemento.html#a8d9daa4c90b9ffe97223d32afb3f53ba',1,'CityMemento']]],
+  ['settotalwastedemand_346',['setTotalWasteDemand',['../classCityMemento.html#a04d9c11c827690e983610351a5860198',1,'CityMemento']]],
+  ['settotalwaterdemand_347',['setTotalWaterDemand',['../classCityMemento.html#a418497eef694d72544dcf0c822ab08c0',1,'CityMemento']]],
+  ['settransportmanager_348',['setTransportManager',['../classCityMemento.html#afd862bdef927ea09367798a56659184a',1,'CityMemento']]],
+  ['setutilitymanager_349',['setUtilityManager',['../classCityMemento.html#a7579228ad65c2943e86937f2abfbbed8',1,'CityMemento']]],
+  ['sewagemanagementdecorator_350',['SewageManagementDecorator',['../classSewageManagementDecorator.html#a32eca0b4dff629187b5fd501406e5290',1,'SewageManagementDecorator']]],
+  ['shop_351',['Shop',['../classShop.html#a01fa9d82c30378b5d87f5f5d417d1331',1,'Shop']]],
+  ['startsimulation_352',['startSimulation',['../classInterface.html#a2423bc762ce55c532ee80302be28d917',1,'Interface']]]
+];

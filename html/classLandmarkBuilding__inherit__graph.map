@@ -1,0 +1,8 @@
+<map id="LandmarkBuilding" name="LandmarkBuilding">
+<area shape="rect" id="node1" title="Represents an landmark building with specified tax income, construction cost, and satisfaction value." alt="" coords="121,155,261,181"/>
+<area shape="rect" id="node4" href="$classCulturalCentre.html" title="Specialised concrete LandmarkBuidling class that represents a CulturalCentre." alt="" coords="5,229,121,256"/>
+<area shape="rect" id="node5" href="$classMonument.html" title="Specialised concrete LandmarkBuidling class that represents a Monument." alt="" coords="145,229,237,256"/>
+<area shape="rect" id="node6" href="$classPark.html" title="Specialised concrete LandmarkBuidling class that represents a Park." alt="" coords="262,229,313,256"/>
+<area shape="rect" id="node2" href="$classBuilding.html" title="Represents a building component with financial attributes like tax income and construction cost." alt="" coords="154,80,229,107"/>
+<area shape="rect" id="node3" href="$classBuildingComponent.html" title="Abstract class representing a generic building component." alt="" coords="116,5,267,32"/>
+</map>

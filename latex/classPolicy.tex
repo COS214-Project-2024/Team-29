@@ -1,0 +1,80 @@
+\hypertarget{classPolicy}{}\doxysection{Policy Class Reference}
+\label{classPolicy}\index{Policy@{Policy}}
+
+
+Represents a policy with a name and an impact on citizen satisfaction.  
+
+
+
+
+{\ttfamily \#include $<$Policy.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPolicy_a2bb5168a1910231c7725c070185b14b0}{Policy}} (string policy\+Name, bool impact)
+\begin{DoxyCompactList}\small\item\em Constructs a new policy with the specified name and impact. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classPolicy_a8f0a1269a361901f6ab73624e2954694}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the policy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPolicy_a78a4e5408865840ac556bc3ebdda6826}{get\+Impact}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the impact of the policy on citizen satisfaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a policy with a name and an impact on citizen satisfaction. 
+
+The \mbox{\hyperlink{classPolicy}{Policy}} class defines attributes for each policy, including its name and whether it has a positive or negative impact on the satisfaction of citizens. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPolicy_a2bb5168a1910231c7725c070185b14b0}\label{classPolicy_a2bb5168a1910231c7725c070185b14b0}} 
+\index{Policy@{Policy}!Policy@{Policy}}
+\index{Policy@{Policy}!Policy@{Policy}}
+\doxysubsubsection{\texorpdfstring{Policy()}{Policy()}}
+{\footnotesize\ttfamily Policy\+::\+Policy (\begin{DoxyParamCaption}\item[{string}]{policy\+Name,  }\item[{bool}]{impact }\end{DoxyParamCaption})}
+
+
+
+Constructs a new policy with the specified name and impact. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em policy\+Name} & The name of the policy, e.\+g., \char`\"{}\+More public holidays\char`\"{}. \\
+\hline
+{\em impact} & True if the policy has a positive impact on citizen satisfaction; false otherwise. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPolicy_a78a4e5408865840ac556bc3ebdda6826}\label{classPolicy_a78a4e5408865840ac556bc3ebdda6826}} 
+\index{Policy@{Policy}!getImpact@{getImpact}}
+\index{getImpact@{getImpact}!Policy@{Policy}}
+\doxysubsubsection{\texorpdfstring{getImpact()}{getImpact()}}
+{\footnotesize\ttfamily bool Policy\+::get\+Impact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the impact of the policy on citizen satisfaction. 
+
+\begin{DoxyReturn}{Returns}
+True if the policy has a positive impact; false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPolicy_a8f0a1269a361901f6ab73624e2954694}\label{classPolicy_a8f0a1269a361901f6ab73624e2954694}} 
+\index{Policy@{Policy}!getName@{getName}}
+\index{getName@{getName}!Policy@{Policy}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Policy\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of the policy. 
+
+\begin{DoxyReturn}{Returns}
+The policy name as a string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/government/Policy.\+h\item 
+src/government/Policy.\+cpp\end{DoxyCompactItemize}

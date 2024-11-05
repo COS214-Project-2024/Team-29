@@ -1,0 +1,4 @@
+<map id="CompositeNeighbourhood" name="CompositeNeighbourhood">
+<area shape="rect" id="node1" title="Represents a composite neighbourhood containing multiple building components." alt="" coords="5,80,196,107"/>
+<area shape="rect" id="node2" href="$classBuildingComponent.html" title="Abstract class representing a generic building component." alt="" coords="25,5,176,32"/>
+</map>

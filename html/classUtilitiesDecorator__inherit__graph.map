@@ -1,0 +1,7 @@
+<map id="UtilitiesDecorator" name="UtilitiesDecorator">
+<area shape="rect" id="node1" title="The base decorator class for the various utility systems." alt="" coords="5,81,143,108"/>
+<area shape="rect" id="node2" href="$classPowerPlantDecorator.html" title="A decorator class for the power plant utility." alt="" coords="223,5,381,32"/>
+<area shape="rect" id="node3" href="$classSewageManagementDecorator.html" title="A decorator class for the sewage management utility." alt="" coords="191,56,413,83"/>
+<area shape="rect" id="node4" href="$classWasteManagementDecorator.html" title="A decorator class for the waste management utility." alt="" coords="196,107,408,133"/>
+<area shape="rect" id="node5" href="$classWaterSupplyDecorator.html" title="A decorator class for the water supply utility." alt="" coords="218,157,386,184"/>
+</map>

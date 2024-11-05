@@ -1,0 +1,128 @@
+\hypertarget{classLandmarkBuilding}{}\doxysection{Landmark\+Building Class Reference}
+\label{classLandmarkBuilding}\index{LandmarkBuilding@{LandmarkBuilding}}
+
+
+Represents an landmark building with specified tax income, construction cost, and satisfaction value.  
+
+
+
+
+{\ttfamily \#include $<$Landmark\+Building.\+h$>$}
+
+
+
+Inheritance diagram for Landmark\+Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classLandmarkBuilding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Landmark\+Building\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classLandmarkBuilding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLandmarkBuilding_aa60708882f1ed7efab6bf7ee5c36af34}{Landmark\+Building}} (double \mbox{\hyperlink{classBuilding_a0f2975d0fcba3159ae142d3dcd260a52}{tax\+Income}}, double \mbox{\hyperlink{classBuilding_a1764dafe016145158f038aae7ecfbda6}{build\+Cost}}, int \mbox{\hyperlink{classLandmarkBuilding_a2969e24cb504168dad4049c8e01e44d7}{satisfaction\+Value}}, int pow, int water, int waste, int sewage)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classLandmarkBuilding}{Landmark\+Building}} with the specified tax income, build cost, and satisfaction value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLandmarkBuilding_a2d691fa32476df3e373df912c34193c9}{get\+Satisfaction\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the public satisfaction value of the Landmark building. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLandmarkBuilding_a4cce602433a34caed2ac4a00d99f289c}\label{classLandmarkBuilding_a4cce602433a34caed2ac4a00d99f289c}} 
+virtual \mbox{\hyperlink{classLandmarkBuilding_a4cce602433a34caed2ac4a00d99f289c}{$\sim$\+Landmark\+Building}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classLandmarkBuilding}{Landmark\+Building}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} $\ast$ \mbox{\hyperlink{classLandmarkBuilding_a7b21f6e8317c81957338f1269ae95392}{clone}} ()=0
+\begin{DoxyCompactList}\small\item\em Creates a copy of the current landmark building for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classLandmarkBuilding_a2969e24cb504168dad4049c8e01e44d7}{satisfaction\+Value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an landmark building with specified tax income, construction cost, and satisfaction value. 
+
+The \mbox{\hyperlink{classLandmarkBuilding}{Landmark\+Building}} class acts as an abstarct base class for the concrete classes\+: -\/\mbox{\hyperlink{classCulturalCentre}{Cultural\+Centre}} -\/\mbox{\hyperlink{classMonument}{Monument}} -\/Park$<$br$>$~\newline
+ provides the var of satisfaction\+Value specific to Landmark types of buidlings 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLandmarkBuilding_aa60708882f1ed7efab6bf7ee5c36af34}\label{classLandmarkBuilding_aa60708882f1ed7efab6bf7ee5c36af34}} 
+\index{LandmarkBuilding@{LandmarkBuilding}!LandmarkBuilding@{LandmarkBuilding}}
+\index{LandmarkBuilding@{LandmarkBuilding}!LandmarkBuilding@{LandmarkBuilding}}
+\doxysubsubsection{\texorpdfstring{LandmarkBuilding()}{LandmarkBuilding()}}
+{\footnotesize\ttfamily Landmark\+Building\+::\+Landmark\+Building (\begin{DoxyParamCaption}\item[{double}]{tax\+Income,  }\item[{double}]{build\+Cost,  }\item[{int}]{satisfaction\+Value,  }\item[{int}]{pow,  }\item[{int}]{water,  }\item[{int}]{waste,  }\item[{int}]{sewage }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classLandmarkBuilding}{Landmark\+Building}} with the specified tax income, build cost, and satisfaction value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Income} & The income generated from tax. \\
+\hline
+{\em build\+Cost} & The cost required to build. \\
+\hline
+{\em satisfaction\+Value} & Measure of public satisfaction. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLandmarkBuilding_a7b21f6e8317c81957338f1269ae95392}\label{classLandmarkBuilding_a7b21f6e8317c81957338f1269ae95392}} 
+\index{LandmarkBuilding@{LandmarkBuilding}!clone@{clone}}
+\index{clone@{clone}!LandmarkBuilding@{LandmarkBuilding}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classBuildingComponent}{Building\+Component}}$\ast$ Landmark\+Building\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a copy of the current landmark building for saving in \mbox{\hyperlink{classCityMemento}{City\+Memento}}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to copy of the current \mbox{\hyperlink{classLandmarkBuilding}{Landmark\+Building}} as a \mbox{\hyperlink{classBuildingComponent}{Building\+Component}} type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuilding_a2d21e31aa92b325466f5a30bec0dfcb4}{Building}}.
+
+
+
+Implemented in \mbox{\hyperlink{classPark_a75a7a7a50150f1579565359259482987}{Park}}, \mbox{\hyperlink{classMonument_ac0d834edff0ddec42a97160858720bb6}{Monument}}, and \mbox{\hyperlink{classCulturalCentre_af8bd63c7df133517ac5b97ba8f875bc0}{Cultural\+Centre}}.
+
+\mbox{\Hypertarget{classLandmarkBuilding_a2d691fa32476df3e373df912c34193c9}\label{classLandmarkBuilding_a2d691fa32476df3e373df912c34193c9}} 
+\index{LandmarkBuilding@{LandmarkBuilding}!getSatisfactionValue@{getSatisfactionValue}}
+\index{getSatisfactionValue@{getSatisfactionValue}!LandmarkBuilding@{LandmarkBuilding}}
+\doxysubsubsection{\texorpdfstring{getSatisfactionValue()}{getSatisfactionValue()}}
+{\footnotesize\ttfamily int Landmark\+Building\+::get\+Satisfaction\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the public satisfaction value of the Landmark building. 
+
+\begin{DoxyReturn}{Returns}
+Satisfaction value as an integer. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLandmarkBuilding_a2969e24cb504168dad4049c8e01e44d7}\label{classLandmarkBuilding_a2969e24cb504168dad4049c8e01e44d7}} 
+\index{LandmarkBuilding@{LandmarkBuilding}!satisfactionValue@{satisfactionValue}}
+\index{satisfactionValue@{satisfactionValue}!LandmarkBuilding@{LandmarkBuilding}}
+\doxysubsubsection{\texorpdfstring{satisfactionValue}{satisfactionValue}}
+{\footnotesize\ttfamily int Landmark\+Building\+::satisfaction\+Value\hspace{0.3cm}{\ttfamily [protected]}}
+
+A measure of public satisfaction contributed by the landmark. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Composite/landmark/Landmark\+Building.\+h\item 
+src/building\+Composite/landmark/Landmark\+Building.\+cpp\end{DoxyCompactItemize}

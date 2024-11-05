@@ -1,0 +1,21 @@
+<map id="BuildingComponent" name="BuildingComponent">
+<area shape="rect" id="node1" title="Abstract class representing a generic building component." alt="" coords="5,309,156,336"/>
+<area shape="rect" id="node2" href="$classBuilding.html" title="Represents a building component with financial attributes like tax income and construction cost." alt="" coords="262,284,337,311"/>
+<area shape="rect" id="node19" href="$classCompositeNeighbourhood.html" title="Represents a composite neighbourhood containing multiple building components." alt="" coords="204,335,395,361"/>
+<area shape="rect" id="node3" href="$classCommercialBuilding.html" title="Represents a commercial building with specified tax income, construction cost, and employee capacity." alt="" coords="443,81,597,108"/>
+<area shape="rect" id="node7" href="$classIndustrialBuilding.html" title="Represents an industrial building with specified tax income, construction cost, and employee capacity..." alt="" coords="452,233,588,260"/>
+<area shape="rect" id="node11" href="$classLandmarkBuilding.html" title="Represents an landmark building with specified tax income, construction cost, and satisfaction value." alt="" coords="450,335,590,361"/>
+<area shape="rect" id="node15" href="$classResidentialBuilding.html" title="Represents an residential building with specified tax income, construction cost, and living capacity." alt="" coords="446,487,594,513"/>
+<area shape="rect" id="node4" href="$classMall.html" title="Specialised concrete CommercialBuidling class that represents a Mall." alt="" coords="678,5,729,32"/>
+<area shape="rect" id="node5" href="$classOffice.html" title="Specialised concrete CommercialBuidling class that represents a Office." alt="" coords="673,56,733,83"/>
+<area shape="rect" id="node6" href="$classShop.html" title="Specialised concrete CommercialBuidling class that represents a Shop." alt="" coords="676,107,731,133"/>
+<area shape="rect" id="node8" href="$classFactory.html" title="Specialised concrete IndustrialBuidling class that represents a Factory." alt="" coords="669,157,738,184"/>
+<area shape="rect" id="node9" href="$classPlant.html" title="Specialised concrete IndustrialBuidling class that represents a Plant." alt="" coords="676,208,731,235"/>
+<area shape="rect" id="node10" href="$classWarehouse.html" title="Specialised concrete IndustrialBuidling class that represents a Warehouse." alt="" coords="656,259,751,285"/>
+<area shape="rect" id="node12" href="$classCulturalCentre.html" title="Specialised concrete LandmarkBuidling class that represents a CulturalCentre." alt="" coords="645,309,761,336"/>
+<area shape="rect" id="node13" href="$classMonument.html" title="Specialised concrete LandmarkBuidling class that represents a Monument." alt="" coords="657,360,749,387"/>
+<area shape="rect" id="node14" href="$classPark.html" title="Specialised concrete LandmarkBuidling class that represents a Park." alt="" coords="678,411,729,437"/>
+<area shape="rect" id="node16" href="$classEstate.html" title="Specialised concrete IndustrialBuidling class that represents an Estate." alt="" coords="672,461,735,488"/>
+<area shape="rect" id="node17" href="$classHouse.html" title="Specialised concrete IndustrialBuidling class that represents a House." alt="" coords="672,512,735,539"/>
+<area shape="rect" id="node18" href="$classTownHouse.html" title="Specialised concrete IndustrialBuidling class that represents a TownHouse." alt="" coords="655,563,751,589"/>
+</map>

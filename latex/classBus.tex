@@ -1,0 +1,141 @@
+\hypertarget{classBus}{}\doxysection{Bus Class Reference}
+\label{classBus}\index{Bus@{Bus}}
+
+
+Represents an bus with specified cost, capacity, and transport type.  
+
+
+
+
+{\ttfamily \#include $<$Bus.\+h$>$}
+
+
+
+Inheritance diagram for Bus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classBus__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classBus__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBus_a46905467b112d3b66e690d5d12896811}{Bus}} (string name, float \&budget)
+\begin{DoxyCompactList}\small\item\em Creates a new bus for the city with specified name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBus_aab6194602b6a5a4fa87987f7c1adf35d}\label{classBus_aab6194602b6a5a4fa87987f7c1adf35d}} 
+\mbox{\hyperlink{classBus_aab6194602b6a5a4fa87987f7c1adf35d}{$\sim$\+Bus}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classBus}{Bus}}, decrements public\+Transport\+Capacity by its own capacity. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBus_abe41fc02547032a0ce5942e6337310f0}{get\+Transport\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of transport associated with the bus. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBus_ab739b1eb212fdfe22caad5eaea451484}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the bus. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBus_a874aefbe282bc89357dad167f03906fe}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the specific transport type label of the bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents an bus with specified cost, capacity, and transport type. 
+
+The \mbox{\hyperlink{classBus}{Bus}} class is a specialised mode of transport within a city, providing an implementation specific to buses, including attributes for cost, type, and capacity. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBus_a46905467b112d3b66e690d5d12896811}\label{classBus_a46905467b112d3b66e690d5d12896811}} 
+\index{Bus@{Bus}!Bus@{Bus}}
+\index{Bus@{Bus}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{Bus()}{Bus()}}
+{\footnotesize\ttfamily Bus\+::\+Bus (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{float \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Creates a new bus for the city with specified name. 
+
+
+\begin{DoxyItemize}
+\item Cost\+: R 100,000.
+\item Type\+: Public\+Transport.
+\item Capacity\+: 5,000
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if there is not enough budget to build the buses. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBus_ab739b1eb212fdfe22caad5eaea451484}\label{classBus_ab739b1eb212fdfe22caad5eaea451484}} 
+\index{Bus@{Bus}!getName@{getName}}
+\index{getName@{getName}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Bus\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the name of the bus. 
+
+\begin{DoxyReturn}{Returns}
+The name of the bus as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_a6eaf02f55273a4d556705d417fe1ebfd}{Mode\+Of\+Transport}}.
+
+\mbox{\Hypertarget{classBus_abe41fc02547032a0ce5942e6337310f0}\label{classBus_abe41fc02547032a0ce5942e6337310f0}} 
+\index{Bus@{Bus}!getTransportType@{getTransportType}}
+\index{getTransportType@{getTransportType}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{getTransportType()}{getTransportType()}}
+{\footnotesize\ttfamily string Bus\+::get\+Transport\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the type of transport associated with the bus. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the transport type, ergo -\/ \char`\"{}\+Public\+Transport\char`\"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_aabd8fc73f8db175f8a62c510bf9fd984}{Mode\+Of\+Transport}}.
+
+\mbox{\Hypertarget{classBus_a874aefbe282bc89357dad167f03906fe}\label{classBus_a874aefbe282bc89357dad167f03906fe}} 
+\index{Bus@{Bus}!getType@{getType}}
+\index{getType@{getType}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Bus\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the specific transport type label of the bus. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the type of transport, \char`\"{}\+Bus\char`\"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModeOfTransport_aaa163719b4fc5e11714e88221d33c03e}{Mode\+Of\+Transport}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/transport/Bus.\+h\item 
+src/transport/Bus.\+cpp\end{DoxyCompactItemize}

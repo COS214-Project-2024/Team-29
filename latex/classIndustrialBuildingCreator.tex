@@ -1,0 +1,83 @@
+\hypertarget{classIndustrialBuildingCreator}{}\doxysection{Industrial\+Building\+Creator Class Reference}
+\label{classIndustrialBuildingCreator}\index{IndustrialBuildingCreator@{IndustrialBuildingCreator}}
+
+
+A concrete factory method for creating buildings.  
+
+
+
+
+{\ttfamily \#include $<$Industrial\+Building\+Creator.\+h$>$}
+
+
+
+Inheritance diagram for Industrial\+Building\+Creator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classIndustrialBuildingCreator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Industrial\+Building\+Creator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classIndustrialBuildingCreator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBuilding}{Building}} $\ast$ \mbox{\hyperlink{classIndustrialBuildingCreator_a3cf4668f14d2662db1bb352aa7c1dcef}{create\+Building}} (int b\+Name)
+\begin{DoxyCompactList}\small\item\em Creates a building object of type Industrial and returns it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A concrete factory method for creating buildings. 
+
+The \mbox{\hyperlink{classIndustrialBuildingCreator}{Industrial\+Building\+Creator}} class provides one of the concrete classes for the abstract factory class, Buidling\+Creator, and is responsible for creating \mbox{\hyperlink{classBuilding}{Building}} objects of type Industrial 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIndustrialBuildingCreator_a3cf4668f14d2662db1bb352aa7c1dcef}\label{classIndustrialBuildingCreator_a3cf4668f14d2662db1bb352aa7c1dcef}} 
+\index{IndustrialBuildingCreator@{IndustrialBuildingCreator}!createBuilding@{createBuilding}}
+\index{createBuilding@{createBuilding}!IndustrialBuildingCreator@{IndustrialBuildingCreator}}
+\doxysubsubsection{\texorpdfstring{createBuilding()}{createBuilding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuilding}{Building}} $\ast$ Industrial\+Building\+Creator\+::create\+Building (\begin{DoxyParamCaption}\item[{int}]{b\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a building object of type Industrial and returns it. 
+
+create\+Bulding() takes in a int paramenter that defines the type of industrial building
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classFactory}{Factory}} \+: b\+Name == 1
+\item \mbox{\hyperlink{classWarehouse}{Warehouse}} \+: b\+Name == 2
+\item \mbox{\hyperlink{classPlant}{Plant}} \+: b\+Name == 3~\newline
+~\newline
+ (returns nullptr if b\+Name$<$1 or b\+Name$>$3)~\newline
+ returns a \mbox{\hyperlink{classBuilding}{Building}} pointer to the object (Building$\ast$).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+Name} & int that determines the type of Industrial building created\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Building$\ast$ to \mbox{\hyperlink{classBuilding}{Building}} object created 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuildingCreator_ae3f859670acfc139f1c0630cdfaff7d5}{Building\+Creator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/building\+Factory/Industrial\+Building\+Creator.\+h\item 
+src/building\+Factory/Industrial\+Building\+Creator.\+cpp\end{DoxyCompactItemize}
