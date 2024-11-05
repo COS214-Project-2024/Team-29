@@ -9,6 +9,7 @@
 
 ## Raphael Rato (u22887581) Contributions:
 - Class Diagrams
+- Documentation (helped with)
 - Doxygen creating and commenting
 - Utilities Classes
 - City (helped with)
