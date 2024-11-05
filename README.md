@@ -17,22 +17,15 @@
 - Debbugging and error solving
 
 ## Cloning the Repository:
-- This project includes googletest as a Git submodule, which is required to build and run tests. When cloning the repository, make sure to initialize and update submodules to download all dependencies.
+git clone https://github.com/COS214-Project-2024/TheCityKings.git
 
-
-### Clone with Submodules in One Step:
-- To clone the repository and initialize submodules in one command, use:
-
-git clone --recurse-submodules <repo-url>
-
-- Replace <repo-url> with the URL of this repository.
-
-### Clone and Initialize Submodules Separately:
-- Alternatively, if you’ve already cloned the repository without submodules, you can initialize them with:
-
-git submodule update --init --recursive
-
-- This will populate the googletest directory with the necessary files for running tests.
-
-## See Also
-https://drive.google.com/drive/folders/1GalDrlGerlEXvBFv4t1ANYMJB7xISi-w
+## Compiling Code:
+1. Clone repo to directory of choice (e.g /projects)
+2. cd TheCityKings    (Directory of cloned repo)
+3. mkdir build        (If not created already)
+4. rm -rf build/*     (Fresh build, skip if new)
+5. cd build
+6. cmake ..
+7. make
+8. cd src
+9. ./TheCityKings
