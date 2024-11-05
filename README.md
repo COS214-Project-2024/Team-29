@@ -7,6 +7,13 @@
 - Ruben Hannes Gadd (u23633353)
 - Raphael Rato (u22887581)
 
+## Raphael Rato (u22887581) Contributions:
+- Class Diagrams
+- Doxygen creating and commenting
+- Utilities Classes
+- City (helped with)
+- Command Pattern (Not Used)
+- Debbugging and error solving
 
 ## Cloning the Repository:
 - This project includes googletest as a Git submodule, which is required to build and run tests. When cloning the repository, make sure to initialize and update submodules to download all dependencies.
