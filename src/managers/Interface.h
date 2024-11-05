@@ -15,6 +15,9 @@ class Interface {
         int cycle;  /**< Simulation cycle counter. */
 
         //City Functions
+        /**
+         * @brief Updates the city stats, mainly the cities taxes.
+         */
         void updateCityStats();
 
         //Display Prompt Functions
@@ -69,9 +72,15 @@ class Interface {
         int getCycle();
 
         //UI Functions
+        /**
+         * @brief Clears the terminal for a cleaner UI for the client
+         */
         void clearTerminal();
 
         //Greeter Functions
+        /**
+         * @brief Displays a goodbye message to user for the end of the game
+         */
         void displayGoodbyeMessage();
 
     public:
